@@ -1,6 +1,6 @@
-# Senedd Petitions
+# Scottish Petitions
 
-This is the code base for the Senedd's petitions service (https://petitions.senedd.wales).
+This is the code base for the Scottish Parliament's petitions service (https://petitions.parliament.scot).
 
 ## Setup
 
@@ -11,20 +11,20 @@ We recommend using [Docker Desktop][1] to get setup quickly. If you'd prefer not
 The application uses domains to differentiate between different aspects so you'll need to setup the following DNS records in your local `/etc/hosts` file:
 
 ```
-127.0.0.1     welshpets.local
-127.0.0.1     cymraegpets.local
+127.0.0.1     scotpets.local
+127.0.0.1     albapets.local
 127.0.0.1     moderatepets.local
 ```
 
-If you don't want to edit your `/etc/hosts` file or you're on Windows then you can use a public wildcard DNS like `welshpets.lvh.me` and override the default domains using a `.env.local` file:
+If you don't want to edit your `/etc/hosts` file or you're on Windows then you can use a public wildcard DNS like `scotpets.lvh.me` and override the default domains using a `.env.local` file:
 
 ```
-EPETITIONS_HOST_EN=welshpets.lvh.me
-EPETITIONS_HOST_CY=cymraegpets.lvh.me
+EPETITIONS_HOST_EN=scotpets.lvh.me
+EPETITIONS_HOST_GD=albapets.lvh.me
 MODERATE_HOST=moderatepets.lvh.me
 ```
 
-If you do this before running the app for the first time it will automatically pick these up, otherwise you'll need to use a PostgreSQL client to edit the `url_en`, `url_cy` and `moderate_url` columns on the record in the `sites` table.
+If you do this before running the app for the first time it will automatically pick these up, otherwise you'll need to use a PostgreSQL client to edit the `url_en`, `url_gd` and `moderate_url` columns on the record in the `sites` table.
 
 ### Create the databases
 
