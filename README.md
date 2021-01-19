@@ -11,9 +11,7 @@ We recommend using [Docker Desktop][1] to get setup quickly. If you'd prefer not
 The application uses domains to differentiate between different aspects so you'll need to setup the following DNS records in your local `/etc/hosts` file:
 
 ```
-127.0.0.1     scotpets.local
-127.0.0.1     albapets.local
-127.0.0.1     moderatepets.local
+127.0.0.1     scotpets.local albapets.local moderatepets.local
 ```
 
 If you don't want to edit your `/etc/hosts` file or you're on Windows then you can use a public wildcard DNS like `scotpets.lvh.me` and override the default domains using a `.env.local` file:
