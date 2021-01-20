@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_20_015258) do
+ActiveRecord::Schema.define(version: 2021_01_20_183137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "intarray"
@@ -424,9 +424,9 @@ ActiveRecord::Schema.define(version: 2021_01_20_015258) do
   end
 
   create_table "sites", force: :cascade do |t|
-    t.string "title_en", limit: 50, default: "Petition the Senedd", null: false
-    t.string "url_en", limit: 50, default: "https://petitions.senedd.wales", null: false
-    t.string "email_from_en", limit: 100, default: "\"Petitions: Senedd\" <no-reply@petitions.senedd.wales>", null: false
+    t.string "title_en", limit: 50, default: "Petition the Scottish Parliament", null: false
+    t.string "url_en", limit: 50, default: "https://petitions.parliament.scot", null: false
+    t.string "email_from_en", limit: 100, default: "\"Petitions: Scottish Parliament\" <no-reply@petitions.parliament.scot>\"", null: false
     t.string "username", limit: 30
     t.string "password_digest", limit: 60
     t.boolean "enabled", default: true, null: false
@@ -440,8 +440,8 @@ ActiveRecord::Schema.define(version: 2021_01_20_015258) do
     t.datetime "last_checked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "feedback_email", limit: 100, default: "\"Petitions: Senedd\" <petitions@senedd.wales>", null: false
-    t.string "moderate_url", limit: 50, default: "https://moderate.petitions.senedd.wales", null: false
+    t.string "feedback_email", limit: 100, default: "\"Petitions: Scottish Parliament\" <petitionscommittee@parliament.scot>", null: false
+    t.string "moderate_url", limit: 50, default: "https://moderate.petitions.parliament.scot", null: false
     t.datetime "last_petition_created_at"
     t.integer "login_timeout", default: 1800, null: false
     t.jsonb "feature_flags", default: {}, null: false
@@ -449,9 +449,9 @@ ActiveRecord::Schema.define(version: 2021_01_20_015258) do
     t.integer "signature_count_interval", default: 60, null: false
     t.boolean "update_signature_counts", default: false, null: false
     t.integer "threshold_for_moderation_delay", default: 500, null: false
-    t.string "title_cy", limit: 50, default: "Deisebu'r Senedd", null: false
-    t.string "url_cy", limit: 50, default: "https://deisebau.senedd.cymru", null: false
-    t.string "email_from_cy", limit: 100, default: "\"Deisebau: Senedd\" <dim-ateb@deisebau.senedd.cymru>", null: false
+    t.string "title_cy", limit: 50, default: "Athchuinge do Phàrlamaid na h-Alba", null: false
+    t.string "url_cy", limit: 50, default: "https://athchuingean.parlamaid-alba.scot", null: false
+    t.string "email_from_cy", limit: 100, default: "\"Athchuingean: Pàrlamaid na h-Alba\" <gun-fhreagairt@athchuingean.parlamaid-alba.scot>", null: false
     t.datetime "translations_updated_at"
   end
 
