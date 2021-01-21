@@ -51,7 +51,7 @@ RSpec.describe SharingHelper, type: :helper do
   context "when viewing the site in Welsh" do
     before do
       headers["HTTP_HOST"]   = "deisebau.senedd.cymru"
-      I18n.locale = :"cy-GB"
+      I18n.locale = :"gd-GB"
     end
 
     describe "#share_via_facebook" do

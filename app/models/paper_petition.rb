@@ -52,7 +52,7 @@ class PaperPetition
     validates :name, :phone_number, :address
   end
 
-  validates :locale, inclusion: { in: %w[en-GB cy-GB] }
+  validates :locale, inclusion: { in: %w[en-GB gd-GB] }
   validates :email, email: true
   validates :postcode, postcode: true
   validates :phone_number, length: { maximum: 31 }

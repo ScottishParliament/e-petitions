@@ -229,7 +229,7 @@ RSpec.configure do |config|
 
   config.before(:each, type: :routes) do |example|
     if example.metadata[:welsh]
-      I18n.locale = :"cy-GB"
+      I18n.locale = :"gd-GB"
     end
   end
 

@@ -6,7 +6,7 @@ class FetchMembersJob < ApplicationJob
 
   ENDPOINTS = {
     "en-GB": "/mgwebservice.asmx/GetCouncillorsByWard",
-    "cy-GB": "/mgwebservicew.asmx/GetCouncillorsByWard"
+    "gd-GB": "/mgwebservicew.asmx/GetCouncillorsByWard"
   }
 
   WARDS = "/councillorsbyward/wards/ward"
@@ -59,7 +59,7 @@ class FetchMembersJob < ApplicationJob
         end
       end
 
-      members(:"cy-GB").each do |member|
+      members(:"gd-GB").each do |member|
         hash.fetch(member[:id]).tap do |row|
           row[:name_gd] = member[:name]
           row[:party_gd] = member[:party]

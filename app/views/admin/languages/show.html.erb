@@ -30,14 +30,14 @@
                 <%= link_to 'Edit', edit_admin_language_path(@language.locale, key), class: 'button' %>
               </div>
               <div class="button_to">
-                <%= link_to 'Translate', edit_admin_language_path("cy-GB", key), class: 'button-secondary' %>
+                <%= link_to 'Translate', edit_admin_language_path("gd-GB", key), class: 'button-secondary' %>
               </div>
             <% else %>
               <div class="button_to">
                 <%= link_to 'Edit', edit_admin_language_path(@language.locale, key), class: 'button-secondary' %>
               </div>
               <div class="button_to">
-                <%= link_to 'Translate', edit_admin_language_path("cy-GB", key), class: 'button' %>
+                <%= link_to 'Translate', edit_admin_language_path("gd-GB", key), class: 'button' %>
               </div>
             <% end %>
           <% else %>

@@ -39,7 +39,7 @@ FactoryBot.define do
     end
 
     trait :welsh do
-      locale { "cy-GB" }
+      locale { "gd-GB" }
     end
 
     after(:build) do |petition, evaluator|
@@ -663,11 +663,11 @@ FactoryBot.define do
     end
 
     trait :welsh do
-      locale { "cy-GB" }
+      locale { "gd-GB" }
       name   { "Welsh" }
 
       translations do
-        { "cy-GB" => { "title" => "Deisebau" } }
+        { "gd-GB" => { "title" => "Deisebau" } }
       end
     end
   end

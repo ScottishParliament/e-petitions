@@ -23,7 +23,7 @@ class Member < ActiveRecord::Base
   end
 
   def url
-    I18n.locale == :"cy-GB" ? url_gd : url_en
+    I18n.locale == :"gd-GB" ? url_gd : url_en
   end
 
   private

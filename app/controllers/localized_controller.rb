@@ -20,8 +20,8 @@ class LocalizedController < ApplicationController
 
   def locale
     case params[:locale]
-    when "cy-GB"
-      :"cy-GB"
+    when "gd-GB"
+      :"gd-GB"
     else
       :"en-GB"
     end

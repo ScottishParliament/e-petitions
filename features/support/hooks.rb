@@ -39,7 +39,7 @@ After do
 end
 
 Before('@welsh') do
-  I18n.locale = :"cy-GB"
+  I18n.locale = :"gd-GB"
 end
 
 Before('~@welsh') do

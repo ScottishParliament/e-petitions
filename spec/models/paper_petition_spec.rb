@@ -34,7 +34,7 @@ RSpec.describe PaperPetition, type: :model do
     end
 
     it { is_expected.to allow_value("en-GB").for(:locale) }
-    it { is_expected.to allow_value("cy-GB").for(:locale) }
+    it { is_expected.to allow_value("gd-GB").for(:locale) }
     it { is_expected.not_to allow_value("en-US").for(:locale) }
 
     it { is_expected.to allow_value("alice@example.com").for(:email) }
@@ -171,7 +171,7 @@ RSpec.describe PaperPetition, type: :model do
           background_en: "For reasons", background_gd: "Am resymau",
           additional_details_en: "Here's some more reasons",
           additional_details_gd: "Dyma ychydig mwy o resymau",
-          locale: "cy-GB", signature_count: 6000, submitted_on: "2020-04-30",
+          locale: "gd-GB", signature_count: 6000, submitted_on: "2020-04-30",
           name: "Alice Smith", email: "alice@example.com", postcode: "CF99 1NA",
           address: "The Senedd\nPierhead St\nCardiff", phone_number: "0300 200 6565"
         }
@@ -194,7 +194,7 @@ RSpec.describe PaperPetition, type: :model do
           background_gd: "Am resymau",
           additional_details_en: "Here's some more reasons",
           additional_details_gd: "Dyma ychydig mwy o resymau",
-          locale: "cy-GB", signature_count: 6000,
+          locale: "gd-GB", signature_count: 6000,
           open_at: Time.utc(2020, 3, 1, 12, 0, 0),
           closed_at: Time.utc(2020, 4, 30, 11, 0, 0),
           moderation_threshold_reached_at: Time.utc(2020, 4, 30, 11, 0, 0),
@@ -210,7 +210,7 @@ RSpec.describe PaperPetition, type: :model do
           email: "alice@example.com",
           postcode: "CF991NA",
           location_code: "GB-WLS",
-          locale: "cy-GB"
+          locale: "gd-GB"
         )
 
         expect(contact).to have_attributes(

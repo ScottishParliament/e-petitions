@@ -139,10 +139,10 @@ RSpec.describe PetitionsController, type: :controller do
       context "when creator is on the Welsh domain" do
         it "records the Welsh locale on the creator's signature" do
           perform_enqueued_jobs do
-            post :create, params: { stage: "replay_email", locale: "cy-GB", petition_creator: params.merge(state: Signature::VALIDATED_STATE) }
+            post :create, params: { stage: "replay_email", locale: "gd-GB", petition_creator: params.merge(state: Signature::VALIDATED_STATE) }
           end
 
-          expect(petition.creator.locale).to eq("cy-GB")
+          expect(petition.creator.locale).to eq("gd-GB")
         end
       end
 

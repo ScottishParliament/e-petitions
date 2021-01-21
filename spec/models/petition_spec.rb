@@ -77,7 +77,7 @@ RSpec.describe Petition, type: :model do
   end
 
   context "validations" do
-    %i[en-GB cy-GB].each do |locale|
+    %i[en-GB gd-GB].each do |locale|
       context "when editing #{locale}" do
         subject { Petition.new(editing: locale) }
         around(:example) {|ex| I18n.with_locale(locale) { ex.run }}
@@ -2745,7 +2745,7 @@ RSpec.describe Petition, type: :model do
   describe "#locale" do
     specify do
       I18n.with_locale(:"en-GB") { expect(Petition.new.locale).to eq("en-GB") }
-      I18n.with_locale(:"cy-GB") { expect(Petition.new.locale).to eq("cy-GB") }
+      I18n.with_locale(:"gd-GB") { expect(Petition.new.locale).to eq("gd-GB") }
     end
   end
 end

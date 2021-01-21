@@ -36,6 +36,6 @@ class Admin::PetitionDetailsController < Admin::AdminController
   end
 
   def petition_locale
-    params[:locale] == "cy-GB" ? :"cy-GB" : :"en-GB"
+    params[:locale] == "gd-GB" ? :"gd-GB" : :"en-GB"
   end
 end

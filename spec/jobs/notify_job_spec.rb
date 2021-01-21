@@ -458,11 +458,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -672,7 +672,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               :pending_signature,
               name: "Suzie",
               email: "suzie@example.com",
-              locale: "cy-GB",
+              locale: "gd-GB",
               sponsor: true,
               petition: petition
             )
@@ -706,11 +706,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -753,7 +753,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               :pending_signature,
               name: "Suzie",
               email: "suzie@example.com",
-              locale: "cy-GB",
+              locale: "gd-GB",
               sponsor: true,
               petition: petition
             )
@@ -849,7 +849,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               :validated_signature,
               name: "Suzie",
               email: "suzie@example.com",
-              locale: "cy-GB",
+              locale: "gd-GB",
               email_count: 1,
               sponsor: true,
               petition: petition
@@ -890,11 +890,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -944,7 +944,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               :validated_signature,
               name: "Suzie",
               email: "suzie@example.com",
-              locale: "cy-GB",
+              locale: "gd-GB",
               email_count: 1,
               sponsor: true,
               petition: petition
@@ -1033,7 +1033,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
       end
 
       context "when the signature was created in Welsh" do
-        let(:signature) { FactoryBot.create(:pending_signature, email: "suzie@example.com", locale: "cy-GB", petition: petition) }
+        let(:signature) { FactoryBot.create(:pending_signature, email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
         it "sends an email via GOV.UK Notify with the Welsh template" do
           perform_enqueued_jobs do
@@ -1118,7 +1118,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
       end
 
       context "when the signature was created in Welsh" do
-        let(:signature) { FactoryBot.create(:validated_signature, email: "suzie@example.com", locale: "cy-GB", email_count: 1, petition: petition) }
+        let(:signature) { FactoryBot.create(:validated_signature, email: "suzie@example.com", locale: "gd-GB", email_count: 1, petition: petition) }
 
         it "sends an email via GOV.UK Notify with the English template" do
           perform_enqueued_jobs do
@@ -1206,11 +1206,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -1298,7 +1298,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               :validated_signature,
               name: "Suzie",
               email: "suzie@example.com",
-              locale: "cy-GB",
+              locale: "gd-GB",
               sponsor: true,
               petition: petition
             )
@@ -1334,11 +1334,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -1380,7 +1380,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               :validated_signature,
               name: "Suzie",
               email: "suzie@example.com",
-              locale: "cy-GB",
+              locale: "gd-GB",
               sponsor: true,
               petition: petition
             )
@@ -1532,11 +1532,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -1699,7 +1699,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -1772,7 +1772,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -1845,7 +1845,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -1886,11 +1886,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -1938,7 +1938,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -2011,7 +2011,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -2084,7 +2084,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -2178,7 +2178,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               :validated_signature,
               name: "Suzie",
               email: "suzie@example.com",
-              locale: "cy-GB",
+              locale: "gd-GB",
               sponsor: true,
               petition: petition
             )
@@ -2212,11 +2212,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -2259,7 +2259,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               :validated_signature,
               name: "Suzie",
               email: "suzie@example.com",
-              locale: "cy-GB",
+              locale: "gd-GB",
               sponsor: true,
               petition: petition
             )
@@ -2349,7 +2349,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -2413,7 +2413,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -2477,7 +2477,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -2510,11 +2510,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -2556,7 +2556,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -2620,7 +2620,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -2684,7 +2684,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 :validated_signature,
                 name: "Suzie",
                 email: "suzie@example.com",
-                locale: "cy-GB",
+                locale: "gd-GB",
                 sponsor: true,
                 petition: petition
               )
@@ -2842,11 +2842,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -2943,7 +2943,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
 
         context "and the signature was created in Welsh" do
-          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "cy-GB", petition: petition) }
+          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
           it "sends an email via GOV.UK Notify with the Welsh template" do
             perform_enqueued_jobs do
@@ -2981,11 +2981,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -3019,7 +3019,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
 
         context "and the signature was created in Welsh" do
-          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "cy-GB", petition: petition) }
+          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
           it "sends an email via GOV.UK Notify with the Welsh template" do
             perform_enqueued_jobs do
@@ -3111,11 +3111,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -3197,7 +3197,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
 
         context "and the signature was created in Welsh" do
-          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "cy-GB", petition: petition) }
+          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
           it "sends an email via GOV.UK Notify with the Welsh template" do
             perform_enqueued_jobs do
@@ -3234,11 +3234,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -3269,7 +3269,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
 
         context "and the signature was created in Welsh" do
-          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "cy-GB", petition: petition) }
+          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
           it "sends an email via GOV.UK Notify with the Welsh template" do
             perform_enqueued_jobs do
@@ -3362,11 +3362,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -3456,7 +3456,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
 
         context "and the signature was created in Welsh" do
-          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "cy-GB", petition: petition) }
+          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
           it "sends an email via GOV.UK Notify with the Welsh template" do
             perform_enqueued_jobs do
@@ -3496,11 +3496,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -3534,7 +3534,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
 
         context "and the signature was created in Welsh" do
-          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "cy-GB", petition: petition) }
+          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
           it "sends an email via GOV.UK Notify with the Welsh template" do
             perform_enqueued_jobs do
@@ -3646,11 +3646,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -3754,7 +3754,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
 
         context "and the signature was created in Welsh" do
-          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "cy-GB", petition: petition) }
+          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
           it "sends an email via GOV.UK Notify with the Welsh template" do
             perform_enqueued_jobs do
@@ -3804,11 +3804,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_gd: "Gwnewch bethau",
             background_gd: "Oherwydd rhesymau",
             additional_details_gd: "Dyma ychydig mwy o resymau",
-            locale: "cy-GB",
+            locale: "gd-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
             creator_attributes: {
-              locale: "cy-GB"
+              locale: "gd-GB"
             }
           )
         end
@@ -3846,7 +3846,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
 
         context "and the signature was created in Welsh" do
-          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "cy-GB", petition: petition) }
+          let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
           it "sends an email via GOV.UK Notify with the Welsh template" do
             perform_enqueued_jobs do

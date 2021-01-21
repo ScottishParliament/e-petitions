@@ -26,7 +26,7 @@ module TranslationHelper
     end
 
     def helper
-      locale == :"cy-GB" ? :"#{route}_en_url" : :"#{route}_gd_url"
+      locale == :"gd-GB" ? :"#{route}_en_url" : :"#{route}_gd_url"
     end
 
     def translate(params)

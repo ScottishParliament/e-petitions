@@ -30,7 +30,7 @@ RSpec.describe Language, type: :model do
     let!(:english) { FactoryBot.create(:language, :english) }
 
     it "returns an array of symbols" do
-      expect(Language.available_locales).to eq(%i[en-GB cy-GB])
+      expect(Language.available_locales).to eq(%i[en-GB gd-GB])
     end
   end
 
@@ -38,10 +38,10 @@ RSpec.describe Language, type: :model do
     let!(:language) { FactoryBot.create(:language, :english) }
 
     context "when the locale doesn't exist" do
-      let(:arguments) { [:"cy-GB", :title, [], {}] }
+      let(:arguments) { [:"gd-GB", :title, [], {}] }
 
       it "returns nil" do
-        expect(Language).to receive(:find_by).with(locale: :"cy-GB").and_return(nil)
+        expect(Language).to receive(:find_by).with(locale: :"gd-GB").and_return(nil)
         expect(Language.lookup(*arguments)).to be_nil
       end
     end

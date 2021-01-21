@@ -194,16 +194,16 @@ module WelshPets
             match route.path("en-GB"), route.options("en")
 
             if route.localized?
-              match route.path("cy-GB"), to: redirect(route.redirect("en"), status: 308), via: route.via, as: nil
+              match route.path("gd-GB"), to: redirect(route.redirect("en"), status: 308), via: route.via, as: nil
             end
           end
         end
       end
 
       constraints(Site.constraints_for_public_gd) do
-        defaults locale: "cy-GB" do
+        defaults locale: "gd-GB" do
           routes.each do |route|
-            match route.path("cy-GB"), route.options("cy")
+            match route.path("gd-GB"), route.options("cy")
 
             if route.localized?
               match route.path("en-GB"), to: redirect(route.redirect("cy"), status: 308), via: route.via, as: nil

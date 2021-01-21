@@ -16,7 +16,7 @@ RSpec.describe DateTimeHelper, type: :helper do
 
     context "in Welsh" do
       around do |example|
-        I18n.with_locale(:"cy-GB") { example.run }
+        I18n.with_locale(:"gd-GB") { example.run }
       end
 
       it "returns the correct date format" do
@@ -90,7 +90,7 @@ RSpec.describe DateTimeHelper, type: :helper do
 
     context "in Welsh" do
       around do |example|
-        I18n.with_locale(:"cy-GB") { example.run }
+        I18n.with_locale(:"gd-GB") { example.run }
       end
 
       context "when the date is in the future" do

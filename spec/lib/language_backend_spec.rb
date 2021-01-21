@@ -14,14 +14,14 @@ RSpec.describe LanguageBackend do
 
   describe "#available_locales" do
     it "calls Language.available_locales" do
-      expect(Language).to receive(:available_locales).and_return(%i[en-GB cy-GB])
-      expect(I18n.available_locales).to eq(%i[en-GB cy-GB])
+      expect(Language).to receive(:available_locales).and_return(%i[en-GB gd-GB])
+      expect(I18n.available_locales).to eq(%i[en-GB gd-GB])
     end
   end
 
   describe "#lookup" do
     it "calls Language.lookup" do
-      expect(Language).to receive(:available_locales).and_return(%i[en-GB cy-GB])
+      expect(Language).to receive(:available_locales).and_return(%i[en-GB gd-GB])
       expect(Language).to receive(:lookup).with(:"en-GB", :"ui.site_title", nil, {}).and_return("Welsh Petitions")
       expect(I18n.translate(:"ui.site_title")).to eq("Welsh Petitions")
     end

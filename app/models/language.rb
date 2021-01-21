@@ -132,7 +132,7 @@ class Language < ActiveRecord::Base
   end
 
   def welsh?
-    locale == "cy-GB"
+    locale == "gd-GB"
   end
 
   def translated?(key)
@@ -156,7 +156,7 @@ class Language < ActiveRecord::Base
   end
 
   def other_locale
-    locale == "en-GB" ? "cy-GB" : "en-GB"
+    locale == "en-GB" ? "gd-GB" : "en-GB"
   end
 
   def other_translations
