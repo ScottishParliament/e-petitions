@@ -1,4 +1,4 @@
-module WelshPets
+module ScotsPets
   module Routing
     extend ActiveSupport::Concern
 

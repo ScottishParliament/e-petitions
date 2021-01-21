@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  extend WelshPets::Routing
+  extend ScotsPets::Routing
 
   public_scope do
     scope controller: 'constituencies' do
