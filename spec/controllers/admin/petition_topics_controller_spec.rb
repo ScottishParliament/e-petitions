@@ -7,14 +7,14 @@ RSpec.describe Admin::PetitionTopicsController, type: :controller, admin: true d
     describe "GET /admin/petitions/:petition_id/topics" do
       it "redirects to the login page" do
         get :show, params: { petition_id: petition.id }
-        expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/login")
+        expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/login")
       end
     end
 
     describe "PATCH /admin/petitions/:petition_id/topics" do
       it "redirects to the login page" do
         patch :update, params: { petition_id: petition.id }
-        expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/login")
+        expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/login")
       end
     end
   end
@@ -26,14 +26,14 @@ RSpec.describe Admin::PetitionTopicsController, type: :controller, admin: true d
     describe "GET /admin/petitions/:petition_id/topics" do
       it "redirects to the edit profile page" do
         get :show, params: { petition_id: petition.id }
-        expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/profile/#{user.id}/edit")
       end
     end
 
     describe "PATCH /admin/petitions/:petition_id/topics" do
       it "redirects to the edit profile page" do
         patch :update, params: { petition_id: petition.id }
-        expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/profile/#{user.id}/edit")
       end
     end
   end
@@ -77,7 +77,7 @@ RSpec.describe Admin::PetitionTopicsController, type: :controller, admin: true d
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/petitions/#{petition.id}")
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/petitions/#{petition.id}")
         end
 
         it "sets the flash notice message" do
@@ -93,7 +93,7 @@ RSpec.describe Admin::PetitionTopicsController, type: :controller, admin: true d
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/petitions/#{petition.id}")
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/petitions/#{petition.id}")
         end
 
         it "sets the flash notice message" do

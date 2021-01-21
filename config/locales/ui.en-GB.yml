@@ -93,7 +93,7 @@ en-GB:
             body_html: |-
               <p>You can email the %{petitions_committee_link} directly.</p>
               <p>They can help you to understand how the Senedd handles petitions. They can also provide a template for you to use to collect signatures on paper and help with some technical problems using this service. They can’t forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition.</p>
-              <p>Email: <a href="mailto:petitions@senedd.wales">petitions@senedd.wales</a></p>            
+              <p>Email: <a href="mailto:petitionscommittee@parliament.scot">petitionscommittee@parliament.scot</a></p>            
             petitions_committee_link: Petitions Committee
           phone:
             heading: Phone
@@ -159,7 +159,7 @@ en-GB:
 
         <p><u>Petitions from other websites are not accepted by the Petitions Committee.</u></p>
 
-        <p>If you are considering collecting signatures on paper, you should <a href="mailto:petitions@senedd.wales">contact us</a> in advance for advice. A template can also be provided.</p>
+        <p>If you are considering collecting signatures on paper, you should <a href="mailto:petitionscommittee@parliament.scot">contact us</a> in advance for advice. A template can also be provided.</p>
 
         <h1 class="page-title" id="how-petitions-work">How petitions work</h1>
 

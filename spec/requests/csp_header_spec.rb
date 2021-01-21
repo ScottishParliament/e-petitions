@@ -35,7 +35,7 @@ RSpec.describe "Content Security Policy header", type: :request do
 
     it "includes the moderation site in the script-src directive" do
       get "/"
-      expect(subject).to match(/script-src 'self' 'unsafe-inline' https:\/\/cc\.cdn\.civiccomputing\.com https:\/\/moderate\.petitions\.senedd\.wales;/)
+      expect(subject).to match(/script-src 'self' 'unsafe-inline' https:\/\/cc\.cdn\.civiccomputing\.com https:\/\/moderate\.petitions\.parliament\.scot;/)
     end
   end
 end

@@ -17,7 +17,7 @@ module ScotsPets
           SSLVerifyClient: OpenSSL::SSL::VERIFY_NONE,
           SSLPrivateKey:   private_key,
           SSLCertificate:  ssl_certificate,
-          SSLCertName:     [['GB', 'petitions.senedd.wales']],
+          SSLCertName:     [['GB', 'petitions.parliament.scot']],
           AccessLog:       [],
           Logger:          logger
         }
@@ -64,7 +64,7 @@ module ScotsPets
         details << 'L=Cardiff'
         details << 'O=Senedd'
         details << 'OU=ICT'
-        details << 'CN=petitions.senedd.wales'
+        details << 'CN=petitions.parliament.scot'
 
         args = %w[openssl req -x509]
         args.concat ['-newkey', 'rsa:2048']

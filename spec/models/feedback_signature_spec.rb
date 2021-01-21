@@ -21,8 +21,8 @@ RSpec.describe FeedbackSignature, type: :model do
   end
 
   describe "#email" do
-    it "returns 'petitions@senedd.wales'" do
-      expect(signature.email).to eq("petitions@senedd.wales")
+    it "returns 'petitionscommittee@parliament.scot'" do
+      expect(signature.email).to eq("petitionscommittee@parliament.scot")
     end
   end
 
@@ -53,7 +53,7 @@ RSpec.describe FeedbackSignature, type: :model do
       end
     end
 
-    context "when the petition was created in Welsh" do
+    context "when the petition was created in Scottish" do
       let(:petition) { FactoryBot.create(:open_petition, locale: "gd-GB") }
 
       it "returns gd-GB" do
@@ -76,7 +76,7 @@ RSpec.describe FeedbackSignature, type: :model do
 
   describe "#to_gid" do
     it "returns a GlobalID instance" do
-      expect(signature.to_gid).to eq(GlobalID.new("gid://welsh-pets/FeedbackSignature/#{petition.id}"))
+      expect(signature.to_gid).to eq(GlobalID.new("gid://scots-pets/FeedbackSignature/#{petition.id}"))
     end
   end
 end

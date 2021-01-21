@@ -245,12 +245,12 @@ class Site < ActiveRecord::Base
     private
 
     def default_title_en
-      ENV.fetch('SITE_TITLE_EN', "Petition the Senedd")
+      ENV.fetch('SITE_TITLE_EN', "Petition the Scottish Parliament")
     end
     alias_method :default_title, :default_title_en
 
     def default_title_gd
-      ENV.fetch('SITE_TITLE_GD', "Deisebu'r Senedd")
+      ENV.fetch('SITE_TITLE_GD', "Athchuinge do Phàrlamaid na h-Alba")
     end
 
     def default_scheme
@@ -278,12 +278,12 @@ class Site < ActiveRecord::Base
     end
 
     def default_host_en
-      ENV.fetch('EPETITIONS_HOST_EN', 'petitions.senedd.wales')
+      ENV.fetch('EPETITIONS_HOST_EN', 'petitions.parliament.scot')
     end
     alias_method :default_host, :default_host_en
 
     def default_host_gd
-      ENV.fetch('EPETITIONS_HOST_GD', 'deisebau.senedd.cymru')
+      ENV.fetch('EPETITIONS_HOST_GD', 'athchuingean.parlamaid-alba.scot')
     end
 
     def default_domain(tld_length = 1)
@@ -299,7 +299,7 @@ class Site < ActiveRecord::Base
     end
 
     def default_moderate_host
-      ENV.fetch('MODERATE_HOST', 'moderate.petitions.senedd.wales')
+      ENV.fetch('MODERATE_HOST', 'moderate.petitions.parliament.scot')
     end
 
     def default_port
@@ -307,16 +307,16 @@ class Site < ActiveRecord::Base
     end
 
     def default_email_from_en
-      ENV.fetch('EPETITIONS_FROM_EN', %{"Petitions: Senedd" <no-reply@#{default_host_en}>})
+      ENV.fetch('EPETITIONS_FROM_EN', %{"Petitions: Scottish Parliament" <no-reply@#{default_host_en}>})
     end
     alias_method :default_email_from, :default_email_from_en
 
     def default_email_from_gd
-      ENV.fetch('EPETITIONS_FROM_GD', %{"Deisebau: Senedd" <dim-ateb@#{default_host_gd}>})
+      ENV.fetch('EPETITIONS_FROM_GD', %{"Athchuingean: Pàrlamaid na h-Alba" <gun-fhreagairt@#{default_host_gd}>})
     end
 
     def default_feedback_email
-      ENV.fetch('EPETITIONS_FEEDBACK', %{"Petitions: Senedd" <petitions@#{default_domain}>})
+      ENV.fetch('EPETITIONS_FEEDBACK', %{"Petitions: Scottish Parliament" <petitionscommittee@#{default_domain}>})
     end
 
     def default_username

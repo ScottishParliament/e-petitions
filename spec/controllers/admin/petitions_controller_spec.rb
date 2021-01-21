@@ -5,14 +5,14 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
     describe "GET /admin/petitions" do
       it "redirects to the login page" do
         get :index
-        expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/login")
+        expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/login")
       end
     end
 
     describe "GET /admin/petitions/:id" do
       it "redirects to the login page" do
         get :show, params: { id: "100000" }
-        expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/login")
+        expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/login")
       end
     end
   end
@@ -24,14 +24,14 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
     describe "GET /admin/petitions" do
       it "redirects to the edit profile page" do
         get :index
-        expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/profile/#{user.id}/edit")
       end
     end
 
     describe "GET /admin/petitions/:id" do
       it "redirects to the edit profile page" do
         get :show, params: { id: "100000" }
-        expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/profile/#{user.id}/edit")
       end
     end
   end
@@ -79,7 +79,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         before { get :index, params: { q: "100000" } }
 
         it "redirects to the admin petition page" do
-          expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/petitions/100000")
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/petitions/100000")
         end
       end
     end
@@ -89,7 +89,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         before { get :show, params: { id: "999999" } }
 
         it "redirects to the admin dashboard page" do
-          expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin")
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin")
         end
 
         it "sets the flash alert message" do
@@ -117,7 +117,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         before { post :resend, params: { id: "999999" } }
 
         it "redirects to the admin dashboard page" do
-          expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin")
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin")
         end
 
         it "sets the flash alert message" do
@@ -131,7 +131,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         before { perform_enqueued_jobs { post :resend, params: { id: petition.to_param } } }
 
         it "redirects to the admin petition page" do
-          expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/petitions/#{petition.to_param}")
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/petitions/#{petition.to_param}")
         end
 
         it "sets the flash alert message" do
@@ -143,7 +143,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         end
 
         it "sends a copy of the email to the feedback address" do
-          expect(mailbox_for("petitions@senedd.wales").last).to have_subject(/Action required: Petition “Do Stuff!”/)
+          expect(mailbox_for("petitionscommittee@parliament.scot").last).to have_subject(/Action required: Petition “Do Stuff!”/)
         end
       end
     end

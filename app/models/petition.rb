@@ -103,7 +103,7 @@ class Petition < ActiveRecord::Base
     private
 
     def suffix
-      locale == :"gd-GB" ? "cy" : "en"
+      locale == :"gd-GB" ? "gd" : "en"
     end
 
     def translated_method(name)

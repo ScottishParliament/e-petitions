@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Site, type: :model do
   describe "schema" do
-    it { is_expected.to have_db_column(:title_en).of_type(:string).with_options(limit: 50, null: false, default: "Petition the Senedd") }
-    it { is_expected.to have_db_column(:title_gd).of_type(:string).with_options(limit: 50, null: false, default: "Deisebu'r Senedd") }
-    it { is_expected.to have_db_column(:url_en).of_type(:string).with_options(limit: 50, null: false, default: "https://petitions.senedd.wales") }
-    it { is_expected.to have_db_column(:url_gd).of_type(:string).with_options(limit: 50, null: false, default: "https://deisebau.senedd.cymru") }
-    it { is_expected.to have_db_column(:email_from_en).of_type(:string).with_options(limit: 100, null: false, default: %{"Petitions: Senedd" <no-reply@petitions.senedd.wales>}) }
-    it { is_expected.to have_db_column(:email_from_gd).of_type(:string).with_options(limit: 100, null: false, default: %{"Deisebau: Senedd" <dim-ateb@deisebau.senedd.cymru>}) }
+    it { is_expected.to have_db_column(:title_en).of_type(:string).with_options(limit: 50, null: false, default: "Petition the Scottish Parliament") }
+    it { is_expected.to have_db_column(:title_gd).of_type(:string).with_options(limit: 50, null: false, default: "Athchuinge do Phàrlamaid na h-Alba") }
+    it { is_expected.to have_db_column(:url_en).of_type(:string).with_options(limit: 50, null: false, default: "https://petitions.parliament.scot") }
+    it { is_expected.to have_db_column(:url_gd).of_type(:string).with_options(limit: 50, null: false, default: "https://athchuingean.parlamaid-alba.scot") }
+    it { is_expected.to have_db_column(:email_from_en).of_type(:string).with_options(limit: 100, null: false, default: %{"Petitions: Scottish Parliament" <no-reply@petitions.parliament.scot>}) }
+    it { is_expected.to have_db_column(:email_from_gd).of_type(:string).with_options(limit: 100, null: false, default: %{"Athchuingean: Pàrlamaid na h-Alba" <gun-fhreagairt@athchuingean.parlamaid-alba.scot>}) }
     it { is_expected.to have_db_column(:username).of_type(:string).with_options(limit: 30) }
     it { is_expected.to have_db_column(:password_digest).of_type(:string).with_options(limit: 60) }
     it { is_expected.to have_db_column(:enabled).of_type(:boolean).with_options(null: false, default: true) }
@@ -22,7 +22,7 @@ RSpec.describe Site, type: :model do
     it { is_expected.to have_db_column(:last_checked_at).of_type(:datetime).with_options(null: true, default: nil) }
     it { is_expected.to have_db_column(:created_at).of_type(:datetime).with_options(null: false) }
     it { is_expected.to have_db_column(:updated_at).of_type(:datetime).with_options(null: false) }
-    it { is_expected.to have_db_column(:feedback_email).of_type(:string).with_options(limit: 100, default: '"Petitions: Senedd" <petitions@senedd.wales>') }
+    it { is_expected.to have_db_column(:feedback_email).of_type(:string).with_options(limit: 100, default: '"Petitions: Scottish Parliament" <petitionscommittee@parliament.scot>') }
     it { is_expected.to have_db_column(:last_petition_created_at).of_type(:datetime).with_options(null: true, default: nil) }
     it { is_expected.to have_db_column(:login_timeout).of_type(:integer).with_options(null: false, default: 1800) }
     it { is_expected.to have_db_column(:signature_count_updated_at).of_type(:datetime).with_options(null: true, default: nil) }
@@ -104,8 +104,8 @@ RSpec.describe Site, type: :model do
     end
 
     it "delegates title to the instance" do
-      expect(site).to receive(:title).and_return("Petition the Senedd (Test)")
-      expect(Site.title).to eq("Petition the Senedd (Test)")
+      expect(site).to receive(:title).and_return("Petition the Scottish Parliament (Test)")
+      expect(Site.title).to eq("Petition the Scottish Parliament (Test)")
     end
 
     it "delegates url to the instance" do
@@ -277,41 +277,41 @@ RSpec.describe Site, type: :model do
     end
 
     describe "for title_en" do
-      it "defaults to 'Petition the Senedd'" do
-        allow(ENV).to receive(:fetch).with("SITE_TITLE_EN", "Petition the Senedd").and_return("Petition the Senedd")
-        expect(defaults[:title_en]).to eq("Petition the Senedd")
+      it "defaults to 'Petition the Scottish Parliament'" do
+        allow(ENV).to receive(:fetch).with("SITE_TITLE_EN", "Petition the Scottish Parliament").and_return("Petition the Scottish Parliament")
+        expect(defaults[:title_en]).to eq("Petition the Scottish Parliament")
       end
 
       it "can be overridden with the SITE_TITLE_EN environment variable" do
-        allow(ENV).to receive(:fetch).with("SITE_TITLE_EN", "Petition the Senedd").and_return("Petition the Senedd (Test)")
-        expect(defaults[:title_en]).to eq("Petition the Senedd (Test)")
+        allow(ENV).to receive(:fetch).with("SITE_TITLE_EN", "Petition the Scottish Parliament").and_return("Petition the Scottish Parliament (Test)")
+        expect(defaults[:title_en]).to eq("Petition the Scottish Parliament (Test)")
       end
     end
 
     describe "for title_gd" do
-      it "defaults to 'Deisebu'r Senedd'" do
-        allow(ENV).to receive(:fetch).with("SITE_TITLE_GD", "Deisebu'r Senedd").and_return("Deisebu'r Senedd")
-        expect(defaults[:title_gd]).to eq("Deisebu'r Senedd")
+      it "defaults to 'Athchuinge do Phàrlamaid na h-Alba'" do
+        allow(ENV).to receive(:fetch).with("SITE_TITLE_GD", "Athchuinge do Phàrlamaid na h-Alba").and_return("Athchuinge do Phàrlamaid na h-Alba")
+        expect(defaults[:title_gd]).to eq("Athchuinge do Phàrlamaid na h-Alba")
       end
 
       it "can be overridden with the SITE_TITLE_GD environment variable" do
-        allow(ENV).to receive(:fetch).with("SITE_TITLE_GD", "Deisebu'r Senedd").and_return("Deisebu'r Senedd (Prawf)")
-        expect(defaults[:title_gd]).to eq("Deisebu'r Senedd (Prawf)")
+        allow(ENV).to receive(:fetch).with("SITE_TITLE_GD", "Athchuinge do Phàrlamaid na h-Alba").and_return("Athchuinge do Phàrlamaid na h-Alba (Prawf)")
+        expect(defaults[:title_gd]).to eq("Athchuinge do Phàrlamaid na h-Alba (Prawf)")
       end
     end
 
     describe "for url_en" do
-      it "defaults to 'https://petitions.senedd.wales'" do
+      it "defaults to 'https://petitions.parliament.scot'" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("https")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.senedd.wales").and_return("petitions.senedd.wales")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.parliament.scot").and_return("petitions.parliament.scot")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return(443)
 
-        expect(defaults[:url_en]).to eq("https://petitions.senedd.wales")
+        expect(defaults[:url_en]).to eq("https://petitions.parliament.scot")
       end
 
       it "allows overriding via environment variables" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("http")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.senedd.wales").and_return("localhost")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.parliament.scot").and_return("localhost")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return("3000")
 
         expect(defaults[:url_en]).to eq("http://localhost:3000")
@@ -319,17 +319,17 @@ RSpec.describe Site, type: :model do
     end
 
     describe "for url_gd" do
-      it "defaults to 'https://petitions.senedd.wales'" do
+      it "defaults to 'https://petitions.parliament.scot'" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("https")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "deisebau.senedd.cymru").and_return("deisebau.senedd.cymru")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "athchuingean.parlamaid-alba.scot").and_return("athchuingean.parlamaid-alba.scot")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return(443)
 
-        expect(defaults[:url_gd]).to eq("https://deisebau.senedd.cymru")
+        expect(defaults[:url_gd]).to eq("https://athchuingean.parlamaid-alba.scot")
       end
 
       it "allows overriding via environment variables" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("http")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "deisebau.senedd.cymru").and_return("localhost")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "athchuingean.parlamaid-alba.scot").and_return("localhost")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return("3000")
 
         expect(defaults[:url_gd]).to eq("http://localhost:3000")
@@ -337,17 +337,17 @@ RSpec.describe Site, type: :model do
     end
 
     describe "for moderate_url" do
-      it "defaults to 'https://moderate.petitions.senedd.wales'" do
+      it "defaults to 'https://moderate.petitions.parliament.scot'" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("https")
-        allow(ENV).to receive(:fetch).with("MODERATE_HOST", "moderate.petitions.senedd.wales").and_return("moderate.petitions.senedd.wales")
+        allow(ENV).to receive(:fetch).with("MODERATE_HOST", "moderate.petitions.parliament.scot").and_return("moderate.petitions.parliament.scot")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return(443)
 
-        expect(defaults[:moderate_url]).to eq("https://moderate.petitions.senedd.wales")
+        expect(defaults[:moderate_url]).to eq("https://moderate.petitions.parliament.scot")
       end
 
       it "allows overriding via environment variables" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("http")
-        allow(ENV).to receive(:fetch).with("MODERATE_HOST", "moderate.petitions.senedd.wales").and_return("localhost")
+        allow(ENV).to receive(:fetch).with("MODERATE_HOST", "moderate.petitions.parliament.scot").and_return("localhost")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return("3000")
 
         expect(defaults[:moderate_url]).to eq("http://localhost:3000")
@@ -355,70 +355,70 @@ RSpec.describe Site, type: :model do
     end
 
     describe "for email_from_en" do
-      it "defaults to 'no-reply@petitions.senedd.wales'" do
+      it "defaults to 'no-reply@petitions.parliament.scot'" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("https")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.senedd.wales").and_return("petitions.senedd.wales")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.parliament.scot").and_return("petitions.parliament.scot")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return(443)
 
-        expect(defaults[:email_from_en]).to eq(%{"Petitions: Senedd" <no-reply@petitions.senedd.wales>})
+        expect(defaults[:email_from_en]).to eq(%{"Petitions: Scottish Parliament" <no-reply@petitions.parliament.scot>})
       end
 
       it "allows overriding via the url environment variables" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("http")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.senedd.wales").and_return("localhost")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.parliament.scot").and_return("localhost")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return("3000")
 
-        expect(defaults[:email_from_en]).to eq(%{"Petitions: Senedd" <no-reply@localhost>})
+        expect(defaults[:email_from_en]).to eq(%{"Petitions: Scottish Parliament" <no-reply@localhost>})
       end
 
       it "allows overriding via the EPETITIONS_FROM_EN environment variables" do
-        allow(ENV).to receive(:fetch).with("EPETITIONS_FROM_EN", %{"Petitions: Senedd" <no-reply@petitions.senedd.wales>}).and_return("no-reply@downingstreet.gov.uk")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_FROM_EN", %{"Petitions: Scottish Parliament" <no-reply@petitions.parliament.scot>}).and_return("no-reply@downingstreet.gov.uk")
         expect(defaults[:email_from_en]).to eq("no-reply@downingstreet.gov.uk")
       end
     end
 
     describe "for email_from_gd" do
-      it "defaults to 'dim-ateb@deisebau.senedd.cymru'" do
+      it "defaults to 'gun-fhreagairt@athchuingean.parlamaid-alba.scot'" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("https")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "deisebau.senedd.cymru").and_return("deisebau.senedd.cymru")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "athchuingean.parlamaid-alba.scot").and_return("athchuingean.parlamaid-alba.scot")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return(443)
 
-        expect(defaults[:email_from_gd]).to eq(%{"Deisebau: Senedd" <dim-ateb@deisebau.senedd.cymru>})
+        expect(defaults[:email_from_gd]).to eq(%{"Athchuingean: Pàrlamaid na h-Alba" <gun-fhreagairt@athchuingean.parlamaid-alba.scot>})
       end
 
       it "allows overriding via the url environment variables" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("http")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "deisebau.senedd.cymru").and_return("localhost")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "athchuingean.parlamaid-alba.scot").and_return("localhost")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return("3000")
 
-        expect(defaults[:email_from_gd]).to eq(%{"Deisebau: Senedd" <dim-ateb@localhost>})
+        expect(defaults[:email_from_gd]).to eq(%{"Athchuingean: Pàrlamaid na h-Alba" <gun-fhreagairt@localhost>})
       end
 
       it "allows overriding via the EPETITIONS_FROM_GD environment variables" do
-        allow(ENV).to receive(:fetch).with("EPETITIONS_FROM_GD", %{"Deisebau: Senedd" <dim-ateb@deisebau.senedd.cymru>}).and_return("no-reply@downingstreet.gov.uk")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_FROM_GD", %{"Athchuingean: Pàrlamaid na h-Alba" <gun-fhreagairt@athchuingean.parlamaid-alba.scot>}).and_return("no-reply@downingstreet.gov.uk")
         expect(defaults[:email_from_gd]).to eq("no-reply@downingstreet.gov.uk")
       end
     end
 
     describe "for feedback_email" do
-      it "defaults to 'petitions@senedd.wales'" do
+      it "defaults to 'petitionscommittee@parliament.scot'" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("https")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.senedd.wales").and_return("petitions.senedd.wales")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.parliament.scot").and_return("petitions.parliament.scot")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return(443)
 
-        expect(defaults[:feedback_email]).to eq(%{"Petitions: Senedd" <petitions@senedd.wales>})
+        expect(defaults[:feedback_email]).to eq(%{"Petitions: Scottish Parliament" <petitionscommittee@parliament.scot>})
       end
 
       it "allows overriding via the url environment variables" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("http")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.senedd.wales").and_return("localhost")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_EN", "petitions.parliament.scot").and_return("localhost")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return("3000")
 
-        expect(defaults[:feedback_email]).to eq(%{"Petitions: Senedd" <petitions@localhost>})
+        expect(defaults[:feedback_email]).to eq(%{"Petitions: Scottish Parliament" <petitionscommittee@localhost>})
       end
 
       it "allows overriding via the EPETITIONS_FEEDBACK environment variables" do
-        allow(ENV).to receive(:fetch).with("EPETITIONS_FEEDBACK", %{"Petitions: Senedd" <petitions@senedd.wales>}).and_return("petitions@assembly.wales")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_FEEDBACK", %{"Petitions: Scottish Parliament" <petitionscommittee@parliament.scot>}).and_return("petitions@assembly.wales")
         expect(defaults[:feedback_email]).to eq("petitions@assembly.wales")
       end
     end
@@ -688,8 +688,8 @@ RSpec.describe Site, type: :model do
 
     it "returns an array of valid origin urls" do
       expect(Site.urls).to eq %w[
-        https://petitions.senedd.wales
-        https://deisebau.senedd.cymru
+        https://petitions.parliament.scot
+        https://athchuingean.parlamaid-alba.scot
       ]
     end
   end

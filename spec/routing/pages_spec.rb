@@ -23,16 +23,16 @@ RSpec.describe "pages", type: :routes do
     end
 
     describe "helpers" do
-      it "#home_url generates https://petitions.senedd.wales/" do
-        expect(home_url).to eq("https://petitions.senedd.wales/")
+      it "#home_url generates https://petitions.parliament.scot/" do
+        expect(home_url).to eq("https://petitions.parliament.scot/")
       end
 
-      it "#help_url generates https://petitions.senedd.wales/help" do
-        expect(help_url).to eq("https://petitions.senedd.wales/help")
+      it "#help_url generates https://petitions.parliament.scot/help" do
+        expect(help_url).to eq("https://petitions.parliament.scot/help")
       end
 
-      it "#privacy_url generates https://petitions.senedd.wales/privacy" do
-        expect(privacy_url).to eq("https://petitions.senedd.wales/privacy")
+      it "#privacy_url generates https://petitions.parliament.scot/privacy" do
+        expect(privacy_url).to eq("https://petitions.parliament.scot/privacy")
       end
     end
   end
@@ -59,16 +59,16 @@ RSpec.describe "pages", type: :routes do
     end
 
     describe "helpers" do
-      it "#home_url generates https://deisebau.senedd.cymru/" do
-        expect(home_url).to eq("https://deisebau.senedd.cymru/")
+      it "#home_url generates https://athchuingean.parlamaid-alba.scot/" do
+        expect(home_url).to eq("https://athchuingean.parlamaid-alba.scot/")
       end
 
-      it "#help_url generates https://deisebau.senedd.cymru/help" do
-        expect(help_url).to eq("https://deisebau.senedd.cymru/help")
+      it "#help_url generates https://athchuingean.parlamaid-alba.scot/help" do
+        expect(help_url).to eq("https://athchuingean.parlamaid-alba.scot/help")
       end
 
-      it "#privacy_url generates https://deisebau.senedd.cymru/preifatrwydd" do
-        expect(privacy_url).to eq("https://deisebau.senedd.cymru/preifatrwydd")
+      it "#privacy_url generates https://athchuingean.parlamaid-alba.scot/preifatrwydd" do
+        expect(privacy_url).to eq("https://athchuingean.parlamaid-alba.scot/preifatrwydd")
       end
     end
   end

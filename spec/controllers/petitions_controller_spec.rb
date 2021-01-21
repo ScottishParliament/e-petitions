@@ -47,7 +47,7 @@ RSpec.describe PetitionsController, type: :controller do
         end
 
         expect(petition.creator).not_to be_nil
-        expect(response).to redirect_to("https://petitions.senedd.wales/petitions/thank-you")
+        expect(response).to redirect_to("https://petitions.parliament.scot/petitions/thank-you")
       end
 
       it "should successfully create a new petition and a signature even when email has white space either end" do
@@ -56,7 +56,7 @@ RSpec.describe PetitionsController, type: :controller do
         end
 
         expect(petition).not_to be_nil
-        expect(response).to redirect_to("https://petitions.senedd.wales/petitions/thank-you")
+        expect(response).to redirect_to("https://petitions.parliament.scot/petitions/thank-you")
       end
 
       it "should strip a petition action on petition creation" do
@@ -65,7 +65,7 @@ RSpec.describe PetitionsController, type: :controller do
         end
 
         expect(petition).not_to be_nil
-        expect(response).to redirect_to("https://petitions.senedd.wales/petitions/thank-you")
+        expect(response).to redirect_to("https://petitions.parliament.scot/petitions/thank-you")
       end
 
       it "should send gather sponsors email to petition's creator" do
@@ -74,7 +74,7 @@ RSpec.describe PetitionsController, type: :controller do
         end
 
         expect(last_email_sent).to deliver_to("john@example.com")
-        expect(last_email_sent).to deliver_from(%{"Petitions: Senedd" <no-reply@petitions.senedd.wales>})
+        expect(last_email_sent).to deliver_from(%{"Petitions: Scottish Parliament" <no-reply@petitions.parliament.scot>})
         expect(last_email_sent).to have_subject(/Action required: Petition “Save the planet”/)
       end
 
@@ -246,7 +246,7 @@ RSpec.describe PetitionsController, type: :controller do
         end
 
         expect(petition).to be_nil
-        expect(response).to redirect_to("https://petitions.senedd.wales/petitions/thank-you")
+        expect(response).to redirect_to("https://petitions.parliament.scot/petitions/thank-you")
       end
     end
   end
@@ -289,12 +289,12 @@ RSpec.describe PetitionsController, type: :controller do
       context "but it is not a public facet from the locale file" do
         it "redirects to itself with state=all" do
           get :index, params: { state: "awaiting_monkey" }
-          expect(response).to redirect_to "https://petitions.senedd.wales/petitions?state=all"
+          expect(response).to redirect_to "https://petitions.parliament.scot/petitions?state=all"
         end
 
         it "preserves other params when it redirects" do
           get :index, params: { q: "what is clocks", state: "awaiting_monkey" }
-          expect(response).to redirect_to "https://petitions.senedd.wales/petitions?q=what+is+clocks&state=all"
+          expect(response).to redirect_to "https://petitions.parliament.scot/petitions?q=what+is+clocks&state=all"
         end
       end
 

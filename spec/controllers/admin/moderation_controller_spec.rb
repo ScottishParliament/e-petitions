@@ -65,7 +65,7 @@ RSpec.describe Admin::ModerationController, type: :controller, admin: true do
         end
 
         it "redirects to the admin show page for the petition page" do
-          expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/petitions/#{petition.id}")
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/petitions/#{petition.id}")
         end
 
         it "sends an email to the petition creator" do
@@ -130,7 +130,7 @@ RSpec.describe Admin::ModerationController, type: :controller, admin: true do
           end
 
           it 'redirects to the admin show page for the petition' do
-            expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/petitions/#{petition.id}")
+            expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/petitions/#{petition.id}")
           end
 
           it "sends an email to the petition creator" do
@@ -174,7 +174,7 @@ RSpec.describe Admin::ModerationController, type: :controller, admin: true do
           end
 
           it 'redirects to the admin show page for the petition' do
-            expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/petitions/#{petition.id}")
+            expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/petitions/#{petition.id}")
           end
 
           it "sends an email to the petition creator" do
@@ -244,7 +244,7 @@ RSpec.describe Admin::ModerationController, type: :controller, admin: true do
         end
 
         it "redirects to the admin show page for the petition page" do
-          expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/petitions/#{petition.id}")
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/petitions/#{petition.id}")
         end
 
         it "does not send an email to the petition creator" do
@@ -277,7 +277,7 @@ RSpec.describe Admin::ModerationController, type: :controller, admin: true do
         end
 
         it "redirects to the admin show page for the petition page" do
-          expect(response).to redirect_to("https://moderate.petitions.senedd.wales/admin/petitions/#{petition.id}")
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/petitions/#{petition.id}")
         end
 
         it "does not send an email to the petition creator" do

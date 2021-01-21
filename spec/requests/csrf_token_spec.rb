@@ -5,14 +5,14 @@ RSpec.describe 'token', type: :request do
     {
       first_name: "System",
       last_name: "Administrator",
-      email: "admin@petitions.senedd.wales",
+      email: "admin@petitions.parliament.scot",
       password: "L3tme1n!",
       password_confirmation: "L3tme1n!"
     }
   end
 
   let(:login_params) do
-    { email: "admin@petitions.senedd.wales", password: "L3tme1n!" }
+    { email: "admin@petitions.parliament.scot", password: "L3tme1n!" }
   end
 
   let(:encrypted_csrf_token) do
@@ -27,7 +27,7 @@ RSpec.describe 'token', type: :request do
   before do
     FactoryBot.create(:sysadmin_user, user_attributes)
 
-    host! "moderate.petitions.senedd.wales"
+    host! "moderate.petitions.parliament.scot"
     https!
 
     get "/admin/login"

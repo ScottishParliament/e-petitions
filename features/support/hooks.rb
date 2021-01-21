@@ -47,13 +47,13 @@ Before('~@welsh') do
 end
 
 Before('@admin') do
-  Capybara.app_host = 'https://moderate.petitions.senedd.wales'
-  Capybara.default_host = 'https://moderate.petitions.senedd.wales'
+  Capybara.app_host = 'https://moderate.petitions.parliament.scot'
+  Capybara.default_host = 'https://moderate.petitions.parliament.scot'
 end
 
 Before('~@admin') do
-  Capybara.app_host = 'https://petitions.senedd.wales'
-  Capybara.default_host = 'https://petitions.senedd.wales'
+  Capybara.app_host = 'https://petitions.parliament.scot'
+  Capybara.default_host = 'https://petitions.parliament.scot'
 end
 
 Before('@skip') do
