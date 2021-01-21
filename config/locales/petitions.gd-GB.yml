@@ -1,4 +1,4 @@
-cy-GB:
+gd-GB:
   local_petitions:
     csv_filename:
       all: "all-popular-petitions-in-%{constituency}.csv"

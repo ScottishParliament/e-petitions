@@ -1,5 +1,5 @@
 {
-  "cy-GB": {
+  "gd-GB": {
     "i18n": {
       "plural": {
         "keys": %i[zero one two other],

@@ -1,4 +1,4 @@
-cy-GB:
+gd-GB:
   notify:
     templates:
       email_confirmation_for_signer: "de60bc30-2d7b-4a71-851f-0ac357af048f"
