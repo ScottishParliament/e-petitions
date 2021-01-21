@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_20_183137) do
+ActiveRecord::Schema.define(version: 2021_01_20_192856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "intarray"
@@ -42,12 +42,12 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
   create_table "constituencies", id: :string, limit: 9, force: :cascade do |t|
     t.string "region_id", limit: 9, null: false
     t.string "name_en", limit: 100, null: false
-    t.string "name_cy", limit: 100, null: false
+    t.string "name_gd", limit: 100, null: false
     t.string "example_postcode", limit: 7, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name_cy"], name: "index_constituencies_on_name_cy", unique: true
     t.index ["name_en"], name: "index_constituencies_on_name_en", unique: true
+    t.index ["name_gd"], name: "index_constituencies_on_name_gd", unique: true
     t.index ["region_id"], name: "index_constituencies_on_region_id"
   end
 
@@ -91,13 +91,13 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
     t.integer "commons_image_file_size"
     t.datetime "commons_image_updated_at"
     t.string "transcript_url_en", limit: 500
-    t.string "transcript_url_cy", limit: 500
+    t.string "transcript_url_gd", limit: 500
     t.string "video_url_en", limit: 500
-    t.string "video_url_cy", limit: 500
+    t.string "video_url_gd", limit: 500
     t.string "debate_pack_url_en", limit: 500
-    t.string "debate_pack_url_cy", limit: 500
+    t.string "debate_pack_url_gd", limit: 500
     t.text "overview_en"
-    t.text "overview_cy"
+    t.text "overview_gd"
     t.index ["petition_id", "debated_on"], name: "index_debate_outcomes_on_petition_id_and_debated_on"
     t.index ["petition_id"], name: "index_debate_outcomes_on_petition_id", unique: true
     t.index ["updated_at"], name: "index_debate_outcomes_on_updated_at"
@@ -201,9 +201,9 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
     t.string "region_id", limit: 9
     t.string "constituency_id", limit: 9
     t.string "name_en", limit: 100, null: false
-    t.string "name_cy", limit: 100, null: false
+    t.string "name_gd", limit: 100, null: false
     t.string "party_en", limit: 100, null: false
-    t.string "party_cy", limit: 100, null: false
+    t.string "party_gd", limit: 100, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["constituency_id"], name: "index_members_on_constituency_id", unique: true
@@ -224,9 +224,9 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "subject_en", null: false
-    t.string "subject_cy", null: false
+    t.string "subject_gd", null: false
     t.text "body_en"
-    t.text "body_cy"
+    t.text "body_gd"
     t.index ["petition_id"], name: "index_petition_emails_on_petition_id"
   end
 
@@ -267,15 +267,15 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
     t.text "committee_note"
     t.string "locale", limit: 7, default: "en-GB", null: false
     t.string "action_en", limit: 255
-    t.string "action_cy", limit: 255
+    t.string "action_gd", limit: 255
     t.text "additional_details_en"
-    t.text "additional_details_cy"
+    t.text "additional_details_gd"
     t.string "background_en", limit: 3000
-    t.string "background_cy", limit: 3000
+    t.string "background_gd", limit: 3000
     t.datetime "completed_at"
     t.datetime "referred_at"
     t.string "abms_link_en"
-    t.string "abms_link_cy"
+    t.string "abms_link_gd"
     t.boolean "submitted_on_paper", default: false, null: false
     t.date "submitted_on"
     t.datetime "archived_at"
@@ -286,9 +286,9 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
     t.index "to_tsvector('english'::regconfig, (action_en)::text)", name: "index_petitions_on_action_en", using: :gin
     t.index "to_tsvector('english'::regconfig, (background_en)::text)", name: "index_petitions_on_background_en", using: :gin
     t.index "to_tsvector('english'::regconfig, additional_details_en)", name: "index_petitions_on_additional_details_en", using: :gin
-    t.index "to_tsvector('simple'::regconfig, (action_cy)::text)", name: "index_petitions_on_action_cy", using: :gin
-    t.index "to_tsvector('simple'::regconfig, (background_cy)::text)", name: "index_petitions_on_background_cy", using: :gin
-    t.index "to_tsvector('simple'::regconfig, additional_details_cy)", name: "index_petitions_on_additional_details_cy", using: :gin
+    t.index "to_tsvector('simple'::regconfig, (action_gd)::text)", name: "index_petitions_on_action_cy", using: :gin
+    t.index "to_tsvector('simple'::regconfig, (background_gd)::text)", name: "index_petitions_on_background_cy", using: :gin
+    t.index "to_tsvector('simple'::regconfig, additional_details_gd)", name: "index_petitions_on_additional_details_cy", using: :gin
     t.index ["anonymized_at"], name: "index_petitions_on_anonymized_at"
     t.index ["archived_at", "state"], name: "index_petitions_on_archived_at_and_state"
     t.index ["created_at", "state"], name: "index_petitions_on_created_at_and_state"
@@ -337,18 +337,18 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
 
   create_table "regions", id: :string, limit: 9, force: :cascade do |t|
     t.string "name_en", limit: 100, null: false
-    t.string "name_cy", limit: 100, null: false
+    t.string "name_gd", limit: 100, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name_cy"], name: "index_regions_on_name_cy", unique: true
     t.index ["name_en"], name: "index_regions_on_name_en", unique: true
+    t.index ["name_gd"], name: "index_regions_on_name_gd", unique: true
   end
 
   create_table "rejection_reasons", force: :cascade do |t|
     t.string "code", limit: 30, null: false
     t.string "title", limit: 100, null: false
     t.string "description_en", limit: 2000, null: false
-    t.string "description_cy", limit: 2000, null: false
+    t.string "description_gd", limit: 2000, null: false
     t.boolean "hidden", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -363,7 +363,7 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "details_en"
-    t.text "details_cy"
+    t.text "details_gd"
     t.index ["petition_id"], name: "index_rejections_on_petition_id", unique: true
   end
 
@@ -449,9 +449,9 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
     t.integer "signature_count_interval", default: 60, null: false
     t.boolean "update_signature_counts", default: false, null: false
     t.integer "threshold_for_moderation_delay", default: 500, null: false
-    t.string "title_cy", limit: 50, default: "Athchuinge do Phàrlamaid na h-Alba", null: false
-    t.string "url_cy", limit: 50, default: "https://athchuingean.parlamaid-alba.scot", null: false
-    t.string "email_from_cy", limit: 100, default: "\"Athchuingean: Pàrlamaid na h-Alba\" <gun-fhreagairt@athchuingean.parlamaid-alba.scot>", null: false
+    t.string "title_gd", limit: 50, default: "Athchuinge do Phàrlamaid na h-Alba", null: false
+    t.string "url_gd", limit: 50, default: "https://athchuingean.parlamaid-alba.scot", null: false
+    t.string "email_from_gd", limit: 100, default: "\"Athchuingean: Pàrlamaid na h-Alba\" <gun-fhreagairt@athchuingean.parlamaid-alba.scot>", null: false
     t.datetime "translations_updated_at"
   end
 
@@ -474,15 +474,15 @@ ActiveRecord::Schema.define(version: 2021_01_20_183137) do
 
   create_table "topics", force: :cascade do |t|
     t.string "code_en", limit: 100, null: false
-    t.string "code_cy", limit: 100, null: false
+    t.string "code_gd", limit: 100, null: false
     t.string "name_en", limit: 100, null: false
-    t.string "name_cy", limit: 100, null: false
+    t.string "name_gd", limit: 100, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["code_cy"], name: "index_topics_on_code_cy", unique: true
     t.index ["code_en"], name: "index_topics_on_code_en", unique: true
-    t.index ["name_cy"], name: "index_topics_on_name_cy", unique: true
+    t.index ["code_gd"], name: "index_topics_on_code_gd", unique: true
     t.index ["name_en"], name: "index_topics_on_name_en", unique: true
+    t.index ["name_gd"], name: "index_topics_on_name_gd", unique: true
   end
 
   create_table "trending_domains", force: :cascade do |t|
