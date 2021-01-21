@@ -10,9 +10,9 @@ RSpec.describe Member, type: :model do
     it { is_expected.to have_db_column(:region_id).of_type(:string).with_options(null: true, limit: 9) }
     it { is_expected.to have_db_column(:constituency_id).of_type(:string).with_options(null: true, limit: 9) }
     it { is_expected.to have_db_column(:name_en).of_type(:string).with_options(null: false, limit: 100) }
-    it { is_expected.to have_db_column(:name_cy).of_type(:string).with_options(null: false, limit: 100) }
+    it { is_expected.to have_db_column(:name_gd).of_type(:string).with_options(null: false, limit: 100) }
     it { is_expected.to have_db_column(:party_en).of_type(:string).with_options(null: false, limit: 100) }
-    it { is_expected.to have_db_column(:party_cy).of_type(:string).with_options(null: false, limit: 100) }
+    it { is_expected.to have_db_column(:party_gd).of_type(:string).with_options(null: false, limit: 100) }
     it { is_expected.to have_db_column(:created_at).of_type(:datetime).with_options(null: false) }
     it { is_expected.to have_db_column(:updated_at).of_type(:datetime).with_options(null: false) }
   end

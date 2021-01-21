@@ -71,12 +71,12 @@ class Site < ActiveRecord::Base
     end
     alias_method :host_with_port, :host_with_port_en
 
-    def host_cy
-      instance.host_cy
+    def host_gd
+      instance.host_gd
     end
 
-    def host_with_port_cy
-      instance.host_with_port_cy
+    def host_with_port_gd
+      instance.host_with_port_gd
     end
 
     def constraints_for_public_en
@@ -88,11 +88,11 @@ class Site < ActiveRecord::Base
     end
     alias_method :constraints_for_public, :constraints_for_public_en
 
-    def constraints_for_public_cy
+    def constraints_for_public_gd
       if table_exists?
-        instance.constraints_for_public_cy
+        instance.constraints_for_public_gd
       else
-        default_constraints_for_public_cy
+        default_constraints_for_public_gd
       end
     end
 
@@ -125,8 +125,8 @@ class Site < ActiveRecord::Base
     end
     alias_method :port, :port_en
 
-    def port_cy
-      instance.port_cy
+    def port_gd
+      instance.port_gd
     end
 
     def protected?
@@ -187,12 +187,12 @@ class Site < ActiveRecord::Base
     def defaults
       {
         title_en:                       default_title_en,
-        title_cy:                       default_title_cy,
+        title_gd:                       default_title_gd,
         url_en:                         default_url_en,
-        url_cy:                         default_url_cy,
+        url_gd:                         default_url_gd,
         moderate_url:                   default_moderate_url,
         email_from_en:                  default_email_from_en,
-        email_from_cy:                  default_email_from_cy,
+        email_from_gd:                  default_email_from_gd,
         feedback_email:                 default_feedback_email,
         username:                       default_username,
         password:                       default_password,
@@ -211,7 +211,7 @@ class Site < ActiveRecord::Base
 
     %i[title url email_from].each do |method|
       method_en = :"#{method}_en"
-      method_cy = :"#{method}_cy"
+      method_gd = :"#{method}_gd"
 
       define_method method do
         instance.public_send method
@@ -221,13 +221,13 @@ class Site < ActiveRecord::Base
         instance.public_send method_en
       end
 
-      define_method method_cy do
-        instance.public_send method_cy
+      define_method method_gd do
+        instance.public_send method_gd
       end
     end
 
     def urls
-      [url_en, url_cy]
+      [url_en, url_gd]
     end
 
     def feedback_address
@@ -249,8 +249,8 @@ class Site < ActiveRecord::Base
     end
     alias_method :default_title, :default_title_en
 
-    def default_title_cy
-      ENV.fetch('SITE_TITLE_CY', "Deisebu'r Senedd")
+    def default_title_gd
+      ENV.fetch('SITE_TITLE_GD', "Deisebu'r Senedd")
     end
 
     def default_scheme
@@ -269,8 +269,8 @@ class Site < ActiveRecord::Base
       default_uri.build(default_url_components(default_host_en)).to_s
     end
 
-    def default_url_cy
-      default_uri.build(default_url_components(default_host_cy)).to_s
+    def default_url_gd
+      default_uri.build(default_url_components(default_host_gd)).to_s
     end
 
     def default_url_components(host)
@@ -282,8 +282,8 @@ class Site < ActiveRecord::Base
     end
     alias_method :default_host, :default_host_en
 
-    def default_host_cy
-      ENV.fetch('EPETITIONS_HOST_CY', 'deisebau.senedd.cymru')
+    def default_host_gd
+      ENV.fetch('EPETITIONS_HOST_GD', 'deisebau.senedd.cymru')
     end
 
     def default_domain(tld_length = 1)
@@ -311,8 +311,8 @@ class Site < ActiveRecord::Base
     end
     alias_method :default_email_from, :default_email_from_en
 
-    def default_email_from_cy
-      ENV.fetch('EPETITIONS_FROM_CY', %{"Deisebau: Senedd" <dim-ateb@#{default_host_cy}>})
+    def default_email_from_gd
+      ENV.fetch('EPETITIONS_FROM_GD', %{"Deisebau: Senedd" <dim-ateb@#{default_host_gd}>})
     end
 
     def default_feedback_email
@@ -372,8 +372,8 @@ class Site < ActiveRecord::Base
     end
     alias_method :default_constraints_for_public, :default_constraints_for_public_en
 
-    def default_constraints_for_public_cy
-      { protocol: default_protocol, host: default_host_cy, port: default_port }
+    def default_constraints_for_public_gd
+      { protocol: default_protocol, host: default_host_gd, port: default_port }
     end
 
     def default_constraints_for_moderation
@@ -447,12 +447,12 @@ class Site < ActiveRecord::Base
   end
   alias_method :host_with_port, :host_with_port_en
 
-  def host_cy
-    uri_cy.host
+  def host_gd
+    uri_gd.host
   end
 
-  def host_with_port_cy
-    "#{host_cy}#{port_string(uri_cy)}"
+  def host_with_port_gd
+    "#{host_gd}#{port_string(uri_gd)}"
   end
 
   def port_en
@@ -465,12 +465,12 @@ class Site < ActiveRecord::Base
   end
   alias_method :protocol, :protocol_en
 
-  def port_cy
-    uri_cy.port
+  def port_gd
+    uri_gd.port
   end
 
-  def protocol_cy
-    "#{uri_cy.scheme}://"
+  def protocol_gd
+    "#{uri_gd.scheme}://"
   end
 
   def constraints_for_public_en
@@ -480,9 +480,9 @@ class Site < ActiveRecord::Base
   end
   alias_method :constraints_for_public, :constraints_for_public_en
 
-  def constraints_for_public_cy
+  def constraints_for_public_gd
     unless database_migrating?
-      { protocol: protocol_cy, host: host_cy, port: port_cy }
+      { protocol: protocol_gd, host: host_gd, port: port_gd }
     end
   end
 
@@ -546,10 +546,10 @@ class Site < ActiveRecord::Base
     @feedback_address ||= Mail::Address.new(feedback_email).address
   end
 
-  validates :title_en, :title_cy, presence: true, length: { maximum: 50 }
-  validates :url_en, :url_cy, presence: true, length: { maximum: 50 }
+  validates :title_en, :title_gd, presence: true, length: { maximum: 50 }
+  validates :url_en, :url_gd, presence: true, length: { maximum: 50 }
   validates :moderate_url, presence: true, length: { maximum: 50 }
-  validates :email_from_en, :email_from_cy, presence: true, length: { maximum: 100 }
+  validates :email_from_en, :email_from_gd, presence: true, length: { maximum: 100 }
   validates :feedback_email, presence: true, length: { maximum: 100 }
   validates :petition_duration, presence: true, numericality: { only_integer: true }
   validates :minimum_number_of_sponsors, presence: true, numericality: { only_integer: true }
@@ -618,8 +618,8 @@ class Site < ActiveRecord::Base
   end
   alias_method :uri, :uri_en
 
-  def uri_cy
-    @uri_cy ||= URI.parse(url_cy)
+  def uri_gd
+    @uri_gd ||= URI.parse(url_gd)
   end
 
   def moderate_uri

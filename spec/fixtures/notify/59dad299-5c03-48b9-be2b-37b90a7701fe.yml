@@ -1,5 +1,5 @@
 id: "59dad299-5c03-48b9-be2b-37b90a7701fe"
-name: "notify_creator_that_petition_was_rejected_hidden_cy"
+name: "notify_creator_that_petition_was_rejected_hidden_gd"
 subject: "Gwrthodwyd eich deiseb “((action))” | We rejected your petition “((action))”"
 body: |-
   Annwyl ((creator)),
@@ -10,13 +10,13 @@ body: |-
   
   Yn anffodus, ni allwn dderbyn y ddeiseb a gynigiwyd gennych “((action))”.
    
-  ((content_cy))
+  ((content_gd))
   
   Dim ond deisebau nad ydynt yn bodloni’r safonau y byddwn yn eu gwrthod:
-  ((standards_url_cy))
+  ((standards_url_gd))
   
   Os hoffech roi cynnig arall arni, cliciwch yma i ddechrau deiseb:
-  ((new_petition_url_cy))
+  ((new_petition_url_gd))
   
   Mae’n ddrwg gennym na allwn fwrw ymlaen â’ch deiseb y tro hwn. 
   

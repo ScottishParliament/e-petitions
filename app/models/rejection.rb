@@ -8,11 +8,11 @@ class Rejection < ActiveRecord::Base
 
   validates :petition, presence: true
   validates :code, presence: true, inclusion: { in: :rejection_codes }
-  validates :details_en, :details_cy, length: { maximum: 4000 }, allow_blank: true
+  validates :details_en, :details_gd, length: { maximum: 4000 }, allow_blank: true
 
   attr_writer :rejected_at
 
-  delegate :description_en, :description_cy, to: :rejection_reason
+  delegate :description_en, :description_gd, to: :rejection_reason
 
   after_save do
     # Prevent deprecation warnings about the
@@ -33,19 +33,19 @@ class Rejection < ActiveRecord::Base
   end
 
   def content
-    translated_method(:content_en, :content_cy)
+    translated_method(:content_en, :content_gd)
   end
 
   def content_en
     [description_en, details_en].reject(&:blank?).join("\n\n")
   end
 
-  def content_cy
-    [description_cy, details_cy].reject(&:blank?).join("\n\n")
+  def content_gd
+    [description_gd, details_gd].reject(&:blank?).join("\n\n")
   end
 
   def description
-    translated_method(:description_en, :description_cy)
+    translated_method(:description_en, :description_gd)
   end
 
   def rejected_at

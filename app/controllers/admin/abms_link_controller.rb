@@ -20,6 +20,6 @@ class Admin::AbmsLinkController < Admin::AdminController
   end
 
   def petition_params
-    params.require(:petition).permit(:abms_link_en, :abms_link_cy)
+    params.require(:petition).permit(:abms_link_en, :abms_link_gd)
   end
 end

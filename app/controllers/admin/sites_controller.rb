@@ -26,7 +26,7 @@ class Admin::SitesController < Admin::AdminController
 
   def site_params
     params.require(:site).permit(
-      :title_en, :title_cy, :url_en, :url_cy, :email_from_en, :email_from_cy,
+      :title_en, :title_gd, :url_en, :url_gd, :email_from_en, :email_from_gd,
       :username, :password, :enabled, :protected, :petition_duration,
       :minimum_number_of_sponsors, :maximum_number_of_sponsors,
       :threshold_for_moderation, :threshold_for_referral, :threshold_for_debate,

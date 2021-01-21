@@ -5,7 +5,7 @@ class GatherSponsorsForPetitionEmailJob < NotifyJob
     {
       action:  petition.action, content: petition.content, creator: signature.name,
       url_en:  new_petition_sponsor_en_url(petition, token: petition.sponsor_token),
-      url_cy:  new_petition_sponsor_cy_url(petition, token: petition.sponsor_token)
+      url_gd:  new_petition_sponsor_gd_url(petition, token: petition.sponsor_token)
     }
   end
 

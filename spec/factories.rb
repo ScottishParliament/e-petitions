@@ -80,13 +80,13 @@ FactoryBot.define do
     trait :translated do
       after(:build) do |petition, evaluator|
         if petition.english?
-          petition.action_cy ||= petition.action_en
-          petition.background_cy ||= petition.background_en
-          petition.additional_details_cy ||= petition.additional_details_en
+          petition.action_gd ||= petition.action_en
+          petition.background_gd ||= petition.background_en
+          petition.additional_details_gd ||= petition.additional_details_en
         else
-          petition.action_en ||= petition.action_cy
-          petition.background_en ||= petition.background_cy
-          petition.additional_details_en ||= petition.additional_details_cy
+          petition.action_en ||= petition.action_gd
+          petition.background_en ||= petition.background_gd
+          petition.additional_details_en ||= petition.additional_details_gd
         end
       end
     end
@@ -249,16 +249,16 @@ FactoryBot.define do
       debated_on { 1.day.ago }
       overview { nil }
       overview_en { nil }
-      overview_cy { nil }
+      overview_gd { nil }
       transcript_url { nil }
       transcript_url_en { nil }
-      transcript_url_cy { nil }
+      transcript_url_gd { nil }
       video_url { nil }
       video_url_en { nil }
-      video_url_cy { nil }
+      video_url_gd { nil }
       debate_pack_url { nil }
       debate_pack_url_en { nil }
-      debate_pack_url_cy { nil }
+      debate_pack_url_gd { nil }
       commons_image { nil }
     end
 
@@ -273,54 +273,54 @@ FactoryBot.define do
 
       if evaluator.overview.present?
         debate_outcome_attributes[:overview_en] = evaluator.overview
-        debate_outcome_attributes[:overview_cy] = evaluator.overview
+        debate_outcome_attributes[:overview_gd] = evaluator.overview
       end
 
       if evaluator.overview_en.present?
         debate_outcome_attributes[:overview_en] = evaluator.overview_en
       end
 
-      if evaluator.overview_cy.present?
-        debate_outcome_attributes[:overview_cy] = evaluator.overview_cy
+      if evaluator.overview_gd.present?
+        debate_outcome_attributes[:overview_gd] = evaluator.overview_gd
       end
 
       if evaluator.transcript_url.present?
         debate_outcome_attributes[:transcript_url_en] = evaluator.transcript_url
-        debate_outcome_attributes[:transcript_url_cy] = evaluator.transcript_url
+        debate_outcome_attributes[:transcript_url_gd] = evaluator.transcript_url
       end
 
       if evaluator.transcript_url_en.present?
         debate_outcome_attributes[:transcript_url_en] = evaluator.transcript_url_en
       end
 
-      if evaluator.transcript_url_cy.present?
-        debate_outcome_attributes[:transcript_url_cy] = evaluator.transcript_url_cy
+      if evaluator.transcript_url_gd.present?
+        debate_outcome_attributes[:transcript_url_gd] = evaluator.transcript_url_gd
       end
 
       if evaluator.video_url.present?
         debate_outcome_attributes[:video_url_en] = evaluator.video_url
-        debate_outcome_attributes[:video_url_cy] = evaluator.video_url
+        debate_outcome_attributes[:video_url_gd] = evaluator.video_url
       end
 
       if evaluator.video_url_en.present?
         debate_outcome_attributes[:video_url_en] = evaluator.video_url_en
       end
 
-      if evaluator.video_url_cy.present?
-        debate_outcome_attributes[:video_url_cy] = evaluator.video_url_cy
+      if evaluator.video_url_gd.present?
+        debate_outcome_attributes[:video_url_gd] = evaluator.video_url_gd
       end
 
       if evaluator.debate_pack_url.present?
         debate_outcome_attributes[:debate_pack_url_en] = evaluator.debate_pack_url
-        debate_outcome_attributes[:debate_pack_url_cy] = evaluator.debate_pack_url
+        debate_outcome_attributes[:debate_pack_url_gd] = evaluator.debate_pack_url
       end
 
       if evaluator.debate_pack_url_en.present?
         debate_outcome_attributes[:debate_pack_url_en] = evaluator.debate_pack_url_en
       end
 
-      if evaluator.debate_pack_url_cy.present?
-        debate_outcome_attributes[:debate_pack_url_cy] = evaluator.debate_pack_url_cy
+      if evaluator.debate_pack_url_gd.present?
+        debate_outcome_attributes[:debate_pack_url_gd] = evaluator.debate_pack_url_gd
       end
 
       if evaluator.commons_image.present?
@@ -335,7 +335,7 @@ FactoryBot.define do
     transient do
       overview { nil }
       overview_en { nil }
-      overview_cy { nil }
+      overview_gd { nil }
     end
 
     debate_state 'not_debated'
@@ -345,15 +345,15 @@ FactoryBot.define do
 
       if evaluator.overview.present?
         debate_outcome_attributes[:overview_en] = evaluator.overview
-        debate_outcome_attributes[:overview_cy] = evaluator.overview
+        debate_outcome_attributes[:overview_gd] = evaluator.overview
       end
 
       if evaluator.overview_en.present?
         debate_outcome_attributes[:overview_en] = evaluator.overview_en
       end
 
-      if evaluator.overview_cy.present?
-        debate_outcome_attributes[:overview_cy] = evaluator.overview_cy
+      if evaluator.overview_gd.present?
+        debate_outcome_attributes[:overview_gd] = evaluator.overview_gd
       end
 
       petition.build_debate_outcome(debate_outcome_attributes)
@@ -444,7 +444,7 @@ FactoryBot.define do
       id { "W09000043" }
       association :region, :south_wales_central
       name_en { "Cardiff South and Penarth" }
-      name_cy { "De Caerdydd a Phenarth" }
+      name_gd { "De Caerdydd a Phenarth" }
       example_postcode { "CF119WE" }
     end
 
@@ -452,14 +452,14 @@ FactoryBot.define do
       id { "W09000019" }
       association :region, :south_wales_west
       name_en { "Swansea West" }
-      name_cy { "Gorllewin Abertawe" }
+      name_gd { "Gorllewin Abertawe" }
       example_postcode { "SA16UD" }
     end
 
     sequence(:id) { |n| "W19%06d" % n }
     association :region
     sequence(:name_en) { |n| "Constituency #{n}" }
-    sequence(:name_cy) { |n| "Etholaeth #{n}" }
+    sequence(:name_gd) { |n| "Etholaeth #{n}" }
     example_postcode { Faker::Address.postcode.tr(" ", "") }
   end
 
@@ -467,27 +467,27 @@ FactoryBot.define do
     trait :south_wales_central do
       id { "W10000007" }
       name_en { "South Wales Central" }
-      name_cy { "Canol De Cymru" }
+      name_gd { "Canol De Cymru" }
     end
 
     trait :south_wales_west do
       id { "W10000009" }
       name_en { "South Wales West" }
-      name_cy { "Gorllewin De Cymru" }
+      name_gd { "Gorllewin De Cymru" }
     end
 
     sequence(:id) { |n| "W11%06d" % n }
     sequence(:name_en) { |n| "Region #{n}" }
-    sequence(:name_cy) { |n| "Rhanbarth #{n}" }
+    sequence(:name_gd) { |n| "Rhanbarth #{n}" }
   end
 
   factory :member do
     region_id { nil }
     constituency_id { nil }
     name_en { Faker::Name.name }
-    name_cy { Faker::Name.name }
+    name_gd { Faker::Name.name }
     party_en { "Welsh Labour" }
-    party_cy { "Llafur Cymru" }
+    party_gd { "Llafur Cymru" }
 
     trait :region do
       association :region
@@ -501,25 +501,25 @@ FactoryBot.define do
       id { 249 }
       constituency_id { "W09000043" }
       name_en { "Vaughan Gething MS" }
-      name_cy { "Vaughan Gething AS" }
+      name_gd { "Vaughan Gething AS" }
       party_en { "Welsh Labour" }
-      party_cy { "Llafur Cymru" }
+      party_gd { "Llafur Cymru" }
     end
 
     trait :regional_member do
       region_id { "W10000007" }
       name_en { "Bob Jones MS" }
-      name_cy { "Bob Jones AS" }
+      name_gd { "Bob Jones AS" }
       party_en { "Welsh Conservative Party" }
-      party_cy { "Ceidwadwyr Cymreig" }
+      party_gd { "Ceidwadwyr Cymreig" }
     end
 
     trait :constituency_member do
       constituency_id { "W09000043" }
       name_en { "Alice Davies MS" }
-      name_cy { "Alice Davies AS" }
+      name_gd { "Alice Davies AS" }
       party_en { "Welsh Labour" }
-      party_cy { "Llafur Cymru" }
+      party_gd { "Llafur Cymru" }
     end
   end
 
@@ -576,8 +576,8 @@ FactoryBot.define do
     association :petition, factory: :petition
     subject_en "Message Subject"
     body_en "Message body"
-    subject_cy "Pwnc Neges"
-    body_cy "Corff neges"
+    subject_gd "Pwnc Neges"
+    body_gd "Corff neges"
     sent_by "Admin User"
   end
 
@@ -625,8 +625,8 @@ FactoryBot.define do
   factory :topic do
     sequence(:code_en) { |n| "topic-#{n}" }
     sequence(:name_en) { |n| "Topic #{n}" }
-    sequence(:code_cy) { |n| "pwnc-#{n}" }
-    sequence(:name_cy) { |n| "Pwnc #{n}" }
+    sequence(:code_gd) { |n| "pwnc-#{n}" }
+    sequence(:name_gd) { |n| "Pwnc #{n}" }
   end
 
   factory :trending_ip do
@@ -676,7 +676,7 @@ FactoryBot.define do
     code { Faker::Lorem.unique.word.dasherize }
     title { Faker::Lorem.unique.sentence }
     description_en { Faker::Lorem.paragraph }
-    description_cy { Faker::Lorem.paragraph }
+    description_gd { Faker::Lorem.paragraph }
     hidden { false }
 
     trait :hidden do

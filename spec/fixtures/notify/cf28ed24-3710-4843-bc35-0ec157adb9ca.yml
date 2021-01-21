@@ -1,5 +1,5 @@
 id: "cf28ed24-3710-4843-bc35-0ec157adb9ca"
-name: "notify_sponsor_that_petition_was_rejected_hidden_cy"
+name: "notify_sponsor_that_petition_was_rejected_hidden_gd"
 subject: "Gwrthodwyd y ddeiseb “((action))” y gwnaethoch chi ei chefnogi | We rejected the petition “((action))” that you supported"
 body: |-
   Annwyl ((sponsor)),
@@ -10,10 +10,10 @@ body: |-
   
   Yn anffodus, ni allwn dderbyn y ddeiseb a gynigiwyd “((action))”.
   
-  ((content_cy))
+  ((content_gd))
   
   Dim ond deisebau nad ydynt yn bodloni’r safonau y byddwn yn eu gwrthod:
-  ((standards_url_cy))
+  ((standards_url_gd))
   
   Diolch,
   Tîm Deisebau 

@@ -24,7 +24,7 @@ When(/^I reject the petition with a reason code "([^"]*)" and some explanatory t
   choose "Reject"
   select reason_code, :from => :petition_rejection_code
   fill_in :petition_rejection_details_en, :with => "See guidelines at http://direct.gov.uk"
-  fill_in :petition_rejection_details_cy, :with => "Gweler y canllawiau yn http://direct.gov.uk"
+  fill_in :petition_rejection_details_gd, :with => "Gweler y canllawiau yn http://direct.gov.uk"
   click_button "Email petition creator"
 end
 
@@ -157,15 +157,15 @@ Given /^the petition is translated$/ do
   (@sponsored_petition || @petition).tap do |petition|
     if petition.english?
       petition.update!(
-        action_cy: petition.action_en,
-        background_cy: petition.background_en,
-        additional_details_cy: petition.additional_details_en
+        action_gd: petition.action_en,
+        background_gd: petition.background_en,
+        additional_details_gd: petition.additional_details_en
       )
     else
       petition.update!(
-        action_en: petition.action_cy,
-        background_en: petition.background_cy,
-        additional_details_en: petition.additional_details_cy
+        action_en: petition.action_gd,
+        background_en: petition.background_gd,
+        additional_details_en: petition.additional_details_gd
       )
     end
   end
@@ -175,15 +175,15 @@ Given /^the petition "([^"]*)" is translated$/ do |action|
   (Petition.find_by!(action: action)).tap do |petition|
     if petition.english?
       petition.update!(
-        action_cy: petition.action_en,
-        background_cy: petition.background_en,
-        additional_details_cy: petition.additional_details_en
+        action_gd: petition.action_en,
+        background_gd: petition.background_en,
+        additional_details_gd: petition.additional_details_en
       )
     else
       petition.update!(
-        action_en: petition.action_cy,
-        background_en: petition.background_cy,
-        additional_details_en: petition.additional_details_cy
+        action_en: petition.action_gd,
+        background_en: petition.background_gd,
+        additional_details_en: petition.additional_details_gd
       )
     end
   end

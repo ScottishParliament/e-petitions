@@ -17,7 +17,7 @@ class Admin::ModerationController < Admin::AdminController
   end
 
   def moderation_params
-    params.require(:petition).permit(:moderation, rejection: [:code, :details_en, :details_cy])
+    params.require(:petition).permit(:moderation, rejection: [:code, :details_en, :details_gd])
   end
 
   def send_notifications

@@ -60,7 +60,7 @@ RSpec.describe Admin::AbmsLinkController, type: :controller, admin: true do
       let(:attributes) do
         {
           abms_link_en: "https://business.senedd.wales/mgIssueHistoryHome.aspx?IId=27662&Opt=0",
-          abms_link_cy: "https://busnes.senedd.cymru/mgIssueHistoryHome.aspx?IId=27662&Opt=0"
+          abms_link_gd: "https://busnes.senedd.cymru/mgIssueHistoryHome.aspx?IId=27662&Opt=0"
         }
       end
 
@@ -92,7 +92,7 @@ RSpec.describe Admin::AbmsLinkController, type: :controller, admin: true do
         expect {
           petition.reload
         }.to change {
-          petition.abms_link_cy
+          petition.abms_link_gd
         }.from(nil).to(a_string_matching("busnes.senedd.cymru"))
       end
     end

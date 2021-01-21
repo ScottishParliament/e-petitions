@@ -73,6 +73,6 @@ class Admin::RejectionReasonsController < Admin::AdminController
   end
 
   def rejection_reason_attributes
-    %i[code title description_en description_cy hidden]
+    %i[code title description_en description_gd hidden]
   end
 end

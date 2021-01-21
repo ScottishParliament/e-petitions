@@ -1,6 +1,6 @@
 id: "a8557cbf-a889-4392-88a1-988634169d69"
 name: "notify_sponsor_that_petition_is_published_en"
-subject: "We published the petition “((action_en))” that you supported | Cyhoeddwyd y ddeiseb “((action_cy))” y gwnaethoch chi ei chefnogi"
+subject: "We published the petition “((action_en))” that you supported | Cyhoeddwyd y ddeiseb “((action_gd))” y gwnaethoch chi ei chefnogi"
 body: |-
   Dear ((sponsor)),
   
@@ -19,12 +19,12 @@ body: |-
   
   Annwyl ((sponsor)),
   
-  Mae’r ddeiseb y gwnaethoch chi ei chefnogi – “((action_cy))”, bellach wedi ei chyhoeddi.
+  Mae’r ddeiseb y gwnaethoch chi ei chefnogi – “((action_gd))”, bellach wedi ei chyhoeddi.
   
   Mae angen o leiaf ((referral_threshold)) llofnod ar ddeiseb er mwyn i’r Pwyllgor Deisebau ei hystyried.
   
   Cliciwch ar y linc i weld y ddeiseb a dechrau ei rhannu:
-  ((url_cy))
+  ((url_gd))
   
   Diolch,
   Tîm Deisebau

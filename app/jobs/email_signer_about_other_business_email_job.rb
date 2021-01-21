@@ -10,13 +10,13 @@ class EmailSignerAboutOtherBusinessEmailJob < NotifyJob
   def personalisation(signature, petition, email)
     {
       name: signature.name,
-      action_en: petition.action_en, action_cy: petition.action_cy,
+      action_en: petition.action_en, action_gd: petition.action_gd,
       petition_url_en: petition_en_url(petition),
-      petition_url_cy: petition_cy_url(petition),
-      subject_en: email.subject_en, subject_cy: email.subject_cy,
-      body_en: email.body_en, body_cy: email.body_cy,
+      petition_url_gd: petition_gd_url(petition),
+      subject_en: email.subject_en, subject_gd: email.subject_gd,
+      body_en: email.body_en, body_gd: email.body_gd,
       unsubscribe_url_en: unsubscribe_signature_en_url(signature, token: signature.unsubscribe_token),
-      unsubscribe_url_cy: unsubscribe_signature_cy_url(signature, token: signature.unsubscribe_token),
+      unsubscribe_url_gd: unsubscribe_signature_gd_url(signature, token: signature.unsubscribe_token),
     }
   end
 end

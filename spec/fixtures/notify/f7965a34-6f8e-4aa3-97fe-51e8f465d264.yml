@@ -53,7 +53,7 @@ body: |-
   Rydw i wedi creu deiseb – a wnewch chi ei llofnodi?
   
   Cliciwch ar y linc i lofnodi’r ddeiseb: 
-  ((url_cy))
+  ((url_gd))
   
   Fy neiseb I:
   
@@ -62,4 +62,4 @@ body: |-
   ((content))
   
   Cliciwch ar y linc i lofnodi’r ddeiseb: 
-  ((url_cy))
+  ((url_gd))

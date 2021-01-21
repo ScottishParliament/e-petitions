@@ -8,7 +8,7 @@ class PetitionAndEmailConfirmationForSponsorEmailJob < NotifyJob
       {
         action:  petition.action, content: petition.content, creator: petition.creator_name,
         url_en:  verify_sponsor_en_url(signature, token: signature.perishable_token),
-        url_cy:  verify_sponsor_cy_url(signature, token: signature.perishable_token)
+        url_gd:  verify_sponsor_gd_url(signature, token: signature.perishable_token)
       }
     end
   end

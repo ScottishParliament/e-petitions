@@ -67,7 +67,7 @@ class Admin::TopicsController < Admin::AdminController
 
   def topic_params
     if params.key?(:topic)
-      params.require(:topic).permit(:code_en, :code_cy, :name_en, :name_cy)
+      params.require(:topic).permit(:code_en, :code_gd, :name_en, :name_gd)
     else
       {}
     end

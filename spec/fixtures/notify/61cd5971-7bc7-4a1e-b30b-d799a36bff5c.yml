@@ -1,27 +1,27 @@
 id: "61cd5971-7bc7-4a1e-b30b-d799a36bff5c"
-name: "notify_signer_of_positive_debate_outcome_cy"
-subject: "Trafododd y Senedd “((action_cy))” | The Senedd debated “((action_en))”"
+name: "notify_signer_of_positive_debate_outcome_gd"
+subject: "Trafododd y Senedd “((action_gd))” | The Senedd debated “((action_en))”"
 body: |-
   Annwyl ((name)),
   
-  Trafododd y Senedd y ddeiseb a lofnodwyd gennych - “((action_cy))”
+  Trafododd y Senedd y ddeiseb a lofnodwyd gennych - “((action_gd))”
   
-  ((overview_cy))
+  ((overview_gd))
   
-  Gwyliwch y ddadl: ((video_url_cy))
+  Gwyliwch y ddadl: ((video_url_gd))
   
-  Darllenwch y trawsgrifiad: ((transcript_url_cy))
+  Darllenwch y trawsgrifiad: ((transcript_url_gd))
   
-  Dewch o hyd i fanylion y ddeiseb: ((debate_pack_url_cy))
+  Dewch o hyd i fanylion y ddeiseb: ((debate_pack_url_gd))
   
-  Y ddeiseb: ((petition_url_cy))
+  Y ddeiseb: ((petition_url_gd))
   
   Diolch,
   Tîm Deisebau
   Y Senedd
   
-  Rydych chi’n derbyn yr e-bost hwn oherwydd i chi lofnodi’r ddeiseb hon: “((action_cy))”.
-  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_cy))
+  Rydych chi’n derbyn yr e-bost hwn oherwydd i chi lofnodi’r ddeiseb hon: “((action_gd))”.
+  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_gd))
   
   ---
   

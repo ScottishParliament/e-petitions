@@ -5,7 +5,7 @@ RSpec.describe RejectionReason, type: :model do
     it { is_expected.to have_db_column(:code).of_type(:string).with_options(limit: 30, null: false) }
     it { is_expected.to have_db_column(:title).of_type(:string).with_options(limit: 100, null: false) }
     it { is_expected.to have_db_column(:description_en).of_type(:string).with_options(limit: 2000, null: false) }
-    it { is_expected.to have_db_column(:description_cy).of_type(:string).with_options(limit: 2000, null: false) }
+    it { is_expected.to have_db_column(:description_gd).of_type(:string).with_options(limit: 2000, null: false) }
     it { is_expected.to have_db_column(:hidden).of_type(:boolean).with_options(null: false, default: false) }
     it { is_expected.to have_db_column(:created_at).of_type(:datetime).with_options(null: false) }
     it { is_expected.to have_db_column(:updated_at).of_type(:datetime).with_options(null: false) }
@@ -20,7 +20,7 @@ RSpec.describe RejectionReason, type: :model do
     it { is_expected.to validate_presence_of(:code) }
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:description_en) }
-    it { is_expected.to validate_presence_of(:description_cy) }
+    it { is_expected.to validate_presence_of(:description_gd) }
 
     it { is_expected.to validate_uniqueness_of(:code) }
     it { is_expected.to validate_uniqueness_of(:title) }
@@ -28,7 +28,7 @@ RSpec.describe RejectionReason, type: :model do
     it { is_expected.to validate_length_of(:code).is_at_most(30) }
     it { is_expected.to validate_length_of(:title).is_at_most(100) }
     it { is_expected.to validate_length_of(:description_en).is_at_most(1000) }
-    it { is_expected.to validate_length_of(:description_cy).is_at_most(1000) }
+    it { is_expected.to validate_length_of(:description_gd).is_at_most(1000) }
 
     it { is_expected.to allow_value("code").for(:code) }
     it { is_expected.to allow_value("rejection-code").for(:code) }

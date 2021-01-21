@@ -1,11 +1,11 @@
 <tr>
   <td>
     <%= link_to edit_admin_topic_path(topic) do %>
-      <%= topic.code_en %> / <%= topic.code_cy %>
+      <%= topic.code_en %> / <%= topic.code_gd %>
     <% end %>
   </td>
   <td>
-    <%= topic.name_en %> / <%= topic.name_cy %>
+    <%= topic.name_en %> / <%= topic.name_gd %>
   </td>
   <td>
     <%= button_to 'Delete', admin_topic_path(topic, params.permit(:q)), method: :delete, class: 'button-warning', data: { confirm: 'Delete topic?' } %>

@@ -6,10 +6,10 @@
     <%= f.text_area :overview_en, tabindex: increment, class: 'form-control' %>
   <% end %>
 
-  <%= form_row for: [f.object, :overview_cy] do %>
-    <%= f.label :overview_cy, "Overview  (Welsh)", class: 'form-label' %>
-    <%= error_messages_for_field f.object, :overview_cy %>
-    <%= f.text_area :overview_cy, tabindex: increment, class: 'form-control' %>
+  <%= form_row for: [f.object, :overview_gd] do %>
+    <%= f.label :overview_gd, "Overview  (Welsh)", class: 'form-label' %>
+    <%= error_messages_for_field f.object, :overview_gd %>
+    <%= f.text_area :overview_gd, tabindex: increment, class: 'form-control' %>
   <% end %>
 
   <h3 class="petition-action-subheading">Was this petition debated?</h3>
@@ -40,10 +40,10 @@
       <%= f.url_field :transcript_url_en, tabindex: increment, class: 'form-control' %>
     <% end %>
 
-    <%= form_row for: [f.object, :transcript_url_cy] do %>
-      <%= f.label :transcript_url_cy, 'Transcript URL (Welsh)', class: 'form-label' %>
-      <%= error_messages_for_field f.object, :transcript_url_cy %>
-      <%= f.url_field :transcript_url_cy, tabindex: increment, class: 'form-control' %>
+    <%= form_row for: [f.object, :transcript_url_gd] do %>
+      <%= f.label :transcript_url_gd, 'Transcript URL (Welsh)', class: 'form-label' %>
+      <%= error_messages_for_field f.object, :transcript_url_gd %>
+      <%= f.url_field :transcript_url_gd, tabindex: increment, class: 'form-control' %>
     <% end %>
 
     <%= form_row for: [f.object, :video_url_en] do %>
@@ -52,10 +52,10 @@
       <%= f.url_field :video_url_en, tabindex: increment, class: 'form-control' %>
     <% end %>
 
-    <%= form_row for: [f.object, :video_url_cy] do %>
-      <%= f.label :video_url_cy, 'Video URL (Welsh)', class: 'form-label' %>
-      <%= error_messages_for_field f.object, :video_url_cy %>
-      <%= f.url_field :video_url_cy, tabindex: increment, class: 'form-control' %>
+    <%= form_row for: [f.object, :video_url_gd] do %>
+      <%= f.label :video_url_gd, 'Video URL (Welsh)', class: 'form-label' %>
+      <%= error_messages_for_field f.object, :video_url_gd %>
+      <%= f.url_field :video_url_gd, tabindex: increment, class: 'form-control' %>
     <% end %>
 
     <%= form_row for: [f.object, :debate_pack_url_en] do %>
@@ -64,10 +64,10 @@
       <%= f.url_field :debate_pack_url_en, tabindex: increment, class: 'form-control' %>
     <% end %>
 
-    <%= form_row for: [f.object, :debate_pack_url_cy] do %>
-      <%= f.label :debate_pack_url_cy, 'Debate Pack URL (Welsh)', class: 'form-label' %>
-      <%= error_messages_for_field f.object, :debate_pack_url_cy %>
-      <%= f.url_field :debate_pack_url_cy, tabindex: increment, class: 'form-control' %>
+    <%= form_row for: [f.object, :debate_pack_url_gd] do %>
+      <%= f.label :debate_pack_url_gd, 'Debate Pack URL (Welsh)', class: 'form-label' %>
+      <%= error_messages_for_field f.object, :debate_pack_url_gd %>
+      <%= f.url_field :debate_pack_url_gd, tabindex: increment, class: 'form-control' %>
     <% end %>
 
     <%= form_row for: [f.object, :commons_image] do %>

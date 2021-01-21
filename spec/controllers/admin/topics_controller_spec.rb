@@ -79,7 +79,7 @@ RSpec.describe Admin::TopicsController, type: :controller, admin: true do
 
       context "with invalid params" do
         let :params do
-          { code_en: "", name_en: "", code_cy: "", name_cy: "" }
+          { code_en: "", name_en: "", code_gd: "", name_gd: "" }
         end
 
         it "returns 200 OK" do
@@ -93,7 +93,7 @@ RSpec.describe Admin::TopicsController, type: :controller, admin: true do
 
       context "with valid params" do
         let :params do
-          { code_en: "topic", name_en: "Topic", code_cy: "pwnc", name_cy: "Pwnc" }
+          { code_en: "topic", name_en: "Topic", code_gd: "pwnc", name_gd: "Pwnc" }
         end
 
         it "redirects to the index page" do
@@ -127,7 +127,7 @@ RSpec.describe Admin::TopicsController, type: :controller, admin: true do
 
       context "and the params are invalid" do
         let :params do
-          { code_en: "", name_en: "", code_cy: "", name_cy: "" }
+          { code_en: "", name_en: "", code_gd: "", name_gd: "" }
         end
 
         it "returns 200 OK" do
@@ -141,7 +141,7 @@ RSpec.describe Admin::TopicsController, type: :controller, admin: true do
 
       context "and the params are valid" do
         let :params do
-          { code_en: "topic", name_en: "Topic", code_cy: "pwnc", name_cy: "Pwnc" }
+          { code_en: "topic", name_en: "Topic", code_gd: "pwnc", name_gd: "Pwnc" }
         end
 
         it "redirects to the index page" do

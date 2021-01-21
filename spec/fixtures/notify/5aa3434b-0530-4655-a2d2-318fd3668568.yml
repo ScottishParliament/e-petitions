@@ -1,20 +1,20 @@
 id: "5aa3434b-0530-4655-a2d2-318fd3668568"
-name: "email_signer_about_other_business_cy"
-subject: "((subject_cy)) | ((subject_en))"
+name: "email_signer_about_other_business_gd"
+subject: "((subject_gd)) | ((subject_en))"
 body: |-
   Annwyl ((name)),
   
-  Yn ddiweddar gwnaethoch lofnodi’r ddeiseb “((action_cy))”:
-  ((petition_url_cy))
+  Yn ddiweddar gwnaethoch lofnodi’r ddeiseb “((action_gd))”:
+  ((petition_url_gd))
   
-  ((body_cy))
+  ((body_gd))
   
   Diolch,
   Tîm Deisebau
   Y Senedd
   
-  Rydych chi’n derbyn yr e-bost hwn oherwydd i chi lofnodi’r ddeiseb hon: “((action_cy))”.
-  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_cy))
+  Rydych chi’n derbyn yr e-bost hwn oherwydd i chi lofnodi’r ddeiseb hon: “((action_gd))”.
+  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_gd))
   
   ---
   

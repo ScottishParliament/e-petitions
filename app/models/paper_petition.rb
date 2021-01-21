@@ -6,11 +6,11 @@ class PaperPetition
   delegate :threshold_for_debate, to: :Site
 
   attribute :action_en, :string
-  attribute :action_cy, :string
+  attribute :action_gd, :string
   attribute :background_en, :string
-  attribute :background_cy, :string
+  attribute :background_gd, :string
   attribute :additional_details_en, :string
-  attribute :additional_details_cy, :string
+  attribute :additional_details_gd, :string
   attribute :locale, :string, default: "en-GB"
   attribute :location_code, :string, default: "GB-WLS"
   attribute :signature_count, :integer
@@ -23,7 +23,7 @@ class PaperPetition
 
   with_options presence: true do
     validates :action_en, :background_en
-    validates :action_cy, :background_cy
+    validates :action_gd, :background_gd
     validates :locale, :location_code
     validates :signature_count, :submitted_on
     validates :name, :email, :phone_number
@@ -31,15 +31,15 @@ class PaperPetition
   end
 
   with_options length: { maximum: 100 } do
-    validates :action_en, :action_cy
+    validates :action_en, :action_gd
   end
 
   with_options length: { maximum: 500 } do
-    validates :background_en, :background_cy, :address
+    validates :background_en, :background_gd, :address
   end
 
   with_options length: { maximum: 1100 } do
-    validates :additional_details_en, :additional_details_cy
+    validates :additional_details_en, :additional_details_gd
   end
 
   with_options length: { maximum: 255 } do
@@ -48,7 +48,7 @@ class PaperPetition
 
   with_options format: { with: /\A[^-=+@]/, allow_blank: true } do
     validates :action_en, :background_en, :additional_details_en
-    validates :action_cy, :background_cy, :additional_details_cy
+    validates :action_gd, :background_gd, :additional_details_gd
     validates :name, :phone_number, :address
   end
 
@@ -65,7 +65,7 @@ class PaperPetition
     super(value.to_s.strip)
   end
 
-  def action_cy=(value)
+  def action_gd=(value)
     super(value.to_s.strip)
   end
 
@@ -73,7 +73,7 @@ class PaperPetition
     super(value.to_s.strip)
   end
 
-  def background_cy=(value)
+  def background_gd=(value)
     super(value.to_s.strip)
   end
 
@@ -81,7 +81,7 @@ class PaperPetition
     super(value.to_s.strip)
   end
 
-  def additional_details_cy=(value)
+  def additional_details_gd=(value)
     super(value.to_s.strip)
   end
 
@@ -89,8 +89,8 @@ class PaperPetition
     additional_details_en.present?
   end
 
-  def additional_details_cy?
-    additional_details_cy.present?
+  def additional_details_gd?
+    additional_details_gd.present?
   end
 
   def name=(value)
@@ -126,8 +126,8 @@ class PaperPetition
       state: "closed", submitted_on_paper: true,
       action_en: action_en, background_en: background_en,
       additional_details_en: additional_details_en,
-      action_cy: action_cy, background_cy: background_cy,
-      additional_details_cy: additional_details_cy,
+      action_gd: action_gd, background_gd: background_gd,
+      additional_details_gd: additional_details_gd,
       locale: locale, signature_count: signature_count,
       submitted_on: submitted_on, open_at: open_at,
       moderation_threshold_reached_at: closed_at,

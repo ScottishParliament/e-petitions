@@ -1,6 +1,6 @@
 class Member < ActiveRecord::Base
   URL_EN = "https://senedd.wales/en/memhome/Pages/MemberProfile.aspx?mid=%{id}"
-  URL_CY = "https://senedd.cymru/cy/memhome/Pages/MemberProfile.aspx?mid=%{id}"
+  URL_GD = "https://senedd.cymru/cy/memhome/Pages/MemberProfile.aspx?mid=%{id}"
 
   include Translatable
 
@@ -23,7 +23,7 @@ class Member < ActiveRecord::Base
   end
 
   def url
-    I18n.locale == :"cy-GB" ? url_cy : url_en
+    I18n.locale == :"cy-GB" ? url_gd : url_en
   end
 
   private
@@ -32,7 +32,7 @@ class Member < ActiveRecord::Base
     URL_EN % { id: id }
   end
 
-  def url_cy
-    URL_CY % { id: id }
+  def url_gd
+    URL_GD % { id: id }
   end
 end

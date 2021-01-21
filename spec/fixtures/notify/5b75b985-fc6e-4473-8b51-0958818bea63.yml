@@ -1,6 +1,6 @@
 id: "5b75b985-fc6e-4473-8b51-0958818bea63"
 name: "email_creator_about_other_business_en"
-subject: "((subject_en)) | ((subject_cy))"
+subject: "((subject_en)) | ((subject_gd))"
 body: |-
   Dear ((name)),
   
@@ -20,14 +20,14 @@ body: |-
   
   Annwyl ((name)),
   
-  Yn ddiweddar fe wnaethoch chi greu’r ddeiseb “((action_cy))”:
-  ((petition_url_cy))
+  Yn ddiweddar fe wnaethoch chi greu’r ddeiseb “((action_gd))”:
+  ((petition_url_gd))
   
-  ((body_cy))
+  ((body_gd))
   
   Diolch,
   Tîm Deisebau
   Y Senedd
   
   Rydych chi’n derbyn yr e-bost hwn oherwydd i chi greu’r ddeiseb hon: “((action_en))”.
-  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_cy))
+  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_gd))

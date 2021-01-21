@@ -39,7 +39,7 @@ class Petition < ActiveRecord::Base
   before_save :update_moderation_lag, unless: :moderation_lag?
   after_create :update_last_petition_created_at
 
-  extend Searchable(:action_en, :action_cy, :background_en, :background_cy, :additional_details_en, :additional_details_cy)
+  extend Searchable(:action_en, :action_gd, :background_en, :background_gd, :additional_details_en, :additional_details_gd)
   include Browseable, Taggable, Topics
 
   facet :all,       -> { not_archived.by_most_recent }
@@ -627,15 +627,15 @@ class Petition < ActiveRecord::Base
   end
 
   def content
-    translated_method(:content_en, :content_cy)
+    translated_method(:content_en, :content_gd)
   end
 
   def content_en
     [background_en, additional_details_en].reject(&:blank?).join("\n\n")
   end
 
-  def content_cy
-    [background_cy, additional_details_cy].reject(&:blank?).join("\n\n")
+  def content_gd
+    [background_gd, additional_details_gd].reject(&:blank?).join("\n\n")
   end
 
   def english?
@@ -655,15 +655,15 @@ class Petition < ActiveRecord::Base
   end
 
   def additional_details_en_translated?
-    english? ? true : !additional_details_cy? || additional_details_en?
+    english? ? true : !additional_details_gd? || additional_details_en?
   end
 
   def welsh_translated?
-    action_cy? && background_cy? && additional_details_cy_translated?
+    action_gd? && background_gd? && additional_details_gd_translated?
   end
 
-  def additional_details_cy_translated?
-    welsh? ? true : !additional_details_en? || additional_details_cy?
+  def additional_details_gd_translated?
+    welsh? ? true : !additional_details_en? || additional_details_gd?
   end
 
   def will_be_hidden?
@@ -714,15 +714,15 @@ class Petition < ActiveRecord::Base
       unless translated?
         if english?
           update_columns(
-            action_cy: action_en,
-            background_cy: background_en,
-            additional_details_cy: additional_details_en
+            action_gd: action_en,
+            background_gd: background_en,
+            additional_details_gd: additional_details_en
           )
         else
           update_columns(
-            action_en: action_cy,
-            background_en: background_cy,
-            additional_details_en: additional_details_cy
+            action_en: action_gd,
+            background_en: background_gd,
+            additional_details_en: additional_details_gd
           )
         end
       end

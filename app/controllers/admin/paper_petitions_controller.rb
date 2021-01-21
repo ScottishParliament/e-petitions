@@ -21,9 +21,9 @@ class Admin::PaperPetitionsController < Admin::AdminController
 
   def petition_attributes
     %i[
-      action_en action_cy
-      background_en background_cy
-      additional_details_en additional_details_cy
+      action_en action_gd
+      background_en background_gd
+      additional_details_en additional_details_gd
       signature_count locale submitted_on
       name email phone_number address postcode
     ]

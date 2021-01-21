@@ -14,7 +14,7 @@ class SponsorSignedEmailOnThresholdEmailJob < NotifyJob
         creator: creator.name,
         action:  petition.action,
         url_en:  help_en_url(anchor: 'standards'),
-        url_cy:  help_cy_url(anchor: 'standards')
+        url_gd:  help_gd_url(anchor: 'standards')
       }
     end
   end

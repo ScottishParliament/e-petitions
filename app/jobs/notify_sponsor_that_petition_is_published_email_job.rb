@@ -4,8 +4,8 @@ class NotifySponsorThatPetitionIsPublishedEmailJob < NotifyJob
   def personalisation(signature, petition)
     {
       sponsor: signature.name,
-      action_en:  petition.action_en, action_cy: petition.action_cy,
-      url_en:  petition_en_url(petition), url_cy:  petition_cy_url(petition)
+      action_en:  petition.action_en, action_gd: petition.action_gd,
+      url_en:  petition_en_url(petition), url_gd:  petition_gd_url(petition)
     }
   end
 end

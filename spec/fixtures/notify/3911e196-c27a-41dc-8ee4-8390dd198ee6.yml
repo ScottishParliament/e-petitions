@@ -1,20 +1,20 @@
 id: "3911e196-c27a-41dc-8ee4-8390dd198ee6"
-name: "notify_sponsor_that_petition_was_rejected_insufficient_cy"
-subject: "Gwrthodwyd y ddeiseb “((action_cy))” y gwnaethoch chi ei chefnogi | We rejected the petition “((action_en))” that you supported"
+name: "notify_sponsor_that_petition_was_rejected_insufficient_gd"
+subject: "Gwrthodwyd y ddeiseb “((action_gd))” y gwnaethoch chi ei chefnogi | We rejected the petition “((action_en))” that you supported"
 body: |-
   Annwyl ((sponsor)),
   
   Diolch am gefnogi deiseb.  
   
-  Yn anffodus, allwn ni ddim cyfeirio’r ddeiseb “((action_cy))” at y Pwyllgor Deisebau.
+  Yn anffodus, allwn ni ddim cyfeirio’r ddeiseb “((action_gd))” at y Pwyllgor Deisebau.
   
-  ((content_cy))
+  ((content_gd))
   
   Cliciwch ar y linc i weld y ddeiseb a wrthodwyd:
-  ((url_cy))
+  ((url_gd))
   
   Dim ond deisebau nad ydynt yn bodloni’r safonau y byddwn yn eu gwrthod:
-  ((standards_url_cy))
+  ((standards_url_gd))
   
   Diolch,
   Tîm Deisebau 

@@ -29,22 +29,22 @@ module Translatable
 
   module ClassMethods
     EN_SUFFIX = "_en"
-    CY_SUFFIX = "_cy"
+    CY_SUFFIX = "_gd"
 
     def translate(*names)
       names.each do |name|
         translated_methods << name.to_sym
         class_eval <<~RUBY
           def #{name}
-            translated_method(:"#{name}_en", :"#{name}_cy")
+            translated_method(:"#{name}_en", :"#{name}_gd")
           end
 
           def #{name}?
-            translated_method(:"#{name}_en?", :"#{name}_cy?")
+            translated_method(:"#{name}_en?", :"#{name}_gd?")
           end
 
           def #{name}=(value)
-            translated_method(:"#{name}_en=", :"#{name}_cy=", value)
+            translated_method(:"#{name}_en=", :"#{name}_gd=", value)
           end
         RUBY
       end

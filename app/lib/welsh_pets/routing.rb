@@ -200,7 +200,7 @@ module WelshPets
         end
       end
 
-      constraints(Site.constraints_for_public_cy) do
+      constraints(Site.constraints_for_public_gd) do
         defaults locale: "cy-GB" do
           routes.each do |route|
             match route.path("cy-GB"), route.options("cy")
@@ -214,10 +214,10 @@ module WelshPets
 
       routes.each do |route|
         route_en = :"#{route.name}_en"
-        route_cy = :"#{route.name}_cy"
+        route_gd = :"#{route.name}_gd"
 
         direct(route.name) do |*args|
-          route_for((I18n.locale == :"en-GB" ? route_en : route_cy), *args)
+          route_for((I18n.locale == :"en-GB" ? route_en : route_gd), *args)
         end
       end
     end

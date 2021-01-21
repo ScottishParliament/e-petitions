@@ -6,7 +6,7 @@ Given(/^a constituency "(.*?)"(?: with Member "(.*?)")? is found by postcode "(.
     member_name = member_name.present? ? member_name : 'Rye Tonnemem-Burr AM'
     constituency = FactoryBot.create(:constituency, name: constituency_name)
     FactoryBot.create(:postcode, id: postcode.tr(' ', ''), constituency_id: constituency.id)
-    FactoryBot.create(:member, constituency_id: constituency.id, name_en: member_name, name_cy: member_name)
+    FactoryBot.create(:member, constituency_id: constituency.id, name_en: member_name, name_gd: member_name)
     @constituencies[constituency.name] = constituency
   end
 

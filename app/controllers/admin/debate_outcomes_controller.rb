@@ -43,7 +43,7 @@ class Admin::DebateOutcomesController < Admin::AdminController
     %i[
       debated_on debated commons_image
       overview_en transcript_url_en video_url_en debate_pack_url_en
-      overview_cy transcript_url_cy video_url_cy debate_pack_url_cy
+      overview_gd transcript_url_gd video_url_gd debate_pack_url_gd
     ]
   end
 

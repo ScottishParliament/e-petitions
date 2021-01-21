@@ -34,29 +34,29 @@
 
       <fieldset id="welsh-details">
         <legend><h2>Petition details in Welsh</h2></legend>
-        <%= form_row for: [form.object, :action_cy] do %>
-          <%= form.label :action_cy, "Action", class: "form-label" %>
-          <%= error_messages_for_field @paper_petition, :action_cy %>
-          <%= form.text_area :action_cy, tabindex: increment, rows: 3, class: "form-control", data: { max_length: 100 } %>
+        <%= form_row for: [form.object, :action_gd] do %>
+          <%= form.label :action_gd, "Action", class: "form-label" %>
+          <%= error_messages_for_field @paper_petition, :action_gd %>
+          <%= form.text_area :action_gd, tabindex: increment, rows: 3, class: "form-control", data: { max_length: 100 } %>
           <p class="character-count">100 characters max</p>
         <% end %>
 
-        <%= form_row for: [form.object, :background_cy] do %>
-          <%= form.label :background_cy, "Background", class: "form-label" %>
-          <%= error_messages_for_field @paper_petition, :background_cy %>
-          <%= form.text_area :background_cy, tabindex: increment, rows: 5, class: "form-control", data: { max_length: 500 } %>
+        <%= form_row for: [form.object, :background_gd] do %>
+          <%= form.label :background_gd, "Background", class: "form-label" %>
+          <%= error_messages_for_field @paper_petition, :background_gd %>
+          <%= form.text_area :background_gd, tabindex: increment, rows: 5, class: "form-control", data: { max_length: 500 } %>
           <p class="character-count">500 characters max</p>
         <% end %>
 
-        <%= content_tag :details, open: @paper_petition.additional_details_cy? do %>
+        <%= content_tag :details, open: @paper_petition.additional_details_gd? do %>
           <summary>
-            <%= form.label :additional_details_cy, "Additional details" %>
+            <%= form.label :additional_details_gd, "Additional details" %>
           </summary>
 
-          <%= form_row for: [form.object, :additional_details_cy] do %>
-            <%= form.label :additional_details_cy, "Additional details", class: "form-label" %>
-            <%= error_messages_for_field @paper_petition, :additional_details_cy %>
-            <%= form.text_area :additional_details_cy, tabindex: increment, rows: 7, class: "form-control", data: { max_length: 1100 } %>
+          <%= form_row for: [form.object, :additional_details_gd] do %>
+            <%= form.label :additional_details_gd, "Additional details", class: "form-label" %>
+            <%= error_messages_for_field @paper_petition, :additional_details_gd %>
+            <%= form.text_area :additional_details_gd, tabindex: increment, rows: 7, class: "form-control", data: { max_length: 1100 } %>
             <p class="character-count">1100 characters max</p>
           <% end %>
         <% end %>
@@ -72,7 +72,7 @@
 
         <div class="multiple-choice">
           <%= form.radio_button :locale, "cy-GB" %>
-          <%= form.label :locale_welsh, "Welsh", for: "paper_petition_locale_cy-gb" %>
+          <%= form.label :locale_welsh, "Welsh", for: "paper_petition_locale_gd-gb" %>
         </div>
         <%= error_messages_for_field @paper_petition, :locale %>
       <% end %>

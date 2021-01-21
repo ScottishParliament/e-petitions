@@ -20,7 +20,7 @@ RSpec.describe Rejection, type: :model do
     it { is_expected.to validate_presence_of(:code) }
     it { is_expected.to validate_inclusion_of(:code).in_array(%w[insufficient duplicate irrelevant no-action fake-name libellous offensive bad-address not-suitable]) }
     it { is_expected.to validate_length_of(:details_en).is_at_most(4000) }
-    it { is_expected.to validate_length_of(:details_cy).is_at_most(4000) }
+    it { is_expected.to validate_length_of(:details_gd).is_at_most(4000) }
   end
 
   describe "callbacks" do

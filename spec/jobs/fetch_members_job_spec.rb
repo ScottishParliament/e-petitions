@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe FetchMembersJob, type: :job do
   let(:url) { "https://business.senedd.wales" }
   let(:members_en) { "#{url}/mgwebservice.asmx/GetCouncillorsByWard" }
-  let(:members_cy) { "#{url}/mgwebservicew.asmx/GetCouncillorsByWard" }
+  let(:members_gd) { "#{url}/mgwebservicew.asmx/GetCouncillorsByWard" }
   let(:stub_members_en_api) { stub_request(:get, members_en) }
-  let(:stub_members_cy_api) { stub_request(:get, members_cy) }
+  let(:stub_members_gd_api) { stub_request(:get, members_gd) }
 
   def xml_response(status, body = nil, &block)
     status = Rack::Utils.status_code(status)
@@ -35,7 +35,7 @@ RSpec.describe FetchMembersJob, type: :job do
   context "when the request is successful" do
     before do
       stub_members_en_api.to_return(xml_response(:ok, "members_en"))
-      stub_members_cy_api.to_return(xml_response(:ok, "members_cy"))
+      stub_members_gd_api.to_return(xml_response(:ok, "members_gd"))
     end
 
     it "imports members" do
@@ -71,7 +71,7 @@ RSpec.describe FetchMembersJob, type: :job do
       end
 
       it "assigns the Welsh member name" do
-        expect(member.name_cy).to eq("Vaughan Gething AS")
+        expect(member.name_gd).to eq("Vaughan Gething AS")
       end
 
       it "assigns the English party name" do
@@ -79,7 +79,7 @@ RSpec.describe FetchMembersJob, type: :job do
       end
 
       it "assigns the Welsh party name" do
-        expect(member.party_cy).to eq("Llafur Cymru")
+        expect(member.party_gd).to eq("Llafur Cymru")
       end
     end
 
@@ -167,7 +167,7 @@ RSpec.describe FetchMembersJob, type: :job do
     context "because the API is not responding" do
       before do
         stub_members_en_api.to_timeout
-        stub_members_cy_api.to_timeout
+        stub_members_gd_api.to_timeout
       end
 
       it "doesn't import any members" do
@@ -178,7 +178,7 @@ RSpec.describe FetchMembersJob, type: :job do
     context "because the API connection is blocked" do
       before do
         stub_members_en_api.to_return(xml_response(:proxy_authentication_required))
-        stub_members_cy_api.to_return(xml_response(:proxy_authentication_required))
+        stub_members_gd_api.to_return(xml_response(:proxy_authentication_required))
       end
 
       it "doesn't import any members" do
@@ -189,7 +189,7 @@ RSpec.describe FetchMembersJob, type: :job do
     context "because the API can't be found" do
       before do
         stub_members_en_api.to_return(xml_response(:not_found))
-        stub_members_cy_api.to_return(xml_response(:not_found))
+        stub_members_gd_api.to_return(xml_response(:not_found))
       end
 
       it "doesn't import any members" do
@@ -200,7 +200,7 @@ RSpec.describe FetchMembersJob, type: :job do
     context "because the API can't find the resource" do
       before do
         stub_members_en_api.to_return(xml_response(:not_acceptable))
-        stub_members_cy_api.to_return(xml_response(:not_acceptable))
+        stub_members_gd_api.to_return(xml_response(:not_acceptable))
       end
 
       it "doesn't import any members" do
@@ -211,7 +211,7 @@ RSpec.describe FetchMembersJob, type: :job do
     context "because the API is returning an internal server error" do
       before do
         stub_members_en_api.to_return(xml_response(:internal_server_error))
-        stub_members_cy_api.to_return(xml_response(:internal_server_error))
+        stub_members_gd_api.to_return(xml_response(:internal_server_error))
       end
 
       it "doesn't import any constituencies" do

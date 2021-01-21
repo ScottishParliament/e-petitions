@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe Site, type: :model do
   describe "schema" do
     it { is_expected.to have_db_column(:title_en).of_type(:string).with_options(limit: 50, null: false, default: "Petition the Senedd") }
-    it { is_expected.to have_db_column(:title_cy).of_type(:string).with_options(limit: 50, null: false, default: "Deisebu'r Senedd") }
+    it { is_expected.to have_db_column(:title_gd).of_type(:string).with_options(limit: 50, null: false, default: "Deisebu'r Senedd") }
     it { is_expected.to have_db_column(:url_en).of_type(:string).with_options(limit: 50, null: false, default: "https://petitions.senedd.wales") }
-    it { is_expected.to have_db_column(:url_cy).of_type(:string).with_options(limit: 50, null: false, default: "https://deisebau.senedd.cymru") }
+    it { is_expected.to have_db_column(:url_gd).of_type(:string).with_options(limit: 50, null: false, default: "https://deisebau.senedd.cymru") }
     it { is_expected.to have_db_column(:email_from_en).of_type(:string).with_options(limit: 100, null: false, default: %{"Petitions: Senedd" <no-reply@petitions.senedd.wales>}) }
-    it { is_expected.to have_db_column(:email_from_cy).of_type(:string).with_options(limit: 100, null: false, default: %{"Deisebau: Senedd" <dim-ateb@deisebau.senedd.cymru>}) }
+    it { is_expected.to have_db_column(:email_from_gd).of_type(:string).with_options(limit: 100, null: false, default: %{"Deisebau: Senedd" <dim-ateb@deisebau.senedd.cymru>}) }
     it { is_expected.to have_db_column(:username).of_type(:string).with_options(limit: 30) }
     it { is_expected.to have_db_column(:password_digest).of_type(:string).with_options(limit: 60) }
     it { is_expected.to have_db_column(:enabled).of_type(:boolean).with_options(null: false, default: true) }
@@ -44,11 +44,11 @@ RSpec.describe Site, type: :model do
 
   describe "validations" do
     it { is_expected.to validate_presence_of(:title_en) }
-    it { is_expected.to validate_presence_of(:title_cy) }
+    it { is_expected.to validate_presence_of(:title_gd) }
     it { is_expected.to validate_presence_of(:url_en) }
-    it { is_expected.to validate_presence_of(:url_cy) }
+    it { is_expected.to validate_presence_of(:url_gd) }
     it { is_expected.to validate_presence_of(:email_from_en) }
-    it { is_expected.to validate_presence_of(:email_from_cy) }
+    it { is_expected.to validate_presence_of(:email_from_gd) }
     it { is_expected.to validate_presence_of(:petition_duration) }
     it { is_expected.to validate_presence_of(:minimum_number_of_sponsors) }
     it { is_expected.to validate_presence_of(:maximum_number_of_sponsors) }
@@ -59,11 +59,11 @@ RSpec.describe Site, type: :model do
     it { is_expected.to validate_presence_of(:login_timeout) }
 
     it { is_expected.to validate_length_of(:title_en).is_at_most(50) }
-    it { is_expected.to validate_length_of(:title_cy).is_at_most(50) }
+    it { is_expected.to validate_length_of(:title_gd).is_at_most(50) }
     it { is_expected.to validate_length_of(:url_en).is_at_most(50) }
-    it { is_expected.to validate_length_of(:url_cy).is_at_most(50) }
+    it { is_expected.to validate_length_of(:url_gd).is_at_most(50) }
     it { is_expected.to validate_length_of(:email_from_en).is_at_most(100) }
-    it { is_expected.to validate_length_of(:email_from_cy).is_at_most(100) }
+    it { is_expected.to validate_length_of(:email_from_gd).is_at_most(100) }
     it { is_expected.to validate_length_of(:feedback_email).is_at_most(100) }
 
     %w[
@@ -288,15 +288,15 @@ RSpec.describe Site, type: :model do
       end
     end
 
-    describe "for title_cy" do
+    describe "for title_gd" do
       it "defaults to 'Deisebu'r Senedd'" do
-        allow(ENV).to receive(:fetch).with("SITE_TITLE_CY", "Deisebu'r Senedd").and_return("Deisebu'r Senedd")
-        expect(defaults[:title_cy]).to eq("Deisebu'r Senedd")
+        allow(ENV).to receive(:fetch).with("SITE_TITLE_GD", "Deisebu'r Senedd").and_return("Deisebu'r Senedd")
+        expect(defaults[:title_gd]).to eq("Deisebu'r Senedd")
       end
 
-      it "can be overridden with the SITE_TITLE_CY environment variable" do
-        allow(ENV).to receive(:fetch).with("SITE_TITLE_CY", "Deisebu'r Senedd").and_return("Deisebu'r Senedd (Prawf)")
-        expect(defaults[:title_cy]).to eq("Deisebu'r Senedd (Prawf)")
+      it "can be overridden with the SITE_TITLE_GD environment variable" do
+        allow(ENV).to receive(:fetch).with("SITE_TITLE_GD", "Deisebu'r Senedd").and_return("Deisebu'r Senedd (Prawf)")
+        expect(defaults[:title_gd]).to eq("Deisebu'r Senedd (Prawf)")
       end
     end
 
@@ -318,21 +318,21 @@ RSpec.describe Site, type: :model do
       end
     end
 
-    describe "for url_cy" do
+    describe "for url_gd" do
       it "defaults to 'https://petitions.senedd.wales'" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("https")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_CY", "deisebau.senedd.cymru").and_return("deisebau.senedd.cymru")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "deisebau.senedd.cymru").and_return("deisebau.senedd.cymru")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return(443)
 
-        expect(defaults[:url_cy]).to eq("https://deisebau.senedd.cymru")
+        expect(defaults[:url_gd]).to eq("https://deisebau.senedd.cymru")
       end
 
       it "allows overriding via environment variables" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("http")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_CY", "deisebau.senedd.cymru").and_return("localhost")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "deisebau.senedd.cymru").and_return("localhost")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return("3000")
 
-        expect(defaults[:url_cy]).to eq("http://localhost:3000")
+        expect(defaults[:url_gd]).to eq("http://localhost:3000")
       end
     end
 
@@ -377,26 +377,26 @@ RSpec.describe Site, type: :model do
       end
     end
 
-    describe "for email_from_cy" do
+    describe "for email_from_gd" do
       it "defaults to 'dim-ateb@deisebau.senedd.cymru'" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("https")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_CY", "deisebau.senedd.cymru").and_return("deisebau.senedd.cymru")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "deisebau.senedd.cymru").and_return("deisebau.senedd.cymru")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return(443)
 
-        expect(defaults[:email_from_cy]).to eq(%{"Deisebau: Senedd" <dim-ateb@deisebau.senedd.cymru>})
+        expect(defaults[:email_from_gd]).to eq(%{"Deisebau: Senedd" <dim-ateb@deisebau.senedd.cymru>})
       end
 
       it "allows overriding via the url environment variables" do
         allow(ENV).to receive(:fetch).with("EPETITIONS_PROTOCOL", "https").and_return("http")
-        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_CY", "deisebau.senedd.cymru").and_return("localhost")
+        allow(ENV).to receive(:fetch).with("EPETITIONS_HOST_GD", "deisebau.senedd.cymru").and_return("localhost")
         allow(ENV).to receive(:fetch).with("EPETITIONS_PORT", '443').and_return("3000")
 
-        expect(defaults[:email_from_cy]).to eq(%{"Deisebau: Senedd" <dim-ateb@localhost>})
+        expect(defaults[:email_from_gd]).to eq(%{"Deisebau: Senedd" <dim-ateb@localhost>})
       end
 
-      it "allows overriding via the EPETITIONS_FROM_CY environment variables" do
-        allow(ENV).to receive(:fetch).with("EPETITIONS_FROM_CY", %{"Deisebau: Senedd" <dim-ateb@deisebau.senedd.cymru>}).and_return("no-reply@downingstreet.gov.uk")
-        expect(defaults[:email_from_cy]).to eq("no-reply@downingstreet.gov.uk")
+      it "allows overriding via the EPETITIONS_FROM_GD environment variables" do
+        allow(ENV).to receive(:fetch).with("EPETITIONS_FROM_GD", %{"Deisebau: Senedd" <dim-ateb@deisebau.senedd.cymru>}).and_return("no-reply@downingstreet.gov.uk")
+        expect(defaults[:email_from_gd]).to eq("no-reply@downingstreet.gov.uk")
       end
     end
 
@@ -853,13 +853,13 @@ RSpec.describe Site, type: :model do
     end
   end
 
-  describe "#constraints_for_public_cy" do
+  describe "#constraints_for_public_gd" do
     subject :site do
-      described_class.create!(url_cy: "https://deiseb.senedd.prawf")
+      described_class.create!(url_gd: "https://deiseb.senedd.prawf")
     end
 
     it "a hash of routing constraints" do
-      expect(site.constraints_for_public_cy).to eq(
+      expect(site.constraints_for_public_gd).to eq(
         protocol: "https://", host: "deiseb.senedd.prawf", port: 443
       )
     end
@@ -897,13 +897,13 @@ RSpec.describe Site, type: :model do
     end
   end
 
-  describe "#host_cy" do
+  describe "#host_gd" do
     subject :site do
-      described_class.create!(url_cy: "https://deiseb.senedd.prawf")
+      described_class.create!(url_gd: "https://deiseb.senedd.prawf")
     end
 
     it "the host of the url" do
-      expect(site.host_cy).to eq("deiseb.senedd.prawf")
+      expect(site.host_gd).to eq("deiseb.senedd.prawf")
     end
   end
 
@@ -939,24 +939,24 @@ RSpec.describe Site, type: :model do
     end
   end
 
-  describe "#host_with_port_cy" do
+  describe "#host_with_port_gd" do
     context "when the port is the default port" do
       subject :site do
-        described_class.create!(url_cy: "https://deiseb.senedd.prawf")
+        described_class.create!(url_gd: "https://deiseb.senedd.prawf")
       end
 
       it "the host without the port of the url" do
-        expect(site.host_with_port_cy).to eq("deiseb.senedd.prawf")
+        expect(site.host_with_port_gd).to eq("deiseb.senedd.prawf")
       end
     end
 
     context "when the port is not the default port" do
       subject :site do
-        described_class.create!(url_cy: "https://deiseb.senedd.prawf:8443")
+        described_class.create!(url_gd: "https://deiseb.senedd.prawf:8443")
       end
 
       it "the host with the port of the url" do
-        expect(site.host_with_port_cy).to eq("deiseb.senedd.prawf:8443")
+        expect(site.host_with_port_gd).to eq("deiseb.senedd.prawf:8443")
       end
     end
   end
@@ -1013,13 +1013,13 @@ RSpec.describe Site, type: :model do
     end
   end
 
-  describe "#port_cy" do
+  describe "#port_gd" do
     subject :site do
-      described_class.create!(url_cy: "https://deiseb.senedd.prawf")
+      described_class.create!(url_gd: "https://deiseb.senedd.prawf")
     end
 
     it "the port of the url" do
-      expect(site.port_cy).to eq(443)
+      expect(site.port_gd).to eq(443)
     end
   end
 
@@ -1043,13 +1043,13 @@ RSpec.describe Site, type: :model do
     end
   end
 
-  describe "#protocol_cy" do
+  describe "#protocol_gd" do
     subject :site do
-      described_class.create!(url_cy: "https://deiseb.senedd.prawf")
+      described_class.create!(url_gd: "https://deiseb.senedd.prawf")
     end
 
     it "the protocol of the url" do
-      expect(site.protocol_cy).to eq("https://")
+      expect(site.protocol_gd).to eq("https://")
     end
   end
 

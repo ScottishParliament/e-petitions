@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe PaperPetition, type: :model do
   describe "validations" do
     %i[
-      action_en background_en action_cy background_cy
+      action_en background_en action_gd background_gd
       locale location_code signature_count submitted_on
       name email phone_number address postcode
     ].each do |attribute|
@@ -11,9 +11,9 @@ RSpec.describe PaperPetition, type: :model do
     end
 
     [
-      [%i[action_en action_cy], 100],
-      [%i[background_en background_cy address], 500],
-      [%i[additional_details_en additional_details_cy], 1100],
+      [%i[action_en action_gd], 100],
+      [%i[background_en background_gd address], 500],
+      [%i[additional_details_en additional_details_gd], 1100],
       [%i[email postcode], 255],
       [%i[phone_number], 31]
     ].each do |attributes, length|
@@ -24,7 +24,7 @@ RSpec.describe PaperPetition, type: :model do
 
     %i[
       action_en background_en additional_details_en
-      action_cy background_cy additional_details_cy
+      action_gd background_gd additional_details_gd
       name phone_number address
     ].each do |attribute|
       it { is_expected.not_to allow_value("-").for(attribute).with_message(:invalid) }
@@ -56,10 +56,10 @@ RSpec.describe PaperPetition, type: :model do
     end
   end
 
-  describe "#action_cy=" do
+  describe "#action_gd=" do
     it "strips whitespace from the beginning and end" do
-      subject.action_cy = " Gwnewch bethau!  "
-      expect(subject.action_cy).to eq("Gwnewch bethau!")
+      subject.action_gd = " Gwnewch bethau!  "
+      expect(subject.action_gd).to eq("Gwnewch bethau!")
     end
   end
 
@@ -70,10 +70,10 @@ RSpec.describe PaperPetition, type: :model do
     end
   end
 
-  describe "#background_cy=" do
+  describe "#background_gd=" do
     it "strips whitespace from the beginning and end" do
-      subject.background_cy = " Am resymau  "
-      expect(subject.background_cy).to eq("Am resymau")
+      subject.background_gd = " Am resymau  "
+      expect(subject.background_gd).to eq("Am resymau")
     end
   end
 
@@ -84,10 +84,10 @@ RSpec.describe PaperPetition, type: :model do
     end
   end
 
-  describe "#additional_details_cy=" do
+  describe "#additional_details_gd=" do
     it "strips whitespace from the beginning and end" do
-      subject.additional_details_cy = " Dyma ychydig mwy o resymau  "
-      expect(subject.additional_details_cy).to eq("Dyma ychydig mwy o resymau")
+      subject.additional_details_gd = " Dyma ychydig mwy o resymau  "
+      expect(subject.additional_details_gd).to eq("Dyma ychydig mwy o resymau")
     end
   end
 
@@ -109,20 +109,20 @@ RSpec.describe PaperPetition, type: :model do
     end
   end
 
-  describe "#additional_details_cy?" do
-    context "when additional_details_cy has no content" do
-      subject { described_class.new(additional_details_cy: "") }
+  describe "#additional_details_gd?" do
+    context "when additional_details_gd has no content" do
+      subject { described_class.new(additional_details_gd: "") }
 
       it "returns false" do
-        expect(subject.additional_details_cy?).to eq(false)
+        expect(subject.additional_details_gd?).to eq(false)
       end
     end
 
-    context "when additional_details_cy has content" do
-      subject { described_class.new(additional_details_cy: "Dyma ychydig mwy o resymau") }
+    context "when additional_details_gd has content" do
+      subject { described_class.new(additional_details_gd: "Dyma ychydig mwy o resymau") }
 
       it "returns true" do
-        expect(subject.additional_details_cy?).to eq(true)
+        expect(subject.additional_details_gd?).to eq(true)
       end
     end
   end
@@ -167,10 +167,10 @@ RSpec.describe PaperPetition, type: :model do
     context "when the params are valid" do
       let(:params) do
         {
-          action_en: "Do stuff!", action_cy: "Gwnewch bethau!",
-          background_en: "For reasons", background_cy: "Am resymau",
+          action_en: "Do stuff!", action_gd: "Gwnewch bethau!",
+          background_en: "For reasons", background_gd: "Am resymau",
           additional_details_en: "Here's some more reasons",
-          additional_details_cy: "Dyma ychydig mwy o resymau",
+          additional_details_gd: "Dyma ychydig mwy o resymau",
           locale: "cy-GB", signature_count: 6000, submitted_on: "2020-04-30",
           name: "Alice Smith", email: "alice@example.com", postcode: "CF99 1NA",
           address: "The Senedd\nPierhead St\nCardiff", phone_number: "0300 200 6565"
@@ -189,11 +189,11 @@ RSpec.describe PaperPetition, type: :model do
           submitted_on_paper: true,
           submitted_on: Date.civil(2020, 4, 30),
           action_en: "Do stuff!",
-          action_cy: "Gwnewch bethau!",
+          action_gd: "Gwnewch bethau!",
           background_en: "For reasons",
-          background_cy: "Am resymau",
+          background_gd: "Am resymau",
           additional_details_en: "Here's some more reasons",
-          additional_details_cy: "Dyma ychydig mwy o resymau",
+          additional_details_gd: "Dyma ychydig mwy o resymau",
           locale: "cy-GB", signature_count: 6000,
           open_at: Time.utc(2020, 3, 1, 12, 0, 0),
           closed_at: Time.utc(2020, 4, 30, 11, 0, 0),

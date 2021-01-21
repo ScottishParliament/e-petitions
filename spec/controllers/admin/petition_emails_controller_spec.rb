@@ -183,8 +183,8 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
         {
           subject_en: "Petition email subject",
           body_en: "Petition email body",
-          subject_cy: "Testun e-bost y ddeiseb",
-          body_cy: "Corff e-bost deiseb"
+          subject_gd: "Testun e-bost y ddeiseb",
+          body_gd: "Corff e-bost deiseb"
         }
       end
 
@@ -223,8 +223,8 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
               expect(email).to be_present
               expect(email.subject_en).to eq "Petition email subject"
               expect(email.body_en).to eq "Petition email body"
-              expect(email.subject_cy).to eq "Testun e-bost y ddeiseb"
-              expect(email.body_cy).to eq "Corff e-bost deiseb"
+              expect(email.subject_gd).to eq "Testun e-bost y ddeiseb"
+              expect(email.body_gd).to eq "Corff e-bost deiseb"
               expect(email.sent_by).to eq user.pretty_name
             end
 
@@ -305,7 +305,7 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
 
           describe "with invalid params" do
             let(:petition_email_attributes) do
-              { subject_en: "", body_en: "", subject_cy: "", body_cy: "" }
+              { subject_en: "", body_en: "", subject_gd: "", body_gd: "" }
             end
 
             it "re-renders the admin/petition_emails/new template" do
@@ -393,8 +393,8 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
               expect(email).to be_present
               expect(email.subject_en).to eq "Petition email subject"
               expect(email.body_en).to eq "Petition email body"
-              expect(email.subject_cy).to eq "Testun e-bost y ddeiseb"
-              expect(email.body_cy).to eq "Corff e-bost deiseb"
+              expect(email.subject_gd).to eq "Testun e-bost y ddeiseb"
+              expect(email.body_gd).to eq "Corff e-bost deiseb"
               expect(email.sent_by).to eq user.pretty_name
             end
 
@@ -443,7 +443,7 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
 
           describe "with invalid params" do
             let(:petition_email_attributes) do
-              { subject_en: "", body_en: "", subject_cy: "", body_cy: "" }
+              { subject_en: "", body_en: "", subject_gd: "", body_gd: "" }
             end
 
             it "re-renders the admin/petition_emails/new template" do
@@ -531,8 +531,8 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
               expect(email).to be_present
               expect(email.subject_en).to eq "Petition email subject"
               expect(email.body_en).to eq "Petition email body"
-              expect(email.subject_cy).to eq "Testun e-bost y ddeiseb"
-              expect(email.body_cy).to eq "Corff e-bost deiseb"
+              expect(email.subject_gd).to eq "Testun e-bost y ddeiseb"
+              expect(email.body_gd).to eq "Corff e-bost deiseb"
               expect(email.sent_by).to eq user.pretty_name
             end
 
@@ -581,7 +581,7 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
 
           describe "with invalid params" do
             let(:petition_email_attributes) do
-              { subject_en: "", body_en: "", subject_cy: "", body_cy: "" }
+              { subject_en: "", body_en: "", subject_gd: "", body_gd: "" }
             end
 
             it "re-renders the admin/petition_emails/new template" do
@@ -642,8 +642,8 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
           petition: petition,
           subject_en: "Petition email subject",
           body_en: "Petition email body",
-          subject_cy: "Testun e-bost y ddeiseb",
-          body_cy: "Corff e-bost deiseb"
+          subject_gd: "Testun e-bost y ddeiseb",
+          body_gd: "Corff e-bost deiseb"
         )
       end
 
@@ -696,8 +696,8 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
           petition: petition,
           subject_en: "Petition email subject",
           body_en: "Petition email body",
-          subject_cy: "Testun e-bost y ddeiseb",
-          body_cy: "Corff e-bost deiseb"
+          subject_gd: "Testun e-bost y ddeiseb",
+          body_gd: "Corff e-bost deiseb"
         )
       end
 
@@ -705,8 +705,8 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
         {
           subject_en: "New petition email subject",
           body_en: "New petition email body",
-          subject_cy: "Testun e-bost deiseb newydd",
-          body_cy: "Corff e-bost deiseb newydd"
+          subject_gd: "Testun e-bost deiseb newydd",
+          body_gd: "Corff e-bost deiseb newydd"
         }
       end
 
@@ -751,8 +751,8 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
               expect(email).to be_present
               expect(email.subject_en).to eq "New petition email subject"
               expect(email.body_en).to eq "New petition email body"
-              expect(email.subject_cy).to eq "Testun e-bost deiseb newydd"
-              expect(email.body_cy).to eq "Corff e-bost deiseb newydd"
+              expect(email.subject_gd).to eq "Testun e-bost deiseb newydd"
+              expect(email.body_gd).to eq "Corff e-bost deiseb newydd"
               expect(email.sent_by).to eq user.pretty_name
             end
 
@@ -833,7 +833,7 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
 
           describe "with invalid params" do
             let(:petition_email_attributes) do
-              { subject_en: "", body_en: "", subject_cy: "", body_cy: "" }
+              { subject_en: "", body_en: "", subject_gd: "", body_gd: "" }
             end
 
             it "re-renders the admin/petition_emails/edit template" do
@@ -978,7 +978,7 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
 
           describe "with invalid params" do
             let(:petition_email_attributes) do
-              { subject_en: "", body_en: "", subject_cy: "", body_cy: "" }
+              { subject_en: "", body_en: "", subject_gd: "", body_gd: "" }
             end
 
             it "re-renders the admin/petition_emails/edit template" do
@@ -1131,7 +1131,7 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
 
           describe "with invalid params" do
             let(:petition_email_attributes) do
-              { subject_en: "", body_en: "", subject_cy: "", body_cy: "" }
+              { subject_en: "", body_en: "", subject_gd: "", body_gd: "" }
             end
 
             it "re-renders the admin/petition_emails/edit template" do
@@ -1151,8 +1151,8 @@ RSpec.describe Admin::PetitionEmailsController, type: :controller, admin: true d
               email.reload
               expect(email.subject_en).to eq "Petition email subject"
               expect(email.body_en).to eq "Petition email body"
-              expect(email.subject_cy).to eq "Testun e-bost y ddeiseb"
-              expect(email.body_cy).to eq "Corff e-bost deiseb"
+              expect(email.subject_gd).to eq "Testun e-bost y ddeiseb"
+              expect(email.body_gd).to eq "Corff e-bost deiseb"
             end
           end
         end

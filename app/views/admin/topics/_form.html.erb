@@ -21,16 +21,16 @@
     <fieldset>
       <legend><h2>Welsh</h2></legend>
 
-      <%= form_row for: [form.object, :code_cy] do %>
-        <%= form.label :code_cy, "Code", class: 'form-label' %>
-        <%= error_messages_for_field @topic, :code_cy %>
-        <%= form.text_field :code_cy, tabindex: increment, maxlength: 100, autofocus: true, class: 'form-control' %>
+      <%= form_row for: [form.object, :code_gd] do %>
+        <%= form.label :code_gd, "Code", class: 'form-label' %>
+        <%= error_messages_for_field @topic, :code_gd %>
+        <%= form.text_field :code_gd, tabindex: increment, maxlength: 100, autofocus: true, class: 'form-control' %>
       <% end %>
 
-      <%= form_row for: [form.object, :name_cy] do %>
-        <%= form.label :name_cy, "Name", class: 'form-label' %>
-        <%= error_messages_for_field @topic, :name_cy %>
-        <%= form.text_field :name_cy, tabindex: increment, maxlength: 100, class: 'form-control' %>
+      <%= form_row for: [form.object, :name_gd] do %>
+        <%= form.label :name_gd, "Name", class: 'form-label' %>
+        <%= error_messages_for_field @topic, :name_gd %>
+        <%= form.text_field :name_gd, tabindex: increment, maxlength: 100, class: 'form-control' %>
       <% end %>
     </fieldset>
   </div>

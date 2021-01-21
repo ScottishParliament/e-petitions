@@ -286,9 +286,9 @@ ActiveRecord::Schema.define(version: 2021_01_20_192856) do
     t.index "to_tsvector('english'::regconfig, (action_en)::text)", name: "index_petitions_on_action_en", using: :gin
     t.index "to_tsvector('english'::regconfig, (background_en)::text)", name: "index_petitions_on_background_en", using: :gin
     t.index "to_tsvector('english'::regconfig, additional_details_en)", name: "index_petitions_on_additional_details_en", using: :gin
-    t.index "to_tsvector('simple'::regconfig, (action_gd)::text)", name: "index_petitions_on_action_cy", using: :gin
-    t.index "to_tsvector('simple'::regconfig, (background_gd)::text)", name: "index_petitions_on_background_cy", using: :gin
-    t.index "to_tsvector('simple'::regconfig, additional_details_gd)", name: "index_petitions_on_additional_details_cy", using: :gin
+    t.index "to_tsvector('simple'::regconfig, (action_gd)::text)", name: "index_petitions_on_action_gd", using: :gin
+    t.index "to_tsvector('simple'::regconfig, (background_gd)::text)", name: "index_petitions_on_background_gd", using: :gin
+    t.index "to_tsvector('simple'::regconfig, additional_details_gd)", name: "index_petitions_on_additional_details_gd", using: :gin
     t.index ["anonymized_at"], name: "index_petitions_on_anonymized_at"
     t.index ["archived_at", "state"], name: "index_petitions_on_archived_at_and_state"
     t.index ["created_at", "state"], name: "index_petitions_on_created_at_and_state"

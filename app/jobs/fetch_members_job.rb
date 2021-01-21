@@ -61,8 +61,8 @@ class FetchMembersJob < ApplicationJob
 
       members(:"cy-GB").each do |member|
         hash.fetch(member[:id]).tap do |row|
-          row[:name_cy] = member[:name]
-          row[:party_cy] = member[:party]
+          row[:name_gd] = member[:name]
+          row[:party_gd] = member[:party]
         end
       end
     end

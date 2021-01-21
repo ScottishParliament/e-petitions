@@ -8,10 +8,10 @@
     <%= f.text_field :abms_link_en, tabindex: increment, class: 'form-control' %>
   <% end %>
 
-  <%= form_row :for => [f.object, :abms_link_cy], style: "margin-top: -15px;" do %>
-    <%= f.label :abms_link_cy, "Welsh", class: 'form-label' %>
-    <%= error_messages_for_field f.object, :abms_link_cy %>
-    <%= f.text_field :abms_link_cy, tabindex: increment, class: 'form-control' %>
+  <%= form_row :for => [f.object, :abms_link_gd], style: "margin-top: -15px;" do %>
+    <%= f.label :abms_link_gd, "Welsh", class: 'form-label' %>
+    <%= error_messages_for_field f.object, :abms_link_gd %>
+    <%= f.text_field :abms_link_gd, tabindex: increment, class: 'form-control' %>
   <% end %>
 
   <%= f.submit "Save", name: 'save', class: 'button' %>

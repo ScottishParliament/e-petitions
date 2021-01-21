@@ -6,23 +6,23 @@ class NotifyCreatorThatPetitionWasRejectedEmailJob < NotifyJob
       if insufficient_petition?
         {
           creator: signature.name,
-          action_en: petition.action_en, action_cy: petition.action_cy,
-          content_en: rejection.content_en, content_cy: rejection.content_cy,
-          url_en: petition_en_url(petition), url_cy: petition_cy_url(petition),
+          action_en: petition.action_en, action_gd: petition.action_gd,
+          content_en: rejection.content_en, content_gd: rejection.content_gd,
+          url_en: petition_en_url(petition), url_gd: petition_gd_url(petition),
           standards_url_en: help_en_url(anchor: "standards"),
-          standards_url_cy: help_cy_url(anchor: "standards"),
+          standards_url_gd: help_gd_url(anchor: "standards"),
           new_petition_url_en: check_petitions_en_url,
-          new_petition_url_cy: check_petitions_cy_url
+          new_petition_url_gd: check_petitions_gd_url
         }
       else
         {
           creator: signature.name, action: petition.action,
-          content_en: rejection.content_en, content_cy: rejection.content_cy,
-          url_en: petition_en_url(petition), url_cy: petition_cy_url(petition),
+          content_en: rejection.content_en, content_gd: rejection.content_gd,
+          url_en: petition_en_url(petition), url_gd: petition_gd_url(petition),
           standards_url_en: help_en_url(anchor: "standards"),
-          standards_url_cy: help_cy_url(anchor: "standards"),
+          standards_url_gd: help_gd_url(anchor: "standards"),
           new_petition_url_en: check_petitions_en_url,
-          new_petition_url_cy: check_petitions_cy_url
+          new_petition_url_gd: check_petitions_gd_url
         }
       end
     end

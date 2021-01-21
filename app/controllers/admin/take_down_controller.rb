@@ -21,7 +21,7 @@ class Admin::TakeDownController < Admin::AdminController
   end
 
   def rejection_params
-    params.require(:petition).permit(rejection: [:code, :details_en, :details_cy])
+    params.require(:petition).permit(rejection: [:code, :details_en, :details_gd])
   end
 
   def send_notifications

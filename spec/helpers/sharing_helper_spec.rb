@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe SharingHelper, type: :helper do
-  let(:petition) { FactoryBot.create(:open_petition, id: 100000, action_en: "Do Something!", action_cy: "Gwneud Rhywbeth!") }
+  let(:petition) { FactoryBot.create(:open_petition, id: 100000, action_en: "Do Something!", action_gd: "Gwneud Rhywbeth!") }
   let(:headers) { helper.request.env }
 
   before do

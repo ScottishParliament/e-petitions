@@ -10,14 +10,14 @@ class NotifySignerOfPositiveDebateOutcomeEmailJob < NotifyJob
   def personalisation(signature, petition, outcome)
     {
       name: signature.name,
-      action_en: petition.action_en, action_cy: petition.action_cy,
-      overview_en: outcome.overview_en, overview_cy: outcome.overview_cy,
-      transcript_url_en: outcome.transcript_url_en, transcript_url_cy: outcome.transcript_url_cy,
-      video_url_en: outcome.video_url_en, video_url_cy: outcome.video_url_cy,
-      debate_pack_url_en: outcome.debate_pack_url_en, debate_pack_url_cy: outcome.debate_pack_url_cy,
-      petition_url_en: petition_en_url(petition), petition_url_cy: petition_cy_url(petition),
+      action_en: petition.action_en, action_gd: petition.action_gd,
+      overview_en: outcome.overview_en, overview_gd: outcome.overview_gd,
+      transcript_url_en: outcome.transcript_url_en, transcript_url_gd: outcome.transcript_url_gd,
+      video_url_en: outcome.video_url_en, video_url_gd: outcome.video_url_gd,
+      debate_pack_url_en: outcome.debate_pack_url_en, debate_pack_url_gd: outcome.debate_pack_url_gd,
+      petition_url_en: petition_en_url(petition), petition_url_gd: petition_gd_url(petition),
       unsubscribe_url_en: unsubscribe_signature_en_url(signature, token: signature.unsubscribe_token),
-      unsubscribe_url_cy: unsubscribe_signature_cy_url(signature, token: signature.unsubscribe_token),
+      unsubscribe_url_gd: unsubscribe_signature_gd_url(signature, token: signature.unsubscribe_token),
     }
   end
 end

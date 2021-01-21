@@ -17,10 +17,10 @@
   <%= form.text_area :description_en, tabindex: increment, rows: 6, class: 'form-control' %>
 <% end %>
 
-<%= form_row for: [form.object, :description_cy] do %>
-  <%= form.label :description_cy, "Description in Welsh", class: 'form-label' %>
-  <%= error_messages_for_field @rejection_reason, :description_cy %>
-  <%= form.text_area :description_cy, tabindex: increment, rows: 6, class: 'form-control' %>
+<%= form_row for: [form.object, :description_gd] do %>
+  <%= form.label :description_gd, "Description in Welsh", class: 'form-label' %>
+  <%= error_messages_for_field @rejection_reason, :description_gd %>
+  <%= form.text_area :description_gd, tabindex: increment, rows: 6, class: 'form-control' %>
 <% end %>
 
 <h3>Should this rejection reason hide the petition?</h3>

@@ -208,7 +208,7 @@ RSpec.configure do |config|
     if example.metadata[:admin]
       host! Site.moderate_host_with_port
     elsif example.metadata[:welsh]
-      host! Site.host_with_port_cy
+      host! Site.host_with_port_gd
     else
       host! Site.host_with_port_en
     end

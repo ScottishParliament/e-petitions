@@ -1,5 +1,5 @@
 id: "fb8c5cee-8fb1-46f3-8818-58f3c4311c2b"
-name: "gather_sponsors_for_petition_moderation_delay_cy"
+name: "gather_sponsors_for_petition_moderation_delay_gd"
 subject: "Cam i’w gymryd: Deiseb “((action))” | Action required: Petition “((action))”"
 body: |-
   Annwyl ((creator)),
@@ -21,7 +21,7 @@ body: |-
   Rydw i wedi creu deiseb – a wnewch chi ei llofnodi?
   
   Cliciwch ar y linc i lofnodi’r ddeiseb: 
-  ((url_cy))
+  ((url_gd))
   
   Fy neiseb I:
   
@@ -30,7 +30,7 @@ body: |-
   ((content))
   
   Cliciwch ar y linc i lofnodi’r ddeiseb: 
-  ((url_cy))
+  ((url_gd))
   
   ---
   

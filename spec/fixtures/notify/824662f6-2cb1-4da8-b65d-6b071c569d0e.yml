@@ -1,6 +1,6 @@
 id: "824662f6-2cb1-4da8-b65d-6b071c569d0e"
 name: "notify_signer_of_debate_scheduled_en"
-subject: "Senedd will debate “((action_en))” | Bydd y Senedd yn trafod “((action_cy))”"
+subject: "Senedd will debate “((action_en))” | Bydd y Senedd yn trafod “((action_gd))”"
 body: |-
   Dear ((name)),
   
@@ -23,11 +23,11 @@ body: |-
   
   Annwyl ((name)),
   
-  Mae’r Senedd yn mynd i drafod y ddeiseb a lofnodwyd gennych - “((action_cy))”.
+  Mae’r Senedd yn mynd i drafod y ddeiseb a lofnodwyd gennych - “((action_gd))”.
   
-  ((petition_url_cy))
+  ((petition_url_gd))
   
-  Mae’r ddadl wedi’i hamserlennu ar gyfer ((debate_date_cy)).
+  Mae’r ddadl wedi’i hamserlennu ar gyfer ((debate_date_gd)).
   
   Ar ôl i’r ddadl ddigwydd, byddwn yn e-bostio fideo a thrawsgrifiad atoch.
   
@@ -35,5 +35,5 @@ body: |-
   Y tîm Deisebau
   Senedd
   
-  Rydych chi’n derbyn yr e-bost hwn oherwydd i chi lofnodi’r ddeiseb hon: “((action_cy))”.
-  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_cy))
+  Rydych chi’n derbyn yr e-bost hwn oherwydd i chi lofnodi’r ddeiseb hon: “((action_gd))”.
+  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_gd))

@@ -26,7 +26,7 @@ module TranslationHelper
     end
 
     def helper
-      locale == :"cy-GB" ? :"#{route}_en_url" : :"#{route}_cy_url"
+      locale == :"cy-GB" ? :"#{route}_en_url" : :"#{route}_gd_url"
     end
 
     def translate(params)
@@ -40,7 +40,7 @@ module TranslationHelper
       return value unless key == "topic"
 
       if topic = Topic.find_by(code: value)
-        I18n.locale == :"en-GB" ? topic.code_cy : topic.code_en
+        I18n.locale == :"en-GB" ? topic.code_gd : topic.code_en
       else
         value
       end

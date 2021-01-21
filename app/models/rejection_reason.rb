@@ -10,7 +10,7 @@ class RejectionReason < ActiveRecord::Base
 
   with_options presence: true do
     validates :description_en, length: { maximum: 1000 }
-    validates :description_cy, length: { maximum: 1000 }
+    validates :description_gd, length: { maximum: 1000 }
   end
 
   before_destroy do

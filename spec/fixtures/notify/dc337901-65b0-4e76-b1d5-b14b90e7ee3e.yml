@@ -1,6 +1,6 @@
 id: "dc337901-65b0-4e76-b1d5-b14b90e7ee3e"
 name: "notify_creator_that_petition_is_published_en"
-subject: "We published your petition “((action_en))” | Cyhoeddwyd eich deiseb “((action_cy))”"
+subject: "We published your petition “((action_en))” | Cyhoeddwyd eich deiseb “((action_gd))”"
 body: |-
   Dear ((creator)),
   
@@ -29,10 +29,10 @@ body: |-
   
   Annwyl ((creator)),
   
-  Mae eich deiseb “((action_cy))” bellach wedi’i chyhoeddi ac yn barod i gasglu llofnodion. 
+  Mae eich deiseb “((action_gd))” bellach wedi’i chyhoeddi ac yn barod i gasglu llofnodion. 
   
   Cliciwch ar y linc i weld eich deiseb a dechrau ei rhannu:
-  ((url_cy))
+  ((url_gd))
   
   Mae angen o leiaf ((referral_threshold)) llofnod ar ddeiseb er mwyn i’r Pwyllgor Deisebau ei hystyried. Ni fydd hyn yn digwydd tan ar ôl i’r ddeiseb orffen casglu llofnodion. Rhowch wybod i ni os hoffech newid dyddiad cau eich deiseb.
   

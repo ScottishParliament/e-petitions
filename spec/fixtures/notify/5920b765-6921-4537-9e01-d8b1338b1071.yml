@@ -1,5 +1,5 @@
 id: "5920b765-6921-4537-9e01-d8b1338b1071"
-name: "gather_sponsors_for_petition_easter_cy"
+name: "gather_sponsors_for_petition_easter_gd"
 subject: "Cam i’w gymryd: Deiseb “((action))” | Action required: Petition “((action))”"
 body: |-
   Annwyl ((creator)),
@@ -21,7 +21,7 @@ body: |-
   Rydw i wedi creu deiseb – a wnewch chi ei llofnodi?
   
   Cliciwch ar y linc i lofnodi’r ddeiseb: 
-  ((url_cy))
+  ((url_gd))
   
   Fy neiseb I:
   
@@ -30,7 +30,7 @@ body: |-
   ((content))
   
   Cliciwch ar y linc i lofnodi’r ddeiseb: 
-  ((url_cy))
+  ((url_gd))
   
   ---
   

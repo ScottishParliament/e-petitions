@@ -9,7 +9,7 @@ RSpec.describe Constituency, type: :model do
     it { is_expected.to have_db_column(:id).of_type(:string).with_options(null: false, limit: 9, primary_key: true) }
     it { is_expected.to have_db_column(:region_id).of_type(:string).with_options(null: false, limit: 9) }
     it { is_expected.to have_db_column(:name_en).of_type(:string).with_options(null: false, limit: 100) }
-    it { is_expected.to have_db_column(:name_cy).of_type(:string).with_options(null: false, limit: 100) }
+    it { is_expected.to have_db_column(:name_gd).of_type(:string).with_options(null: false, limit: 100) }
     it { is_expected.to have_db_column(:example_postcode).of_type(:string).with_options(null: false, limit: 7) }
     it { is_expected.to have_db_column(:created_at).of_type(:datetime).with_options(null: false) }
     it { is_expected.to have_db_column(:updated_at).of_type(:datetime).with_options(null: false) }
@@ -26,6 +26,6 @@ RSpec.describe Constituency, type: :model do
   describe "indexes" do
     it { is_expected.to have_db_index([:region_id]) }
     it { is_expected.to have_db_index([:name_en]).unique }
-    it { is_expected.to have_db_index([:name_cy]).unique }
+    it { is_expected.to have_db_index([:name_gd]).unique }
   end
 end

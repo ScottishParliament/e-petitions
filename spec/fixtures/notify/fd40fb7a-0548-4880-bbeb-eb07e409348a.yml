@@ -1,23 +1,23 @@
 id: "fd40fb7a-0548-4880-bbeb-eb07e409348a"
-name: "notify_creator_that_petition_was_rejected_insufficient_cy"
-subject: "Gwrthodwyd eich deiseb “((action_cy))” | We rejected your petition “((action_en))”"
+name: "notify_creator_that_petition_was_rejected_insufficient_gd"
+subject: "Gwrthodwyd eich deiseb “((action_gd))” | We rejected your petition “((action_en))”"
 body: |-
   Annwyl ((creator)),
   
   Diolch am gyflwyno deiseb i’r Senedd.
   
-  Yn anffodus, allwn ni ddim cyfeirio’r ddeiseb “((action_cy))” at y Pwyllgor Deisebau.
+  Yn anffodus, allwn ni ddim cyfeirio’r ddeiseb “((action_gd))” at y Pwyllgor Deisebau.
   
-  ((content_cy))
+  ((content_gd))
    
   Cliciwch ar y linc i weld y ddeiseb a wrthodwyd:
-  ((url_cy))
+  ((url_gd))
   
   Dim ond deisebau nad ydynt yn bodloni’r safonau y byddwn yn eu gwrthod:
-  ((standards_url_cy))
+  ((standards_url_gd))
   
   Os hoffech roi cynnig arall arni, cliciwch yma i ddechrau deiseb:
-  ((new_petition_url_cy))
+  ((new_petition_url_gd))
   
   Mae’n ddrwg gennym na allwn fwrw ymlaen â’ch deiseb y tro hwn. 
   

@@ -80,7 +80,7 @@ class Admin::PetitionEmailsController < Admin::AdminController
   end
 
   def email_attributes
-    %i[subject_en subject_cy body_en body_cy]
+    %i[subject_en subject_gd body_en body_gd]
   end
 
   def feedback_signature

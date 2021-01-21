@@ -88,7 +88,7 @@ RSpec.describe Admin::ModerationController, type: :controller, admin: true do
         let(:patch_options) do
           {
             moderation: 'reject',
-            rejection: { code: rejection_code, details_en: 'rejection details', details_cy: 'manylion gwrthod' }
+            rejection: { code: rejection_code, details_en: 'rejection details', details_gd: 'manylion gwrthod' }
           }
         end
         let(:deliveries) { ActionMailer::Base.deliveries }
@@ -126,7 +126,7 @@ RSpec.describe Admin::ModerationController, type: :controller, admin: true do
 
           it 'sets the rejection details to the supplied details' do
             expect(petition.rejection.details_en).to eq('rejection details')
-            expect(petition.rejection.details_cy).to eq('manylion gwrthod')
+            expect(petition.rejection.details_gd).to eq('manylion gwrthod')
           end
 
           it 'redirects to the admin show page for the petition' do

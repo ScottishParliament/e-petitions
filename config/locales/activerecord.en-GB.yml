@@ -9,7 +9,7 @@ en-GB:
               invalid: "Action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
                 other: "Action is too long (maximum is %{count} characters)"
-            action_cy:
+            action_gd:
               blank: "Action must be completed"
               invalid: "Action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
@@ -19,7 +19,7 @@ en-GB:
               invalid: "Background can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
                 other: "Background is too long (maximum is %{count} characters)"
-            background_cy:
+            background_gd:
               blank: "Background must be completed"
               invalid: "Background can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
@@ -28,7 +28,7 @@ en-GB:
               invalid: "Additional details can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
                 other: "Additional details is too long (maximum is %{count} characters)"
-            additional_details_cy:
+            additional_details_gd:
               invalid: "Additional details can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
                 other: "Additional details is too long (maximum is %{count} characters)"
@@ -117,7 +117,7 @@ en-GB:
               blank: "Subject must be completed"
               too_long:
                 other: "Subject is too long (maximum is %{count} characters)"
-            subject_cy:
+            subject_gd:
               blank: "Subject must be completed"
               too_long:
                 other: "Subject is too long (maximum is %{count} characters)"
@@ -125,7 +125,7 @@ en-GB:
               blank: "Body must be completed"
               too_long:
                 other: "Body is too long (maximum is %{count} characters)"
-            body_cy:
+            body_gd:
               blank: "Body must be completed"
               too_long:
                 other: "Body is too long (maximum is %{count} characters)"
@@ -177,7 +177,7 @@ en-GB:
               blank: "Description must be completed"
               too_long:
                 other: "Description is too long (maximum is %{count} characters)"
-            description_cy:
+            description_gd:
               blank: "Description must be completed"
               too_long:
                 other: "Description is too long (maximum is %{count} characters)"
@@ -198,7 +198,7 @@ en-GB:
               too_long:
                 one: "Code is too long (maximum is 1 character)"
                 other: "Code is too long (maximum is %{count} characters)"
-            code_cy:
+            code_gd:
               blank: "Code must be completed"
               taken: "Code already exists"
               too_long:
@@ -210,7 +210,7 @@ en-GB:
               too_long:
                 one: "Name is too long (maximum is 1 character)"
                 other: "Name is too long (maximum is %{count} characters)"
-            name_cy:
+            name_gd:
               blank: "Name must be completed"
               taken: "Name already exists"
               too_long:

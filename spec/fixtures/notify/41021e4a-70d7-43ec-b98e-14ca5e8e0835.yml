@@ -1,6 +1,6 @@
 id: "41021e4a-70d7-43ec-b98e-14ca5e8e0835"
 name: "notify_creator_of_negative_debate_outcome_en"
-subject: "Senedd didn’t debate “((action_en))” | Ni thrafododd y Senedd “((action_cy))”"
+subject: "Senedd didn’t debate “((action_en))” | Ni thrafododd y Senedd “((action_gd))”"
 body: |-
   Dear ((name)),
   
@@ -23,17 +23,17 @@ body: |-
   
   Annwyl ((name)),
   
-  Penderfynodd y Pwyllgor Deisebau beidio â thrafod eich deiseb - “((action_cy))”
+  Penderfynodd y Pwyllgor Deisebau beidio â thrafod eich deiseb - “((action_gd))”
   
-  ((overview_cy))
+  ((overview_gd))
   
-  Y ddeiseb: ((petition_url_cy))
+  Y ddeiseb: ((petition_url_gd))
   
-  Darganfyddwch fwy am y Pwyllgor Deisebau: ((petitions_committee_url_cy))
+  Darganfyddwch fwy am y Pwyllgor Deisebau: ((petitions_committee_url_gd))
   
   Diolch,
   Tîm Deisebau
   Y Senedd
   
-  Rydych chi’n derbyn yr e-bost hwn oherwydd i chi greu’r ddeiseb hon: “((action_cy))”.
-  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_cy))
+  Rydych chi’n derbyn yr e-bost hwn oherwydd i chi greu’r ddeiseb hon: “((action_gd))”.
+  Dad-danysgrifio rhag cael negeseuon e-bost am y ddeiseb hon: ((unsubscribe_url_gd))

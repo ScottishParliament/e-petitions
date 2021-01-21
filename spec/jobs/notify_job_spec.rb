@@ -324,7 +324,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Because of reasons\n\nHere's some more reasons",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -347,7 +347,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Because of reasons\n\nHere's some more reasons",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -372,7 +372,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Because of reasons\n\nHere's some more reasons",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -395,7 +395,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Because of reasons\n\nHere's some more reasons",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -420,7 +420,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Because of reasons\n\nHere's some more reasons",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -443,7 +443,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Because of reasons\n\nHere's some more reasons",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -455,9 +455,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         let(:petition) do
           FactoryBot.create(
             :pending_petition,
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -483,7 +483,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Oherwydd rhesymau\n\nDyma ychydig mwy o resymau",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -506,7 +506,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Oherwydd rhesymau\n\nDyma ychydig mwy o resymau",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -531,7 +531,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Oherwydd rhesymau\n\nDyma ychydig mwy o resymau",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -554,7 +554,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Oherwydd rhesymau\n\nDyma ychydig mwy o resymau",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -579,7 +579,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Oherwydd rhesymau\n\nDyma ychydig mwy o resymau",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -602,7 +602,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                   content: "Oherwydd rhesymau\n\nDyma ychydig mwy o resymau",
                   creator: "Charlie",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}/noddwyr/newydd?token=#{petition.sponsor_token}"
                 }
               )).to have_been_made
             end
@@ -660,7 +660,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 content: "Because of reasons\n\nHere's some more reasons",
                 creator: "Charlie",
                 url_en: "https://petitions.senedd.wales/sponsors/#{signature.id}/verify?token=#{signature.perishable_token}",
-                url_cy: "https://deisebau.senedd.cymru/noddwyr/#{signature.id}/gwirio?token=#{signature.perishable_token}"
+                url_gd: "https://deisebau.senedd.cymru/noddwyr/#{signature.id}/gwirio?token=#{signature.perishable_token}"
               }
             )).to have_been_made
           end
@@ -692,7 +692,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 content: "Because of reasons\n\nHere's some more reasons",
                 creator: "Charlie",
                 url_en: "https://petitions.senedd.wales/sponsors/#{signature.id}/verify?token=#{signature.perishable_token}",
-                url_cy: "https://deisebau.senedd.cymru/noddwyr/#{signature.id}/gwirio?token=#{signature.perishable_token}"
+                url_gd: "https://deisebau.senedd.cymru/noddwyr/#{signature.id}/gwirio?token=#{signature.perishable_token}"
               }
             )).to have_been_made
           end
@@ -703,9 +703,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         let(:petition) do
           FactoryBot.create(
             :sponsored_petition,
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -741,7 +741,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 content: "Oherwydd rhesymau\n\nDyma ychydig mwy o resymau",
                 creator: "Charlie",
                 url_en: "https://petitions.senedd.wales/sponsors/#{signature.id}/verify?token=#{signature.perishable_token}",
-                url_cy: "https://deisebau.senedd.cymru/noddwyr/#{signature.id}/gwirio?token=#{signature.perishable_token}"
+                url_gd: "https://deisebau.senedd.cymru/noddwyr/#{signature.id}/gwirio?token=#{signature.perishable_token}"
               }
             )).to have_been_made
           end
@@ -773,7 +773,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 content: "Oherwydd rhesymau\n\nDyma ychydig mwy o resymau",
                 creator: "Charlie",
                 url_en: "https://petitions.senedd.wales/sponsors/#{signature.id}/verify?token=#{signature.perishable_token}",
-                url_cy: "https://deisebau.senedd.cymru/noddwyr/#{signature.id}/gwirio?token=#{signature.perishable_token}"
+                url_gd: "https://deisebau.senedd.cymru/noddwyr/#{signature.id}/gwirio?token=#{signature.perishable_token}"
               }
             )).to have_been_made
           end
@@ -887,9 +887,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         let(:petition) do
           FactoryBot.create(
             :validated_petition,
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -980,7 +980,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
     end
 
     describe EmailConfirmationForSignerEmailJob do
-      let(:petition) { FactoryBot.create(:open_petition, action_en: "Do stuff", action_cy: "Gwnewch bethau") }
+      let(:petition) { FactoryBot.create(:open_petition, action_en: "Do stuff", action_gd: "Gwnewch bethau") }
       let(:constituency) { FactoryBot.create(:constituency, :cardiff_south_and_penarth) }
 
       it_behaves_like "a notify job" do
@@ -1002,9 +1002,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
             personalisation: {
               action_en: "Do stuff",
-              action_cy: "Gwnewch bethau",
+              action_gd: "Gwnewch bethau",
               url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/verify?token=#{signature.perishable_token}",
-              url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/gwirio?token=#{signature.perishable_token}"
+              url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/gwirio?token=#{signature.perishable_token}"
             }
           )).to have_been_made
         end
@@ -1046,9 +1046,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
             personalisation: {
               action_en: "Do stuff",
-              action_cy: "Gwnewch bethau",
+              action_gd: "Gwnewch bethau",
               url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/verify?token=#{signature.perishable_token}",
-              url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/gwirio?token=#{signature.perishable_token}"
+              url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/gwirio?token=#{signature.perishable_token}"
             }
           )).to have_been_made
         end
@@ -1078,7 +1078,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
     end
 
     describe EmailDuplicateSignaturesEmailJob do
-      let(:petition) { FactoryBot.create(:open_petition, action_en: "Do stuff", action_cy: "Gwnewch bethau") }
+      let(:petition) { FactoryBot.create(:open_petition, action_en: "Do stuff", action_gd: "Gwnewch bethau") }
 
       it_behaves_like "a notify job" do
         let(:signature) { FactoryBot.create(:validated_signature, petition: petition) }
@@ -1099,9 +1099,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
             personalisation: {
               action_en: "Do stuff",
-              action_cy: "Gwnewch bethau",
+              action_gd: "Gwnewch bethau",
               url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
+              url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
             }
           )).to have_been_made
         end
@@ -1131,9 +1131,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
             personalisation: {
               action_en: "Do stuff",
-              action_cy: "Gwnewch bethau",
+              action_gd: "Gwnewch bethau",
               url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
+              url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
             }
           )).to have_been_made
         end
@@ -1165,9 +1165,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -1188,9 +1188,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               creator: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
+              url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
             }
           )).to have_been_made
         end
@@ -1203,9 +1203,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -1226,9 +1226,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               creator: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
+              url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
             }
           )).to have_been_made
         end
@@ -1249,9 +1249,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -1284,9 +1284,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 sponsor: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
               }
             )).to have_been_made
           end
@@ -1315,9 +1315,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 sponsor: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
               }
             )).to have_been_made
           end
@@ -1331,9 +1331,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -1366,9 +1366,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 sponsor: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
               }
             )).to have_been_made
           end
@@ -1397,9 +1397,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 sponsor: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}"
               }
             )).to have_been_made
           end
@@ -1425,9 +1425,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -1452,13 +1452,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               personalisation: {
                 creator: "Charlie", action: "Do stuff",
                 content_en: "There’s already a petition about this issue. We cannot accept a new petition when we already have one about a very similar issue, or if the Petitions Committee has considered one in the last year.",
-                content_cy: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
+                content_gd: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 standards_url_en: "https://petitions.senedd.wales/help#standards",
-                standards_url_cy: "https://deisebau.senedd.cymru/help#standards",
+                standards_url_gd: "https://deisebau.senedd.cymru/help#standards",
                 new_petition_url_en: "https://petitions.senedd.wales/petitions/check",
-                new_petition_url_cy: "https://deisebau.senedd.cymru/deisebau/gwirio"
+                new_petition_url_gd: "https://deisebau.senedd.cymru/deisebau/gwirio"
               }
             )).to have_been_made
           end
@@ -1480,13 +1480,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               personalisation: {
                 creator: "Charlie", action: "Do stuff",
                 content_en: "It’s offensive, nonsense, a joke, or an advert.",
-                content_cy: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
+                content_gd: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 standards_url_en: "https://petitions.senedd.wales/help#standards",
-                standards_url_cy: "https://deisebau.senedd.cymru/help#standards",
+                standards_url_gd: "https://deisebau.senedd.cymru/help#standards",
                 new_petition_url_en: "https://petitions.senedd.wales/petitions/check",
-                new_petition_url_cy: "https://deisebau.senedd.cymru/deisebau/gwirio"
+                new_petition_url_gd: "https://deisebau.senedd.cymru/deisebau/gwirio"
               }
             )).to have_been_made
           end
@@ -1506,15 +1506,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               template_id: "47bbcd29-ffc8-4bea-b490-c6caed2fd0ae",
               reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
               personalisation: {
-                creator: "Charlie", action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                creator: "Charlie", action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 content_en: "It did not collect enough signatures to be referred to the Petitions Committee.\n\nPetitions need to receive at least 50 signatures before they can be considered in the Senedd.",
-                content_cy: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
+                content_gd: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 standards_url_en: "https://petitions.senedd.wales/help#standards",
-                standards_url_cy: "https://deisebau.senedd.cymru/help#standards",
+                standards_url_gd: "https://deisebau.senedd.cymru/help#standards",
                 new_petition_url_en: "https://petitions.senedd.wales/petitions/check",
-                new_petition_url_cy: "https://deisebau.senedd.cymru/deisebau/gwirio"
+                new_petition_url_gd: "https://deisebau.senedd.cymru/deisebau/gwirio"
               }
             )).to have_been_made
           end
@@ -1529,9 +1529,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -1556,13 +1556,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               personalisation: {
                 creator: "Charlie", action: "Gwnewch bethau",
                 content_en: "There’s already a petition about this issue. We cannot accept a new petition when we already have one about a very similar issue, or if the Petitions Committee has considered one in the last year.",
-                content_cy: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
+                content_gd: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 standards_url_en: "https://petitions.senedd.wales/help#standards",
-                standards_url_cy: "https://deisebau.senedd.cymru/help#standards",
+                standards_url_gd: "https://deisebau.senedd.cymru/help#standards",
                 new_petition_url_en: "https://petitions.senedd.wales/petitions/check",
-                new_petition_url_cy: "https://deisebau.senedd.cymru/deisebau/gwirio"
+                new_petition_url_gd: "https://deisebau.senedd.cymru/deisebau/gwirio"
               }
             )).to have_been_made
           end
@@ -1584,13 +1584,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               personalisation: {
                 creator: "Charlie", action: "Gwnewch bethau",
                 content_en: "It’s offensive, nonsense, a joke, or an advert.",
-                content_cy: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
+                content_gd: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 standards_url_en: "https://petitions.senedd.wales/help#standards",
-                standards_url_cy: "https://deisebau.senedd.cymru/help#standards",
+                standards_url_gd: "https://deisebau.senedd.cymru/help#standards",
                 new_petition_url_en: "https://petitions.senedd.wales/petitions/check",
-                new_petition_url_cy: "https://deisebau.senedd.cymru/deisebau/gwirio"
+                new_petition_url_gd: "https://deisebau.senedd.cymru/deisebau/gwirio"
               }
             )).to have_been_made
           end
@@ -1610,15 +1610,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               template_id: "fd40fb7a-0548-4880-bbeb-eb07e409348a",
               reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
               personalisation: {
-                creator: "Charlie", action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                creator: "Charlie", action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 content_en: "It did not collect enough signatures to be referred to the Petitions Committee.\n\nPetitions need to receive at least 50 signatures before they can be considered in the Senedd.",
-                content_cy: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
+                content_gd: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
                 url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 standards_url_en: "https://petitions.senedd.wales/help#standards",
-                standards_url_cy: "https://deisebau.senedd.cymru/help#standards",
+                standards_url_gd: "https://deisebau.senedd.cymru/help#standards",
                 new_petition_url_en: "https://petitions.senedd.wales/petitions/check",
-                new_petition_url_cy: "https://deisebau.senedd.cymru/deisebau/gwirio"
+                new_petition_url_gd: "https://deisebau.senedd.cymru/deisebau/gwirio"
               }
             )).to have_been_made
           end
@@ -1644,9 +1644,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -1683,11 +1683,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", action: "Do stuff",
                   content_en: "There’s already a petition about this issue. We cannot accept a new petition when we already have one about a very similar issue, or if the Petitions Committee has considered one in the last year.",
-                  content_cy: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
+                  content_gd: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -1717,11 +1717,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", action: "Do stuff",
                   content_en: "There’s already a petition about this issue. We cannot accept a new petition when we already have one about a very similar issue, or if the Petitions Committee has considered one in the last year.",
-                  content_cy: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
+                  content_gd: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -1756,11 +1756,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", action: "Do stuff",
                   content_en: "It’s offensive, nonsense, a joke, or an advert.",
-                  content_cy: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
+                  content_gd: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -1790,11 +1790,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", action: "Do stuff",
                   content_en: "It’s offensive, nonsense, a joke, or an advert.",
-                  content_cy: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
+                  content_gd: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -1827,13 +1827,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 template_id: "611e4790-2a93-43fe-897d-07c21caddd0b",
                 reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
                 personalisation: {
-                  sponsor: "Suzie", action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                  sponsor: "Suzie", action_en: "Do stuff", action_gd: "Gwnewch bethau",
                   content_en: "It did not collect enough signatures to be referred to the Petitions Committee.\n\nPetitions need to receive at least 50 signatures before they can be considered in the Senedd.",
-                  content_cy: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
+                  content_gd: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -1861,13 +1861,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 template_id: "3911e196-c27a-41dc-8ee4-8390dd198ee6",
                 reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
                 personalisation: {
-                  sponsor: "Suzie", action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                  sponsor: "Suzie", action_en: "Do stuff", action_gd: "Gwnewch bethau",
                   content_en: "It did not collect enough signatures to be referred to the Petitions Committee.\n\nPetitions need to receive at least 50 signatures before they can be considered in the Senedd.",
-                  content_cy: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
+                  content_gd: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -1883,9 +1883,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -1922,11 +1922,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", action: "Gwnewch bethau",
                   content_en: "There’s already a petition about this issue. We cannot accept a new petition when we already have one about a very similar issue, or if the Petitions Committee has considered one in the last year.",
-                  content_cy: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
+                  content_gd: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -1956,11 +1956,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", action: "Gwnewch bethau",
                   content_en: "There’s already a petition about this issue. We cannot accept a new petition when we already have one about a very similar issue, or if the Petitions Committee has considered one in the last year.",
-                  content_cy: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
+                  content_gd: "Mae deiseb yn bodoli eisoes ar y mater hwn. Ni allwn dderbyn deiseb newydd os oes un yn bodoli eisoes ar fater tebyg iawn, neu os yw’r Pwyllgor Deisebau wedi ystyried deiseb debyg yn ystod y flwyddyn ddiwethaf.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -1995,11 +1995,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", action: "Gwnewch bethau",
                   content_en: "It’s offensive, nonsense, a joke, or an advert.",
-                  content_cy: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
+                  content_gd: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2029,11 +2029,11 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", action: "Gwnewch bethau",
                   content_en: "It’s offensive, nonsense, a joke, or an advert.",
-                  content_cy: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
+                  content_gd: "Mae’n sarhaus, yn nonsens, yn jôc neu’n hysbyseb.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2066,13 +2066,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 template_id: "611e4790-2a93-43fe-897d-07c21caddd0b",
                 reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
                 personalisation: {
-                  sponsor: "Suzie", action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                  sponsor: "Suzie", action_en: "Do stuff", action_gd: "Gwnewch bethau",
                   content_en: "It did not collect enough signatures to be referred to the Petitions Committee.\n\nPetitions need to receive at least 50 signatures before they can be considered in the Senedd.",
-                  content_cy: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
+                  content_gd: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2100,13 +2100,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 template_id: "3911e196-c27a-41dc-8ee4-8390dd198ee6",
                 reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
                 personalisation: {
-                  sponsor: "Suzie", action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                  sponsor: "Suzie", action_en: "Do stuff", action_gd: "Gwnewch bethau",
                   content_en: "It did not collect enough signatures to be referred to the Petitions Committee.\n\nPetitions need to receive at least 50 signatures before they can be considered in the Senedd.",
-                  content_cy: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
+                  content_gd: "Ni chasglwyd digon o lofnodion i gyfeirio’r ddeiseb at y Pwyllgor Deisebau.\n\nMae angen o leiaf 50 llofnod ar ddeiseb cyn y gellir ei hystyried yn y Senedd.",
                   url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                  url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                  url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                   standards_url_en: "https://petitions.senedd.wales/help#standards",
-                  standards_url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  standards_url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2164,9 +2164,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               personalisation: {
                 sponsor: "Suzie", creator: "Charlie", action: "Do stuff",
                 sponsor_count_en: "You have 1 supporter so far",
-                sponsor_count_cy: "Mae gennych chi 1 cefnogwr hyd yn hyn",
+                sponsor_count_gd: "Mae gennych chi 1 cefnogwr hyd yn hyn",
                 url_en: "https://petitions.senedd.wales/help#standards",
-                url_cy: "https://deisebau.senedd.cymru/help#standards"
+                url_gd: "https://deisebau.senedd.cymru/help#standards"
               }
             )).to have_been_made
           end
@@ -2196,9 +2196,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               personalisation: {
                 sponsor: "Suzie", creator: "Charlie", action: "Do stuff",
                 sponsor_count_en: "You have 1 supporter so far",
-                sponsor_count_cy: "Mae gennych chi 1 cefnogwr hyd yn hyn",
+                sponsor_count_gd: "Mae gennych chi 1 cefnogwr hyd yn hyn",
                 url_en: "https://petitions.senedd.wales/help#standards",
-                url_cy: "https://deisebau.senedd.cymru/help#standards"
+                url_gd: "https://deisebau.senedd.cymru/help#standards"
               }
             )).to have_been_made
           end
@@ -2209,9 +2209,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         let(:petition) do
           FactoryBot.create(
             :pending_petition,
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -2245,9 +2245,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               personalisation: {
                 sponsor: "Suzie", creator: "Charlie", action: "Gwnewch bethau",
                 sponsor_count_en: "You have 1 supporter so far",
-                sponsor_count_cy: "Mae gennych chi 1 cefnogwr hyd yn hyn",
+                sponsor_count_gd: "Mae gennych chi 1 cefnogwr hyd yn hyn",
                 url_en: "https://petitions.senedd.wales/help#standards",
-                url_cy: "https://deisebau.senedd.cymru/help#standards"
+                url_gd: "https://deisebau.senedd.cymru/help#standards"
               }
             )).to have_been_made
           end
@@ -2277,9 +2277,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               personalisation: {
                 sponsor: "Suzie", creator: "Charlie", action: "Gwnewch bethau",
                 sponsor_count_en: "You have 1 supporter so far",
-                sponsor_count_cy: "Mae gennych chi 1 cefnogwr hyd yn hyn",
+                sponsor_count_gd: "Mae gennych chi 1 cefnogwr hyd yn hyn",
                 url_en: "https://petitions.senedd.wales/help#standards",
-                url_cy: "https://deisebau.senedd.cymru/help#standards"
+                url_gd: "https://deisebau.senedd.cymru/help#standards"
               }
             )).to have_been_made
           end
@@ -2337,7 +2337,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Do stuff",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2367,7 +2367,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Do stuff",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2401,7 +2401,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Do stuff",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2431,7 +2431,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Do stuff",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2465,7 +2465,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Do stuff",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2495,7 +2495,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Do stuff",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2507,9 +2507,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         let(:petition) do
           FactoryBot.create(
             :validated_petition,
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -2544,7 +2544,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Gwnewch bethau",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2574,7 +2574,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Gwnewch bethau",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2608,7 +2608,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Gwnewch bethau",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2638,7 +2638,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Gwnewch bethau",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2672,7 +2672,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Gwnewch bethau",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2702,7 +2702,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
                 personalisation: {
                   sponsor: "Suzie", creator: "Charlie", action: "Gwnewch bethau",
                   url_en: "https://petitions.senedd.wales/help#standards",
-                  url_cy: "https://deisebau.senedd.cymru/help#standards"
+                  url_gd: "https://deisebau.senedd.cymru/help#standards"
                 }
               )).to have_been_made
             end
@@ -2777,9 +2777,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           :petition_email,
           petition: petition,
           subject_en: "The Petitions committee will be discussing this petition",
-          subject_cy: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
+          subject_gd: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
           body_en: "On the 21st July, the Petitions committee will be discussing this petition to see whether to recommend it for a debate in Senedd.",
-          body_cy: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
+          body_gd: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
         )
       end
 
@@ -2795,9 +2795,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -2818,15 +2818,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               name: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+              petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
               subject_en: "The Petitions committee will be discussing this petition",
-              subject_cy: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
+              subject_gd: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
               body_en: "On the 21st July, the Petitions committee will be discussing this petition to see whether to recommend it for a debate in Senedd.",
-              body_cy: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
+              body_gd: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
               unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-              unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+              unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
             }
           )).to have_been_made
         end
@@ -2839,9 +2839,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -2862,15 +2862,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               name: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+              petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
               subject_en: "The Petitions committee will be discussing this petition",
-              subject_cy: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
+              subject_gd: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
               body_en: "On the 21st July, the Petitions committee will be discussing this petition to see whether to recommend it for a debate in Senedd.",
-              body_cy: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
+              body_gd: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
               unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-              unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+              unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
             }
           )).to have_been_made
         end
@@ -2883,9 +2883,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           :petition_email,
           petition: petition,
           subject_en: "The Petitions committee will be discussing this petition",
-          subject_cy: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
+          subject_gd: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
           body_en: "On the 21st July, the Petitions committee will be discussing this petition to see whether to recommend it for a debate in Senedd.",
-          body_cy: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
+          body_gd: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
         )
       end
 
@@ -2902,9 +2902,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -2928,15 +2928,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 subject_en: "The Petitions committee will be discussing this petition",
-                subject_cy: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
+                subject_gd: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
                 body_en: "On the 21st July, the Petitions committee will be discussing this petition to see whether to recommend it for a debate in Senedd.",
-                body_cy: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
+                body_gd: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -2956,15 +2956,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 subject_en: "The Petitions committee will be discussing this petition",
-                subject_cy: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
+                subject_gd: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
                 body_en: "On the 21st July, the Petitions committee will be discussing this petition to see whether to recommend it for a debate in Senedd.",
-                body_cy: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
+                body_gd: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -2978,9 +2978,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3004,15 +3004,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 subject_en: "The Petitions committee will be discussing this petition",
-                subject_cy: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
+                subject_gd: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
                 body_en: "On the 21st July, the Petitions committee will be discussing this petition to see whether to recommend it for a debate in Senedd.",
-                body_cy: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
+                body_gd: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3032,15 +3032,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 subject_en: "The Petitions committee will be discussing this petition",
-                subject_cy: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
+                subject_gd: "Bydd y pwyllgor Deisebau yn trafod y ddeiseb hon",
                 body_en: "On the 21st July, the Petitions committee will be discussing this petition to see whether to recommend it for a debate in Senedd.",
-                body_cy: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
+                body_gd: "Ar 21 Gorffennaf, bydd y pwyllgor Deisebau yn trafod y ddeiseb hon i weld a ddylid ei hargymell ar gyfer dadl yn y Senedd.",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3065,9 +3065,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3088,12 +3088,12 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               name: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
-              debate_date_en: "7 July 2020", debate_date_cy: "7 Gorffennaf 2020",
+              petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+              debate_date_en: "7 July 2020", debate_date_gd: "7 Gorffennaf 2020",
               unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-              unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+              unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
             }
           )).to have_been_made
         end
@@ -3108,9 +3108,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3131,12 +3131,12 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               name: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
-              debate_date_en: "7 July 2020", debate_date_cy: "7 Gorffennaf 2020",
+              petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+              debate_date_en: "7 July 2020", debate_date_gd: "7 Gorffennaf 2020",
               unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-              unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+              unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
             }
           )).to have_been_made
         end
@@ -3159,9 +3159,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3185,12 +3185,12 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
-                debate_date_en: "7 July 2020", debate_date_cy: "7 Gorffennaf 2020",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                debate_date_en: "7 July 2020", debate_date_gd: "7 Gorffennaf 2020",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3210,12 +3210,12 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
-                debate_date_en: "7 July 2020", debate_date_cy: "7 Gorffennaf 2020",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                debate_date_en: "7 July 2020", debate_date_gd: "7 Gorffennaf 2020",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3231,9 +3231,9 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3257,12 +3257,12 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
-                debate_date_en: "7 July 2020", debate_date_cy: "7 Gorffennaf 2020",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                debate_date_en: "7 July 2020", debate_date_gd: "7 Gorffennaf 2020",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3282,12 +3282,12 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
-                debate_date_en: "7 July 2020", debate_date_cy: "7 Gorffennaf 2020",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                debate_date_en: "7 July 2020", debate_date_gd: "7 Gorffennaf 2020",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3309,13 +3309,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           FactoryBot.create(
             :not_debated_petition,
             overview_en: "Because it was no longer relevant",
-            overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+            overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3336,15 +3336,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               name: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               overview_en: "Because it was no longer relevant",
-              overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+              overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
               petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+              petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
               petitions_committee_url_en: "https://petitions.senedd.wales/help#petitions-committee",
-              petitions_committee_url_cy: "https://deisebau.senedd.cymru/help#petitions-committee",
+              petitions_committee_url_gd: "https://deisebau.senedd.cymru/help#petitions-committee",
               unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-              unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+              unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
             }
           )).to have_been_made
         end
@@ -3355,13 +3355,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           FactoryBot.create(
             :not_debated_petition,
             overview_en: "Because it was no longer relevant",
-            overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+            overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3382,15 +3382,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               name: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               overview_en: "Because it was no longer relevant",
-              overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+              overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
               petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+              petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
               petitions_committee_url_en: "https://petitions.senedd.wales/help#petitions-committee",
-              petitions_committee_url_cy: "https://deisebau.senedd.cymru/help#petitions-committee",
+              petitions_committee_url_gd: "https://deisebau.senedd.cymru/help#petitions-committee",
               unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-              unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+              unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
             }
           )).to have_been_made
         end
@@ -3411,13 +3411,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           FactoryBot.create(
             :not_debated_petition,
             overview_en: "Because it was no longer relevant",
-            overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+            overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3441,15 +3441,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 overview_en: "Because it was no longer relevant",
-                overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+                overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 petitions_committee_url_en: "https://petitions.senedd.wales/help#petitions-committee",
-                petitions_committee_url_cy: "https://deisebau.senedd.cymru/help#petitions-committee",
+                petitions_committee_url_gd: "https://deisebau.senedd.cymru/help#petitions-committee",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3469,15 +3469,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 overview_en: "Because it was no longer relevant",
-                overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+                overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 petitions_committee_url_en: "https://petitions.senedd.wales/help#petitions-committee",
-                petitions_committee_url_cy: "https://deisebau.senedd.cymru/help#petitions-committee",
+                petitions_committee_url_gd: "https://deisebau.senedd.cymru/help#petitions-committee",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3489,13 +3489,13 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           FactoryBot.create(
             :not_debated_petition,
             overview_en: "Because it was no longer relevant",
-            overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+            overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3519,15 +3519,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 overview_en: "Because it was no longer relevant",
-                overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+                overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 petitions_committee_url_en: "https://petitions.senedd.wales/help#petitions-committee",
-                petitions_committee_url_cy: "https://deisebau.senedd.cymru/help#petitions-committee",
+                petitions_committee_url_gd: "https://deisebau.senedd.cymru/help#petitions-committee",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3547,15 +3547,15 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 overview_en: "Because it was no longer relevant",
-                overview_cy: "Oherwydd nad oedd yn berthnasol mwyach",
+                overview_gd: "Oherwydd nad oedd yn berthnasol mwyach",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 petitions_committee_url_en: "https://petitions.senedd.wales/help#petitions-committee",
-                petitions_committee_url_cy: "https://deisebau.senedd.cymru/help#petitions-committee",
+                petitions_committee_url_gd: "https://deisebau.senedd.cymru/help#petitions-committee",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3577,19 +3577,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           FactoryBot.create(
             :debated_petition,
             overview_en: "Senedd came to the conclusion that this was a good idea",
-            overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+            overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
             transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-            transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+            transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
             video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-            video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+            video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
             debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-            debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+            debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3610,19 +3610,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               name: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               overview_en: "Senedd came to the conclusion that this was a good idea",
-              overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+              overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
               transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-              transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+              transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
               video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-              video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+              video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
               debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-              debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+              debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
               petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+              petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
               unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-              unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+              unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
             }
           )).to have_been_made
         end
@@ -3633,19 +3633,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           FactoryBot.create(
             :debated_petition,
             overview_en: "Senedd came to the conclusion that this was a good idea",
-            overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+            overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
             transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-            transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+            transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
             video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-            video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+            video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
             debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-            debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+            debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3666,19 +3666,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             reference: "d85a62b0-efb6-51a2-9087-a10881e6728e",
             personalisation: {
               name: "Charlie",
-              action_en: "Do stuff", action_cy: "Gwnewch bethau",
+              action_en: "Do stuff", action_gd: "Gwnewch bethau",
               overview_en: "Senedd came to the conclusion that this was a good idea",
-              overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+              overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
               transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-              transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+              transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
               video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-              video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+              video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
               debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-              debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+              debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
               petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-              petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+              petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
               unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-              unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+              unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
             }
           )).to have_been_made
         end
@@ -3699,19 +3699,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           FactoryBot.create(
             :debated_petition,
             overview_en: "Senedd came to the conclusion that this was a good idea",
-            overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+            overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
             transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-            transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+            transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
             video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-            video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+            video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
             debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-            debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+            debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "en-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3735,19 +3735,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 overview_en: "Senedd came to the conclusion that this was a good idea",
-                overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+                overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
                 transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-                transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+                transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
                 video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-                video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+                video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
                 debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-                debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+                debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3767,19 +3767,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 overview_en: "Senedd came to the conclusion that this was a good idea",
-                overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+                overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
                 transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-                transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+                transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
                 video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-                video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+                video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
                 debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-                debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+                debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3791,19 +3791,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           FactoryBot.create(
             :debated_petition,
             overview_en: "Senedd came to the conclusion that this was a good idea",
-            overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+            overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
             transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-            transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+            transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
             video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-            video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+            video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
             debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-            debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+            debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
             action_en: "Do stuff",
             background_en: "Because of reasons",
             additional_details_en: "Here's some more reasons",
-            action_cy: "Gwnewch bethau",
-            background_cy: "Oherwydd rhesymau",
-            additional_details_cy: "Dyma ychydig mwy o resymau",
+            action_gd: "Gwnewch bethau",
+            background_gd: "Oherwydd rhesymau",
+            additional_details_gd: "Dyma ychydig mwy o resymau",
             locale: "cy-GB",
             creator_name: "Charlie",
             creator_email: "charlie@example.com",
@@ -3827,19 +3827,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 overview_en: "Senedd came to the conclusion that this was a good idea",
-                overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+                overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
                 transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-                transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+                transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
                 video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-                video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+                video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
                 debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-                debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+                debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end
@@ -3859,19 +3859,19 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               reference: "a87bda8d-19ac-5df8-ac83-075f189db982",
               personalisation: {
                 name: "Suzie",
-                action_en: "Do stuff", action_cy: "Gwnewch bethau",
+                action_en: "Do stuff", action_gd: "Gwnewch bethau",
                 overview_en: "Senedd came to the conclusion that this was a good idea",
-                overview_cy: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
+                overview_gd: "Daeth y Senedd i'r casgliad bod hwn yn syniad da",
                 transcript_url_en: "https://record.assembly.wales/Plenary/5667#A51756",
-                transcript_url_cy: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
+                transcript_url_gd: "https://cofnod.cynulliad.cymru/Plenary/5667#A51756",
                 video_url_en: "http://www.senedd.tv/Meeting/Archive/760dfc2e-74aa-4fc7-b4a7-fccaa9e2ba1c?autostart=True",
-                video_url_cy: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
+                video_url_gd: "http://www.senedd.tv/Meeting/Archive/c36fbd6a-d3b8-40dd-9567-ac1bef6caa84?autostart=True",
                 debate_pack_url_en: "https://business.senedd.wales/ieListDocuments.aspx?CId=401&MId=5667",
-                debate_pack_url_cy: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
+                debate_pack_url_gd: "https://busnes.senedd.cymru/ieListDocuments.aspx?CId=401&MId=5667",
                 petition_url_en: "https://petitions.senedd.wales/petitions/#{petition.id}",
-                petition_url_cy: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
+                petition_url_gd: "https://deisebau.senedd.cymru/deisebau/#{petition.id}",
                 unsubscribe_url_en: "https://petitions.senedd.wales/signatures/#{signature.id}/unsubscribe?token=#{signature.unsubscribe_token}",
-                unsubscribe_url_cy: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
+                unsubscribe_url_gd: "https://deisebau.senedd.cymru/llofnodion/#{signature.id}/dad-danysgrifio?token=#{signature.unsubscribe_token}",
               }
             )).to have_been_made
           end

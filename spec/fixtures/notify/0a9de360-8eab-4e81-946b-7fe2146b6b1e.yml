@@ -32,13 +32,13 @@ body: |-
   
   Yn anffodus, ni allwn dderbyn y ddeiseb a gynigiwyd “((action))”.
   
-  ((content_cy))
+  ((content_gd))
   
   Cliciwch ar y linc i weld y ddeiseb a wrthodwyd:
-  ((url_cy))
+  ((url_gd))
   
   Dim ond deisebau nad ydynt yn bodloni’r safonau y byddwn yn eu gwrthod:
-  ((standards_url_cy))
+  ((standards_url_gd))
   
   Diolch,
   Tîm Deisebau 
