@@ -7,7 +7,7 @@
 require 'webrick'
 require 'webrick/httpproxy'
 
-class WpetsProxyServer < WEBrick::HTTPProxyServer
+class SpetsProxyServer < WEBrick::HTTPProxyServer
   def do_CONNECT(req, res)
     if req.unparsed_uri =~ /petitions\.parliament\.scot/
       req.instance_variable_set(:@unparsed_uri, '127.0.0.1:3443')
@@ -17,7 +17,7 @@ class WpetsProxyServer < WEBrick::HTTPProxyServer
   end
 end
 
-proxy = WpetsProxyServer.new(BindAddress: '127.0.0.1', Port: 8443)
+proxy = SpetsProxyServer.new(BindAddress: '127.0.0.1', Port: 8443)
 
 trap 'INT'  do proxy.shutdown end
 trap 'TERM' do proxy.shutdown end

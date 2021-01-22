@@ -923,7 +923,7 @@ en-GB:
             </thead>
             <tbody>
               <tr>
-                <td>_wpets_session</td>
+                <td>_spets_session</td>
                 <td>This keeps your information secure while you use the petitions service</td>
                 <td>When you close your browser</td>
               </tr>

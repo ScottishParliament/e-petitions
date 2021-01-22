@@ -33,13 +33,13 @@ docker-compose run --rm web rake db:setup
 ### Create an admin user
 
 ```
-docker-compose run --rm web rake wpets:add_sysadmin_user
+docker-compose run --rm web rake spets:add_sysadmin_user
 ```
 
 ### Load the postcode, constituency and region data
 
 ```
-docker-compose run --rm web rake wpets:geography:import
+docker-compose run --rm web rake spets:geography:import
 ```
 
 ### Fetch the member list

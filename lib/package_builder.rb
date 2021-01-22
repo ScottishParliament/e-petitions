@@ -82,7 +82,7 @@ class PackageBuilder
   private
 
   def application_name
-    "#{ENV.fetch('AWS_DEPLOYMENT_APP_NAME', 'wpets-app')}-#{environment}"
+    "#{ENV.fetch('AWS_DEPLOYMENT_APP_NAME', 'spets-app')}-#{environment}"
   end
 
   def archive_file

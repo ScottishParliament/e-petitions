@@ -1,4 +1,4 @@
-namespace :wpets do
+namespace :spets do
   desc "Add sysadmin user"
   task :add_sysadmin_user => :environment do
     if AdminUser.find_by(email: 'admin@example.com').nil?
@@ -39,7 +39,7 @@ namespace :wpets do
 
     desc "Start the signature count updater if it's not running"
     task :signature_counts => :environment do
-      Task.run("wpets:site:signature_counts", 10.minutes) do
+      Task.run("spets:site:signature_counts", 10.minutes) do
         break unless Site.update_signature_counts
 
         unless Site.signature_count_updated_at > 15.minutes.ago
@@ -50,14 +50,14 @@ namespace :wpets do
 
     desc "Track trending domains"
     task :trending_domains => :environment do
-      Task.run("wpets:site:trending_domains", 30.minutes) do
+      Task.run("spets:site:trending_domains", 30.minutes) do
         TrendingDomainsByPetitionJob.perform_later
       end
     end
 
     desc "Track trending IP addresses"
     task :trending_ips => :environment do
-      Task.run("wpets:site:trending_ips", 30.minutes) do
+      Task.run("spets:site:trending_ips", 30.minutes) do
         TrendingIpsByPetitionJob.perform_later
       end
     end

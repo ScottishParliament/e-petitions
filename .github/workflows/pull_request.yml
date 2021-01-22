@@ -50,14 +50,14 @@ jobs:
 
     - name: Setup database
       env:
-        DATABASE_URL: postgres://postgres:@localhost:5432/wpets_test
+        DATABASE_URL: postgres://postgres:@localhost:5432/spets_test
         RAILS_ENV: test
       run: |
         bundle exec rake db:setup
 
     - name: Run tests
       env:
-        DATABASE_URL: postgres://postgres:@localhost:5432/wpets_test
+        DATABASE_URL: postgres://postgres:@localhost:5432/spets_test
         RAILS_ENV: test
       run: |
         bundle exec rake

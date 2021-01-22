@@ -5,7 +5,7 @@ RSpec.describe 'session cookie', type: :request, show_exceptions: true do
   let(:cookies) { response.header["Set-Cookie"].split("\n") }
 
   subject do
-    cookies.find{ |c| c =~ /^_wpets_session/ }
+    cookies.find{ |c| c =~ /^_spets_session/ }
   end
 
   before do

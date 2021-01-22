@@ -48,11 +48,11 @@ Capybara.register_driver :chrome_headless do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
 end
 
-Capybara.register_server :wpets do |app, port|
+Capybara.register_server :spets do |app, port|
   ScotsPets::SSLServer.build(app, port)
 end
 
-Capybara.server = :wpets
+Capybara.server = :spets
 Capybara.default_normalize_ws = true
 
 pid = Process.spawn('bin/local_proxy', out: 'log/proxy.log', err: 'log/proxy.log')

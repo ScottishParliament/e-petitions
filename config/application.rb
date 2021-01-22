@@ -39,7 +39,7 @@ module ScotsPets
     # Configure the cache store
     config.cache_store = :atomic_dalli_store, nil, {
       expires_in: 1.day, compress: true,
-      namespace: ENV.fetch('MEMCACHE_NAMESPACE') { 'wpets' },
+      namespace: ENV.fetch('MEMCACHE_NAMESPACE') { 'spets' },
       pool_size: ENV.fetch('RAILS_MAX_THREADS') { 5 }.to_i
     }
 

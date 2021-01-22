@@ -1,6 +1,6 @@
 require 'csv'
 
-namespace :wpets do
+namespace :spets do
   namespace :geography do
     desc "Load constituency, postcode and region data"
     task import: :environment do

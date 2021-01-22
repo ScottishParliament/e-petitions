@@ -22,37 +22,37 @@
 env :PATH, ENV['PATH']
 
 every :day, at: '2.00am' do
-  rake "wpets:members:refresh", output: nil
+  rake "spets:members:refresh", output: nil
 end
 
 every :day, at: '2.30am' do
-  rake "wpets:petitions:count", output: nil
+  rake "spets:petitions:count", output: nil
 end
 
 every :day, at: '3.30am' do
-	rake "wpets:petitions:update_statistics", output: nil
+	rake "spets:petitions:update_statistics", output: nil
 end
 
 every :day, at: '7.00am' do
-  rake "wpets:petitions:close", output: nil
+  rake "spets:petitions:close", output: nil
 end
 
 every :day, at: '7.05am' do
-  rake "wpets:petitions:refer_or_reject", output: nil
+  rake "spets:petitions:refer_or_reject", output: nil
 end
 
 every :day, at: '7.15am' do
-  rake "wpets:petitions:debated", output: nil
+  rake "spets:petitions:debated", output: nil
 end
 
 every 15.minutes do
-  rake "wpets:site:signature_counts", output: nil
+  rake "spets:site:signature_counts", output: nil
 end
 
 every :hour, at: 15 do
-  rake "wpets:site:trending_ips", output: nil
+  rake "spets:site:trending_ips", output: nil
 end
 
 every :hour, at: 10 do
-  rake "wpets:site:trending_domains", output: nil
+  rake "spets:site:trending_domains", output: nil
 end

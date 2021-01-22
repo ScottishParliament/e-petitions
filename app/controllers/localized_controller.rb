@@ -40,7 +40,7 @@ class LocalizedController < ApplicationController
   end
 
   def bypass_cookie
-    cookies.signed[:_wpets_bypass]
+    cookies.signed[:_spets_bypass]
   end
 
   def bypass_authenticated?
@@ -49,7 +49,7 @@ class LocalizedController < ApplicationController
 
   def set_bypass_cookie
     if bypass_param == Site.bypass_token
-      cookies.signed[:_wpets_bypass] = Site.bypass_token
+      cookies.signed[:_spets_bypass] = Site.bypass_token
       redirect_to home_url
     end
   end
