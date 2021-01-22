@@ -2,42 +2,42 @@ gd-GB:
   errors:
     attributes:
       email:
-        blank: "Rhaid nodi cyfeiriad e-bost"
-        invalid: "Nid yw’r system yn adnabod y cyfeiriad e-bost ‘%{value}’"
-        plus_address: "Ni chewch chi ddefnyddio ‘plus addressing’ yn eich cyfeiriad e-bost"
+        blank: "Email must be completed"
+        invalid: "Email ‘%{value}’ not recognised"
+        plus_address: "You can’t use ‘plus addressing’ in your email address"
       creator:
-        blank: "Rhaid llenwi’r blwch crëwr"
+        blank: "Creator must be completed"
       action:
-        invalid: "Ni chaiff y cam gweithredu ddechrau â symbol ‘=’, ‘+’, ‘-’ na ’@’"
-        blank: "Rhaid nodi beth ydych chi am i ni ei wneud"
-        too_long: "Mae’r cam gweithredu yn rhy hir"
+        invalid: "Action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+        blank: "Action must be completed"
+        too_long: "Action is too long"
       background:
-        invalid: "Ni chaiff y cefndir ddechrau â symbol ‘=’, ‘+’, ‘-’ na ‘@’"
-        blank: "Rhaid llenwi’r blwch cefndir"
-        too_long: "Mae’r cefndir yn rhy hir"
+        invalid: "Background can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+        blank: "Background must be completed"
+        too_long: "Background is too long"
       additional_details:
-        invalid: "Ni chaiff y manylion ychwanegol ddechrau â symbol ‘=’, ‘+’, ‘-’ na ‘@’"
-        too_long: "Mae’r manylion ychwanegol yn rhy hir"
+        invalid: "Additional details can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+        too_long: "Additional details is too long"
       closing_date:
-        blank: "Rhaid nodi dyddiad cau"
-        invalid: "Nid yw’r system yn adnabod y dyddiad cau"
-        past: "Mae’r dyddiad cau yn y gorffennol"
-        too_near: "Rhaid i’r dyddiad cau fod o leiaf 30 diwrnod i heddiw"
-        too_far: "Ni chaiff y dyddiad cau fod yn hwyrach na 6 mis i heddiw"
+        blank: "Closing date must be completed"
+        invalid: "Closing date not recognised"
+        past: "Closing date is in the past"
+        too_near: "Closing date must be at least 30 days from today"
+        too_far: "Closing date must be no more than 6 months from today"
       comment:
-        blank: "Rhaid nodi sylwadau"
+        blank: "Comments must be completed"
       name:
-        invalid: "Ni chaiff yr enw ddechrau â symbol ‘=’, ‘+’, ‘-’ na ‘@’"
-        blank: "Rhaid nodi enw"
-        has_uri: "Ni all enw gynnwys dolenni"
+        invalid: "Name can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+        blank: "Name must be completed"
+        has_uri: "Name can’t contain links"
       location_code:
-        blank: "Rhaid nodi lleoliad"
+        blank: "Location must be completed"
       postcode:
-        blank: "Rhaid nodi cod post"
-        invalid: "Nid yw’r system yn adnabod y cod post"
+        blank: "Postcode must be completed"
+        invalid: "Postcode not recognised"
       phone_number:
-        blank: "Rhaid nodi rhif ffôn"
-        too_long: "Mae’r rhif ffôn yn rhy hir"
+        blank: "Phone number must be completed"
+        too_long: "Phone number is too long"
       address:
-        blank: "Rhaid nodi cyfeiriad"
-        too_long: "Mae’r cyfeiriad yn rhy hir"
+        blank: "Address must be completed"
+        too_long: "Address is too long"

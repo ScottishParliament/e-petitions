@@ -1,10 +1,10 @@
 gd-GB:
   metadata:
     open_graph:
-      site_name: "Deisebau - Senedd Cymru"
-      default_title: "Deisebau - Senedd Cymru"
-      title: "Deiseb: %{petition}"
+      site_name: "Petitions - Senedd"
+      default_title: "Petitions - Senedd"
+      title: "Petition: %{petition}"
 
     twitter:
-      default_title: "Deisebau - Senedd Cymru"
-      title: "Deiseb: %{petition}"
+      default_title: "Petitions - Senedd"
+      title: "Petition: %{petition}"

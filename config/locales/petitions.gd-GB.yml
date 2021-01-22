@@ -3,3 +3,60 @@ gd-GB:
     csv_filename:
       all: "all-popular-petitions-in-%{constituency}.csv"
       open: "open-popular-petitions-in-%{constituency}.csv"
+
+  petitions:
+    errors:
+      invalid_signature_count: "Petition %{id} had an invalid signature count"
+
+    facets:
+      public:
+        - :all
+        - :open
+        - :referred
+        - :debated
+        - :not_debated
+        - :completed
+        - :rejected
+      admin:
+        - :all
+        - :collecting_sponsors
+        - :in_moderation
+        - :recently_in_moderation
+        - :nearly_overdue_in_moderation
+        - :overdue_in_moderation
+        - :tagged_in_moderation
+        - :untagged_in_moderation
+        - :open
+        - :referred
+        - :rejected
+        - :hidden
+        - :awaiting_debate_date
+        - :with_debate_outcome
+        - :in_debate_queue
+        - :completed
+        - :archived
+      names:
+        admin:
+          all: "All petitions (%{quantity})"
+          collecting_sponsors: "Collecting sponsors (%{quantity})"
+          in_moderation: "Awaiting moderation (%{quantity})"
+          recently_in_moderation: "Awaiting moderation - recent (%{quantity})"
+          nearly_overdue_in_moderation: "Awaiting moderation - nearly overdue (%{quantity})"
+          overdue_in_moderation: "Awaiting moderation - overdue (%{quantity})"
+          tagged_in_moderation: "Awaiting moderation - tagged (%{quantity})"
+          untagged_in_moderation: "Awaiting moderation - untagged (%{quantity})"
+          open: "Open (%{quantity})"
+          referred: "Referred (%{quantity})"
+          rejected: "Rejected (%{quantity})"
+          hidden: "Hidden (%{quantity})"
+          awaiting_debate_date: "Awaiting a debate by the Senedd (%{quantity})"
+          with_debate_outcome: "Has been debated by the Senedd (%{quantity})"
+          in_debate_queue: "In debate queue (%{quantity})"
+          completed: "Completed (%{quantity})"
+          archived: "Archived (%{quantity})"
+
+    action_counts:
+      in_moderation_html: "<span class=\"count\">%{formatted_count}</span> Moderation queue"
+      referred_html: "<span class=\"count\">%{formatted_count}</span> Referred queue"
+      in_debate_queue_html: "<span class=\"count\">%{formatted_count}</span> Debate queue"
+      all_html: "<span class=\"count\">%{formatted_count}</span> All petitions"

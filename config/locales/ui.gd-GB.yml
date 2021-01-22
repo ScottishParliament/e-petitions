@@ -3,840 +3,854 @@ gd-GB:
   ui:
     holding_page:
       body_html: |-
-        <h1 class="page-title">Bydd y wefan ddeisebau newydd ar gael ar 30 Ebrill</h1>
-        <p>Nid yw’r wefan ddeisebau ar gael ar hyn o bryd. Byddwn ni’n lansio gwefan newydd, well ar gyfer deisebau ar 30 Ebrill.</p>
-        <p>Mae’n ddrwg gennym am unrhyw anghyfleustra.</p>
-        <p>Cliciwch yma i gael rhagor o wybodaeth am waith y Pwyllgor Deisebau.</p>      
+        <h1 class="page-title">A new petitions site is coming on 30 April</h1>
+        <p>Sorry, the petitions service is currently unavailable. We are launching a new, improved website for petitions on 30 April.</p>
+        <p>Please accept our apologies for any inconvenience.</p>
+        <p>Click here to find out more about the work of the <a href="https://senedd.wales/en/bus-home/committees/Pages/Committee-Profile.aspx?cid=430">Petitions Committee</a>.</p>
     cc:
       statement:
-        name: "Rhagor o wybodaeth am y cwcis ar y wefan hon"
+        name: "Find out more about the cookies on this website"
         description: ""
         updated: "30/04/2020"
       text:
-        "title": "Ffeiliau sy’n cael eu harbed ar eich ffôn, eich tabled neu’ch cyfrifiadur pan fyddwch chi’n ymweld â gwefan yw cwcis."
-        "intro": "Mae rhai o’r cwcis hyn yn hanfodol tra bod rhai eraill yn ein helpu i wella eich profiad drwy ddangos i ni sut mae’r wefan yn cael ei defnyddio."
-        "description": "Rydym ni’n defnyddio cwcis i storio gwybodaeth am y ffordd rydych chi’n defnyddio’r wefan, er enghraifft y tudalennau rydych chi’n ymweld â nhw."
-        "notify_title": "Rhowch wybod i ni a ydych chi’n derbyn cwcis"
-        "notify_description": "Rydym ni’n defnyddio cwcis i gasglu gwybodaeth am y ffordd rydych chi’n defnyddio’r gwasanaeth hwn."
-        "necessary_title": "Cwcis cwbl angenrheidiol"
-        "necessary_description": "Mae’r cwcis hanfodol hyn yn gwneud pethau fel cofio’r manylion rydych chi wedi’u nodi wrth lenwi ffurflen (er enghraifft, creu deiseb)."
-        "on": "Derbyn"
-        "off": "Gwrthod"
-        "accept": "Derbyn pob cwci"
-        "reject": "Gwrthod cwcis diangen"
-        "settings": "Gosod dewisiadau ar gyfer cwcis"
-        "accept_settings": "Derbyn pob cwci"
-        "reject_settings": "Gwrthod cwcis diangen"
+        "title": "Cookies are files saved on your phone, tablet or computer when you visit a website."
+        "intro": "Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used."
+        "description": "We use cookies to store information about how you use the website, such as the pages you visit."
+        "notify_title": "Tell us whether you accept cookies"
+        "notify_description": "We use cookies to collect information about how you use this service."
+        "necessary_title": "Strictly necessary cookies"
+        "necessary_description": "These essential cookies do things like remember your progress through a form (for example a creating a petition)."
+        "on": "On"
+        "off": "Off"
+        "accept": "Accept all cookies"
+        "reject": "Reject unnecessary cookies"
+        "settings": "Set cookie preferences"
+        "accept_settings": "Accept all cookies"
+        "reject_settings": "Reject unnecessary cookies"
       analytics:
-        label: "Cwcis syn mesur defnydd or wefan"
-        description: "Rydym yn defnyddio Google Analytics i fesur sut rydych yn defnyddio y wefan er mwyn gwneud gwelliannau ar sail anghenion defnyddwyr. Nid ydym yn caniatau i Google ddefnyddio na rhannu data am sut rydych yn defnyddio y wefan hon."
+        label: "Cookies that measure website use"
+        description: "We use Google Analytics to measure how you use the website so we can improve it based on user needs. We do not allow Google to use or share the data about how you use this site."
     os:
-      app_name: Deisebau
+      app_name: Petitions
       app_tooltip: Senedd
     counts:
       referred_html:
-        one: Cyfeiriwyd <span class="count">%{num}</span> ddeiseb at y Pwyllgor Deisebau
-        two: Cyfeiriwyd <span class="count">2</span> deiseb at y Pwyllgor Deisebau
-        zero: Cyfeiriwyd <span class="count">0</span> deiseb at y Pwyllgor Deisebau
-        other: Cyfeiriwyd <span class="count">%{num}</span> deiseb at y Pwyllgor Deisebau
-      debated_explanation_html: Gweld pob deiseb y cynhaliwyd dadl arni yn y Senedd (%{num})
-      referred_explanation_html: Gweld pob deiseb a gyfeiriwyd at y Pwyllgor Deisebau (%{num})
+        one: <span class="count">1</span> petition was referred to the Petitions Committee
+        two: <span class="count">2</span> petitions were referred to the Petitions
+          Committee
+        zero: <span class="count">0</span> petitions were referred to the Petitions
+          Committee
+        other: <span class="count">%{num}</span> petitions were referred to the Petitions
+          Committee
+      debated_explanation_html: See all petitions debated by the Senedd (%{num})
+      referred_explanation_html: See all petitions referred to the Petitions Committee (%{num})
       with_debated_outcome_html:
-        one: Cynhaliwyd dadl ar <span class="count">%{num}</span> ddeiseb yn y Senedd
-        two: Cynhaliwyd dadl ar <span class="count">2</span> deiseb yn y Senedd
-        zero: Cynhaliwyd dadl ar <span class="count">0</span> deiseb yn y Senedd
-        other: Cynhaliwyd dadl ar <span class="count">%{num}</span> deiseb yn y Senedd
-      not_debated_explanation_html: Gweld pob deiseb na chynhaliwyd dadl arni yn y
-        Senedd (%{num})
+        one: <span class="count">%{num}</span> petition was debated by the Senedd
+        two: <span class="count">2</span> petitions were debated by the Senedd
+        zero: <span class="count">0</span> petitions were debated by the Senedd
+        other: <span class="count">%{num}</span> petitions were debated by the Senedd
+      not_debated_explanation_html: See all petitions not debated by the Senedd (%{num})
     footer:
       nav:
-        home: Hafan
-        privacy: Preifatrwydd
-        feedback: Adborth
-        cookies: Cwcis
-        all_petitions: Pob deiseb
-        start_a_petition: Dechrau deiseb
-        how_petitions_work: Sut mae deisebau yn gweithio
-        accessibility: Datganiad ynghylch hygyrchedd
+        home: Home
+        privacy: Privacy
+        feedback: Feedback
+        cookies: Cookies
+        all_petitions: All petitions
+        start_a_petition: Start a petition
+        how_petitions_work: How petitions work
+        accessibility: Accessibility statement
       main_website_html: |-
-        <a rel="external" href="https://senedd.wales">Hafan y Senedd</a>
+        <a rel="external" href="https://senedd.wales">Senedd Homepage</a>
       ogl_html: |-
-        <h3><a class="logo" href="https://www.nationalarchives.gov.uk/doc/open-government-licence-cymraeg/version/3/" rel="external license">Drwydded Llywodraeth Agored</a></h3>
-        <p>Mae’r holl gynnwys ar gael o dan <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence-cymraeg/version/3/" rel="external license">Drwydded Llywodraeth Agored v3.0</a>, ac eithrio lle nodir yn wahanol</p>
+        <h3><a class="logo" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="external license">Open Government Licence</a></h3>
+        <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="external license">Open Government Licence v3.0</a>, except where otherwise stated</p>
     header:
       brand_html: |-
-        <a href="https://senedd.cymru" rel="external">      
+        <a href="https://senedd.wales" rel="external">
           <p>Senedd Cymru</p>
           <p>Gaelic Parliament</p>
         </a>
-      title: Deisebau
+      title: Petitions
       title_link_html: |-
-        <a title="Ewch i hafan y Deisebau" href="%{url}">Deisebau</a>
+        <a title="Go to the Petitions homepage" href="%{url}">Petitions</a>
       language_switcher_html: |-
-        <a class="language-switcher" title="Show this page in English" tabindex="-1" href="%{url}">English</a>
+        <a class="language-switcher" title="Dangoswch y dudalen hon yn Gymraeg" href="%{url}">Cymraeg</a>
     sharing:
       email_html: |-
-        <a rel="external" target="_blank" href="mailto:?body=%{url}&amp;subject=Deiseb%3A%20%{action}">E-bost</a>
+        <a rel="external" target="_blank" href="mailto:?body=%{url}&amp;subject=Petition%3A%20%{action}">Email</a>
       twitter_html: |-
-        <a rel="external" target="_blank" href="https://twitter.com/intent/tweet?text=Deiseb%3A%20%{action}&amp;url=%{url}">Twitter</a>
+        <a rel="external" target="_blank" href="https://twitter.com/intent/tweet?text=Petition%3A%20%{action}&amp;url=%{url}">Twitter</a>
       facebook_html: |-
         <a rel="external" target="_blank" href="https://www.facebook.com/sharer/sharer.php?ref=responsive&amp;u=%{url}">Facebook</a>
       whatsapp_html: |-
-        <a rel="external" target="_blank" href="whatsapp://send?text=Deiseb%3A%20%{action}%0A%{url}">Whatsapp</a>
+        <a rel="external" target="_blank" href="whatsapp://send?text=Petition%3A%20%{action}%0A%{url}">Whatsapp</a>
     feedback:
       new:
         contact:
           email:
-            heading: E-bost 
-            body_html: "<p>Gallwch anfon e-bost uniongyrchol at y %{petitions_committee_link}.</p>\r\n\r\n<p>Gallant
-              eich helpu i ddeall sut mae’r Senedd yn ymdrin â deisebau. Gallant hefyd
-              ddarparu templed i chi ei ddefnyddio wrth gasglu llofnodion ar bapur
-              a helpu gyda rhai o’r problemau technegol allai godi wrth i chi ddefnyddio’r
-              gwasanaeth hwn. Ni allant anfon eich adborth ymlaen at y bobl wnaeth
-              ddechrau deiseb na roi sylwadau ar y syniadau sy’n cael eu trafod mewn
-              deiseb benodol.</p>\r\n\r\n<p>E-bost: <a href=\"mailto:petitionscommittee@parliament.scot\">athchuingean.parlamaid-alba.scot</a></p>"
-            petitions_committee_link: Pwyllgor Deisebau
+            heading: Email
+            body_html: |-
+              <p>You can email the %{petitions_committee_link} directly.</p>
+              <p>They can help you to understand how the Senedd handles petitions. They can also provide a template for you to use to collect signatures on paper and help with some technical problems using this service. They can’t forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition.</p>
+              <p>Email: <a href="mailto:petitionscommittee@parliament.scot">petitionscommittee@parliament.scot</a></p>
+            petitions_committee_link: Petitions Committee
           phone:
-            heading: Ffôn
-            body_html: "<p>Canolfan Gyswllt y Senedd sy’n ymdrin â galwadau ffôn.</p>\r\n\r\n<p>Gallant
-              eich helpu i ddeall sut mae’r Senedd yn ymdrin â deisebau. Ni allant
-              helpu gyda phroblemau technegol wrth i chi ddefnyddio’r gwasanaeth hwn,
-              anfon eich adborth ymlaen at y bobl wnaeth ddechrau deiseb na roi sylwadau
-              ar y syniadau sy’n cael eu trafod mewn deiseb benodol.</p>\r\n\r\n<ul>\r\n
-              \ <li>Ffôn: <a href=\"tel:+443002006565\">0300 200 6565</a> (cyfradd
-              leol) neu SMS: <a href=\"tel:+447970493958\">07970 493958</a></li>\r\n
-              \ <li>Ffôn testun gan ddefnyddio Text Relay: <a href=\"tel:+4418001\">18001</a>
-              ac yna <a href=\"tel:+443002006565\">0300 200 6565</a></li>\r\n  <li>Dydd
-              Llun i ddydd Gwener, 08:30&ndash;17:30</li>\r\n</ul>"
-          heading: Cysylltu
-        heading: Adborth a chysylltu
+            heading: Phone
+            body_html: "<p>Phone calls are handled by the Senedd Contact Centre.</p>\r\n\r\n<p>They
+              can help you to understand how the Senedd handles petitions. They can’t
+              help with any technical problems with this service, forward your feedback
+              to the people who started a petition or comment on the ideas raised
+              in a specific petition.</p>\r\n\r\n<ul>\r\n  <li>Telephone: <a href=\"tel:+443002006565\">0300
+              200 6565</a> (local rate) or SMS: <a href=\"tel:+447970493958\">07970
+              493958</a></li>\r\n  <li>Textphone via Text Relay: <a href=\"tel:+4418001\">18001</a>
+              followed by <a href=\"tel:+443002006565\">0300 200 6565</a></li>\r\n
+              \ <li>Monday to Friday, 08:30&ndash;17:30</li>\r\n</ul>"
+          heading: Contact
+        heading: Feedback and contact
         feedback:
-          heading: Adborth
+          heading: Feedback
           comments:
-            label: Sylwadau
-          terms_html: "<p>Dim ond i ateb eich neges y byddwn ni’n defnyddio eich cyfeiriad
-            e-bost</p>\r\n<p>Ni allwn anfon eich adborth ymlaen at y bobl wnaeth ddechrau
-            deiseb na roi sylwadau ar y syniadau sy’n cael eu trafod mewn deiseb benodol</p>"
+            label: Comments
+          terms_html: |-
+            <p>We’ll only use your email to reply to your message</p>
+            <p>We can’t forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition</p>
           want_reply:
             email:
-              label: Cyfeiriad e-bost
-            heading: A ydych chi am gael ateb?
+              label: Email address
+            heading: Do you want a reply?
           submit_html: |-
-            <button type="submit" class="button forward" data-disable-with="Anfon adborth">Anfon adborth</button>
+            <button type="submit" class="button forward" data-disable-with="Send feedback">Send feedback</button>
           petition_link_or_title:
-            label_html: Teitl y ddeiseb/linc <span class="optional">dewisol</span>
+            label_html: Petition title/link <span class="optional">optional</span>
       thanks:
-        heading: Anfonwyd eich adborth
-        back_link: Yn ôl i’r hafan Ddeisebau 
+        heading: Your feedback has been sent
+        back_link: Back to Petitions home
         body_html: |-
-          <p>Diolch am anfon eich adborth atom.</p>
-          <p>Os ydych chi wedi gofyn am gael ymateb, byddwn ni’n cysylltu â chi cyn cynted â phosibl.</p>
-          <p>Gall gymryd hyd at 5 diwrnod gwaith yn ystod cyfnodau prysur.</p>
+          <p>Thanks for sending us your feedback.</p>
+          <p>If you’ve requested a response, we’ll be in touch as soon as we can.</p>
+          <p>During busy periods this can take up to 5 working days.</p>
     sponsors:
       new:
-        heading: Llofnodi deiseb %{creator_name}
+        heading: Sign %{creator_name}’s petition
       signed:
-        added: Mae eich llofnod wedi cael ei ychwanegu at y ddeiseb hon fel cefnogwr.
-        heading: Diolch
+        added: Your signature has been added to this petition as a supporter.
+        heading: Thanks
         what_next_html: |-
-          <h2>Beth nesaf?</h2>
-          <p>Mae angen o leiaf %{min_sponsors} gefnogwr ar y ddeiseb hon er mwyn iddi fynd yn fyw.</p>
-          <p>Pan fydd y ddeiseb yn fyw, byddwn ni’n anfon linc atoch mewn neges e-bost fel y gallwch chi ddechrau ei rhannu.</p>
+          <h2>What next?</h2>
+          <p>This petition needs %{min_sponsors} supporters to go live.</p>
+          <p>When it goes live, we’ll email you a link so you can start sharing it.</p>
     help_page:
       body_html: |-
-        <h1 class="page-title" id="creating-a-petition">Creu deiseb</h1>
+        <h1 class="page-title" id="creating-a-petition">Creating a petition</h1>
 
-        <p>Deisebau yw un o’r ffyrdd mwyaf uniongyrchol o awgrymu sut y gellir newid rhywbeth. Mae deisebau’n gallu:</p>
+        <p>Petitioning is one of the most direct ways to suggest how something could change. Petitions can:</p>
 
         <ul class="list-bullet">
-          <li>codi ymwybyddiaeth o fater;</li>
-          <li>arwain at newid polisi Llywodraeth Cymru neu ddarparu gwasanaethau mewn ffordd wahanol;</li>
-          <li>cynnig neu ddylanwadu ar gyfraith newydd;</li>
-          <li>annog un o bwyllgorau’r Senedd i gynnal ymchwiliad;</li>
-          <li>arwain at ddadl yn y Senedd neu ddylanwadu ar ddadl a drefnwyd eisoes;</li>
-          <li>annog pwyllgorau neu Aelodau unigol o’r Senedd i gymryd camau pellach eu hunain, er enghraifft drwy ofyn cwestiynau.</li>
+          <li>Raise awareness of an issue;</li>
+          <li>Bring about a change in Gaelic Government policy or a different way of delivering services;</li>
+          <li>Propose or influence a new law;</li>
+          <li>Prompt a Senedd Committee to hold an inquiry;</li>
+          <li>Lead to, or influence, a debate in the Senedd;</li>
+          <li>Prompt a Committee or individual Members of the Senedd to take further action themselves, for instance by asking questions.</li>
         </ul>
 
-        <p>Gallwch gyflwyno deiseb drwy ddefnyddio ein system ddeisebau ar-lein, ar bapur, neu gyfuniad o’r ddwy.</p>
+        <p>You can submit a petition using our online petitions system, on paper, or a combination of the two.</p>
 
-        <p><u>Nid yw’r Pwyllgor Deisebau yn derbyn deisebau o wefannau eraill.</u></p>
+        <p><u>Petitions from other websites are not accepted by the Petitions Committee.</u></p>
 
-        <p>Os ydych chi’n ystyried casglu llofnodion ar bapur, dylech <a href="mailto:athchuingean.parlamaid-alba.scot">gysylltu â ni</a> ymlaen llaw i gael cyngor. Gallwn ddarparu templed hefyd.</p>
+        <p>If you are considering collecting signatures on paper, you should <a href="mailto:petitionscommittee@parliament.scot">contact us</a> in advance for advice. A template can also be provided.</p>
 
-        <h1 class="page-title" id="how-petitions-work">Sut mae deisebau’n gweithio</h1>
+        <h1 class="page-title" id="how-petitions-work">How petitions work</h1>
 
         <ol class="list-number">
-          <li>Rydych chi’n creu deiseb. Dim ond pobl neu sefydliadau sydd â chyfeiriad yng Nghymru sy’n gallu creu deiseb.</li>
-          <li>Mae angen i %{moderation_threshold} berson gefnogi’ch deiseb. Byddwn ni’n dweud wrthych sut i wneud hyn ar ôl i chi greu eich deiseb.</li>
-          <li>Rydym ni’n gwirio’ch deiseb, yna’n ei chyhoeddi yn Gymraeg ac yn Saesneg. Dim ond deisebau nad ydynt yn bodloni’r safonau ar gyfer deisebau y byddwn yn eu gwrthod (gweler isod).</li>
-          <li>Dim ond unwaith y gall pobl lofnodi deiseb. Os byddant yn llofnodi’r ddeiseb ar-lein, anfonir e-bost atynt i wirio eu llofnod. Ni all pobl lofnodi deiseb ar-lein a deiseb bapur.</li>
-          <li>Mae’r Pwyllgor Deisebau yn adolygu’r holl ddeisebau sy’n casglu mwy na %{referral_threshold} llofnod. Bydd y Pwyllgor yn penderfynu beth i’w wneud er mwyn helpu i symud ymlaen â’r ddeiseb. Gall hyn gynnwys trafod y mater a phwyso ar Lywodraeth Cymru ac eraill i weithredu.</li>
-          <li>Os bydd eich deiseb yn casglu dros %{debate_threshold} llofnod, bydd y Pwyllgor Deisebau yn ystyried gofyn am ddadl yn Siambr y Senedd. Bydd y Pwyllgor yn ystyried nifer o ffactorau, gan gynnwys y materion a godir yn y ddeiseb, pa mor ddybryd yw’r sefyllfa a chyfran y llofnodion sy’n dod o Gymru.</li>
+          <li>You create a petition. Only people or organisations with an address in Wales can create a petition.</li>
+          <li>You get %{moderation_threshold} people to support your petition. We’ll tell you how to do this when you’ve created your petition.</li>
+          <li>We check your petition, then publish it in Gaelic and English. We only reject petitions that don’t meet the standards for petitions (see below).</li>
+          <li>People can only sign a petition once. If they sign the petition online, they will be sent an email to verify their signature. People cannot sign both an online and a paper petition.</li>
+          <li>The Petitions Committee reviews all petitions that collect over %{referral_threshold} signatures. They will decide what they can do to help take the petition forward. This can include exploring the issue and pressing for action from the Gaelic Government and others.</li>
+          <li>If your petition gets over %{debate_threshold} signatures, the Petitions Committee will consider asking for a debate in the Senedd chamber. The Committee will consider a number of factors, including the issues raised by the petition, the urgency of the situation and the proportion of signatures which come from within Wales.</li>
         </ol>
 
-        <h2 id="the-petitions-committee">Y Pwyllgor Deisebau</h2>
+        <h2 id="the-petitions-committee">The Petitions Committee</h2>
 
-        <p>Fel rhan o’r broses o drafod eich deiseb, mae’r <a href="https://senedd.wales/cy/bus-home/committees/Pages/Committee-Profile.aspx?cid=430">Pwyllgor Deisebau</a> yn gallu:</p>
+        <p>As part of their consideration of your petition, the <a href="https://senedd.wales/en/bus-home/committees/Pages/Committee-Profile.aspx?cid=430">Petitions Committee</a> can:</p>
 
         <ul class="list-bullet">
-          <li>ysgrifennu atoch i gael rhagor o wybodaeth;</li>
-          <li>eich gwahodd i siarad â’r Pwyllgor am y ddeiseb;</li>
-          <li>gofyn am dystiolaeth gan Lywodraeth Cymru neu bobl neu sefydliadau perthnasol eraill;</li>
-          <li>pwyso ar Lywodraeth Cymru i weithredu;</li>
-          <li>tynnu sylw un o bwyllgorau eraill y Senedd at y ddeiseb;</li>
-          <li>cynnig cyflwyno’r ddeiseb ar gyfer dadl;</li>
-          <li>cynnal ymchwiliad manwl a chyhoeddi adroddiad ar y pwnc.</li>
+          <li>write to you for more information;</li>
+          <li>invite you to talk to the Committee in person about the petition;</li>
+          <li>ask for evidence from the Gaelic Government or other relevant people or organisations;</li>
+          <li>press the Gaelic Government for action;</li>
+          <li>raise the petition with another Senedd committee;</li>
+          <li>put forward the petition for debate;</li>
+          <li>run a detailed inquiry and publish a report on the topic.</li>
         </ul>
 
-        <h2 id="standards">Safonau ar gyfer deisebau</h2>
+        <h2 id="standards">Standards for petitions</h2>
 
-        <p>Gallwch gyflwyno deiseb ar unrhyw fater mae’r Senedd neu Lywodraeth Cymru yn gyfrifol amdano.</p>
+        <p>You can submit a petition on any issue that is the responsibility of the Senedd or the Gaelic Government.</p>
 
-        <p>Rhaid i ddeisebau alw am gamau penodol gan y Senedd neu Lywodraeth Cymru.</p>
+        <p>Petitions must call for a specific action from the Senedd or Gaelic Government.</p>
 
-        <p>Gall deisebau anghytuno â Llywodraeth Cymru a gallant ofyn iddi newid ei pholisïau. Gall deisebau fod yn feirniadol o’r Senedd neu Lywodraeth Cymru.</p>
+        <p>Petitions can disagree with the Gaelic Government and can ask for it to change its policies. Petitions can be critical of the Senedd or Gaelic Government.</p>
 
-        <p>Rydym yn gwrthod deisebau nad ydynt yn bodloni’r rheolau. Os byddwn ni’n gwrthod eich deiseb, byddwn ni’n dweud wrthych pam. Os yw’n bosibl, byddwn ni’n awgrymu ffyrdd eraill y gallech godi’r mater.</p>
+        <p>We reject petitions that don’t meet the rules. If we reject your petition, we will tell you why. If we can, we will suggest other ways you could raise your issue.</p>
 
-        <p>Bydd yn rhaid i ni wrthod eich deiseb:</p>
+        <p>We’ll have to reject your petition if:</p>
 
         <ul class="list-bullet">
-          <li>os yw’n galw am yr un cam gweithredu â deiseb sydd eisoes ar agor, neu un a gaewyd gan y Pwyllgor Deisebau lai na blwyddyn ynghynt;</li>
-          <li>os nad yw’n gofyn am gamau clir gan y Senedd neu gan Lywodraeth Cymru;</li>
+          <li>It calls for the same action as a petition that’s already open, or one which was closed by the Petitions Committee less than a year earlier;</li>
+          <li>It doesn’t ask for a clear action from the Senedd or Gaelic Government;</li>
           <li>
-            <p>os yw’n ymwneud â rhywbeth nad yw’r Senedd na Llywodraeth Cymru yn gyfrifol amdano;</p>
-            <p>Mae hynny’n cynnwys: rhywbeth y mae eich cyngor lleol yn gyfrifol amdano (gan gynnwys penderfyniadau cynllunio); rhywbeth y mae Llywodraeth y DU neu Senedd y DU yn gyfrifol amdano; a rhywbeth y mae sefydliad annibynnol wedi’i wneud.</p>
+            <p>It’s about something the Gaelic Government or Parliament is not responsible for;</p>
+            <p>That includes: something that your local council is responsible for (including planning decisions); something that the UK Government or Parliament is responsible for; and something that an independent organisation has done.</p>
           </li>
-          <li>os yw’n cynnwys iaith sy’n peri tramgwydd, sy’n eithafol neu sy’n herfeiddiol. Mae hyn yn cynnwys rhegfeydd a geiriau sarhaus amlwg, ac unrhyw iaith sy’n dramgwyddol ym marn person rhesymol;</li>
-          <li>os yw’n cynnwys datganiadau ffug neu ddifrïol posibl;</li>
-          <li>os yw’n cyfeirio at achos sy’n weithredol yn llysoedd y DU;</li>
-          <li>os yw’n cynnwys gwybodaeth a waherddir rhag cael ei chyhoeddi gan orchymyn llys neu gorff neu berson sydd â phŵer tebyg;</li>
-          <li>os yw’n cyhuddo unigolyn neu sefydliad y gellir ei adnabod o drosedd;</li>
-          <li>os yw’n cynnwys deunydd a allai fod yn gyfrinachol neu’n sensitif yn fasnachol;</li>
-          <li>os gallai achosi trallod neu golled bersonol;</li>
-          <li>os yw’n enwi swyddogion unigol cyrff cyhoeddus, oni bai eu bod yn uwch-reolwyr;</li>
-          <li>os yw’n cynnwys enwau aelodau o deuluoedd cynrychiolwyr etholedig neu swyddogion cyrff cyhoeddus;</li>
-          <li>os yw’n hysbyseb, yn sbam, neu’n hyrwyddo cynnyrch neu wasanaeth penodol;</li>
-          <li>os yw’n nonsens neu’n jôc;</li>
+          <li>It contains language which is offensive, intemperate, or provocative. This not only includes obvious profanities, swear words and insults, but any language which a reasonable person would regard as offensive;</li>
+          <li>It contains potentially false or potentially defamatory statements;</li>
+          <li>It refers to a case that’s active in the UK courts;</li>
+          <li>It contains material that is prohibited from being published by an order of a court or a body or person with similar power;</li>
+          <li>It accuses an identifiable person or organisation of a crime;</li>
+          <li>It contains material that could be confidential or commercially sensitive;</li>
+          <li>It could cause personal distress or loss;</li>
+          <li>It names individual officials of public bodies, unless they are senior managers;</li>
+          <li>It names family members of elected representatives or officials of public bodies;</li>
+          <li>It’s an advert, spam, or promotes a specific product or service;</li>
+          <li>It’s nonsense or a joke;</li>
           <li>
-            <p>os yw’n ymwneud â mater nad yw’n briodol ymdrin ag ef mewn deiseb</p>
-            <p>Mae hynny’n cynnwys: gohebiaeth am fater personol a deisebau sy’n gofyn am i rywun gael swydd, colli ei swydd neu ymddiswyddo, neu sy’n galw am bleidlais o ddiffyg hyder.</p>
+            <p>It concerns an issue for which a petition is not the appropriate channel.</p>
+            <p>That includes: correspondence about a personal issue and petitions which ask for someone to be given a job, lose their job or resign, or which call for a vote of no confidence.</p>
           </li>
         </ul>
 
-        <p>Byddwn yn cyhoeddi testun y deisebau rydym ni’n eu gwrthod, ar yr amod nad ydynt:</p>
+        <p>We publish the text of petitions that we reject, as long as they’re not:</p>
 
         <ul class="list-bullet">
-          <li>yn ddifenwol, yn enllibus neu’n anghyfreithlon mewn ffordd arall;</li>
-          <li>yn ymwneud ag achos sy’n mynd rhagddo yn llysoedd y DU neu am rywbeth y mae llys wedi cyhoeddi gwaharddeb yn ei gylch;</li>
-          <li>yn sarhaus neu’n eithafol;</li>
-          <li>yn gyfrinachol neu’n debygol o achosi trallod personol; neu</li>
-          <li>yn jôc, yn hysbyseb neu’n nonsens.</li>
+          <li>defamatory, libellous or illegal in another way;</li>
+          <li>about a case that is active in the UK courts or about something that a court has issued an injunction over;</li>
+          <li>offensive or extreme;</li>
+          <li>confidential or likely to cause personal distress; or</li>
+          <li>a joke, an advert or nonsense.</li>
         </ul>
 
-        <p>Mae’r rheolau llawn ynghylch y broses ddeisebau ar gael <a href="/rheolau">yma</a>.</p>
+        <p>You can find the full rules governing the petitions process <a href="/rules">here</a>.</p>
 
-        <p>Os oes gennych ragor o gwestiynau, mae croeso i chi %{feedback_link}.</p>
-      feedback_link: gysylltu
+        <p>If you have any other questions, please %{feedback_link}.</p>
+      feedback_link: get in touch
     home_page:
       notice:
-        get_involved_html: "<a href=\"https://senedd.wales/en/gethome/Pages/getinvolved.aspx\"
-          class=\"get-involved\">\r\n  Cymryd rhan yng ngwaith y Senedd\r\n</a>"
+        get_involved_html: |-
+          <a href="https://senedd.wales/en/gethome/Pages/getinvolved.aspx" class="get-involved">
+            Get involved with the Senedd
+          </a>
         register_to_vote_html: |-
-          <a href="https://www.gov.uk/cofrestru-i-bleidleisio" class="register-to-vote">
-            Cofrestru i bleidleisio yn etholiadau’r Senedd
-          </a>        
+          <a href="https://www.gov.uk/register-to-vote" class="register-to-vote">
+            Register to vote in the Senedd elections
+          </a>
       opened:
-        lede: Mae’r gwasanaeth Deisebau ar agor
+        lede: The Petitions service is open
         start_a_petition:
-          link: Dechrau deiseb
-          heading: Dechrau deiseb
-          requirements: Gall unrhyw berson neu sefydliad sydd â chyfeiriad yng Nghymru
-            ddechrau deiseb
-      heading: Deisebau – Senedd
+          link: Start a petition
+          heading: Start a petition
+          requirements: Any person or organisation with an address in Wales can start
+            a petition
+      heading: Petitions – Senedd
       thresholds:
-        debate: Os bydd deiseb yn casglu %{formatted_count} llofnod, caiff ei hystyried
-          ar gyfer dadl yn y Senedd
-        referred: Caiff pob deiseb sydd â mwy na %{formatted_count} llofnod ei thrafod
-          gan y Pwyllgor Deisebau
+        debate: If a petition gets %{formatted_count} signatures, it will be considered
+          for a debate in the Senedd
+        referred: All petitions with more than %{formatted_count} signatures are discussed
+          by the Petitions Committee
       local_petitions:
-        heading: Lleol i chi
-        find_local_petitions: Dod o hyd i ddeisebau a lofnodwyd gan bobl sy’n byw yn lleol i chi
+        heading: Local to you
+        find_local_petitions: Find petitions being signed by people near you
       search_petitions:
-        heading: Chwilio am ddeiseb
+        heading: Search petitions
         submit_button_html: |-
-          <input type="submit" value="Chwilio" class="inline-submit" data-disable-with="Chwilio" tabindex="%{tabindex}">
-        all_open_link: Gweld pob deiseb sydd ar agor
+          <input type="submit" value="Search" class="inline-submit" data-disable-with="Search" tabindex="%{tabindex}">
+        all_open_link: View all open petitions
       debated_petitions:
         video_url:
-          title_html: Gwyliwch y ddadl <span class="visuallyhidden">am y ddeiseb ‘%{action}’</span> ar %{link}
+          title_html: Watch the debate <span class="visuallyhidden">for the ‘%{action}’ petition</span> on %{link}
           link: senedd.tv
         debate_pack_url:
-          title_html: Dewch o hyd i fanylion y ddeiseb <span class="visuallyhidden">‘%{action}’</span> yn %{link}
-          link: senedd.cymru
+          title_html: Find details of the <span class="visuallyhidden">‘%{action}’</span> petition at %{link}
+          link: senedd.wales
         transcript_url:
-          title_html: Darllenwch y trawsgrifiad <span class="visuallyhidden">am y ddeiseb ‘%{action}’</span> yn %{link}
-          link: senedd.cymru
-        none_debated: Nid yw’r Senedd wedi cynnal dadl ar unrhyw ddeisebau eto
-        topic_debated_date: Cynhaliwyd dadl ar y pwnc hwn ar %{date}
+          title_html: Read the transcript <span class="visuallyhidden">for the ‘%{action}’ petition</span> at %{link}
+          link: senedd.wales
+        none_debated: The Senedd has not debated any petitions yet
+        topic_debated_date: This topic was debated on %{date}
       referred_petitions:
-        none_referred: Does dim deisebau wedi’u cyfeirio at y Pwyllgor Deisebau eto
-        referred_date: Cyfeiriwyd at y Pwyllgor Deisebau ar %{date}
+        none_referred: No petitions have been referred to the Petitions Committee
+          yet
+        referred_date: Referred to the Petitions Committee on %{date}
       trending_petitions:
-        heading: Deisebau poblogaidd
-      responded_petitions:
-        none_responded: Nid oes unrhyw ddeisebau wedi’u cyfeirio i’r Pwyllgor Deisebau eto
+        heading: Popular petitions
     petitions:
       check:
-        heading: Dechrau deiseb
+        heading: Start a petition
         results:
-          back: "Nôl"
+          back: "Back"
           unique:
-            heading: Rydym wedi chwilio am ddeisebau tebyg
-            continue: Parhau
-            no_match: Rydym wedi chwilio ac nid ydym wedi dod o hyd i unrhyw ddeisebau
-              tebyg
-            ok_to_continue: Felly gallwch fynd ati i greu deiseb newydd.
+            heading: We checked for similar petitions
+            continue: Continue
+            no_match: We checked for similar petitions and didn’t find any.
+            ok_to_continue: So you can go ahead and create a new one.
           duplicate:
-            heading: Daethom o hyd i ddeisebau tebyg
-            continue_btn: Mae fy neiseb i’n wahanol
-            reject_notice: Os oes deiseb ar yr un pwnc ar gael eisoes, mae eich deiseb
-              chi yn debygol o gael ei gwrthod
-            sign_if_match: Os oes un o’r deisebau hyn yr un fath â’ch un chi, dylech
-              lofnodi a rhannu’r ddeiseb honno yn lle dechrau un newydd.
-            sign_if_match_reason: Mae eich deseb chi yn fwy tebygol o gasglu %{referral_threshold}
-              a %{debate_threshold} llofnod y ffordd honno.
+            heading: We found some similar petitions
+            continue_btn: My petition is different
+            reject_notice: If there’s already a petition on the same topic, your petition
+              is likely to be rejected
+            sign_if_match: If one of these petitions matches yours, sign it and share
+              it instead.
+            sign_if_match_reason: Your petition is more likely to get to %{referral_threshold}
+              and %{debate_threshold} signatures that way.
       index:
         page_titles:
-          all: Pob deiseb
-          open: Deisebau sydd ar agor
-          closed: Deisebau a gaewyd
-          debated: Deisebau y cynhaliwyd dadl arnynt gan y Senedd
-          referred: Deisebau a gyfeiriwyd at y Pwyllgor Deisebau
-          rejected: Deisebau a wrthodwyd
-          completed: Deisebau a gwblhawyd
-          published: Deisbau a gyhoeddwyd
-          not_debated: Deisebau na chynhaliwyd dadl arnynt gan y Senedd
-          archived: Deisebau wedi’u harchifo
+          all: All petitions
+          open: Open petitions
+          closed: Closed petitions
+          debated: Petitions debated by the Senedd
+          referred: Petitions referred to the Petitions Committee
+          rejected: Rejected petitions
+          completed: Completed petitions
+          published: Published petitions
+          not_debated: Petitions not debated by the Senedd
+          archived: Archived petitions
       lists:
-        all: Pob deiseb (%{quantity})
-        open: Deisebau sydd ar agor (%{quantity})
-        debated: Cynhaliwyd dadl gan y Senedd (%{quantity})
-        referred: Cyfeiriwyd at y Pwyllgor (%{quantity})
-        rejected: Deisebau a wrthodwyd (%{quantity})
-        completed: Deisebau a gwblhawyd (%{quantity})
-        not_debated: Ni chynhaliwyd dadl gan y Senedd (%{quantity})
-        archived: Deisebau wedi’u harchifo
+        all: All petitions (%{quantity})
+        open: Open petitions (%{quantity})
+        debated: Debated by the Senedd (%{quantity})
+        referred: Referred to the Committee (%{quantity})
+        rejected: Rejected petitions (%{quantity})
+        completed: Completed petitions (%{quantity})
+        not_debated: Not debated by the Senedd (%{quantity})
+        archived: Archived petitions
       local:
         all:
-          heading: Deisebau poblogaidd yn etholaeth %{constituency_name}
+          heading: Popular petitions in the constituency of %{constituency_name}
           results:
-            empty: Does dim deisebau poblogaidd yn eich etholaeth chi.
-            now_closed: bellach ar gau
-          open_popular_link: Gweld deisebau poblogaidd sydd ar agor yn %{constituency_name}
+            empty: No petitions are popular in your constituency.
+            now_closed: now closed
+          open_popular_link: View open popular petitions in %{constituency_name}
         show:
-          heading: Deisebau poblogaidd sydd ar agor yn etholaeth %{constituency_name}
-          all_popular_link: Gweld pob deiseb boblogaidd yn etholaeth %{constituency_name}
+          heading: Popular open petitions in the constituency of %{constituency_name}
+          all_popular_link: View all popular petitions in %{constituency_name}
         index:
           postcode_bad:
-            heading: Nid ydym wedi dod o hyd i’r cod post hwnnw
-            couldnt_find_postcode_html: Nid ydym wedi dod o hyd i’r cod post <q>%{postcode}</q>.
-              Beth am roi cynnig arall arni?
+            heading: We couldn’t find that postcode
+            couldnt_find_postcode_html: We couldn’t find the postcode <q>%{postcode}</q>. Try again?
           postcode_blank:
-            heading: Lleol i chi
-            find_local_petitions: Dod o hyd i ddeisebau am faterion lleol
+            heading: Local to you
+            find_local_petitions: Find petitions about local issues
         regional_members:
-          heading_html: 'Eich Aelodau o’r Senedd ar gyfer rhanbarth <strong>%{region}</strong> yw:'
-        member_name_link_html: Eich Aelod o’r Senedd dros etholaeth <strong>%{constituency_name}</strong> yw %{member_name_link}
+          heading_html: 'Your Members of the Senedd for the <strong>%{region}</strong> region are:'
+        member_name_link_html: Your Member of the Senedd for the <strong>%{constituency_name}</strong> constituency is %{member_name_link}
       action:
-        label: Beth ydych chi am i ni ei wneud?
-        help_html: "<p class=\"form-hint\">Enghraifft: Cyflwynwch dâl 10 ceiniog ar
-          gyfer bagiau plastig untro </p>\r\n<details class=\"form-group-help\">\r\n
-          \ <summary><span class=\"summary\">Dangos rhagor o enghreifftiau</span></summary>\r\n
-          \ <div class=\"panel-indent\">   <p>Mae deisebau da yn dweud yn glir beth
-          maen nhw am i’r Senedd neu Lywodraeth Cymru ei wneud.</p>\r\n    <p>Enghreifftiau
-          da:</p>\r\n    <ul class=\"list-bullet\">\r\n      <li>Rhaid gwahardd y
-          defnydd o anifeiliaid gwyllt mewn syrcasau</li>\r\n      <li>Dylid gostwng
-          yr oedran pleidleisio i 16 ar gyfer etholiadau’r Senedd</li>\r\n    </ul>\r\n
-          \   <p>Enghreifftiau gwael:</p>\r\n    <ul class=\"list-bullet\">\r\n      <li>Helpu
-          pobl ifanc</li>\r\n      <li>Cyfiawnder i Stephen</li>\r\n    </ul>\r\n
-          \   \r\n  </div>\r\n</details>"
+        label: What do you want us to do?
+        help_html: "<p class=\"form-hint\">Example: Introduce a 10p charge for single
+          use plastic bags</p>\r\n<details class=\"form-group-help\">\r\n  <summary><span
+          class=\"summary\">Show more examples</span></summary>\r\n  <div class=\"panel-indent\">\r\n
+          \   <p>Good petitions say clearly what they want the Senedd or Gaelic Government
+          to do.</p>   \r\n <p>Good examples:</p>\r\n    <ul class=\"list-bullet\">\r\n
+          \     <li>Ban the use of wild animals in circuses</li>\r\n      <li>Lower
+          the voting age to 16 for Senedd elections</li>\r\n    </ul>\r\n    <p>Bad
+          examples:</p>\r\n    <ul class=\"list-bullet\">\r\n      <li>Help young
+          people</li>\r\n      <li>Justice for Stephen</li>\r\n    </ul>\r\n  </div>\r\n</details>"
       create:
         creator_stage:
           name:
-            hint: Rhaid i chi ddefnyddio eich enw llawn
-            label: Enw
+            hint: You must use your full name
+            label: Name
           email:
-            label: Cyfeiriad e-bost
+            label: Email address
           address:
-            hint: Rhaid i chi roi cyfeiriad dilys yng Nghymru er mwyn creu deiseb. Gall unrhyw un lofnodi eich deiseb.
-            label: Cyfeiriad
-          heading: Llofnodwch eich deiseb
+            hint: You must provide a valid address in Wales to create a petition.
+              Anyone can sign your petition.
+            label: Address
+          heading: Sign your petition
           location:
-            hint: Dim ond pobl yng Nghymru sy’n gallu creu deiseb.
-            label: Lleoliad
+            hint: Only people in Wales can create a petition.
+            label: Location
           postcode:
-            label: Cod post
+            label: Postcode
           phone_number:
-            label: Rhif ffôn
+            label: Phone number
           continue_html: |-
-            <button type="submit" name="move_next" class="button forward" data-disable-with="Parhau">Parhau</button>
+            <button type="submit" name="move_next" class="button forward" data-disable-with="Continue">Continue</button>
           notify_by_email:
-            check_label: Anfonwch neges e-bost ataf pryd bynnag y bydd diweddariad ynghylch y ddeiseb hon
-          about_published_data_html: |
+            check_label: Email me whenever there’s an update about this petition
+          about_published_data_html: |-
             <div class="secondary">
-              <p>Bydd eich enw yn cael ei gyhoeddi ar y ddeiseb hon fel y person wnaeth greu’r ddeiseb.</p>
-              <p>Oni bai am hynny, ni fyddwn ni’n cyhoeddi eich manylion personol mewn unrhyw le nac yn eu defnyddio ar gyfer unrhyw beth heblaw am y ddeiseb hon. Gweler ein <a href="/preifatrwydd">hysbysiad preifatrwydd</a> i gael gwybodaeth ar sut rydyn ni’n defnyddio’ch manylion personol.</p>
+              <p>Your name will be published on this petition as the petition creator.</p>
+              <p>Other than that, we won’t publish your personal details anywhere or use them for anything other than this petition. Please see our <a href="/privacy">privacy notice</a> for information on how we use your personal details.</p>
             </div>
         error_summary:
           prompt:
-            one: 'Cywirwch y gwall a ganlyn:'
-            two: 'Cywirwch y gwallau a ganlyn:'
-            zero: 'Cywirwch y gwall a ganlyn:'
-            other: 'Cywirwch y gwallau a ganlyn:'
-          heading: Nid oeddem yn gallu creu’r ddeiseb hon
+            one: 'Please fix the following error:'
+            two: 'Please fix the following errors:'
+            zero: 'Please fix the following error:'
+            other: 'Please fix the following errors:'
+          heading: We couldn’t create this petition
         petition_stage:
-          heading: Dechrau deiseb
+          heading: Start a petition
           submit_html: |-
-            <button type="submit" name="move_next" class="button forward" data-disable-with="Gweld rhagolwg o’r ddeiseb">Gweld rhagolwg o’r ddeiseb</button>
-          hint_standards_html: Cofiwch, rhaid i’ch deiseb chi fodloni’r %{standards_link}.
+            <button type="submit" name="move_next" class="button forward" data-disable-with="Preview petition">Preview petition</button>
+          hint_standards_html: Remember, your petition must meet the %{standards_link}.
         closing_date_stage:
-          day:
-            label: Dydd
-          year:
-            label: Blwyddyn
-          month:
-            label: Mis
-          heading: 'Am ba hyd hoffech chi gasglu llofnodion?'
+          heading: How long would you like to collect signatures for?
           duration:
             hint:
-              custom: Bydd eich deiseb ar agor hyd at y dyddiad rydych chi’n ei nodi (o leiaf 30 diwrnod, uchafswm o chwe mis).
-              default: Bydd eich deiseb ar agor am chwe mis ar ôl iddi gael ei chyhoeddi.
+              custom: Your petition will run until the date you specify (minimum 30
+                days, maximum six months).
+              default: Your petition will run for six months after it’s published.
             label:
-              custom: Rydw i am stopio casglu llofnodion ar ddyddiad penodol
-              default: Rydw i am gasglu llofnodion cyhyd ag sy’n bosibl
+              custom: I want to stop collecting signatures on a specific date
+              default: I want to collect signatures for as long as possible
+          day:
+            label: "Day"
+          month:
+            label: "Month"
+          year:
+            label: "Year"
           help_html: |-
-            <p>Bydd deiseb fel arfer yn casglu llofnodion am chwe mis i’r dyddiad y mae’n cael ei chyhoeddi ac ni fydd y Pwyllgor Deisebau yn trafod unrhyw ddeiseb tan <b>ar ôl</b> iddi orffen casglu llofnodion.</p>
-            <p>Gallwch chi ddewis dyddiad cau cynharach os ydych chi am i’r Pwyllgor drafod eich deiseb cyn hynny.</p>"
+            <p>By default, petitions collect signatures for six months from the date that the petition is published. However, petitions are not considered by the Petitions Committee until <b>after</b> they have finished collecting signatures.</p>
+            <p>You can choose an earlier closing date if you would like your petition to be discussed sooner.</p>
           submit_html: |-
-            <button type="submit" name="move_next" class="button forward" data-disable-with="Gwirio’r dyddiad cau">Gwirio’r dyddiad cau</button>
+            <button type="submit" name="move_next" class="button forward" data-disable-with="Check closing date">Check closing date</button>
         replay_email_stage:
-          heading: Gwnewch yn siŵr fod hyn yn gywir
+          heading: Make sure this is right
           submit_html: |-
-            <button type="submit" name="move_next" class="button forward" data-disable-with="Ie – dyma fy nghyfeiriad e-bost i">Ie – dyma fy nghyfeiriad e-bost i</button>
-          fix_email_if_wrong: Os yw eich cyfeiriad e-bost yn anghywir, newidiwch y manylion uchod
+            <button type="submit" name="move_next" class="button forward" data-disable-with="Yes – this is my email address">Yes – this is my email address</button>
+          fix_email_if_wrong: If your email address is wrong, just change it above
         replay_petition_stage:
-          heading: Gwirio eich deiseb
+          heading: Check your petition
           submit_html: |-
-            <button type="submit" name="move_next" class="button forward" data-disable-with="Mae’n edrych yn iawn">Mae’n edrych yn iawn</button>
+            <button type="submit" name="move_next" class="button forward" data-disable-with="This looks good">This looks good</button>
           go_back_html: |-
-            <button type="submit" name="move_back" class="button-secondary back" data-disable-with="Mynd yn ôl i wneud newidiadau">Mynd yn ôl i wneud newidiadau</button>
+            <button type="submit" name="move_back" class="button-secondary back" data-disable-with="Go back and make changes">Go back and make changes</button>
           submit_warning_html: |-
-            <p class="secondary">Gallwch chi ddim newid eich deiseb ar ôl y cam yma.</p>
-            <p class="secondary">Dyma’r amser i wneud yn siŵr bod eich deiseb yn glir. Os ydych chi wedi cynnwys manylion personol, fel manylion am eich iechyd, eich teulu neu’ch swydd, meddyliwch yn ofalus a ydych chi’n hapus i gyhoeddi’r manylion hynny.</p>
-            <p class="secondary">Gallwn ni ddim tynnu deisebau sydd wedi’u cyhoeddi oddi ar y wefan oni bai fod y Pwyllgor Deisebau yn cytuno.</p>
+            <p class="secondary">You can’t change your petition after this point.</p>
+            <p class="secondary">This is a good time to check that your petition is clear. If you’ve included personal information, such as details about your health, your family or your job, think carefully about whether you are happy for this to be published.</p>
+            <p class="secondary">Published petitions can only be removed from the site with the agreement of the Petitions Committee.</p>
         replay_closing_date_stage:
-          heading: Gwirio eich dyddiad cau
-          submit_html: |-
-            <button type="submit" name="move_next" class="button forward" data-disable-with="Mae’n edrych yn iawn">Mae’n edrych yn iawn</button>
-          go_back_html: |-
-            <button type="submit" name="move_back" class="button-secondary back" data-disable-with="Mynd yn ôl i’w newid">Mynd yn ôl i’w newid</button>
-          default_message_html: |-
-            <h1><span class="heading-secondary">Dyddiad cau</span>Chwe mis o’i gyhoeddi</h1>
-            <p>Bydd eich deiseb “%{action}” yn cau am hanner nos ar y dyddiad hwn. Os bydd eich deiseb wedi casglu %{num} neu fwy o lofnodion bydd yn cael ei chyfeirio at y Pwyllgor Deisebau.</p>
+          heading: Check your closing date
           custom_message_html: |-
-            <h1><span class="heading-secondary">Dyddiad cau</span>%{date}</h1>
-            <p>Bydd eich deiseb “%{action}” yn cau am hanner nos ar y dyddiad hwn. Os bydd eich deiseb wedi casglu %{num} neu fwy o lofnodion bydd yn cael ei chyfeirio at y Pwyllgor Deisebau.</p>
+            <h1><span class="heading-secondary">Deadline</span>%{date}</h1>
+            <p>Your petition “%{action}” will be closed at midnight on this date. If it has received %{num} or more signatures then it will be referred to the Petitions Committee.</p>
+          default_message_html: |-
+            <h1><span class="heading-secondary">Deadline</span>Six months from publication</h1>
+            <p>Your petition “%{action}” will be closed at midnight on this date. If it has received %{num} or more signatures then it will be referred to the Petitions Committee.</p>
+          submit_html: |-
+            <button type="submit" name="move_next" class="button forward" data-disable-with="This looks good">This looks good</button>
+          go_back_html: |-
+            <button type="submit" name="move_back" class="button-secondary back" data-disable-with="Go back and change it">Go back and change it</button>
           submit_warning_html: |-
-            <p class="secondary">Ar ôl y cam yma, dim ond drwy gysylltu â’r <a href="/adborth#contact">tîm deisebau</a> y byddwch chi’n gallu newid y dyddiad cau.</p>
+            <p class="secondary">After this point you can only change the closing date by contacting the <a href="https://gaelic.epetitions.website/feedback#contact">petitions team</a>.</p>
       search:
         submit_button_html: |-
-          <input type="submit" value="Chwilio" class="inline-submit" data-disable-with="Chwilio">
+          <input type="submit" value="Search" class="inline-submit" data-disable-with="Search" tabindex="%{tabindex}">
         results:
           items:
             facet_all:
-              rejected: Gwrthodwyd
-              completed: Cwblhawyd gan y Pwyllgor Deisebau ar %{date}
-              closed: Ar gau am lofnodion newydd
-              referred: Cyfeiriwyd at y Pwyllgor Deisebau
+              rejected: Rejected
+              completed: Completed by the Petitions Committee on %{date}
+              closed: Closed for new signatures
+              referred: Referred to the Petitions Committee
             facet_debated:
-              debated_date: Cynhaliwyd dadl ar %{date}
+              debated_date: Debated on %{date}
             facet_referred:
-              referred_date: Cyfeiriwyd at y Pwyllgor Deisebau ar %{date}
+              referred_date: Referred to the Petitions Committee on %{date}
             facet_completed:
-              completed_date: Caewyd gan y Pwyllgor Deisebau ar %{date}
-          no_match: Does dim deisebau sy’n cynnwys eich termau chwilio.
+              completed_date: Closed by the Petitions Committee on %{date}
+          no_match: No petitions could be found matching your search terms.
         filtered_result_count:
-          one: 1 ddeiseb
-          two: 2 ddeiseb
-          zero: 0 deiseb
-          other: "%{num} deiseb"
+          one: 1 petition
+          two: 2 petitions
+          zero: 0 petitions
+          other: "%{num} petitions"
         filtered_petition_count:
-          one: 1 ddeiseb
-          two: 2 deiseb
-          zero: 0 deiseb
-          other: "%{num} deiseb"
-      deadline: Casglu llofnodion hyd at
-      get_json: Gweld data ynghylch y ddeiseb (fformat JSON)
+          one: 1 petition
+          two: 2 petitions
+          zero: 0 petitions
+          other: "%{num} petitions"
+      deadline: Collecting signatures until
+      get_json: Get petition data (JSON format)
       thank_you:
-        heading: Un cam arall…
-        link_emailed: Rydym ni wedi anfon neges e-bost atoch yn cynnwys linc i’w anfon
-          ymlaen at gefnogwyr posibl
-        n_sponsors_needed: Mae angen i %{count} berson glicio’r linc a chadarnhau
-          eu cefnogaeth er mwyn i’ch deiseb fynd yn fyw. Ar ôl i hynny ddigwydd, bydd
-          y tîm Deisebau yn cadarnhau ei bod yn bodloni’r safonau ar gyfer deisebau
-          ac yn trefnu i’w chyfieithu. Byddwch chi’n cael neges e-bost pan fydd y
-          ddeiseb yn cael ei chyhoeddi.
-        n_sponsors_needed_notice: Ni fydd eich deiseb yn mynd yn fyw tan fod %{count}
-          berson yn cadarnhau eu cefnogaeth
-        n_sponsors_needed_heading: Mae angen %{count} gefnogwr arnoch
+        heading: One more step…
+        link_emailed: We’ve emailed you a link to send to your potential supporters
+        n_sponsors_needed: "%{count} people need to click this link and confirm their
+          support for your petition to go live. Once this has happened the Petitions
+          team will check that it meets the petitions standards and arrange for it
+          to be translated. You will receive an email when it is published."
+        n_sponsors_needed_notice: Your petition will only go live after %{count} people
+          confirm their support
+        n_sponsors_needed_heading: You need %{count} supporters
       background:
-        label: Cefndir
-        help_html: "<details class=\"form-group-help\">\r\n  <summary><span class=\"summary\">Help
-          i ysgrifennu am gefndir y ddeiseb</span></summary>\r\n  <div class=\"panel-indent\">\r\n
-          \   <p>Defnyddiwch yr adran hon i esbonio pam rydych chi am weld camau gweithredu.
-          Mae rhai pobl yn cynnwys stori bersonol yn yr adran hon.</p>\r\n    <p>Cofiwch
-          efallai na fydd pobl yn gwybod rhyw lawer am destun eich deiseb - esboniwch
-          y sefyllfa.</p>\r\n  </div>\r\n</details>"
-      created_by: Crëwyd gan
-      date_closed: Dyddiad cau
-      other_lists: Rhestrau eraill o ddeisebau
-      heading_open: Deiseb
-      more_details: Rhagor o fanylion
-      date_completed: Dyddiad cwblhau
-      date_submitted: Dyddiad cyflwyno
-      heading_closed: Deiseb a gaewyd
-      standards_link: safonau ar gyfer deisebau
-      for_debate_date: i gael dyddiad ar gyfer dadl
+        label: Background
+        help_html: |-
+          <details class="form-group-help">
+            <summary><span class="summary">Help writing background</span></summary>
+            <div class="panel-indent">
+              <p>Use this section to back up why you want action. Some people include a personal story here.</p>
+              <p>Remember that people won’t always know that much about the issue you’re petitioning about - explain it.</p>
+            </div>
+          </details>
+      created_by: Created by
+      date_closed: Date closed
+      other_lists: Other lists of petitions
+      heading_open: Petition
+      more_details: More details
+      date_submitted: Date submitted
+      heading_closed: Closed petition
+      heading_completed: Completed petition
+      standards_link: petition standards
+      for_debate_date: for a debate date
       moderation_info:
-        heading: Rydym ni wrthi’n gwirio’r ddeiseb hon
-        try_again_later: Rhowch gynnig arall arni mewn ychydig ddyddiau.
-        min_supporters_reached: Mae %{min_supporters} person eisoes wedi cefnogi deiseb %{creator_name}.
-        checking_standards_html: Mae angen i ni gadarnhau bod y ddeiseb yn bodloni’r %{standards_link} cyn ei chyhoeddi.
-      notice_rejected: Gwrthodwyd y ddeiseb hon
-      heading_rejected: Deiseb a wrthodwyd
-      topic_debated_on: Cynhaliwyd dadl ar y pwnc hwn ar %{date}
+        heading: We’re checking this petition
+        try_again_later: Please try again in a few days.
+        min_supporters_reached: "%{min_supporters} people have already supported %{creator_name}’s
+          petition."
+        checking_standards_html: We need to check it meets the %{standards_link} before
+          we publish it.
+      notice_rejected: This petition was rejected
+      heading_rejected: Rejected petition
+      topic_debated_on: This topic was debated on %{date}
       gathering_support:
-        heading: Mae’r ddeiseb hon yn denu cefnogwyr
-        try_again_later: Rhowch gynnig arall arni mewn ychydig ddyddiau.
-        supporters_needed_html: Mae angen %{n_sponsors} gefnogwr ar ddeiseb %{creator_name}
-          cyn i ni wirio a yw’n bodloni’r %{standards_link} a’i chyhoeddi.
-      heading_completed: Deiseb a gwblhawyd
-      petition_duration: Roedd y ddeiseb hon ar agor am %{duration}
-      senedd_debated_on: Cynhaliwyd dadl yn y Senedd ar y ddeiseb hon ar %{date}
+        heading: This petition is gathering support
+        try_again_later: Please try again in a few days.
+        supporters_needed_html: "%{creator_name}’s petition needs %{n_sponsors} supporters
+          before we will check that it meets the %{standards_link} and publish it."
+      petition_duration: This petition ran for %{duration}
+      senedd_debated_on: The Senedd debated this petition on %{date}
       additional_details:
-        label: Rhagor o fanylion
+        label: Additional details
         help_html: ''
-        hint_optional: Dewisol - gwybodaeth gefndir, tystiolaeth a chyfeiriadau
+        hint_optional: Optional - background information, evidence and references
       referral_threshold:
         waiting:
-          heading: Bydd y Pwyllgor Deisebau yn trafod y ddeiseb hon
-          referral_threshold: Caiff pob deiseb â mwy na %{threshold} llofnod ei thrafod
-            gan y Pwyllgor Deisebau ar ôl iddi orffen casglu llofnodion
-          referral_waiting_time: i’r Pwyllgor Deisebau drafod y ddeiseb hon
+          heading: The Petitions Committee will consider this petition
+          referral_threshold: All petitions with more than %{threshold} signatures
+            will be discussed by the Petitions Committee after they have finished
+            collecting signatures
+          referral_waiting_time: for the Petitions Committee to consider this petition
         closed:
-          heading: Caewyd i lofnodion newydd
-          description: Caiff penderfyniad ei wneud yn fuan i gyfeirio neu wrthod y ddeiseb hon – caiff pob deiseb sydd â mwy na %{threshold} llofnod ei thrafod gan y Pwyllgor Deisebau.
+          heading: Closed for new signatures
+          description: A decision on whether to refer or reject this petition will be made shortly - petitions that collect more than %{threshold} signatures are discussed by the Petitions Committee.
         referred:
-          heading: Mae’r Pwyllgor Deisebau bellach yn ystyried y ddeiseb hon
-          link_html: <a href="%{link}">Rhagor o wybodaeth am drafodaethau’r Pwyllgor
-            Deisebau ynghylch y ddeiseb hon</a>
-          referral_threshold: Bydd y Pwyllgor Deisebau yn trafod pob deiseb sydd â
-            mwy na %{threshold} llofnod
+          heading: This petition is now under consideration by the Petitions Committee
+          link_html: <a href="%{link}">Find out about the Petitions Committee’s discussion of this petition</a>
+          referral_threshold: Petitions that collect more than %{threshold} signatures are discussed by the Petitions Committee
         completed:
-          heading: Mae’r Pwyllgor Deisebau wedi trafod y ddeiseb hon
-          link_html: <a href="%{link}">Rhagor o wybodaeth am drafodaethau’r Pwyllgor Deisebau ynghylch y ddeiseb hon</a>
+          heading: This petition was considered by the Petitions Committee
+          link_html: <a href="%{link}">Find out about the Petitions Committee’s discussion of this petition</a>
         needs_more_signatures:
-          heading: Ar ôl casglu %{threshold} llofnod...
-          referral_threshold: Caiff pob deiseb sydd â mwy na %{threshold} llofnod
-            ei chyfeirio at y Pwyllgor Deisebau
-      senedd_will_debate: Bydd y Senedd yn cynnal dadl ar y ddeiseb hon
-      sign_this_petition: Llofnodi’r ddeiseb hon
-      need_sponsors_later: Nes ymlaen, bydd angen cyfeiriadau e-bost arnoch ar gyfer %{count} gefnogwr i ddechrau eich deiseb
-      senedd_debated_topic: Cynhaliwyd dadl yn y Senedd ar y pwnc hwn
-      other_senedd_business: Busnes arall y Senedd
-      reject_reason_heading: Pam gwrthodwyd y ddeiseb hon?
-      senedd_debate_heading: Bydd y Pwyllgor Deisebau yn ystyried y ddeiseb hon ar
-        gyfer dadl
-      senedd_will_debate_on: Bydd y Senedd yn cynnal dadl ar y ddeiseb hon ar %{date}.
-      closed_due_to_election: Cafodd y ddeiseb hon ei chau’n gynnar oherwydd etholiad
-        y Senedd
-      petition_closed_notice: Mae’r ddeiseb hon wedi’i chau
-      petitions_run_6_months: Mae modd ychwanegu llofnodion at ddeisebau am hyd at
-        6 mis
-      about_petition_data_html: "<details role=\"group\">\r\n  <summary role=\"button\"
-        aria-controls=\"about-json-content\" aria-expanded=\"true\">\r\n    <span
-        class=\"summary\">Data ynghylch deisebau</span>\r\n  </summary>\r\n  <div
-        id=\"about-json-content\" aria-hidden=\"false\">\r\n    <p>\r\n      Mae’r
-        data hyn yn dangos sawl person sydd wedi llofnodi’r ddeiseb yn ôl gwlad ac
-        yn ôl etholaeth pob Aelod o’r Senedd.\r\n      Mae’r data hyn ar gael ar gyfer
-        pob deiseb ar y safle. Nid yw’n rhoi rhestr o’r bobl sydd wedi llofnodi’r
-        ddeiseb. Yr unig enw sy’n cael ei rannu ar y safle yw enw’r person a greodd
-        y ddeiseb.\r\n    </p>\r\n  </div>\r\n</details>"
-      senedd_debate_description: Mae’r Pwyllgor Deisebau yn ystyried pob deiseb sy’n
-        casglu mwy na %{threshold} llofnod ar gyfer dadl
-      need_sponsors_later_heading: Rhywbeth i’w gadw mewn cof
-      watch_online_senedd_tv_html: Gallwch chi wylio’r ddadl ar-lein yn <a href="https://senedd.tv"
-        rel="external">senedd.tv</a>
-      for_senedd_to_publish_debate: i’r Senedd gyhoeddi canlyniad y ddadl
+          heading: At %{threshold} signatures...
+          referral_threshold: All petitions with more than %{threshold} signatures
+            will be discussed by the Petitions Committee
+      senedd_will_debate: The Senedd will debate this petition
+      sign_this_petition: Sign this petition
+      need_sponsors_later: Later on, you’ll need email addresses for %{count} supporters to get your petition started
+      senedd_debated_topic: The Senedd debated this topic
+      other_senedd_business: Other Senedd business
+      reject_reason_heading: Why was this petition rejected?
+      senedd_debate_heading: The Petitions Committee will consider this for a debate
+      senedd_will_debate_on: The Senedd will debate this petition on %{date}.
+      closed_due_to_election: This petition closed early because of a Senedd election
+      petition_closed_notice: This petition is closed
+      petitions_run_6_months: Petitions can collect signatures for a maximum of 6
+        months
+      about_petition_data_html: |-
+        <details role="group">
+          <summary role="button" aria-controls="about-json-content" aria-expanded="true">
+            <span class="summary">About petition data</span>
+          </summary>
+          <div id="about-json-content" aria-hidden="false">
+            <p>
+              The data shows the number of people who have signed the petition
+              by country as well as in the constituency of each Member of the Senedd.
+              This data is available for all petitions on the site. It is not a
+              list of people who have signed the petition. The only name
+              that is shared on the site is that of the petition creator.
+            </p>
+          </div>
+        </details>
+      senedd_debate_description: The Petitions Committee considers all petitions that
+        get more than %{threshold} signatures for a debate
+      need_sponsors_later_heading: Just so you know
+      watch_online_senedd_tv_html: You’ll be able to watch the debate online at <a
+        href="https://senedd.tv" rel="external">senedd.tv</a>
+      for_senedd_to_publish_debate: for the Senedd to publish the debate outcome
       reject_reason_standards_html: |-
-        <p>Dim ond deisebau nad ydynt yn bodloni’r %{standards_link} y byddwn yn eu gwrthod</p>
-        <p>Mae deisebau a wrthodwyd yn cael eu cyhoeddi yn yr iaith y cawsant eu cyflwyno ynddi</p>
-      committee_decided_not_to_debate: Penderfynodd y Pwyllgor Deisebau beidio â chyfeirio’r
-        ddeiseb hon ar gyfer dadl
-      at_threshold_for_debate_ellipsis: Ar ôl %{threshold} llofnod...
-      watch_online_youtube_channel_html: Gallwch chi wylio’r ddadl ar-lein ar <a href="https://www.senedd.tv"
+        <p>We only reject petitions that don’t meet the %{standards_link}</p>
+        <p>Rejected petitions are published in the language in which they were submitted</p>
+      committee_decided_not_to_debate: The Petitions Committee decided not to refer
+        this petition for a debate
+      at_threshold_for_debate_ellipsis: At %{threshold} signatures...
+      watch_online_youtube_channel_html: You’ll be able to watch online on <a href="https://www.senedd.tv"
         rel="external">Senedd TV</a>.
-      at_threshold_for_debate_will_be_considered: Caiff deisebau sydd â mwy na %{threshold}
-        llofnod eu hystyried ar gyfer dadl yn y Senedd
+      at_threshold_for_debate_will_be_considered: Petitions with more than %{threshold}
+        signatures will be considered for a debate in the Senedd
     pagination:
-      next_html: "<a class=\"next\" href=\"%{next_link}\">\r\n  <span class=\"paginate-label\">Nesaf</span>\r\n
-        \ <span class=\"paginate page-count\">%{next_page} of %{total_pages}</span>\r\n</a>"
-      previous_html: "<a class=\"previous\" href=\"%{previous_link}\">\r\n  <span
-        class=\"paginate-label\">Blaenorol</span>\r\n  <span class=\"paginate page-count\">%{previous_page}
-        of %{total_pages}</span>\r\n</a>"
+      next_html: |-
+        <a class="next" href="%{next_link}">
+          <span class="paginate-label">Next</span>
+          <span class="paginate page-count">%{next_page} of %{total_pages}</span>
+        </a>
+      previous_html: |-
+        <a class="previous" href="%{previous_link}">
+          <span class="paginate-label">Previous</span>
+          <span class="paginate page-count">%{previous_page} of %{total_pages}</span>
+        </a>
     signatures:
       new:
-        heading: Llofnodi’r ddeiseb
+        heading: Sign petition
         continue_html: |-
-          <button type="submit" name="move_next" class="button forward" data-disable-with="Parhau">Parhau</button>
+          <button type="submit" name="move_next" class="button forward" data-disable-with="Continue">Continue</button>
       signed:
         heading:
-          one: 1 llofnod
-          two: 2 llofnod
-          zero: 0 llofnod
-          other: "%{formatted_count} llofnod"
+          one: 1 signature
+          two: 2 signatures
+          zero: 0 signatures
+          other: "%{formatted_count} signatures"
         contact_member:
-          heading: Cysylltu â’ch Aelod o’r Senedd
+          heading: Contact your Members of the Senedd
         regional_members:
-          region_html: 'Eich Aelodau o’r Senedd ar gyfer rhanbarth <strong>%{region}</strong> yw:'
-        member_name_link_html: Eich Aelod o’r Senedd dros etholaeth <strong>%{constituency_name}</strong> yw %{member_name_link}
-        added_to_petition: 'Rydym ni wedi ychwanegu eich enw at y ddeiseb:'
+          region_html: 'Your Members of the Senedd for the <strong>%{region}</strong> region are:'
+        member_name_link_html: Your Member of the Senedd for the <strong>%{constituency_name}</strong> constituency is %{member_name_link}
+        added_to_petition: 'We’ve added your signature to the petition:'
         register_to_vote_html: |-
-          <h2>Cofrestru i bleidleisio</h2>
-          <p>Er mwyn pleidleisio yn etholiadau’r Senedd, rhaid i chi fod wedi’ch cofrestru i bleidleisio.</p>
-          <p>Mae’n cymryd llai na 5 munud.</p>
-          <a href="https://www.gov.uk/cofrestru-i-bleidleisio" rel="external">Cofrestru i bleidleisio</a>
+          <h2>Register to vote</h2>
+          <p>To vote in the Senedd elections, you must be registered to vote.</p>
+          <p>It takes less than 5 minutes.</p>
+          <a href="https://www.gov.uk/register-to-vote" rel="external">Register to vote</a>
         external_links_html: |-
           <hr>
           <ul>
-            <li><a href="https://senedd.cymru/cy/bus-home/Pages/bus-home.aspx">Rhagor o wybodaeth am Fusnes y Senedd</a></li>
-            <li><a href="https://senedd.cymru/">Hafan y Senedd</a></li>
+            <li><a href="https://senedd.wales/en/bus-home/Pages/bus-home.aspx">Find out more about Senedd Business</a></li>
+            <li><a href="https://senedd.wales/">Senedd Homepage</a></li>
           </ul>
       confirm:
         email_form:
           submit_html: |-
-            <button type="submit" name="move_next" class="button forward" data-disable-with="Ie – dyma fy nghyfeiriad e-bost i">Ie – dyma fy nghyfeiriad e-bost i</button>
-          fix_email_if_wrong: Os yw eich cyfeiriad e-bost yn anghywir, newidiwch y manylion uchod
+            <button type="submit" name="move_next" class="button forward" data-disable-with="Yes – this is my email address">Yes – this is my email address</button>
+          fix_email_if_wrong: If your email address is wrong, just change it above
       thank_you:
-        heading: Un cam arall…
+        heading: One more step…
         confirmation:
-          sent: Rydym ni wedi anfon neges e-bost atoch. Cliciwch ar y linc yn y neges
-            e-bost i gadarnhau eich cyfeiriad.
-          required: Ni fydd eich llofnod yn cael ei chyfrif tan y byddwch chi wedi clicio’r linc yn y neges e-bost
+          sent: We’ve sent you an email. Please click on the link in the email to
+            confirm your address.
+          required: Your signature will not be counted until you click the link in
+            the email
           not_received:
-            heading: Heb gael neges e-bost gadarnhad?
+            heading: Not received a confirmation email?
             instructions_html: |-
-              <p>Os nad ydych chi wedi cael neges e-bost gadarnhad:</p>
+              <p>
+                If you haven’t received a confirmation email:
+              </p>
 
               <ul class="list-bullet">
-                <li>edrychwch yn eich ffolder sbam neu’ch ffolder sothach</li>
-                <li>dylech ganiatáu hyd at 24 awr i’r neges e-bost gyrraedd</li>
+                <li>check your spam or junk mail folders</li>
+                <li>allow up to 24 hours for the email to arrive</li>
               </ul>
       unsubscribe:
-        back_button: Mynd yn ôl i’r hafanddalen
-        failed_html: "<h1>Methu dad-danysgrifio</h1>\r\n<p>Nid yw eich linc dad-danysgrifio
-          yn ddilys.</p>"
-        already_html: "<h1>Rydych chi eisoes wedi dad-danysgrifio o’r ddeiseb hon</h1>\r\n<p>Rydych
-          chi eisoes wedi dad-danysgrifio o’r negeseuon e-bost sy’n rhoi’r wybodaeth
-          ddiweddaraf am y ddeiseb hon.</p>"
-        success_html: "<h1>Rydych chi wedi dad-danysgrifio’n llwyddiannus o’r ddeiseb
-          hon</h1>\r\n<p>Rydych chi wedi dad-danysgrifio o’r negeseuon e-bost sy’n
-          rhoi’r wybodaeth ddiweddaraf am y ddeiseb hon.</p>"
+        back_button: Return to home page
+        failed_html: |-
+          <h1>Failed to unsubscribe</h1>
+          <p>Your unsubscribe link is invalid.</p>
+        already_html: |-
+          <h1>Already unsubscribed from this petition</h1>
+          <p>You have already unsubscribed from email updates about this petition.</p>
+        success_html: |-
+          <h1>Successfully unsubscribed from this petition</h1>
+          <p>You have unsubscribed from email updates about this petition.</p>
       confirmation:
-        signatures: llofnod
-      privacy_notice_html: "<section class=\"secondary\">\r\n  <p>Ni fyddwn yn cyhoeddi
-        eich manylion personol mewn unrhyw le arall nac yn eu defnyddio ar gyfer unrhyw
-        beth heblaw’r ddeiseb hon.</p>\r\n</section>"
+        signatures: signatures
+      privacy_notice_html: |-
+        <section class="secondary">
+          <p>We won’t publish your personal details anywhere or use them for anything other than this petition.</p>
+        </section>
     application:
-      back: Nôl
+      back: Back
       back_html: |-
-        <button type="submit" name="move_back" class="back-page" data-disable-with="Nôl">Nôl</button>
+        <button type="submit" name="move_back" class="back-page" data-disable-with="Back">Back</button>
       continue_html: |-
-        <button type="submit" class="button forward" data-disable-with="Parhau">Parhau</button>
-      character_count: hyd at %{count} nod
-      get_json_csv_html: Gweld y data hyn yn fformat %{json_link} neu %{csv_link}
-      share_this_petition: Rhannu’r ddeiseb hon
-      twitter_card_description: Deisebau swyddogol ar-lein mewn ymateb i faterion cyfoes, yn rhestru sawl deiseb y cyfeiriwyd at y Pwyllgor Deisebau, a’r rhai y cynhaliwyd dadl arnynt yn y Senedd
-    share_title: 'Deiseb: %{petition}'
+        <button type="submit" class="button forward">Continue</button>
+      character_count: "%{count} characters max"
+      get_json_csv_html: Get this data in %{json_link} or %{csv_link} format
+      share_this_petition: Share this petition
+      twitter_card_description: Official online petitions in response to issues of
+        the day, listing the number that were referred to the Petitions Committee,
+        and those that have been debated by the Senedd
+    share_title: 'Petition: %{petition}'
     list_headers:
       open_html: |-
-        <p class="text-secondary">Mae modd ychwanegu llofnodion at y deisebau hyn</p>
+        <p class="text-secondary">These petitions are collecting signatures</p>
       referred_html: |-
-        <p class="text-secondary">Mae’r Pwyllgor Deisebau wrthi’n ystyried y deisebau hyn</p>
+        <p class="text-secondary">These petitions are currently being considered by the Petitions Committee</p>
       debated_html: |-
-        <p class="text-secondary">Cynhaliwyd dadl yn y Cyfarfod Llawn ar y deisebau hyn</p>
+        <p class="text-secondary">These petitions were debated by the Senedd in Plenary</p>
       not_debated_html: |-
-        <p class="text-secondary">Penderfynodd y Pwyllgor Deisebau beidio â gofyn am ddadl yn y Cyfarfod Llawn ar y deisebau hyn</p>
+        <p class="text-secondary">The Petitions Committee decided not to request a Plenary debate on these petitions</p>
       completed_html: |-
-        <p class="text-secondary">Mae’r Pwyllgor Deisebau wedi gorffen ystyried y deisebau hyn</p>
+        <p class="text-secondary">The Petitions Committee has finished considering these petitions</p>
       rejected_html: |-
-        <p class="text-secondary">Nid oedd y deisebau hyn yn <a href="/help#standards">bodloni’r safonau ar gyfer deisebau</a>. Fe’u cyhoeddir yn yr iaith y cawsant eu cyflwyno ynddi.</p>
-
-        <p>Gallwch weld deisebau a wrthodwyd cyn mis Mai 2020 <a href="https://busnes.senedd.cymru/mgIssueHistoryHome.aspx?IId=28231">yma.</a></p>
+        <p class="text-secondary">These petitions did not meet the <a href="/help#standards">petition standards</a>. They are published in the language in which they were submitted.</p>
+        <p>Petitions rejected before May 2020 can be <a href="https://business.senedd.wales/mgIssueHistoryHome.aspx?IId=28231">found here.</a></p>
     local_search:
       submit_button_html: |-
-        <input type="submit" value="Chwilio" class="inline-submit" data-disable-with="Chwilio">
-      postcode: Cod post y DU
+        <input type="submit" value="Search" class="inline-submit" data-disable-with="Search" tabindex="%{tabindex}">
+      postcode: Gaelic postcode
     privacy_page:
       body_html: |-
-        <h1>Preifatrwydd a chwcis</h1>
+        <h1>Privacy and cookies</h1>
 
         <section id="privacy" aria-labelledby="privacy-heading">
 
-          <h2 id="privacy-heading">Hysbysiad preifatrwydd: sut rydym ni’n defnyddio’ch data</h2>
+          <h2 id="privacy-heading">Privacy notice: how we use your data</h2>
 
-          <p>Diweddarwyd ddiwethaf: 13 Tachwedd 2020</p>
+          <p>Last update: 13 November 2020</p>
 
-          <p>Mae’r wefan ddeisebau’n eich galluogi i ddechrau a llofnodi deisebau i godi materion gyda Senedd Cymru/Gaelic Parliament (y cyfeirir ati fel y Senedd o hyn ymlaen).</p>
+          <p>The Petitions site lets you start and sign petitions to raise issues with the Gaelic Parliament/Senedd Cymru (referred to hereafter as the Senedd).</p>
 
-          <p>Darperir y gwasanaeth deisebau gan y Senedd. Mae angen i ni gasglu, prosesu a storio rhai data personol i’ch galluogi i wneud hyn.</p>
+          <p>The Petitions service is provided by the Senedd. We need to collect, process and store some personal data to enable you to do this.</p>
 
-          <h3>Rheolwr Data</h3>
+          <h3>Data Controller</h3>
 
-          <p>Comisiwn y Senedd yw rheolwr data’r wybodaeth a rowch, a bydd yn sicrhau y caiff ei diogelu a’i defnyddio’n unol â deddfwriaeth diogelu data.</p>
+          <p>The Senedd Commission is the data controller of the information you provide, and will ensure it is protected and used in line with data protection legislation.</p>
 
-          <h3>Ein Manylion Cyswllt</h3>
+          <h3>Our Contact Details</h3>
 
-          <p>Dylai ymholiadau ynghylch ein defnydd o’ch gwybodaeth gael eu hanfon at y Swyddog Diogelu Data drwy anfon e-bost neu ffonio:</p>
+          <p>Any queries regarding our use of your information should be sent to the Data Protection Officer at:</p>
 
-          <p>Diogelu.Data@senedd.cymru 0300 2006565</p>
+          <p>Data.Protection@senedd.wales 0300 2006565</p>
 
-          <h3>Pa ddata y byddwn ni’n eu casglu gennych chi</h3>
+          <h3>What data we collect from you</h3>
 
-          <p>Bydd y data personol y byddwn ni’n eu casglu gan bobl sy’n llofnodi deisebau’n cynnwys y canlynol:</p>
-
-          <ul class="list-bullet">
-            <li>eich enw</li>
-            <li>eich cyfeiriad e-bost</li>
-            <li>eich cod post</li>
-            <li>y wlad rydych chi’n byw ynddi</li>
-            <li>y cyfeiriad IP rydych chi’n ei ddefnyddio wrth ddechrau neu lofnodi deiseb</li>
-          </ul>
-
-          <p>Ar ben hynny, ar gyfer pobl sy’n dechrau deiseb, byddwn ni hefyd yn casglu’r canlynol:</p>
+          <p>The personal data we collect from people who sign petitions will include:</p>
 
           <ul class="list-bullet">
-            <li>eich cyfeiriad post</li>
-            <li>eich rhif ffôn cyswllt</li>
-            <li>unrhyw wybodaeth bersonol neu fanylion a rowch yn y ddeiseb ei hun.</li>
+            <li>your name</li>
+            <li>your email address</li>
+            <li>your postcode</li>
+            <li>the country you live in</li>
+            <li>the IP address you use when starting or signing a petition</li>
           </ul>
 
-          <p>Weithiau, rydym ni’n cael gwybodaeth sy’n ymwneud â phobl sydd wedi llofnodi deisebau ar bapur. Mae deisebau papur yn cael eu storio’n ddiogel a’u cadw am yr un cyfnod â data personol a geir drwy ein system ddeisebau electronig ein hunain. Cân nhw eu dinistrio mewn modd diogel ar ddiwedd y cyfnod cadw.</p>
-
-          <h3>Pam y mae angen eich data arnom ni</h3>
-
-          <p>Rydym ni’n defnyddio’r wybodaeth hon er mwyn:</p>
+          <p>In addition, for people who start a petition we will also collect:</p>
 
           <ul class="list-bullet">
-            <li>hwyluso’r broses ddeisebau</li>
-            <li>sicrhau mai dim ond unwaith y bydd pobl yn llofnodi deiseb</li>
-            <li>gwirio eich bod chi’n gymwys i ddechrau deiseb</li>
-            <li>cysylltu â chi ynghylch deisebau rydych chi’n eu dechrau</li>
-            <li>os ydych chi’n dewis cofrestru i gael e-byst gyda’r wybodaeth ddiweddaraf am beth sy’n digwydd yn y Senedd ynghylch deisebau rydych chi wedi’u llofnodi</li>
-            <li>o dro i dro, cawn ni gysylltu â phobl sy’n dechrau neu’n cyflwyno deisebau i geisio adborth ar y broses ddeisebau a sut y gallai gael ei gwella.</li>
+            <li>your postal address</li>
+            <li>your contact telephone number</li>
+            <li>any personal information or details that you provide within the petition itself.</li>
           </ul>
 
-          <h3>Beth rydym ni’n ei wneud gyda’ch data</h3>
+          <p>We sometimes receive information relating to people who have signed petitions on paper. Paper petitions are securely stored and retained for the same period as personal data received through our own electronic petitions system. They are destroyed in a secure manner at the end of the retention period.</p>
 
-          <p>Rydym ni’n defnyddio’ch gwybodaeth bersonol i brosesu’r ddeiseb rydych chi wedi’i dechrau neu ei llofnodi.</p>
+          <h3>Why we need your data</h3>
 
-          <p>Os ydych chi’n dechrau deiseb ac rydym ni’n ei derbyn, caiff eich enw ei gyhoeddi wrth ochr unrhyw destun rydych chi’n ei gynnwys yn y ddeiseb. Ni fyddwn ni’n cyhoeddi’ch manylion cyswllt. Os ydych chi’n dechrau deiseb, bydd eich enw’n ymddangos yn barhaus gyda’r ddeiseb ar dudalennau gwe’r Pwyllgor Deisebau ac mewn trawsgrifiadau a chofnodion cyfarfodydd, fel rhan o broses ddeisebau’r Senedd.</p>
-
-          <p>Os ydych chi wedi llofnodi deiseb, ni fyddwn ni’n cyhoeddi gwybodaeth bersonol amdanoch chi.</p>
-
-          <p>Byddwn ni’n defnyddio’ch cod post i gyfrifo faint o bobl yng Nghymru ac yn holl etholaethau a rhanbarthau’r Senedd sydd wedi llofnodi deiseb.</p>
-
-          <p>Byddwn ni’n cadw’ch data personol o’r dyddiad rydych chi’n dechrau neu’n llofnodi deiseb tan 12 mis ar ôl i’r Pwyllgor Deisebau, hynny yw tan 12 mis ar ôl i’r Pwyllgor ystyried bod y ddeiseb wedi’i chwblhau, heblaw am ddata personol sydd wedi’u cyhoeddi.</p>
-
-          <p>Bydd unrhyw wybodaeth sydd wedi’i chyhoeddi’n aros ar-lein yn barhaus yng nghofnodion proses ddeisebau’r Senedd, gan gynnwys mewn unrhyw ddeunydd y mae’r Pwyllgor Deisebau’n ei gyhoeddi.</p>
-
-          <p>Mae cyfeiriadau IP yn cael eu defnyddio i ddiogelu’r wefan ddeisebau ac atal gweithgarwch twyllodrus.</p>
-
-          <p>Byddwn ni’n rhannu’ch data os bydd yn ofynnol i ni wneud hynny yn ôl y gyfraith – er enghraifft, drwy orchymyn llys, neu i atal twyll neu droseddau eraill.</p>
-
-          <h3>Beth y byddwn ni’n anfon e-byst atoch chi amdano fe</h3>
-
-          <p>Os bydd deiseb rydych chi wedi’i dechrau’n cael ei chyfeirio i’r Pwyllgor Deisebau, byddwn ni’n defnyddio’ch manylion cyswllt i roi’r wybodaeth ddiweddaraf i chi am hynt y ddeiseb ac i gynnig cyfle i chi roi rhagor o wybodaeth ac ymgysylltu â’r Pwyllgor.</p>
-
-          <p>Byddwch yn cael e-byst cadarnhad awtomatig pan fyddwch yn creu neu’n llofnodi deiseb.</p>
-
-          <p>Os ydych chi wedi llofnodi deiseb, gallwch chi ddewis cael y wybodaeth ddiweddaraf am hynt y ddeiseb. Gallai hyn gynnwys cysylltu â chi i roi gwybod i chi beth sy’n digwydd yn y Senedd mewn perthynas â’r Senedd, er enghraifft dadleuon y gallwch chi eu gwylio neu eu darllen, cyfleoedd i ymateb i ymgynghoriad, neu ffyrdd o roi gwybod i bwyllgorau ac Aelodau o’r Senedd pam y mae’r ddeiseb yn bwysig i chi.</p>
-
-          <p>Efallai y byddwn ni’n defnyddio’ch manylion cyswllt yn achlysurol i geisio’ch barn am broses ddeisebau’r Senedd.</p>
-
-          <p>Gallwch chi stopio’r e-byst hyn ar unrhyw adeg drwy glicio ar y linc “dad-danysgrifio” yn yr e-bost.</p>
-
-          <h3>Pwy sydd â mynediad at y data a lle maen nhw’n cael eu prosesu a’u storio</h3>
-
-          <p>Bydd staff Comisiwn y Senedd sy’n gweinyddu’r broses ddeisebau â mynediad at eich gwybodaeth bersonol.</p>
-
-          <p>Bydd Unboxed Consulting Limited, sy’n darparu cymorth technegol ar gyfer y system ddeisebau hefyd â mynediad at y system dim ond at ddibenion cywiro diffygion a chynnal a chadw.</p>
-
-          <p>Bydd gwybodaeth electronig yn cael ei storio ar systemau TGCh y Senedd, sy’n cynnwys gwasanaethau cwmwl trydydd parti y mae Microsoft yn eu darparu. Mae unrhyw drosglwyddiad data gan Microsoft y tu allan i’r AEE wedi’i gynnwys gan gymalau dan gontract y mae Microsoft yn sicrhau bod data personol yn cael eu trin yn unol â deddfwriaeth Ewropeaidd.</p>
-
-          <p>Mae’r system ddeisebau’n defnyddio dull storio cwmwl Gwasanaethau Gwe Amazon (AWS) i storio’ch data. Mae AWS yn storio data yn yr Ardal Economaidd Ewropeaidd (AEE).</p>
-
-          <p>Mae’r system ddeisebau yn defnyddio gwasanaeth Notify GOV.UK i anfon e-byst ynghylch y broses ddeisebau, gan gynnwys diweddariadau. Caiff e-byst sy’n cael eu storio am 7 niwrnod. Mae hysbysiad preifatrwydd gwasanaeth Notify GOV.UK ar gael yma: <a href="https://www.notifications.service.gov.uk/privacy">www.notifications.service.gov.uk/privacy</a>.</p>
-
-          <h3>Sut rydym ni’n diogelu’ch data ac yn eu cadw nhw’n ddiogel</h3>
-
-          <p>Rydym ni wedi ymrwymo i wneud popeth yn ein gallu i gadw’ch data’n ddiogel. Gwnaethom ni sefydlu systemau a phrosesau i atal mynediad heb awdurdod neu ddatgelu’r data rydym ni’n eu casglu amdanoch chi – er enghraifft, rydym ni’n diogelu’ch data gan ddefnyddio lefelau amrywiol o amgryptio. Mae’n ofynnol i bob trydydd parti sy’n prosesu data personol i ni gadw’r data hynny’n ddiogel.</p>
-
-          <h3>Ein seiliau cyfreithiol dros gasglu, dal a defnyddio’ch gwybodaeth bersonol</h3>
-
-          <p>Mae cyfraith diogelu data’n nodi tair sail gyfreithiol amrywiol (neu ‘amodau’) sy’n caniatáu i ni gasglu, dal a defnyddio’ch gwybodaeth bersonol.</p>
-
-          <p>Rydym ni o’r farn bod casglu a defnyddio’ch gwybodaeth yn angenrheidiol i’n helpu i hwyluso’r broses ddeisebau a rhoi cyfle i’r cyhoedd godi materion gyda’r Senedd a dangos cefnogaeth drostyn nhw.</p>
-
-          <p>Fel y cyfryw, mae data personol yn cael eu prosesu ar y sail eu bod nhw’n angenrheidiol er mwyn ymgymryd â thasg er budd y cyhoedd yn unol ag Erthygl 6(1)(e) o’r Rheoliad Cyffredinol ar Ddiogelu Data (GDPR), wedi’i ddarllen ynghyd ag adran 8(d) o Ddeddf Diogelu Data 2018.</p>
-
-          <p>Pan fo’n ofynnol i ni brosesu data personol er mwyn cydymffurfio â rhwymedigaeth gyfreithiol, megis cais dan ddeddfwriaeth mynediad at wybodaeth neu orchymyn llys, byddwn ni’n gwneud hynny ar y sail bod prosesu data’n angenrheidiol er mwyn cydymffurfio â rhwymedigaeth gyfreithiol yn unol ag Erthygl 6(1)(c) o’r GDPR.</p>
-
-          <p>Cawn ni brosesu data personol sy’n ymwneud ag euogfarnau troseddol a throseddau. Er mwyn cydymffurfio ag Erthygl 10 o’r GDPR, bydd y data hyn yn cael eu prosesu yn unol â’n sail gyfreithiol o dan Erthygl 6, fel yr amlinellir uchod, ac adran 10 o Ddeddf Diogelu Data 2018, a pharagraff 6 o Atodlen 1 iddi.</p>
-
-          <p>Yn olaf, cawn ni brosesu categorïau arbennig o ddata personol y rhai sy’n dechrau neu’n llofnodi deiseb, a/neu’n cyfrannu i’w hynt drwy broses ddeisebau’r Senedd. Diffinnir data personol categori arbennig yn Erthygl 9(1) o’r GDPR fel prosesu data personol sy’n datgelu hil neu darddiad ethnig, barn wleidyddol, credoau crefyddol neu athronyddol, neu aelodaeth undeb llafur, a phrosesu data genetig, data biometreg at ddibenion adnabod person naturiol yn unigryw, data sy’n ymwneud ag iechyd neu fywyd rhywiol neu gyfeiriadedd rhywiol person naturiol.</p>
-
-          <p>Fel arfer, bydd data personol categori arbennig yn cael eu prosesu ar y sail eu bod nhw’n angenrheidiol oherwydd budd sylweddol y cyhoedd, yn unol ag Erthygl 9(2)(g) o’r GDPR wedi’i ddarllen ynghyd ag Erthygl 10 o Ddeddf Diogelu Data 2018 a pharagraff 6 o Atodlen 1 iddi. Fodd bynnag, pan fyddwch chi’n trefnu bod eich data personol categori arbennig ar gael i’r cyhoedd, maen nhw’n gallu cael eu prosesu ar y sail ei bod hi’n amlwg eich bod chi wedi trefnu iddyn nhw fod ar gael i’r cyhoedd, yn unol ag Erthygl 9(2)(e) o’r GDPR.</p>
-
-          <h3>Ceisiadau am wybodaeth sy’n cael eu gwneud i’r Comisiwn</h3>
-
-          <p>Mae’r Senedd yn ddarostyngedig i ddeddfwriaeth mynediad at wybodaeth. Os bydd cais am wybodaeth yn cael ei wneud dan ddeddfwriaeth mynediad at wybodaeth, gall fod angen datgelu rhywfaint neu’r cyfan o’r wybodaeth a rowch. Fodd bynnag, dim ond os bydd hi’n ofynnol yn ôl y gyfraith y byddwn ni’n gwneud hyn.</p>
-
-          <h3>Eich hawliau</h3>
-
-          <p>Mae gennych chi rai hawliau dros y wybodaeth rydym ni’n ei dal. Yn gryno, mae’r hawliau’n cynnwys y canlynol:</p>
+          <p>We use this information to:</p>
 
           <ul class="list-bullet">
-            <li>Yr hawl i gael gwybod am sut y mae’ch gwybodaeth bersonol yn cael ei defnyddio;</li>
-            <li>Yr hawl i gael mynediad at gopïau o’ch gwybodaeth bersonol;</li>
-            <li>Yr hawl i’ch gwybodaeth gael ei chywiro os yw’n anghywir;</li>
-            <li>Yr hawl i gyfyngu ar y ffordd rydym ni’n defnyddio’ch gwybodaeth bersonol mewn rhai amgylchiadau;</li>
-            <li>Yr hawl i wrthwynebu i’ch gwybodaeth bersonol gael ei defnyddio mewn rhai amgylchiadau;</li>
+            <li>facilitate the petitions process</li>
+            <li>make sure that people only sign a petition once</li>
+            <li>check that you’re eligible to start a petition</li>
+            <li>contact you about petitions you start</li>
+            <li>if you choose to sign up to email updates about what happens in the Senedd on petitions you’ve signed</li>
+            <li>we may occasionally contact people who start or submit petitions to seek feedback on the petitions process and how it could be improved.</li>
           </ul>
 
-          <p>Os hoffech chi ddefnyddio unrhyw un o’r hawliau hyn, anfonwch e-bost i Ceisiadau-gwybodaeth@senedd.cymru</p>
+          <h3>What we do with your data</h3>
 
-          <h3>Newidiadau i’r hysbysiad hwn</h3>
+          <p>We use your personal information to process the petition you have started or signed.</p>
 
-          <p>Cawn ni newid yr hysbysiad preifatrwydd hwn. Yn yr achos hwnnw, bydd y dyddiad ‘diweddarwyd ddiwethaf’ ar frig y dudalen hon hefyd yn newid. Bydd unrhyw newid i’r hysbysiad preifatrwydd hwn yn gymwys i chi a’ch data ar unwaith. Os yw’r newidiadau hyn yn effeithio ar y ffordd y caiff eich data personol eu prosesu, byddwn ni’n cymryd camau rhesymol i sicrhau y cewch chi wybod.</p>
+          <p>If you start a petition and we accept it, your name will be published alongside any text you include within the petition. We won’t publish any of your contact details. If you start a petition, your name will remain permanently referenced alongside the petition on the Petitions Committee’s web pages and in meeting transcripts and recordings, as part of the official record of the Senedd’s petitions process.</p>
 
-          <h3>Sut i gwyno</h3>
+          <p>If you’ve signed a petition, we won’t publish any personal information about you.</p>
 
-          <p>Gallwch chi hefyd gwyno i Swyddfa’r Comisiynydd Gwybodaeth os nad ydych chi’n fodlon ar y ffordd rydym ni wedi defnyddio’ch data.</p>
+          <p>We’ll use your postcode to work out how many people in Wales and within each Senedd constituency and region have signed a petition.</p>
+
+          <p>We will retain your personal data from the date you start or sign a petition until 12 months after it is no longer being considered by the Petitions Committee, i.e. until 12 months after the Committee considers the petition to be completed, apart from any personal data which has been published.</p>
+
+          <p>Any information which has been published will remain permanently online in the records of the Senedd’s petitions process, including in any material published by the Petitions Committee.</p>
+
+          <p>IP addresses are used to protect the petitions site and prevent fraudulent activity.</p>
+
+          <p>We will share your data if we’re required to do so by law – for example, by court order, or to prevent fraud or other crime.</p>
+
+          <h3>What we’ll email you about</h3>
+
+          <p>If a petition you’ve started is referred to the Petitions Committee, we’ll use your contact details to update you about the petition’s progress and to offer you the opportunity to provide further information and engage with the Committee.</p>
+
+          <p>You will receive automated confirmation emails when you set up or sign a petition.</p>
+
+          <p>If you’ve signed a petition, you can choose to receive updates about the progress of the petition. This might include contacting you to let you know what is happening in the Senedd in relation to your petition, such as: debates that you can watch or read, chances to respond to a consultation, or ways to let committees and Members of the Senedd know why the petition is important to you.</p>
+
+          <p>We may occasionally use your contact details to seek your views on the Senedd’s petitions process.</p>
+
+          <p>You can stop these emails at any time by clicking the “unsubscribe” link in the email.</p>
+
+          <h3>Who has access to the data and where is it processed and stored</h3>
+
+          <p>Senedd Commission staff administering the petitions process will have access to your personal information.</p>
+
+          <p>Unboxed Consulting Limited who provide technical support for the petitions system will also have access to the system for troubleshooting and maintenance purposes only.</p>
+
+          <p>Electronic information will be stored on Senedd ICT systems, which includes third party cloud services provided by Microsoft. Any transfer of data by Microsoft outside of the EEA is covered by contractual clauses under which Microsoft ensure that personal data is treated in line with European legislation.</p>
+
+          <p>The petitions system uses Amazon Web Services (AWS) cloud storage to store your data. AWS store data within the European Economic Area (EEA).</p>
+
+          <p>The petitions system uses the GOV.UK Notify service to send emails relating to the petitions process including updates. Emails sent are stored for 7 days. The privacy notice for the GOV.UK Notify service is available here: <a href="https://www.notifications.service.gov.uk/privacy">www.notifications.service.gov.uk/privacy</a>.
+
+          <h3>How we protect your data and keep it secure</h3>
+
+          <p>We are committed to doing all that we can to keep your data secure. We set up systems and processes to prevent unauthorised access or disclosure of the data we collect about you – for example, we protect your data using varying levels of encryption. All third parties who process personal data for us are required to keep that data secure.</p>
+
+          <h3>Our legal bases for collecting, holding and using your personal information</h3>
+
+          <p>Data protection law sets out various legal bases (or ‘conditions’) which allow us to collect, hold and use your personal information.</p>
+
+          <p>We consider that our collection and use of your information is necessary to help us facilitate the petitions process and allow the public the chance to raise and show support for issues with the Senedd.</p>
+
+          <p>As such, personal data is processed on the basis that it is necessary for the performance of a task carried out in the public interest in accordance with Article 6(1)(e) of the General Data Protection Regulation (GDPR), read together with section 8(d) of the Data Protection Act 2018.</p>
+
+          <p>Where we are required to process personal data in order to comply with a legal obligation, such as a request under access to information legislation or a court order, we will do so on the basis that processing is necessary for compliance with a legal obligation pursuant to Article 6(1)(c) of the GDPR.</p>
+
+          <p>We may process personal data relating to criminal convictions and offences. In order to comply with Article 10 of the GDPR, this data will be processed in accordance with our Article 6 legal basis, as outlined above, and section 10 of, and paragraph 6 of Schedule 1 to, the Data Protection Act 2018.</p>
+
+          <p>Finally, we may process special categories of personal data of those who start or sign a petition, and/or contribute to its passage through the Senedd’s petitions process. Special category personal data is defined in Article 9(1) of the GDPR as the processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade-union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or a natural person’s sex life or sexual orientation.</p>
+
+          <p>Special category personal data will usually be processed on the basis that it is necessary for reasons of substantial public interest, pursuant to Article 9(2)(g) of the GDPR read in conjunction with section 10 of, and paragraph 6 of Schedule 1 to, the Data Protection Act 2018. However, where your special category personal data is made public by you, it may be processed on the basis that it has already been manifestly made public by you, pursuant to Article 9(2)(e) of the GDPR.</p>
+
+          <h3>Requests for information made to the Commission</h3>
+
+          <p>The Senedd is subject to access to information legislation. In the event of a request for information being made under access to information legislation, it may be necessary to disclose all or part of the information that you provide. However, we will only do this if we are required to do so by law.</p>
+
+          <h3>What are your rights</h3>
+
+          <p>You have certain rights over the information we hold. In summary, the rights include:</p>
+
+          <ul class="list-bullet">
+            <li>The right to be informed about how your personal information is used;</li>
+            <li>The right of access to copies of your personal information;</li>
+            <li>The right to rectification if your information is inaccurate;</li>
+            <li>The right to restrict our use of your personal information in certain circumstances;</li>
+            <li>The right to object to the use of your personal information in certain circumstances.</li>
+          </ul>
+
+          <p>If you would like to engage any of these rights, please email information-request@senedd.wales</p>
+
+          <h3>Changes to this notice</h3>
+
+          <p>We may change this privacy notice. In that case the ‘last updated’ date at the top of this page will also change. Any changes to this privacy notice will apply to you and your data immediately. If these changes affect how your personal data is processed, we will take reasonable steps to make sure you know.</p>
+
+          <h3>How to complain</h3>
+
+          <p>You can also complain to the ICO if you are unhappy with how we have used your data.</p>
+
+          <p>The ICO’s address:</p>
 
           <p>
-            Swyddfa’r Comisiynydd Gwybodaeth<br>
+            Information Commissioner’s Office<br>
             Wycliffe House<br>
             Water Lane<br>
             Wilmslow<br>
@@ -849,240 +863,240 @@ gd-GB:
         </section>
 
         <section id="cookies" aria-labelledby="cookies-heading">
-          <h2 id="cookies-heading">Cwcis</h2>
+          <h2 id="cookies-heading">Cookies</h2>
 
-          <p>Mae’r wefan hon yn rhoi ffeiliau bach (o’r enw ‘cwcis’) ar eich cyfrifiadur i gasglu gwybodaeth am y ffordd rydych chi’n pori’r wefan.</p>
+          <p>This website puts small files (known as ‘cookies’) onto your computer to collect information about how you browse the site.</p>
 
-          <p>Defnyddir cwcis er mwyn:</p>
+          <p>Cookies are used to:</p>
 
           <ul class="list-bullet">
-            <li>mesur y ffordd rydych chi’n defnyddio’r gwasanaeth deisebau er mwyn ei ddiweddaru a’i wella ar sail eich anghenion</li>
-            <li>cofio’r hysbysiadau rydych chi wedi’u gweld fel na fyddwn ni’n eu dangos i chi eto</li>
-            <li>helpu i atal pobl rhag llofnodi deisebau drwy dwyll</li>
+            <li>measure how you use the petitions service so it can be updated and improved based on your needs</li>
+            <li>remember the notifications you’ve seen so that we don’t show them to you again</li>
+            <li>help prevent people from fraudulently signing petitions</li>
           </ul>
 
-          <p>Mae rhai cwcis yn hollol angenrheidiol er mwyn sicrhau y caiff y wefan hon ei chynnal yn ddiogel. Ni chân nhw eu defnyddio i’ch adnabod chi’n bersonol.</p>
+          <p>Some cookies are strictly necessary to ensure the secure running of this website. They are not used to identify you personally.</p>
 
-          <p>Rhagor o wybodaeth am <a href="http://www.aboutcookies.org/" rel="external">sut i reoli cwcis</a>.</p>
+          <p>Find out more about <a href="http://www.aboutcookies.org/" rel="external">how to manage cookies</a>.</p>
 
-          <h3>Cwcis Google Analytics</h3>
+          <h3>Google Analytics cookies</h3>
 
-          <p>Rydym ni’n defnyddio Google Analytics i gasglu gwybodaeth am y ffordd rydych chi’n defnyddio’r gwasanaeth. Mae’r wybodaeth hon yn ein helpu i wella’r gwasanaeth ac atal llofnodi deisebau’n dwyllodrus. Y tro cyntaf y byddwch chi’n mynd i’r wefan ar ddyfais newydd, byddwch chi’n gweld opsiwn i ddewis derbyn cwcis dadansoddol.</p>
+          <p>We use Google Analytics to collect information about how you use the service. This information helps us to improve the service and prevent fraudulent signing. When you first visit the site on a new device an option is provided to opt-in to analytics cookies.</p>
 
-          <p>Mae cwci Google Analytics yn casglu ac yn storio gwybodaeth am y canlynol:</p>
+          <p>The Google analytics cookie collects and stores information about:</p>
 
           <ul class="list-bullet">
-            <li>defnyddwyr unigryw</li>
-            <li>hysbysu gwefannau cyfeirio</li>
-            <li>nifer y bobl sy’n mynd i’r wefan a nifer y sesiynau</li>
+            <li>unique users</li>
+            <li>informing referring sites</li>
+            <li>vistor and session counts</li>
           </ul>
 
           <table>
             <thead>
               <tr>
-                <th>Enw</th>
-                <th>Diben</th>
-                <th>Dod i ben</th>
+                <th>Name</th>
+                <th>Purpose</th>
+                <th>Expires</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>_ga</td>
-                <td>Defnyddir cyfeirnod a gynhyrchir ar hap i adnabod defnyddwyr unigryw a hysbysu gwefannau cyfeirio a chyfrif nifer y bobl sy’n mynd i’r wefan a nifer y sesiynau</td>
-                <td>Dwy flynedd</td>
+                <td>A randomly generated reference is used to identify unique users and inform referring sites, visitor and session counts</td>
+                <td>2 years</td>
               </tr>
             </tbody>
           </table>
 
-          <p>Ni chaniateir i Google ddefnyddio na rhannu ein data dadansoddol â neb, ond cewch chi ddewis peidio â derbyn cwcis Google Analytics.</p>
+          <p>Google isn’t allowed to use or share our analytics data with anyone, but you can opt out of Google Analytics cookies.</p>
 
-          <h3>Cwcis sesiwn</h3>
-          <p>Rydym ni’n storio cwci sesiwn ar eich cyfrifiadur i helpu i gadw’ch gwybodaeth yn ddiogel wrth i chi ddefnyddio’r gwasanaeth.</p>
+          <h3>Session cookies</h3>
+          <p>We store a session cookie on your computer to help keep your information secure while you use the service.</p>
 
           <table>
             <thead>
               <tr>
-                <th>Enw</th>
-                <th>Diben</th>
-                <th>Dod i ben</th>
+                <th>Name</th>
+                <th>Purpose</th>
+                <th>Expires</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>_spets_session</td>
-                <td>Mae hyn yn cadw’ch gwybodaeth yn ddiogel wrth i chi ddefnyddio’r gwasanaeth deisebau</td>
-                <td>Pan fyddwch chi’n cau’ch porwr</td>
+                <td>This keeps your information secure while you use the petitions service</td>
+                <td>When you close your browser</td>
               </tr>
             </tbody>
           </table>
         </section>
     debate_outcomes:
       link_titles:
-        video_url: Gwylio’r ddadl
-        transcript_url: Darllen y trawsgrifiad
-        debate_pack_url: Dod o hyd i fanylion y ddeiseb
+        video_url: Watch the debate
+        transcript_url: Read the transcript
+        debate_pack_url: Find details of the petition
       image_tag_html: |-
-        <img srcset="%{srcset}" alt="Gwyliwch y ddeiseb ‘%{action}’ yn cael ei thrafod" src="%{url}">
+        <img srcset="%{srcset}" alt="Watch the petition ‘%{action}’ being debated" src="%{url}">
     signature_counts:
       default_html:
-        one: <span class="count" data-count="%{count}">%{num}</span> <span class="text">llofnod</span>
-        two: <span class="count" data-count="%{count}">2</span> <span class="text">llofnod</span>
-        zero: <span class="count" data-count="%{count}">0</span> <span class="text">llofnod</span>
-        other: <span class="count" data-count="%{count}">%{num}</span> <span class="text">llofnod</span>
+        one: <span class="count" data-count="%{count}">%{num}</span> <span class="text">signature</span>
+        two: <span class="count" data-count="%{count}">2</span> <span class="text">signatures</span>
+        zero: <span class="count" data-count="%{count}">0</span> <span class="text">signatures</span>
+        other: <span class="count" data-count="%{count}">%{num}</span> <span class="text">signatures</span>
       in_total_html:
-        one: Cyfanswm o %{num} llofnod
-        two: Cyfanswm o 2 llofnod
-        zero: Cyfanswm o 0 llofnod
-        other: Cyfanswm o %{num} llofnod
+        one: "%{num} signature total"
+        two: 2 signatures total
+        zero: 0 signatures total
+        other: "%{num} signatures total"
       trending_html:
-        one: <span class="count">%{num}</span> llofnod yn y diwrnod diwethaf
-        two: <span class="count">2</span> lofnod yn y diwrnod diwethaf
-        zero: <span class="count">0</span> llofnod yn y diwrnod diwethaf
-        other: <span class="count">%{num}</span> llofnod yn y diwrnod diwethaf
+        one: <span class="count">%{num}</span> signature in the last day
+        two: <span class="count">2</span> signatures in the last day
+        zero: <span class="count">0</span> signatures in the last day
+        other: <span class="count">%{num}</span> signatures in the last day
       in_your_constituency_html:
-        one: "%{num} llofnod o %{constituency}"
-        two: 2 llofnod o %{constituency}
-        zero: 0 llofnod o %{constituency}
-        other: "%{num} llofnod o %{constituency}"
+        one: "%{num} signature from %{constituency}"
+        two: 2 signatures from %{constituency}
+        zero: 0 signatures from %{constituency}
+        other: "%{num} signatures from %{constituency}"
     scheduled_for_debate_in_words:
-      other: Trefnwyd dadl ar gyfer %{date}
-      today: Trefnwyd cynnal dadl heddiw
-      tomorrow: Trefnwyd cynnal dadl yfory
+      other: Scheduled for debate on %{date}
+      today: Scheduled for debate today
+      tomorrow: Scheduled for debate tomorrow
     rules_page:
       body_html: |-
-        <h1 class="page-title">Penderfyniad gan y Llywydd o dan Reol Sefydlog 23.3 ynghylch priod ffurf deisebau</h1>
+        <h1 class="page-title">Determination by the Presiding Officer under Standing Order 23.3 of the Proper Form of Petitions</h1>
 
-        <p>Mae’r Llywydd wedi gwneud y penderfyniad canlynol ynghylch priod ffurf deisebau’r cyhoedd a gyflwynir o dan Reol Sefydlog 23.</p>
+        <p>The Presiding Officer has made the following determination of the proper form of public petitions submitted under Standing Order 23.</p>
 
         <ol class="list-number">
           <li>
-            <h2>Dull a fformat ar gyfer cyflwyno</h2>
-            <p>Gellir cyflwyno deisebau ar bapur neu yn electronig drwy ddefnyddio system ddeisebau ar-lein y Senedd. Gall deisebau gasglu llofnodion am gyfnod o hyd at chwe mis.</p>
-            <p>Ar gyfer deiseb bapur, dylai geiriad y ddeiseb gael ei nodi’n llawn ar bob dalen (neu ochr dalen) lle gofynnir am lofnodion.  Mae templed ar gael ar gais.</p>
+            <h2>Means and format for submission</h2>
+            <p>Petitions may be submitted on paper or electronically using the Senedd’s online petitions system. Petitions may collect signatures for a maximum period of six months.</p>
+            <p>For a paper petition the petition wording should be set out in full on each sheet (or side of a sheet) where signatures are asked for. A template is available on request.</p>
           </li>
 
           <li>
-            <h2>Geiriad</h2>
-            <p>Dylid cyflwyno deisebau yn ddidwyll. Dylent alw ar y Senedd neu Lywodraeth Cymru i gymryd camau penodol.</p>
+            <h2>Wording</h2>
+            <p>Petitions should be submitted in good faith. They should call for the Senedd or the Gaelic Government to take some specific action.</p>
           </li>
 
           <li>
-            <h2>Gofynion sylfaenol</h2>
-            <p>Mae’n rhaid i ddeisebau nodi’r canlynol yn glir:</p>
+            <h2>Basic Requirements</h2>
+            <p>Petitions must clearly indicate:</p>
             <ul class="list-bullet">
-              <li>enw’r deisebydd, a all fod yn unigolyn neu’n sefydliad;</li>
-              <li>cyfeiriad y deisebydd, sy’n gorfod bod yng Nghymru, ar gyfer anfon pob gohebiaeth ynghylch y ddeiseb; </li>
-              <li>llofnodion gan o leiaf 50 o bobl sy’n cefnogi’r ddeiseb ac enwau a chyfeiriadau’r bobl hynny.</li>
+              <li>the name of the petitioner, who may be an individual or an organisation;</li>
+              <li>the petitioner’s address, which must be in Wales, to which all communications concerning the petition should be sent;</li>
+              <li>signatures from at least 50 people who support the petition and their names and addresses.</li>
             </ul>
-            <p>Ni ddylai deisebau: </p>
+            <p>Petitions must not:</p>
             <ul class="list-bullet">
-              <li>gynnwys iaith sy’n peri tramgwydd, sy’n eithafol neu sy’n herfeiddiol. Mae hyn yn cynnwys rhegfeydd a geiriau sarhaus amlwg, ac unrhyw iaith y byddai person rhesymol ei ystyried yn dramgwyddol;</li>
-              <li>gofyn i’r Senedd wneud unrhyw beth y mae eglur nad oes gan y Senedd bŵer i’w wneud (yn benodol nid yw deisebau ynghylch materion sydd heb eu datganoli yn dderbyniadwy);</li>
-              <li>bod yr un fath, neu i raddau helaeth yr un fath, â deiseb sy’n casglu llofnodion, dan ystyriaeth gan y Pwyllgor neu a gaewyd lai na blwyddyn yn gynt.</li>
+              <li>contain language which is offensive, intemperate, or provocative. This not only includes obvious profanities swear words and insults, but any language which a reasonable person would regard as offensive;</li>
+              <li>ask the Senedd to do anything which it clearly has no power to do (in particular petitions about matters that are not devolved are not admissible);</li>
+              <li>be the same as, or substantially similar to, a petition which was closed less than a year earlier.</li>
             </ul>
-            <p>Rhaid i’r deisebau gydymffurfio mewn ffyrdd eraill â’r penderfyniad hwn.</p>
+            <p>Petitions must comply in other ways with this determination.</p>
           </li>
 
           <li>
-            <h2>Ffactorau eraill sy’n ymwneud â derbyniadwyedd</h2>
-            <p>Nid yw deisebau sy’n cynnwys y canlynol neu’n gofyn i’r Senedd ystyried y canlynol yn dderbyniadwy:</p>
+            <h2>Other factors concerning admissibility</h2>
+            <p>Petitions that include or ask the Senedd to consider the following are not admissible:</p>
             <ul class="list-bullet">
-              <li>ymyrryd ym mhenderfyniadau gweithrediadol neu gamau gweithredu awdurdodau lleol ac Awdurdodau Parciau Cenedlaethol, gan gynnwys penderfyniadau cynllunio;</li>
-              <li>dyfarnu, cyflafareddu neu gyfryngu o ran buddiannau personol neu fasnachol (swyddogaeth llys neu dribiwnlys yw hyn);</li>
-              <li>materion ’sub judice’ (yn amodol ar weithdrefnau cyfreithiol yn y llysoedd);</li>
-              <li>materion sydd eisoes yn destun dyfarniad gan ombwdsmon (neu berson sydd â phwerau tebyg).</li>
+              <li>to intervene in the operational decisions or actions of local authorities and National Park Authorities, including planning decisions;</li>
+              <li>to adjudicate, arbitrate or mediate personal or commercial interests (this is the role of a court or tribunal);</li>
+              <li>matters that are ‘sub judice’ (subject to legal proceedings in the courts);</li>
+              <li>matters that are already subject to determination by an ombudsman (or person with similar powers).</li>
             </ul>
-            <p>Ni ddylai deisebau gynnwys:</p>
+            <p>Petitions must not contain:</p>
             <ul class="list-bullet">
-              <li>datganiadau ffug neu ddifrïol posibl;</li>
-              <li>gwybodaeth a waherddir rhag cael ei chyhoeddi gan orchymyn llys neu gorff neu berson sydd â phŵer tebyg;</li>
-              <li>deunydd sydd o bosibl yn gyfrinachol, yn fasnachol sensitif, neu a all beri trallod personol neu golled;</li>
-              <li>unrhyw gymeradwyaeth fasnachol, hyrwyddo unrhyw gynnyrch, gwasanaeth neu gyhoeddiad neu ddatganiadau sy’n gyfystyr â hysbysebion;</li>
-              <li>enwau swyddogion cyrff cyhoeddus, oni bai eu bod yn uwch reolwyr yn y sefydliadau hynny;</li>
-              <li>enwau aelodau teuluoedd cynrychiolwyr etholedig neu swyddogion cyrff cyhoeddus;</li>
-              <li>enwau unigolion, neu wybodaeth y gellir ei defnyddio i’w hadnabod, mewn perthynas â chyhuddiadau troseddol;</li>
-              <li>materion lle nad deiseb yw’r sianel briodol (er enghraifft, gohebiaeth am fater personol).</li>
+              <li>potentially false or potentially defamatory statements;</li>
+              <li>information which is prohibited from being published by an order of a court or a body or person with similar power;</li>
+              <li>material which is potentially confidential, commercially sensitive, or which may cause personal distress or loss;</li>
+              <li>any commercial endorsement, promotion of any product, service or publication or statements that amount to advertisements;</li>
+              <li>the names of officials of public bodies, unless they are part of the senior management of those organisations;</li>
+              <li>the names of family members of elected representatives or officials of public bodies;</li>
+              <li>the names of individuals, or information where they may be identified, in relation to criminal charges;</li>
+              <li>issues for which a petition is not the appropriate channel (for example, correspondence about a personal issue).</li>
             </ul>
           </li>
 
           <li>
-            <h2>Ceisiadau Rhyddid Gwybodaeth</h2>
-            <p>Ni chaniateir deisebau sydd, yn eu hanfod, yn geisiadau rhyddid gwybodaeth. Mae trefniadau penodol eraill ar gyfer ceisiadau rhyddid gwybodaeth.</p>
+            <h2>Freedom of Information (FOI) requests</h2>
+            <p>Petitions that are essentially FOI requests will not be allowed. There are other specific arrangements for FOI requests.</p>
           </li>
 
           <li>
-            <h2>Achosion Ombwdsmon Gwasanaethau Cyhoeddus Cymru</h2>
-            <p>Ni chaniateir deisebau sy’n gwneud honiadau ynghylch achosion penodol o gamweinyddu neu fethiant gwasanaeth gan gyrff cyhoeddus. Yn yr achosion hyn, cynghorir deisebwyr i gysylltu ag Ombwdsmon Gwasanaethau Cyhoeddus Cymru i ystyried eu pryderon.</p>
+            <h2>Public Services Ombudsman for Wales (PSOW) cases</h2>
+            <p>Petitions alleging specific cases of maladministration or service failure by public bodies are not admissible. In these cases petitioners are advised to contact the PSOW to take forward their concerns.</p>
           </li>
-        </ul>
+        </ol>
     accessibility_page:
       body_html: |-
-        <h1 class="page-title">Datganiad ynghylch hygyrchedd</h1>
+        <h1 class="page-title">Accessibility statement</h1>
 
-        <p><strong>Rydym wedi ymrwymo i wneud y wefan hon yn hygyrch fel y gall cynifer o bobl â phosibl ei defnyddio.</strong></p>
+        <p><strong>We’re committed to making this website accessible so it can be used by as many people as possible.</strong></p>
 
-        <p>Mae’r datganiad hwn yn berthnasol i gynnwys a gyhoeddir ar wefan Deisebau, Senedd Cymru.</p>
+        <p>This statement applies to content published within the Gaelic Parliament Petitions website.</p>
 
-        <p>Senedd Cymru sydd berchen ar y parth hwn (cyfeirir ati o hyn ymlaen fel y Senedd).</p>
+        <p>This domain is owned by the Gaelic Parliament/Senedd Cymru (referred to hereafter as the Senedd).</p>
 
-        <p>Ein nod yw sicrhau bod y wefan hon yn hygyrch i’r gynulleidfa ehangaf bosibl. Ystyr hyn yw y dylech, er enghraifft, allu:</p>
-
-        <ul class="list-bullet">
-          <li>newid lliwiau, lefelau cyferbyniad a ffontiau</li>
-          <li>chwyddo hyd at 300% heb i’r testun fynd oddi ar y sgrin</li>
-          <li>llywio’r wefan gan ddefnyddio bysellfwrdd</li>
-          <li>llywio’r wefan gan ddefnyddio meddalwedd adnabod lleferydd</li>
-          <li>gwrando ar y wefan gan ddefnyddio darllenydd sgrin</li>
-        </ul>
-
-        <h2>Beth rydyn ni’n ei wneud i wella hygyrchedd</h2>
-
-        <p>Er mwyn gwneud gwefannau’r Senedd yn hygyrch, rydym yn:</p>
+        <p>We aim to make this websites accessible to the widest possible audience. This means, for example, that you should be able to:</p>
 
         <ul class="list-bullet">
-          <li>integreiddio hygyrchedd i’n gweithdrefnau caffael</li>
-          <li>darparu hyfforddiant hygyrchedd i’n staff</li>
-          <li>cynnwys unigolion ag anableddau wrth ddylunio ein gwedd allanol.</li>
+          <li>change colours, contrast levels and fonts</li>
+          <li>zoom in up to 300% without the text spilling off the screen</li>
+          <li>navigate the website using a keyboard</li>
+          <li>navigate the website using speech recognition software</li>
+          <li>listen to the website using a screen reader</li>
         </ul>
 
-        <h2>Pa mor hygyrch yw’r wefan hon?</h2>
+        <h2>What we’re doing to improve accessibility</h2>
 
-        <p>Dylai’r wefan hon fod yn gwbl hygyrch.</p>
-
-        <h2>Sut i ofyn am gynnwys mewn fformat gwahanol</h2>
-
-        <p>Os oes angen gwybodaeth arnoch mewn fformat gwahanol, cysylltwch â ni a dywedwch wrthym:</p>
+        <p>To make Senedd websites accessible, we:</p>
 
         <ul class="list-bullet">
-          <li>cyfeiriad gwe (URL) y cynnwys sydd ei angen arnoch chi</li>
-          <li>Eich enw a’ch cyfeiriad e-bost a’r</li>
-          <li>math o fformat sydd ei angen arnoch</li>
+          <li>integrate accessibility into our procurement procedures</li>
+          <li>provide accessibility training for our staff</li>
+          <li>include individuals with disabilities in our design personas</li>
         </ul>
 
-        <h2>Rhoi gwybod am broblemau hygyrchedd gyda’r wefan hon</h2>
+        <h2>How accessible is this website?</h2>
 
-        <p>Os cewch unrhyw broblemau neu os credwch nad ydym yn bodloni’r gofynion o ran hygyrchedd, <a href="/adborth">cysylltwch â ni</a> i roi gwybod.</p>
+        <p>This website should be fully accessible.</p>
 
-        <h2>Gweithdrefn orfodi</h2>
+        <h2>How to request content in a different format</h2>
 
-        <p>Os byddwch yn cysylltu â ni gyda chwyn ac nad ydych yn fodlon â’r ymateb, cysylltwch â’r Gwasanaeth Cynghori a Chymorth o ran Cydraddoldeb (EASS).</p>
+        <p>If you need information in a different format please <a href="/feedback">contact us</a> and tell us:</p>
 
-        <p>Y Comisiwn Cydraddoldeb a Hawliau Dynol sy’n gyfrifol am orfodi Rheoliadau Hygyrchedd Cyrff y Sector Cyhoeddus (Gwefannau a Rhaglenni Ffonau Symudol) (Rhif 2) 2018 (y ‘rheoliadau hygyrchedd’).</p>
+        <ul class="list-bullet">
+          <li>the web address (URL) of the content that you need</p>
+          <li>your contact name and email address</p>
+          <li>the type of format you need</p>
+        </ul>
 
-        <h2>Gwybodaeth dechnegol am hygyrchedd y wefan hon</h2>
+        <h2>Reporting accessibility problems with this website</h2>
 
-        <p>Mae’r Senedd wedi ymrwymo i wneud y wefan hon yn hygyrch, yn unol â Rheoliadau Hygyrchedd Cyrff y Sector Cyhoeddus (Gwefannau a Rhaglenni Ffonau Symudol) (Rhif 2) 2018.</p>
+        <p>If you find any problems or if you think we’re not meeting the accessibility requirements, please contact us to report this.</p>
 
-        <h2>Statws cydymffurfio</h2>
+        <h2>Enforcement procedure</h2>
 
-        <p>Mae’r wefan hon yn cydymffurfio â safon 2.1 AA o’r Canllawiau Hygyrchedd Cynnwys y We.</p>
+        <p>If you contact us with a complaint and you’re not happy with our response contact the Equality Advisory and Support Service (EASS).</p>
 
-        <h2>Sut wnaethon ni brofi’r wefan hon</h2>
+        <p>The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’).</p>
 
-        <p>Mae ein gwefannau wedi’u profi, a pharheir i’w profi ar hyn o bryd, ar gyfer cydymffurfio â safon V2.1 lefel A a lefel AA o’r Canllawiau Hygyrchedd Cynnwys y We gan ddefnyddio cyfuniad o offer awtomataidd o ran safonau hygyrchedd WCAG 2.0.</p>
+        <h2>Technical information about this website’s accessibility</h2>
 
-        <h2>Paratoi’r datganiad hygyrchedd hwn</h2>
+        <p>The Senedd is committed to making this website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
 
-        <p>Paratowyd y datganiad hwn ar 12 Tachwedd 2020.</p>
+        <h2>Compliance status</h2>
 
-        <p>Profir y wefan hon yn barhaus drwy gyfuniad o offer hygyrchedd.</p>
+        <p>This website is compliant with the Web Content Accessibility Guidelines version 2.1 AA standard.</p>
+
+        <h2>How we tested this website</h2>
+
+        <p>Our websites were and are currently being tested for compliance with the Web Content Accessibility Guidelines V2.1 level A and level AA using a combination of automated tools for accessibility WCAG 2.0 standards.</p>
+
+        <h2>Preparation of this accessibility statement</h2>
+
+        <p>This statement was prepared on 12 November 2020.</p>
+
+        <p>This website is tested on an ongoing basis via a combination of accessibility tools.</p>

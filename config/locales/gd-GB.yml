@@ -2,53 +2,53 @@
 gd-GB:
   date:
     abbr_day_names:
-    - Sul
-    - Llun
-    - Maw
-    - Mer
-    - Iau
-    - Gwe
-    - Sad
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
     abbr_month_names:
     -
-    - Ion
-    - Chw
-    - Maw
-    - Ebr
-    - Mai
-    - Meh
-    - Gor
-    - Awst
-    - Med
-    - Hyd
-    - Tach
-    - Rha
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
     day_names:
-    - Dydd Sul
-    - Dydd Llun
-    - Dydd Mawrth
-    - Dydd Mercher
-    - Dydd Iau
-    - Dydd Gwener
-    - Dydd Sadwrn
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
     formats:
       default: "%d-%m-%Y"
       long: "%d %B, %Y"
       short: "%d %b"
     month_names:
     -
-    - Ionawr
-    - Chwefror
-    - Mawrth
-    - Ebrill
-    - Mai
-    - Mehefin
-    - Gorffennaf
-    - Awst
-    - Medi
-    - Hydref
-    - Tachwedd
-    - Rhagfyr
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
     order:
     - :day
     - :month
@@ -56,83 +56,95 @@ gd-GB:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: tuag awr
-        other: tua %{count} awr
+        one: about 1 hour
+        other: about %{count} hours
       about_x_months:
-        one: tua mis
-        other: tua %{count} mis
+        one: about 1 month
+        other: about %{count} months
       about_x_years:
-        one: tua blwyddyn
-        other: tua %{count} blynedd
+        one: about 1 year
+        other: about %{count} years
       almost_x_years:
-        one: bron yn flwyddyn
-        other: bron yn %{count} blynedd
-      half_a_minute: hanner munud
+        one: almost 1 year
+        other: almost %{count} years
+      half_a_minute: half a minute
       less_than_x_minutes:
-        one: llai na munud
-        other: llai na %{count} munud
+        one: less than a minute
+        other: less than %{count} minutes
       less_than_x_seconds:
-        one: llai nag eiliad
-        other: llai na %{count} eiliad
+        one: less than 1 second
+        other: less than %{count} seconds
       over_x_years:
-        one: dros flwyddyn
-        other: dros %{count} blynedd
+        one: over 1 year
+        other: over %{count} years
       x_days:
-        one: 1 diwrnod
-        other: "%{count} diwrnod"
+        one: 1 day
+        other: "%{count} days"
       x_minutes:
-        one: 1 munud
-        other: "%{count} o funudau"
+        one: 1 minute
+        other: "%{count} minutes"
       x_months:
-        one: 1 mis
-        other: "%{count} mis"
+        one: 1 month
+        other: "%{count} months"
       x_seconds:
-        one: 1 eiliad
-        other: "%{count} o eiliadau"
+        one: 1 second
+        other: "%{count} seconds"
     prompts:
-      day: Diwrnod
-      hour: Awr
-      minute: Munud
-      month: Mis
-      second: Eiliad
-      year: Blwyddyn
+      day: Day
+      hour: Hour
+      minute: Minute
+      month: Month
+      second: Seconds
+      year: Year
   errors:
     format: "%{message}"
     messages:
-      accepted: "%{attribute} angen ei dderbyn"
-      blank: "%{attribute} methu bod yn wag"
-      confirmation: "%{attribute} heb fod yn gyfateb"
-      empty: "%{attribute} methu bod yn wag"
-      equal_to: "%{attribute} angen bod yn %{count}"
-      even: "%{attribute} rhaid bod yn eilrif"
-      exclusion: "%{attribute} wedi cadw"
-      greater_than: "%{attribute} angen bod yn fwy na %{count}"
-      greater_than_or_equal_to: "%{attribute} angen bod yr un maint neu fwy na %{count}"
-      inclusion: "%{attribute} heb fod yn y rhestr"
-      invalid: "%{attribute} heb fod yn nheilwng"
-      less_than: "%{attribute} angen bod yn llai na %{count}"
-      less_than_or_equal_to: "%{attribute} angen bod yr un maint neu lai na %{count}"
-      not_a_number: "%{attribute} heb fod yn rhif"
-      not_an_integer: "%{attribute} heb fod yn rhif llawn"
-      odd: "%{attribute} rhaid bod yn odrif"
-      taken: "%{attribute} wedi'i gymryd yn barod"
-      too_long: "%{attribute} yn rhy hir (cewch %{count} llythyren ar y fwyaf)"
-      too_short: "%{attribute} yn rhy fyr (rhaid am o leiaf %{count} llythyren)"
-      wrong_length: "%{attribute} gyda maint anghywir o lythrennau (dylai fod yn %{count} llythyren)"
+      accepted: "%{attribute} must be accepted"
+      blank: "%{attribute} can't be blank"
+      confirmation: "%{attribute} doesn't match %{attribute}"
+      empty: "%{attribute} can't be empty"
+      equal_to: "%{attribute} must be equal to %{count}"
+      even: "%{attribute} must be even"
+      exclusion: "%{attribute} is reserved"
+      greater_than: "%{attribute} must be greater than %{count}"
+      greater_than_or_equal_to: "%{attribute} must be greater than or equal to %{count}"
+      inclusion: "%{attribute} is not included in the list"
+      invalid: "%{attribute} is invalid"
+      less_than: "%{attribute} must be less than %{count}"
+      less_than_or_equal_to: "%{attribute} must be less than or equal to %{count}"
+      not_a_number: "%{attribute} is not a number"
+      not_an_integer: "%{attribute} must be an integer"
+      odd: "%{attribute} must be odd"
+      record_invalid: 'Validation failed: %{errors}'
+      taken: "%{attribute} has already been taken"
+      too_long:
+        one: "%{attribute} is too long (maximum is 1 character)"
+        other: "%{attribute} is too long (maximum is %{count} characters)"
+      too_short:
+        one: "%{attribute} is too short (minimum is 1 character)"
+        other: "%{attribute} is too short (minimum is %{count} characters)"
+      wrong_length:
+        one: "%{attribute} is the wrong length (should be 1 character)"
+        other: "%{attribute} is the wrong length (should be %{count} characters)"
   activerecord:
     errors:
       template:
-        body: "Roedd problemau gyda'r meysydd canlynol:"
+        body: "There were problems with the following fields:"
         header:
-          one: Roedd 1 gwall yn gwahardd y% {model} hwn rhag cael ei arbed
-          other: "Roedd gwallau% {count} yn gwahardd y% {model} hwn rhag cael ei arbed"
+          one: 1 error prohibited this %{model} from being saved
+          other: "%{count} errors prohibited this %{model} from being saved"
   helpers:
+    label:
+      tag:
+        name: "Tag"
+      site:
+        url: "URL"
     select:
-      prompt: Dewiswch
+      prompt: Please select
     submit:
-      create: Creu %{model}
-      submit: Cadw %{model}
-      update: Diweddaru %{model}
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
   number:
     currency:
       format:
@@ -153,11 +165,11 @@ gd-GB:
       decimal_units:
         format: "%n %u"
         units:
-          billion: Biliwn
-          million: Miliwn
-          quadrillion: Cwadriliwn
-          thousand: Mil
-          trillion: Triliwn
+          billion: Billion
+          million: Million
+          quadrillion: Quadrillion
+          thousand: Thousand
+          trillion: Trillion
           unit: ''
       format:
         delimiter: ''
@@ -168,11 +180,7 @@ gd-GB:
         format: "%n %u"
         units:
           byte:
-            zero: Bytes
             one: Byte
-            two: Bytes
-            few: Bytes
-            many: Bytes
             other: Bytes
           gb: GB
           kb: KB
@@ -186,13 +194,13 @@ gd-GB:
         delimiter: ''
   support:
     array:
-      last_word_connector: ", a "
-      two_words_connector: " a "
+      last_word_connector: ", and "
+      two_words_connector: " and "
       words_connector: ", "
   time:
-    am: yb
+    am: am
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
-      long: "%B %d, %Y %H:%M"
+      long: "%d %B, %Y %H:%M"
       short: "%d %b %H:%M"
-    pm: yh
+    pm: pm
