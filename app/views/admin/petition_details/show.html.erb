@@ -7,9 +7,9 @@
 
     <p class="tabs">
       <% if petition_locale == :"en-GB" %>
-        English | <%= link_to "Welsh", admin_petition_details_path(locale: "gd-GB") %>
+        English | <%= link_to "Gaelic", admin_petition_details_path(locale: "gd-GB") %>
       <% else %>
-        <%= link_to "English", admin_petition_details_path(locale: "en-GB") %> | Welsh
+        <%= link_to "English", admin_petition_details_path(locale: "en-GB") %> | Gaelic
       <% end %>
     </p>
 

@@ -245,7 +245,7 @@ class PackageBuilder
   end
 
   def profile
-    ENV.fetch('AWS_PROFILE', 'welsh-petitions')
+    ENV.fetch('AWS_PROFILE', 'gaelic-petitions')
   end
 
   def deploy_release?
@@ -283,7 +283,7 @@ class PackageBuilder
   end
 
   def appsignal_app_name
-    ENV.fetch('APPSIGNAL_APP_NAME', "welsh-petitions-#{environment}")
+    ENV.fetch('APPSIGNAL_APP_NAME', "gaelic-petitions-#{environment}")
   end
 
   def appsignal_push_api_key
@@ -299,7 +299,7 @@ class PackageBuilder
   end
 
   def release_bucket
-    "welsh-petitions-deployments"
+    "gaelic-petitions-deployments"
   end
 
   def release_key

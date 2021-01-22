@@ -33,7 +33,7 @@ Feature: Moderator respond to petition
   Scenario: Moderator translates petition
     Given I am logged in as a moderator
     And I visit a sponsored petition with action: "wee need to save our plaanet", that has background: "Reduce polootion" and additional details: "Enforce Kyotoe protocol in more countries"
-    And I follow "Welsh"
+    And I follow "Gaelic"
     And I fill in "Action" with "Mae angen i ni achub ein planed"
     And I fill in "Background" with "Lleihau llygredd"
     And I fill in "Additional details" with "Gorfodi Protocol Kyoto mewn mwy o wledydd"

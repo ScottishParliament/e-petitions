@@ -6,7 +6,7 @@
 <% end %>
 
 <%= form_row for: [form.object, :subject_gd] do %>
-  <%= form.label :subject_gd, "Subject in Welsh", class: "form-label" %>
+  <%= form.label :subject_gd, "Subject in Gaelic", class: "form-label" %>
   <%= error_messages_for_field form.object, :subject_gd %>
   <%= form.text_area :subject_gd, rows: 2, cols: 70, tabindex: increment, data: { max_length: 100 }, class: "form-control" %>
   <p class="character-count">100 characters max</p>
@@ -20,7 +20,7 @@
 <% end %>
 
 <%= form_row for: [form.object, :body_gd] do %>
-  <%= form.label :body_gd, "Body in Welsh", class: "form-label" %>
+  <%= form.label :body_gd, "Body in Gaelic", class: "form-label" %>
   <%= error_messages_for_field form.object, :body_gd %>
   <%= form.text_area :body_gd, rows: 8, cols: 70, tabindex: increment, data: { max_length: 5000 }, class: "form-control" %>
   <p class="character-count">5000 characters max</p>

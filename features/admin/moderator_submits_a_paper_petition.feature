@@ -16,7 +16,7 @@ Feature: Moderator submits a paper petition
     And I should see "Action must be completed"
     And I should see "Background must be completed"
     When I fill in the English petition details
-    And I fill in the Welsh petition details
+    And I fill in the Gaelic petition details
     And I press "Save"
     Then I should not see "Action must be completed"
     But I should see "Signature count must be completed"
@@ -35,7 +35,7 @@ Feature: Moderator submits a paper petition
     And I should see "Phone number must be completed"
     And I should see "Address must be completed"
     And I should see "Postcode must be completed"
-    When I choose "Welsh"
+    When I choose "Gaelic"
     And I fill in "Name" with "Alice Smith"
     And I fill in "Email" with "alice@example.com"
     And I fill in "Phone number" with "0300 200 6565"

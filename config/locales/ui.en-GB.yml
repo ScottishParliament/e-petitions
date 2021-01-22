@@ -69,7 +69,7 @@ en-GB:
       brand_html: |-
         <a href="https://senedd.wales" rel="external">      
           <p>Senedd Cymru</p>
-          <p>Welsh Parliament</p>
+          <p>Gaelic Parliament</p>
         </a>
       title: Petitions
       title_link_html: |-
@@ -148,7 +148,7 @@ en-GB:
 
         <ul class="list-bullet">
           <li>Raise awareness of an issue;</li>
-          <li>Bring about a change in Welsh Government policy or a different way of delivering services;</li>
+          <li>Bring about a change in Gaelic Government policy or a different way of delivering services;</li>
           <li>Propose or influence a new law;</li>
           <li>Prompt a Senedd Committee to hold an inquiry;</li>
           <li>Lead to, or influence, a debate in the Senedd;</li>
@@ -166,9 +166,9 @@ en-GB:
         <ol class="list-number">
           <li>You create a petition. Only people or organisations with an address in Wales can create a petition.</li>
           <li>You get %{moderation_threshold} people to support your petition. We’ll tell you how to do this when you’ve created your petition.</li>
-          <li>We check your petition, then publish it in Welsh and English. We only reject petitions that don’t meet the standards for petitions (see below).</li>
+          <li>We check your petition, then publish it in Gaelic and English. We only reject petitions that don’t meet the standards for petitions (see below).</li>
           <li>People can only sign a petition once. If they sign the petition online, they will be sent an email to verify their signature. People cannot sign both an online and a paper petition.</li>
-          <li>The Petitions Committee reviews all petitions that collect over %{referral_threshold} signatures. They will decide what they can do to help take the petition forward. This can include exploring the issue and pressing for action from the Welsh Government and others.</li>
+          <li>The Petitions Committee reviews all petitions that collect over %{referral_threshold} signatures. They will decide what they can do to help take the petition forward. This can include exploring the issue and pressing for action from the Gaelic Government and others.</li>
           <li>If your petition gets over %{debate_threshold} signatures, the Petitions Committee will consider asking for a debate in the Senedd chamber. The Committee will consider a number of factors, including the issues raised by the petition, the urgency of the situation and the proportion of signatures which come from within Wales.</li>
         </ol>
 
@@ -179,8 +179,8 @@ en-GB:
         <ul class="list-bullet">
           <li>write to you for more information;</li>
           <li>invite you to talk to the Committee in person about the petition;</li>
-          <li>ask for evidence from the Welsh Government or other relevant people or organisations;</li>
-          <li>press the Welsh Government for action;</li>
+          <li>ask for evidence from the Gaelic Government or other relevant people or organisations;</li>
+          <li>press the Gaelic Government for action;</li>
           <li>raise the petition with another Senedd committee;</li>
           <li>put forward the petition for debate;</li>
           <li>run a detailed inquiry and publish a report on the topic.</li>
@@ -188,11 +188,11 @@ en-GB:
 
         <h2 id="standards">Standards for petitions</h2>
 
-        <p>You can submit a petition on any issue that is the responsibility of the Senedd or the Welsh Government.</p>
+        <p>You can submit a petition on any issue that is the responsibility of the Senedd or the Gaelic Government.</p>
 
-        <p>Petitions must call for a specific action from the Senedd or Welsh Government.</p>
+        <p>Petitions must call for a specific action from the Senedd or Gaelic Government.</p>
 
-        <p>Petitions can disagree with the Welsh Government and can ask for it to change its policies. Petitions can be critical of the Senedd or Welsh Government.</p>
+        <p>Petitions can disagree with the Gaelic Government and can ask for it to change its policies. Petitions can be critical of the Senedd or Gaelic Government.</p>
 
         <p>We reject petitions that don’t meet the rules. If we reject your petition, we will tell you why. If we can, we will suggest other ways you could raise your issue.</p>
 
@@ -200,9 +200,9 @@ en-GB:
 
         <ul class="list-bullet">
           <li>It calls for the same action as a petition that’s already open, or one which was closed by the Petitions Committee less than a year earlier;</li>
-          <li>It doesn’t ask for a clear action from the Senedd or Welsh Government;</li>
+          <li>It doesn’t ask for a clear action from the Senedd or Gaelic Government;</li>
           <li>
-            <p>It’s about something the Welsh Government or Parliament is not responsible for;</p>
+            <p>It’s about something the Gaelic Government or Parliament is not responsible for;</p>
             <p>That includes: something that your local council is responsible for (including planning decisions); something that the UK Government or Parliament is responsible for; and something that an independent organisation has done.</p>
           </li>
           <li>It contains language which is offensive, intemperate, or provocative. This not only includes obvious profanities, swear words and insults, but any language which a reasonable person would regard as offensive;</li>
@@ -350,7 +350,7 @@ en-GB:
         help_html: "<p class=\"form-hint\">Example: Introduce a 10p charge for single
           use plastic bags</p>\r\n<details class=\"form-group-help\">\r\n  <summary><span
           class=\"summary\">Show more examples</span></summary>\r\n  <div class=\"panel-indent\">\r\n
-          \   <p>Good petitions say clearly what they want the Senedd or Welsh Government
+          \   <p>Good petitions say clearly what they want the Senedd or Gaelic Government
           to do.</p>   \r\n <p>Good examples:</p>\r\n    <ul class=\"list-bullet\">\r\n
           \     <li>Ban the use of wild animals in circuses</li>\r\n      <li>Lower
           the voting age to 16 for Senedd elections</li>\r\n    </ul>\r\n    <p>Bad
@@ -445,7 +445,7 @@ en-GB:
           go_back_html: |-
             <button type="submit" name="move_back" class="button-secondary back" data-disable-with="Go back and change it">Go back and change it</button>
           submit_warning_html: |-
-            <p class="secondary">After this point you can only change the closing date by contacting the <a href="https://welsh.epetitions.website/feedback#contact">petitions team</a>.</p>
+            <p class="secondary">After this point you can only change the closing date by contacting the <a href="https://gaelic.epetitions.website/feedback#contact">petitions team</a>.</p>
       search:
         submit_button_html: |-
           <input type="submit" value="Search" class="inline-submit" data-disable-with="Search" tabindex="%{tabindex}">
@@ -699,7 +699,7 @@ en-GB:
     local_search:
       submit_button_html: |-
         <input type="submit" value="Search" class="inline-submit" data-disable-with="Search" tabindex="%{tabindex}">
-      postcode: Welsh postcode
+      postcode: Gaelic postcode
     privacy_page:
       body_html: |-
         <h1>Privacy and cookies</h1>
@@ -710,7 +710,7 @@ en-GB:
 
           <p>Last update: 13 November 2020</p>
 
-          <p>The Petitions site lets you start and sign petitions to raise issues with the Welsh Parliament/Senedd Cymru (referred to hereafter as the Senedd).</p>
+          <p>The Petitions site lets you start and sign petitions to raise issues with the Gaelic Parliament/Senedd Cymru (referred to hereafter as the Senedd).</p>
 
           <p>The Petitions service is provided by the Senedd. We need to collect, process and store some personal data to enable you to do this.</p>
 
@@ -977,7 +977,7 @@ en-GB:
 
           <li>
             <h2>Wording</h2>
-            <p>Petitions should be submitted in good faith. They should call for the Senedd or the Welsh Government to take some specific action.</p>
+            <p>Petitions should be submitted in good faith. They should call for the Senedd or the Gaelic Government to take some specific action.</p>
           </li>
 
           <li>
@@ -1035,9 +1035,9 @@ en-GB:
 
         <p><strong>We’re committed to making this website accessible so it can be used by as many people as possible.</strong></p>
 
-        <p>This statement applies to content published within the Welsh Parliament Petitions website.</p>
+        <p>This statement applies to content published within the Gaelic Parliament Petitions website.</p>
 
-        <p>This domain is owned by the Welsh Parliament/Senedd Cymru (referred to hereafter as the Senedd).</p>
+        <p>This domain is owned by the Gaelic Parliament/Senedd Cymru (referred to hereafter as the Senedd).</p>
 
         <p>We aim to make this websites accessible to the widest possible audience. This means, for example, that you should be able to:</p>
 

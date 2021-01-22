@@ -22,8 +22,8 @@ RSpec.describe LanguageBackend do
   describe "#lookup" do
     it "calls Language.lookup" do
       expect(Language).to receive(:available_locales).and_return(%i[en-GB gd-GB])
-      expect(Language).to receive(:lookup).with(:"en-GB", :"ui.site_title", nil, {}).and_return("Welsh Petitions")
-      expect(I18n.translate(:"ui.site_title")).to eq("Welsh Petitions")
+      expect(Language).to receive(:lookup).with(:"en-GB", :"ui.site_title", nil, {}).and_return("Gaelic Petitions")
+      expect(I18n.translate(:"ui.site_title")).to eq("Gaelic Petitions")
     end
   end
 end

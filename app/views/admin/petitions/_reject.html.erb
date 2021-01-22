@@ -33,7 +33,7 @@
         <div class="content"></div>
       </div>
       <div class="cy">
-        <strong>Welsh:</strong>
+        <strong>Gaelic:</strong>
         <div class="content"></div>
       </div>
     </div>
@@ -45,7 +45,7 @@
     <% end %>
 
     <%= form_row for: [r.object, :details_gd] do %>
-      <%= r.label :details_gd, 'Additional details in Welsh (optional)', class: 'form-label' %>
+      <%= r.label :details_gd, 'Additional details in Gaelic (optional)', class: 'form-label' %>
       <%= error_messages_for_field r.object, :details_gd %>
       <%= r.text_area :details_gd, rows: 8, cols: 70, class: 'form-control' %>
     <% end %>

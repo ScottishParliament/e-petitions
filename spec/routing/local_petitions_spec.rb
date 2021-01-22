@@ -29,7 +29,7 @@ RSpec.describe "routes for local petitions", type: :routes do
     end
   end
 
-  describe "Welsh", welsh: true do
+  describe "Gaelic", gaelic: true do
     it "routes GET /deisebau/lleol to local_petitions#index" do
       expect(get("/deisebau/lleol")).to route_to("local_petitions#index")
     end

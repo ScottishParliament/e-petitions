@@ -124,7 +124,7 @@ RSpec.describe "routes for signatures", type: :routes do
     end
   end
 
-  describe "Welsh", welsh: true do
+  describe "Gaelic", gaelic: true do
     # Routes nested to /petition/:petition_id
     it "doesn't route GET /deisebau/1/llofnodion" do
       expect(get("/deisebau/1/llofnodion")).not_to be_routable

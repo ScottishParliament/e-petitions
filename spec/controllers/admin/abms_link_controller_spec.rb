@@ -88,7 +88,7 @@ RSpec.describe Admin::AbmsLinkController, type: :controller, admin: true do
         }.from(nil).to(a_string_matching("business.senedd.wales"))
       end
 
-      it "stores the Welsh link in the database" do
+      it "stores the Gaelic link in the database" do
         expect {
           petition.reload
         }.to change {

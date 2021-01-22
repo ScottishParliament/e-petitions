@@ -38,11 +38,11 @@ After do
   Site.reload
 end
 
-Before('@welsh') do
+Before('@gaelic') do
   I18n.locale = :"gd-GB"
 end
 
-Before('~@welsh') do
+Before('~@gaelic') do
   I18n.locale = :"en-GB"
 end
 

@@ -115,7 +115,7 @@ RSpec.describe "routes for petitions", type: :routes do
     end
   end
 
-  describe "Welsh", welsh: true do
+  describe "Gaelic", gaelic: true do
     it "routes GET /deisebau to petitions#index" do
       expect(get("/deisebau")).to route_to(controller: "petitions", action: "index")
       expect(petitions_path).to eq("/deisebau")

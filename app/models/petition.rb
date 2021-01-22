@@ -642,12 +642,12 @@ class Petition < ActiveRecord::Base
     locale == "en-GB"
   end
 
-  def welsh?
+  def gaelic?
     locale == "gd-GB"
   end
 
   def translated?
-    english_translated? && welsh_translated?
+    english_translated? && gaelic_translated?
   end
 
   def english_translated?
@@ -658,12 +658,12 @@ class Petition < ActiveRecord::Base
     english? ? true : !additional_details_gd? || additional_details_en?
   end
 
-  def welsh_translated?
+  def gaelic_translated?
     action_gd? && background_gd? && additional_details_gd_translated?
   end
 
   def additional_details_gd_translated?
-    welsh? ? true : !additional_details_en? || additional_details_gd?
+    gaelic? ? true : !additional_details_en? || additional_details_gd?
   end
 
   def will_be_hidden?

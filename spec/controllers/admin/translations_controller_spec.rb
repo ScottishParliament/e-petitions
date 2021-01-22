@@ -71,7 +71,7 @@ RSpec.describe Admin::TranslationsController, type: :controller, admin: true do
       end
     end
 
-    context "and the Origin header is set to the welsh domain" do
+    context "and the Origin header is set to the gaelic domain" do
       before do
         request.set_header "HTTP_ORIGIN", "https://athchuingean.parlamaid-alba.scot"
       end

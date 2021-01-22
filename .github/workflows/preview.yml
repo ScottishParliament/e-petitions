@@ -101,7 +101,7 @@ jobs:
 
     - name: Deploy application
       env:
-        APPSIGNAL_APP_NAME: welsh-petitions-preview
+        APPSIGNAL_APP_NAME: gaelic-petitions-preview
         APPSIGNAL_PUSH_API_KEY: ${{ secrets.APPSIGNAL_PUSH_API_KEY }}
       run: |
         bundle exec rake deploy:preview

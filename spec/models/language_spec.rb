@@ -16,17 +16,17 @@ RSpec.describe Language, type: :model do
 
   describe "scopes" do
     describe "by_name" do
-      let!(:welsh) { FactoryBot.create(:language, :welsh) }
+      let!(:gaelic) { FactoryBot.create(:language, :gaelic) }
       let!(:english) { FactoryBot.create(:language, :english) }
 
       it "returns languages in alphabetical order" do
-        expect(Language.by_name).to eq([english, welsh])
+        expect(Language.by_name).to eq([english, gaelic])
       end
     end
   end
 
   describe ".available_locales" do
-    let!(:welsh) { FactoryBot.create(:language, :welsh) }
+    let!(:gaelic) { FactoryBot.create(:language, :gaelic) }
     let!(:english) { FactoryBot.create(:language, :english) }
 
     it "returns an array of symbols" do
@@ -51,8 +51,8 @@ RSpec.describe Language, type: :model do
 
       it "delegates to the language instance" do
         expect(Language).to receive(:find_by).with(locale: :"en-GB").and_return(language)
-        expect(language).to receive(:lookup).with(*arguments).and_return("Welsh Petitions")
-        expect(Language.lookup(*arguments)).to eq("Welsh Petitions")
+        expect(language).to receive(:lookup).with(*arguments).and_return("Gaelic Petitions")
+        expect(Language.lookup(*arguments)).to eq("Gaelic Petitions")
       end
     end
   end
@@ -97,7 +97,7 @@ RSpec.describe Language, type: :model do
       allow(File).to receive(:read).and_call_original
       allow(File).to receive(:read).with(yaml_file).and_return <<~YAML
         en-GB:
-          title: "Welsh Petitions"
+          title: "Gaelic Petitions"
       YAML
     end
 
@@ -109,7 +109,7 @@ RSpec.describe Language, type: :model do
       }.from(
         "en-GB" => { "title" => "Petitions" }
       ).to(
-        "en-GB" => { "title" => "Welsh Petitions" }
+        "en-GB" => { "title" => "Gaelic Petitions" }
       )
     end
   end
@@ -132,7 +132,7 @@ RSpec.describe Language, type: :model do
 
   describe "#translated?" do
     let!(:english) { FactoryBot.create(:language, :english) }
-    let!(:welsh) { FactoryBot.create(:language, :welsh) }
+    let!(:gaelic) { FactoryBot.create(:language, :gaelic) }
 
     context "when the key exists in the other language" do
       it "returns true" do
@@ -181,7 +181,7 @@ RSpec.describe Language, type: :model do
 
     context "when the key exists and is different from the YAML file" do
       let(:translations) do
-        { "en-GB" => { "ui" => { "header" => { "title" => "Welsh Petitions" } } } }
+        { "en-GB" => { "ui" => { "header" => { "title" => "Gaelic Petitions" } } } }
       end
 
       it "returns true" do
@@ -193,11 +193,11 @@ RSpec.describe Language, type: :model do
   describe "#get" do
     let(:language) { FactoryBot.create(:language, :english, translations: translations) }
     let(:translations) do
-      { "en-GB" => { "header" => { "title" => "Welsh Petitions" } } }
+      { "en-GB" => { "header" => { "title" => "Gaelic Petitions" } } }
     end
 
     it "returns the translation for the key" do
-      expect(language.get("header.title")).to eq("Welsh Petitions")
+      expect(language.get("header.title")).to eq("Gaelic Petitions")
     end
   end
 
@@ -206,11 +206,11 @@ RSpec.describe Language, type: :model do
 
     it "sets the translation for the key but doesn't save it" do
       expect {
-        language.set("header.title", "Welsh Petitions")
+        language.set("header.title", "Gaelic Petitions")
       }.to change {
         language.translations
       }.from({}).to(
-        { "en-GB" => { "header" => { "title" => "Welsh Petitions" } } }
+        { "en-GB" => { "header" => { "title" => "Gaelic Petitions" } } }
       )
 
       language.reload
@@ -223,16 +223,16 @@ RSpec.describe Language, type: :model do
 
     it "sets and saves the translation for the key" do
       expect {
-        language.set!("header.title", "Welsh Petitions")
+        language.set!("header.title", "Gaelic Petitions")
       }.to change {
         language.translations
       }.from({}).to(
-        { "en-GB" => { "header" => { "title" => "Welsh Petitions" } } }
+        { "en-GB" => { "header" => { "title" => "Gaelic Petitions" } } }
       )
 
       language.reload
       expect(language.translations).to eq(
-        { "en-GB" => { "header" => { "title" => "Welsh Petitions" } } }
+        { "en-GB" => { "header" => { "title" => "Gaelic Petitions" } } }
       )
     end
   end
@@ -240,7 +240,7 @@ RSpec.describe Language, type: :model do
   describe "#delete" do
     let(:language) { FactoryBot.create(:language, :english, translations: translations) }
     let(:translations) do
-      { "en-GB" => { "header" => { "title" => "Welsh Petitions" } } }
+      { "en-GB" => { "header" => { "title" => "Gaelic Petitions" } } }
     end
 
     it "deletes the translation for the key but doesn't save it" do
@@ -260,7 +260,7 @@ RSpec.describe Language, type: :model do
   describe "#delete!" do
     let(:language) { FactoryBot.create(:language, :english, translations: translations) }
     let(:translations) do
-      { "en-GB" => { "header" => { "title" => "Welsh Petitions" } } }
+      { "en-GB" => { "header" => { "title" => "Gaelic Petitions" } } }
     end
 
     it "deletes the translation for the key and saves it" do
@@ -312,7 +312,7 @@ RSpec.describe Language, type: :model do
     let(:translations) do
       {
         "en-GB" => {
-          "header" => { "title" => "Welsh Petitions" },
+          "header" => { "title" => "Gaelic Petitions" },
           "signature_count" => { "one" => "1 signature", "other" => "%{count} signatures" }
         }
       }
@@ -327,7 +327,7 @@ RSpec.describe Language, type: :model do
 
       context "when it does exist" do
         it "returns nil" do
-          expect(language.lookup(:"en-GB", :"header.title", [], {})).to eq("Welsh Petitions")
+          expect(language.lookup(:"en-GB", :"header.title", [], {})).to eq("Gaelic Petitions")
         end
       end
     end
@@ -341,7 +341,7 @@ RSpec.describe Language, type: :model do
 
       context "when it does exist" do
         it "returns nil" do
-          expect(language.lookup(:"en-GB", :title, :header, {})).to eq("Welsh Petitions")
+          expect(language.lookup(:"en-GB", :title, :header, {})).to eq("Gaelic Petitions")
         end
       end
     end
@@ -362,8 +362,8 @@ RSpec.describe Language, type: :model do
       end
     end
 
-    context "when the locale is Welsh" do
-      let(:language) { FactoryBot.create(:language, :welsh) }
+    context "when the locale is Gaelic" do
+      let(:language) { FactoryBot.create(:language, :gaelic) }
 
       it "returns false" do
         expect(language.english?).to eq(false)
@@ -371,20 +371,20 @@ RSpec.describe Language, type: :model do
     end
   end
 
-  describe "#welsh?" do
+  describe "#gaelic?" do
     context "when the locale is English" do
       let(:language) { FactoryBot.create(:language, :english) }
 
       it "returns false" do
-        expect(language.welsh?).to eq(false)
+        expect(language.gaelic?).to eq(false)
       end
     end
 
-    context "when the locale is Welsh" do
-      let(:language) { FactoryBot.create(:language, :welsh) }
+    context "when the locale is Gaelic" do
+      let(:language) { FactoryBot.create(:language, :gaelic) }
 
       it "returns true" do
-        expect(language.welsh?).to eq(true)
+        expect(language.gaelic?).to eq(true)
       end
     end
   end

@@ -70,15 +70,15 @@ RSpec.describe FetchMembersJob, type: :job do
         expect(member.name_en).to eq("Vaughan Gething MS")
       end
 
-      it "assigns the Welsh member name" do
+      it "assigns the Gaelic member name" do
         expect(member.name_gd).to eq("Vaughan Gething AS")
       end
 
       it "assigns the English party name" do
-        expect(member.party_en).to eq("Welsh Labour")
+        expect(member.party_en).to eq("Gaelic Labour")
       end
 
-      it "assigns the Welsh party name" do
+      it "assigns the Gaelic party name" do
         expect(member.party_gd).to eq("Llafur Cymru")
       end
     end

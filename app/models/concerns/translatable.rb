@@ -78,7 +78,7 @@ module Translatable
 
   private
 
-  def translated_method(english, welsh, *args)
-    public_send(I18n.locale == :"en-GB" ? english : welsh, *args)
+  def translated_method(english, gaelic, *args)
+    public_send(I18n.locale == :"en-GB" ? english : gaelic, *args)
   end
 end

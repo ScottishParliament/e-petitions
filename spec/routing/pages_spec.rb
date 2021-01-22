@@ -37,7 +37,7 @@ RSpec.describe "pages", type: :routes do
     end
   end
 
-  describe "Welsh", welsh: true do
+  describe "Gaelic", gaelic: true do
     describe "routes" do
       it "GET / routes to pages#index" do
         expect({:get => "/"}).to route_to(controller: "pages", action: "index")

@@ -27,7 +27,7 @@ irrelevant:
   code: "irrelevant"
   title: "Not the Senedd/Government’s responsibility"
   description_en: |-
-    It’s about something that the Senedd or Welsh Government is not responsible for.
+    It’s about something that the Senedd or Gaelic Government is not responsible for.
   description_gd: |-
     Mae’n ymwneud â rhywbeth nad yw’r Senedd na Llywodraeth Cymru yn gyfrifol amdano.
   hidden: false
@@ -37,7 +37,7 @@ no_action:
   code: "no-action"
   title: "Action unclear"
   description_en: |-
-    It’s not clear what the petition is asking the Senedd or Welsh Government to do.
+    It’s not clear what the petition is asking the Senedd or Gaelic Government to do.
 
     Petitions need to call on the Senedd or Government to take a specific action.
   description_gd: |-

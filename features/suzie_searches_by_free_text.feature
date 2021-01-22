@@ -32,8 +32,8 @@ Feature: Suzy Singer searches by free text
       | Eavis vs the Wombles               | Rejected                                         |
     And the markup should be valid
 
-  @welsh
-  Scenario: Search for all visible petitions in Welsh
+  @gaelic
+  Scenario: Search for all visible petitions in Gaelic
     When I search for "Pob deiseb" with "Wombles"
     Then I should see my search term "Wombles" filled in the search field
     And I should see "6 deiseb"
@@ -72,8 +72,8 @@ Feature: Suzy Singer searches by free text
     Then I should see the following search results:
       | Overthrow the Wombles | 1 signature |
 
-  @welsh
-  Scenario: Search for open petitions using multiple search terms in Welsh
+  @gaelic
+  Scenario: Search for open petitions using multiple search terms in Gaelic
     When I search for "Pob deiseb" with "goresgyn y"
     Then I should see the following search results:
       | Goresgyn y Wombles    | 1 llofnod |

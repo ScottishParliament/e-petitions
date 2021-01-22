@@ -1,7 +1,7 @@
 <p class="tabs">
-  <% if params[:tab] == "welsh"  %>
+  <% if params[:tab] == "gaelic"  %>
     <%= link_to "English", edit_admin_site_path %> |
-    Welsh |
+    Gaelic |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |
@@ -15,7 +15,7 @@
     <% end %>
   <% elsif params[:tab] == "petitions" %>
     <%= link_to "English", edit_admin_site_path %> |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     Petitions |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |
@@ -29,7 +29,7 @@
     <% end %>
   <% elsif params[:tab] == "moderation" %>
     <%= link_to "English", edit_admin_site_path %> |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     Moderation |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |
@@ -43,7 +43,7 @@
     <% end %>
   <% elsif params[:tab] == "feedback" %>
     <%= link_to "English", edit_admin_site_path %> |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     Feedback |
@@ -57,7 +57,7 @@
     <% end %>
   <% elsif params[:tab] == "access" %>
     <%= link_to "English", edit_admin_site_path %> |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |
@@ -71,7 +71,7 @@
     <% end %>
   <% elsif params[:tab] == "features" %>
     <%= link_to "English", edit_admin_site_path %> |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |
@@ -85,7 +85,7 @@
     <% end %>
   <% elsif controller_name == "holidays" %>
     <%= link_to "English", edit_admin_site_path %> |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |
@@ -99,7 +99,7 @@
     <% end %>
   <% elsif controller_name == "domains" %>
     <%= link_to "English", edit_admin_site_path %> |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |
@@ -113,7 +113,7 @@
     <% end %>
   <% elsif controller_name == "rejection_reasons" %>
     <%= link_to "English", edit_admin_site_path %> |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |
@@ -127,7 +127,7 @@
     <% end %>
   <% elsif controller_name == "languages" %>
     <%= link_to "English", edit_admin_site_path %> |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |
@@ -139,7 +139,7 @@
     Languages
   <% else %>
     English |
-    <%= link_to "Welsh", edit_admin_site_path(tab: 'welsh') %> |
+    <%= link_to "Gaelic", edit_admin_site_path(tab: 'gaelic') %> |
     <%= link_to "Petitions", edit_admin_site_path(tab: 'petitions') %> |
     <%= link_to "Moderation", edit_admin_site_path(tab: 'moderation') %> |
     <%= link_to "Feedback", edit_admin_site_path(tab: 'feedback') %> |

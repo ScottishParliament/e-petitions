@@ -54,11 +54,11 @@ RSpec.describe SocialMetaHelper, type: :helper do
   describe "#twitter_card_tag" do
     context "when using a string for content" do
       subject do
-        helper.twitter_card_tag("site", "@WelshPetitions")
+        helper.twitter_card_tag("site", "@GaelicPetitions")
       end
 
       it "generates a meta tag with the content" do
-        expect(subject).to match(%r{<meta name="twitter:site" content="@WelshPetitions" />})
+        expect(subject).to match(%r{<meta name="twitter:site" content="@GaelicPetitions" />})
       end
     end
 

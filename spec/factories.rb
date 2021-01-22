@@ -38,7 +38,7 @@ FactoryBot.define do
       locale { "en-GB" }
     end
 
-    trait :welsh do
+    trait :gaelic do
       locale { "gd-GB" }
     end
 
@@ -486,7 +486,7 @@ FactoryBot.define do
     constituency_id { nil }
     name_en { Faker::Name.name }
     name_gd { Faker::Name.name }
-    party_en { "Welsh Labour" }
+    party_en { "Gaelic Labour" }
     party_gd { "Llafur Cymru" }
 
     trait :region do
@@ -502,7 +502,7 @@ FactoryBot.define do
       constituency_id { "W09000043" }
       name_en { "Vaughan Gething MS" }
       name_gd { "Vaughan Gething AS" }
-      party_en { "Welsh Labour" }
+      party_en { "Gaelic Labour" }
       party_gd { "Llafur Cymru" }
     end
 
@@ -510,7 +510,7 @@ FactoryBot.define do
       region_id { "W10000007" }
       name_en { "Bob Jones MS" }
       name_gd { "Bob Jones AS" }
-      party_en { "Welsh Conservative Party" }
+      party_en { "Gaelic Conservative Party" }
       party_gd { "Ceidwadwyr Cymreig" }
     end
 
@@ -518,7 +518,7 @@ FactoryBot.define do
       constituency_id { "W09000043" }
       name_en { "Alice Davies MS" }
       name_gd { "Alice Davies AS" }
-      party_en { "Welsh Labour" }
+      party_en { "Gaelic Labour" }
       party_gd { "Llafur Cymru" }
     end
   end
@@ -662,9 +662,9 @@ FactoryBot.define do
       end
     end
 
-    trait :welsh do
+    trait :gaelic do
       locale { "gd-GB" }
-      name   { "Welsh" }
+      name   { "Gaelic" }
 
       translations do
         { "gd-GB" => { "title" => "Deisebau" } }

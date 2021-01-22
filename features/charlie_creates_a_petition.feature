@@ -57,8 +57,8 @@ Scenario: Charlie creates a petition with a custom closing date
   When I press "Yes – this is my email address"
   Then the petition "The wombats of wimbledon rock." should exist with a closing date of "2020-08-31"
 
-@welsh
-Scenario: Charlie creates a petition in Welsh
+@gaelic
+Scenario: Charlie creates a petition in Gaelic
   Given I start a new petition
   And I fill in the petition details
   And I press "Gweld rhagolwg o’r ddeiseb"

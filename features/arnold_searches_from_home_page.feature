@@ -28,8 +28,8 @@ Scenario: Arnold searches for petitions in English
     | The Wombles will rock Glasto       | 1 signature Referred to the Petitions Committee  |
     | Eavis vs the Wombles               | Rejected                                         |
 
-@welsh
-Scenario: Arnold searches for petitions in Welsh
+@gaelic
+Scenario: Arnold searches for petitions in Gaelic
   Given I am on the home page
   When I search all petitions for "Wombles"
   Then I should see my search term "Wombles" filled in the search field

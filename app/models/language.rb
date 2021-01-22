@@ -131,7 +131,7 @@ class Language < ActiveRecord::Base
     locale == "en-GB"
   end
 
-  def welsh?
+  def gaelic?
     locale == "gd-GB"
   end
 

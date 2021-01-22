@@ -48,7 +48,7 @@ RSpec.describe SharingHelper, type: :helper do
     end
   end
 
-  context "when viewing the site in Welsh" do
+  context "when viewing the site in Gaelic" do
     before do
       headers["HTTP_HOST"]   = "athchuingean.parlamaid-alba.scot"
       I18n.locale = :"gd-GB"

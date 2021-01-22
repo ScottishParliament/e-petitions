@@ -122,7 +122,7 @@ RSpec.describe "invalid ids", type: :request, show_exceptions: true, csrf: false
     end
   end
 
-  context "when on the Welsh website", welsh: true do
+  context "when on the Gaelic website", gaelic: true do
     describe "GET /deisebau/:id" do
       it "returns a 400 Bad Request" do
         get "/deisebau/nid-rhif"

@@ -122,7 +122,7 @@ RSpec.describe Admin::LanguagesController, type: :controller, admin: true do
 
     describe "PATCH /admin/languages/en-GB/title" do
       context "when the update is successful" do
-        before { patch :update, params: { locale: "en-GB", key: "title", translation: "Welsh Petitions" } }
+        before { patch :update, params: { locale: "en-GB", key: "title", translation: "Gaelic Petitions" } }
 
         it "redirects to the show page" do
           expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin/languages/en-GB/title")
@@ -135,10 +135,10 @@ RSpec.describe Admin::LanguagesController, type: :controller, admin: true do
 
       context "when the update is unsuccessful" do
         before do
-          expect(language).to receive(:set!).with("title", "Welsh Petitions").and_return(false)
+          expect(language).to receive(:set!).with("title", "Gaelic Petitions").and_return(false)
         end
 
-        before { patch :update, params: { locale: "en-GB", key: "title", translation: "Welsh Petitions" } }
+        before { patch :update, params: { locale: "en-GB", key: "title", translation: "Gaelic Petitions" } }
 
         it "renders the :edit template" do
           expect(response).to render_template("admin/languages/edit")
@@ -251,7 +251,7 @@ RSpec.describe Admin::LanguagesController, type: :controller, admin: true do
     end
 
     describe "PATCH /admin/languages/en-GB/title" do
-      before { patch :update, params: { locale: "en-GB", key: "title", translation: "Welsh Petitions" } }
+      before { patch :update, params: { locale: "en-GB", key: "title", translation: "Gaelic Petitions" } }
       it_behaves_like "an action when language editing is disabled"
     end
 

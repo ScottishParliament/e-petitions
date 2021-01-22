@@ -146,9 +146,9 @@ Given(/^a moderator updates the petition activity$/) do
     And I follow "Other Senedd business"
     And I follow "New other Senedd business"
     And I fill in "Subject in English" with "Get ready"
-    And I fill in "Subject in Welsh" with "Paratowch"
+    And I fill in "Subject in Gaelic" with "Paratowch"
     And I fill in "Body in English" with "Senedd here it comes"
-    And I fill in "Body in Welsh" with "Senedd yma mae'n dod"
+    And I fill in "Body in Gaelic" with "Senedd yma mae'n dod"
     And I press "Send email"
   )
 end
@@ -221,8 +221,8 @@ When(/^I fill in the English petition details$/) do
   end
 end
 
-When(/^I fill in the Welsh petition details$/) do
-  within(".//fieldset[@id='welsh-details']") do
+When(/^I fill in the Gaelic petition details$/) do
+  within(".//fieldset[@id='gaelic-details']") do
     fill_in "Action", with: "Gwnewch bethau!"
     fill_in "Background", with: "Am resymau"
     click_details "Additional details"

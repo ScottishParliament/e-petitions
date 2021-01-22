@@ -451,7 +451,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :pending_petition,
@@ -469,7 +469,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
 
         context "and it's not a holiday" do
           context "and there are no moderation delays" do
-            it "sends an email via GOV.UK Notify with the Welsh template" do
+            it "sends an email via GOV.UK Notify with the Gaelic template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature)
               end
@@ -492,7 +492,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           context "and there are moderation delays" do
             let(:moderation_queue) { 15 }
 
-            it "sends an email via GOV.UK Notify with the Welsh moderation delay template" do
+            it "sends an email via GOV.UK Notify with the Gaelic moderation delay template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature)
               end
@@ -517,7 +517,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           let(:easter) { true }
 
           context "and there are no moderation delays" do
-            it "sends an email via GOV.UK Notify with the Welsh Easter template" do
+            it "sends an email via GOV.UK Notify with the Gaelic Easter template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature)
               end
@@ -540,7 +540,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           context "and there are moderation delays" do
             let(:moderation_queue) { 15 }
 
-            it "sends an email via GOV.UK Notify with the Welsh moderation delay template" do
+            it "sends an email via GOV.UK Notify with the Gaelic moderation delay template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature)
               end
@@ -565,7 +565,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           let(:christmas) { true }
 
           context "and there are no moderation delays" do
-            it "sends an email via GOV.UK Notify with the Welsh Christmas template" do
+            it "sends an email via GOV.UK Notify with the Gaelic Christmas template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature)
               end
@@ -588,7 +588,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           context "and there are moderation delays" do
             let(:moderation_queue) { 15 }
 
-            it "sends an email via GOV.UK Notify with the Welsh moderation delay template" do
+            it "sends an email via GOV.UK Notify with the Gaelic moderation delay template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature)
               end
@@ -666,7 +666,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the sponsor signed in Welsh" do
+        context "and the sponsor signed in Gaelic" do
           let(:signature) do
             FactoryBot.create(
               :pending_signature,
@@ -678,7 +678,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             )
           end
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature)
             end
@@ -699,7 +699,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :sponsored_petition,
@@ -747,7 +747,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the sponsor signed in Welsh" do
+        context "and the sponsor signed in Gaelic" do
           let(:signature) do
             FactoryBot.create(
               :pending_signature,
@@ -759,7 +759,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             )
           end
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature)
             end
@@ -843,7 +843,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the sponsor signed in Welsh" do
+        context "and the sponsor signed in Gaelic" do
           let(:signature) do
             FactoryBot.create(
               :validated_signature,
@@ -856,7 +856,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             )
           end
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature)
             end
@@ -883,7 +883,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :validated_petition,
@@ -938,7 +938,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the sponsor signed in Welsh" do
+        context "and the sponsor signed in Gaelic" do
           let(:signature) do
             FactoryBot.create(
               :validated_signature,
@@ -951,7 +951,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             )
           end
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature)
             end
@@ -1032,10 +1032,10 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the signature was created in Welsh" do
+      context "when the signature was created in Gaelic" do
         let(:signature) { FactoryBot.create(:pending_signature, email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
-        it "sends an email via GOV.UK Notify with the Welsh template" do
+        it "sends an email via GOV.UK Notify with the Gaelic template" do
           perform_enqueued_jobs do
             described_class.perform_later(signature)
           end
@@ -1117,7 +1117,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the signature was created in Welsh" do
+      context "when the signature was created in Gaelic" do
         let(:signature) { FactoryBot.create(:validated_signature, email: "suzie@example.com", locale: "gd-GB", email_count: 1, petition: petition) }
 
         it "sends an email via GOV.UK Notify with the English template" do
@@ -1196,7 +1196,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :open_petition,
@@ -1215,7 +1215,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           )
         end
 
-        it "sends an email via GOV.UK Notify with the Welsh template" do
+        it "sends an email via GOV.UK Notify with the Gaelic template" do
           perform_enqueued_jobs do
             described_class.perform_later(signature)
           end
@@ -1292,7 +1292,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the sponsor signed in Welsh" do
+        context "and the sponsor signed in Gaelic" do
           let(:signature) do
             FactoryBot.create(
               :validated_signature,
@@ -1304,7 +1304,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             )
           end
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature)
             end
@@ -1324,7 +1324,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :open_petition,
@@ -1374,7 +1374,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the sponsor signed in Welsh" do
+        context "and the sponsor signed in Gaelic" do
           let(:signature) do
             FactoryBot.create(
               :validated_signature,
@@ -1386,7 +1386,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             )
           end
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature)
             end
@@ -1521,7 +1521,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             state,
@@ -1544,7 +1544,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         context "and the petition was published" do
           let(:state) { :rejected_petition }
 
-          it "sends an email via GOV.UK Notify with the Welsh rejection template" do
+          it "sends an email via GOV.UK Notify with the Gaelic rejection template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature, rejection)
             end
@@ -1572,7 +1572,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           let(:state) { :hidden_petition }
           let(:rejection_code) { "offensive" }
 
-          it "sends an email via GOV.UK Notify with the Welsh hidden rejection template" do
+          it "sends an email via GOV.UK Notify with the Gaelic hidden rejection template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature, rejection)
             end
@@ -1600,7 +1600,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           let(:state) { :rejected_petition }
           let(:rejection_code) { "insufficient" }
 
-          it "sends an email via GOV.UK Notify with the Welsh insufficient template" do
+          it "sends an email via GOV.UK Notify with the Gaelic insufficient template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature, rejection)
             end
@@ -1693,7 +1693,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:signature) do
               FactoryBot.create(
                 :validated_signature,
@@ -1705,7 +1705,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh rejection template" do
+            it "sends an email via GOV.UK Notify with the Gaelic rejection template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature, rejection)
               end
@@ -1766,7 +1766,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:signature) do
               FactoryBot.create(
                 :validated_signature,
@@ -1778,7 +1778,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh hidden rejection template" do
+            it "sends an email via GOV.UK Notify with the Gaelic hidden rejection template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature, rejection)
               end
@@ -1839,7 +1839,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:signature) do
               FactoryBot.create(
                 :validated_signature,
@@ -1851,7 +1851,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh insufficient template" do
+            it "sends an email via GOV.UK Notify with the Gaelic insufficient template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature, rejection)
               end
@@ -1875,7 +1875,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             state,
@@ -1932,7 +1932,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:signature) do
               FactoryBot.create(
                 :validated_signature,
@@ -1944,7 +1944,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh rejection template" do
+            it "sends an email via GOV.UK Notify with the Gaelic rejection template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature, rejection)
               end
@@ -2005,7 +2005,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:signature) do
               FactoryBot.create(
                 :validated_signature,
@@ -2017,7 +2017,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh hidden rejection template" do
+            it "sends an email via GOV.UK Notify with the Gaelic hidden rejection template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature, rejection)
               end
@@ -2078,7 +2078,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:signature) do
               FactoryBot.create(
                 :validated_signature,
@@ -2090,7 +2090,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh insufficient template" do
+            it "sends an email via GOV.UK Notify with the Gaelic insufficient template" do
               perform_enqueued_jobs do
                 described_class.perform_later(signature, rejection)
               end
@@ -2172,7 +2172,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the sponsor signed in Welsh" do
+        context "and the sponsor signed in Gaelic" do
           let(:sponsor) do
             FactoryBot.create(
               :validated_signature,
@@ -2205,7 +2205,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :pending_petition,
@@ -2233,7 +2233,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             )
           end
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(creator, sponsor)
             end
@@ -2253,7 +2253,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the sponsor signed in Welsh" do
+        context "and the sponsor signed in Gaelic" do
           let(:sponsor) do
             FactoryBot.create(
               :validated_signature,
@@ -2265,7 +2265,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             )
           end
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(creator, sponsor)
             end
@@ -2343,7 +2343,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:sponsor) do
               FactoryBot.create(
                 :validated_signature,
@@ -2407,7 +2407,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:sponsor) do
               FactoryBot.create(
                 :validated_signature,
@@ -2471,7 +2471,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:sponsor) do
               FactoryBot.create(
                 :validated_signature,
@@ -2503,7 +2503,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :validated_petition,
@@ -2532,7 +2532,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh template" do
+            it "sends an email via GOV.UK Notify with the Gaelic template" do
               perform_enqueued_jobs do
                 described_class.perform_later(creator, sponsor)
               end
@@ -2550,7 +2550,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:sponsor) do
               FactoryBot.create(
                 :validated_signature,
@@ -2562,7 +2562,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh template" do
+            it "sends an email via GOV.UK Notify with the Gaelic template" do
               perform_enqueued_jobs do
                 described_class.perform_later(creator, sponsor)
               end
@@ -2596,7 +2596,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh Easter template" do
+            it "sends an email via GOV.UK Notify with the Gaelic Easter template" do
               perform_enqueued_jobs do
                 described_class.perform_later(creator, sponsor)
               end
@@ -2614,7 +2614,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:sponsor) do
               FactoryBot.create(
                 :validated_signature,
@@ -2626,7 +2626,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh Easter template" do
+            it "sends an email via GOV.UK Notify with the Gaelic Easter template" do
               perform_enqueued_jobs do
                 described_class.perform_later(creator, sponsor)
               end
@@ -2660,7 +2660,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh Christmas template" do
+            it "sends an email via GOV.UK Notify with the Gaelic Christmas template" do
               perform_enqueued_jobs do
                 described_class.perform_later(creator, sponsor)
               end
@@ -2678,7 +2678,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
             end
           end
 
-          context "and the sponsor signed in Welsh" do
+          context "and the sponsor signed in Gaelic" do
             let(:sponsor) do
               FactoryBot.create(
                 :validated_signature,
@@ -2690,7 +2690,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
               )
             end
 
-            it "sends an email via GOV.UK Notify with the Welsh Christmas template" do
+            it "sends an email via GOV.UK Notify with the Gaelic Christmas template" do
               perform_enqueued_jobs do
                 described_class.perform_later(creator, sponsor)
               end
@@ -2832,7 +2832,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :referred_petition,
@@ -2851,7 +2851,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           )
         end
 
-        it "sends an email via GOV.UK Notify with the Welsh template" do
+        it "sends an email via GOV.UK Notify with the Gaelic template" do
           perform_enqueued_jobs do
             described_class.perform_later(signature, email)
           end
@@ -2942,10 +2942,10 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the signature was created in Welsh" do
+        context "and the signature was created in Gaelic" do
           let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature, email)
             end
@@ -2971,7 +2971,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :referred_petition,
@@ -3018,10 +3018,10 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the signature was created in Welsh" do
+        context "and the signature was created in Gaelic" do
           let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature, email)
             end
@@ -3099,7 +3099,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :scheduled_debate_petition,
@@ -3120,7 +3120,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           )
         end
 
-        it "sends an email via GOV.UK Notify with the Welsh template" do
+        it "sends an email via GOV.UK Notify with the Gaelic template" do
           perform_enqueued_jobs do
             described_class.perform_later(signature)
           end
@@ -3196,10 +3196,10 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the signature was created in Welsh" do
+        context "and the signature was created in Gaelic" do
           let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature)
             end
@@ -3222,7 +3222,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :scheduled_debate_petition,
@@ -3268,10 +3268,10 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the signature was created in Welsh" do
+        context "and the signature was created in Gaelic" do
           let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature)
             end
@@ -3350,7 +3350,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :not_debated_petition,
@@ -3371,7 +3371,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           )
         end
 
-        it "sends an email via GOV.UK Notify with the Welsh template" do
+        it "sends an email via GOV.UK Notify with the Gaelic template" do
           perform_enqueued_jobs do
             described_class.perform_later(signature, outcome)
           end
@@ -3455,10 +3455,10 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the signature was created in Welsh" do
+        context "and the signature was created in Gaelic" do
           let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature, outcome)
             end
@@ -3484,7 +3484,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :not_debated_petition,
@@ -3533,10 +3533,10 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the signature was created in Welsh" do
+        context "and the signature was created in Gaelic" do
           let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature, outcome)
             end
@@ -3628,7 +3628,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :debated_petition,
@@ -3655,7 +3655,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           )
         end
 
-        it "sends an email via GOV.UK Notify with the Welsh template" do
+        it "sends an email via GOV.UK Notify with the Gaelic template" do
           perform_enqueued_jobs do
             described_class.perform_later(signature, outcome)
           end
@@ -3753,10 +3753,10 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the signature was created in Welsh" do
+        context "and the signature was created in Gaelic" do
           let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature, outcome)
             end
@@ -3786,7 +3786,7 @@ RSpec.describe NotifyJob, type: :job, notify: false do
         end
       end
 
-      context "when the petition was created in Welsh" do
+      context "when the petition was created in Gaelic" do
         let(:petition) do
           FactoryBot.create(
             :debated_petition,
@@ -3845,10 +3845,10 @@ RSpec.describe NotifyJob, type: :job, notify: false do
           end
         end
 
-        context "and the signature was created in Welsh" do
+        context "and the signature was created in Gaelic" do
           let(:signature) { FactoryBot.create(:validated_signature, name: "Suzie", email: "suzie@example.com", locale: "gd-GB", petition: petition) }
 
-          it "sends an email via GOV.UK Notify with the Welsh template" do
+          it "sends an email via GOV.UK Notify with the Gaelic template" do
             perform_enqueued_jobs do
               described_class.perform_later(signature, outcome)
             end

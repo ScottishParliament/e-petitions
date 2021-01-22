@@ -32,8 +32,8 @@
         <% end %>
       </fieldset>
 
-      <fieldset id="welsh-details">
-        <legend><h2>Petition details in Welsh</h2></legend>
+      <fieldset id="gaelic-details">
+        <legend><h2>Petition details in Gaelic</h2></legend>
         <%= form_row for: [form.object, :action_gd] do %>
           <%= form.label :action_gd, "Action", class: "form-label" %>
           <%= error_messages_for_field @paper_petition, :action_gd %>
@@ -72,7 +72,7 @@
 
         <div class="multiple-choice">
           <%= form.radio_button :locale, "gd-GB" %>
-          <%= form.label :locale_welsh, "Welsh", for: "paper_petition_locale_gd-gb" %>
+          <%= form.label :locale_gaelic, "Gaelic", for: "paper_petition_locale_gd-gb" %>
         </div>
         <%= error_messages_for_field @paper_petition, :locale %>
       <% end %>
