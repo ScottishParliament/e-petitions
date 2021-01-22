@@ -26,37 +26,37 @@ If you do this before running the app for the first time it will automatically p
 
 ### Create the databases
 
-```
+```sh
 docker-compose run --rm web rake db:setup
 ```
 
 ### Create an admin user
 
-```
+```sh
 docker-compose run --rm web rake spets:add_sysadmin_user
 ```
 
 ### Load the postcode, constituency and region data
 
-```
+```sh
 docker-compose run --rm web rake spets:geography:import
 ```
 
 ### Fetch the member list
 
-```
+```sh
 docker-compose run --rm web rails runner 'FetchMembersJob.perform_now'
 ```
 
 ### Enable signature counting
 
-```
+```sh
 docker-compose run --rm web rails runner 'Site.enable_signature_counts!(interval: 10)'
 ```
 
 ### Start the services
 
-```
+```sh
 docker-compose up
 ```
 
@@ -66,20 +66,26 @@ Once the services have started you can access the [front end][2], [back end][3] 
 
 You can run the full test suite using following command:
 
-```
+```sh
 docker-compose run --rm web rake
 ```
 
 Individual specs can be run using the following command:
 
-```
+```sh
 docker-compose run --rm web rspec spec/models/site_spec.rb
 ```
 
 Similarly, individual cucumber features can be run using the following command:
 
-```
+```sh
 docker-compose run --rm web cucumber features/suzie_views_a_petition.feature
+```
+
+Specs can be automatically run on file changes with `guard`:
+
+```sh
+docker-compose run --rm web bundle exec guard
 ```
 
 [1]: https://www.docker.com/products/docker-desktop
