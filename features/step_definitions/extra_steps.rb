@@ -78,8 +78,8 @@ Then(/^a petition should exist with action: "([^"]*)", state: "([^"]*)"$/) do |a
   expect(petition).to exist
 end
 
-Then(/^a petition exists with state: "([^"]*)", action_en: "([^"]*)", action_cy: "([^"]*)", closed_at: "([^"]*)"$/) do |state, action_en, action_cy, closed_at|
-  petition = Petition.where(state: state, action_en: action_en, action_cy: action_cy, closed_at: closed_at)
+Then(/^a petition exists with state: "([^"]*)", action_en: "([^"]*)", action_gd: "([^"]*)", closed_at: "([^"]*)"$/) do |state, action_en, action_gd, closed_at|
+  petition = Petition.where(state: state, action_en: action_en, action_gd: action_gd, closed_at: closed_at)
   expect(petition).to exist
 end
 
@@ -100,12 +100,12 @@ Given(/^an sponsored petition exists with action: "([^"]*)"$/) do |action|
   @petition = FactoryBot.create(:sponsored_petition, action: action)
 end
 
-Given(/^an open petition exists with action_en: "([^"]*)", action_cy: "([^"]*)", background_en: "([^"]*)", background_cy: "([^"]*)"$/) do |action_en, action_cy, background_en, background_cy|
-  @petition = FactoryBot.create(:open_petition, action_en: action_en, action_cy: action_cy, background_en: background_en, background_cy: background_cy)
+Given(/^an open petition exists with action_en: "([^"]*)", action_gd: "([^"]*)", background_en: "([^"]*)", background_gd: "([^"]*)"$/) do |action_en, action_gd, background_en, background_gd|
+  @petition = FactoryBot.create(:open_petition, action_en: action_en, action_gd: action_gd, background_en: background_en, background_gd: background_gd)
 end
 
-Given(/^an open petition exists with action_en: "([^"]*)", background_en: "([^"]*)", action_cy: "([^"]*)", background_cy: "([^"]*)"$/) do |action_en, background_en, action_cy, background_cy|
-  @petition = FactoryBot.create(:open_petition, action_en: action_en, action_cy: action_cy, background_en: background_en, background_cy: background_cy)
+Given(/^an open petition exists with action_en: "([^"]*)", background_en: "([^"]*)", action_gd: "([^"]*)", background_gd: "([^"]*)"$/) do |action_en, background_en, action_gd, background_gd|
+  @petition = FactoryBot.create(:open_petition, action_en: action_en, action_gd: action_gd, background_en: background_en, background_gd: background_gd)
 end
 
 Given(/^a closed petition exists with action: "([^"]*)"$/) do |action|
@@ -116,45 +116,45 @@ Given(/^an open petition exists with action: "([^"]*)", background: "([^"]*)"$/)
   @petition = FactoryBot.create(:open_petition, action: action, background: background)
 end
 
-Given(/^a pending petition exists with action_en: "([^"]*)", action_cy: "([^"]*)"$/) do |action_en, action_cy|
-  @petition = FactoryBot.create(:pending_petition, action_en: action_en, action_cy: action_cy)
+Given(/^a pending petition exists with action_en: "([^"]*)", action_gd: "([^"]*)"$/) do |action_en, action_gd|
+  @petition = FactoryBot.create(:pending_petition, action_en: action_en, action_gd: action_gd)
 end
 
-Given(/^a validated petition exists with action_en: "([^"]*)", action_cy: "([^"]*)"$/) do |action_en, action_cy|
-  @petition = FactoryBot.create(:validated_petition, action_en: action_en, action_cy: action_cy)
+Given(/^a validated petition exists with action_en: "([^"]*)", action_gd: "([^"]*)"$/) do |action_en, action_gd|
+  @petition = FactoryBot.create(:validated_petition, action_en: action_en, action_gd: action_gd)
 end
 
-Given(/^an open petition exists with action_en: "([^"]*)", additional_details: "([^"]*)", action_cy: "([^"]*)", additional_details_cy: "([^"]*)", closed_at: "([^"]*)"$/) do |action_en, additional_details, action_cy, additional_details_cy, closed_at|
-  @petition = FactoryBot.create(:open_petition, action_en: action_en, additional_details: additional_details, action_cy: action_cy, additional_details_cy: additional_details_cy, closed_at: closed_at)
+Given(/^an open petition exists with action_en: "([^"]*)", additional_details: "([^"]*)", action_gd: "([^"]*)", additional_details_gd: "([^"]*)", closed_at: "([^"]*)"$/) do |action_en, additional_details, action_gd, additional_details_gd, closed_at|
+  @petition = FactoryBot.create(:open_petition, action_en: action_en, additional_details: additional_details, action_gd: action_gd, additional_details_gd: additional_details_gd, closed_at: closed_at)
 end
 
-Given(/^an open petition exists with action_en: "([^"]*)", background: "([^"]*)", action_cy: "([^"]*)", background_cy: "([^"]*)", closed_at: "([^"]*)"$/) do |action_en, background, action_cy, background_cy, closed_at|
-  @petition = FactoryBot.create(:open_petition, action_en: action_en, background: background, action_cy: action_cy, background_cy: background_cy, closed_at: closed_at)
+Given(/^an open petition exists with action_en: "([^"]*)", background: "([^"]*)", action_gd: "([^"]*)", background_gd: "([^"]*)", closed_at: "([^"]*)"$/) do |action_en, background, action_gd, background_gd, closed_at|
+  @petition = FactoryBot.create(:open_petition, action_en: action_en, background: background, action_gd: action_gd, background_gd: background_gd, closed_at: closed_at)
 end
 
-Given(/^an open petition exists with action_en: "([^"]*)", action_cy: "([^"]*)", closed_at: "([^"]*)"$/) do |action_en, action_cy, closed_at|
-  @petition = FactoryBot.create(:open_petition, action_en: action_en, action_cy: action_cy, closed_at: closed_at)
+Given(/^an open petition exists with action_en: "([^"]*)", action_gd: "([^"]*)", closed_at: "([^"]*)"$/) do |action_en, action_gd, closed_at|
+  @petition = FactoryBot.create(:open_petition, action_en: action_en, action_gd: action_gd, closed_at: closed_at)
 end
 
-Given(/^a referred petition exists with action_en: "([^"]*)", action_cy: "([^"]*)", closed_at: "([^"]*)"$/) do |action_en, action_cy, closed_at|
-  @petition = FactoryBot.create(:referred_petition, action_en: action_en, action_cy: action_cy, closed_at: closed_at)
+Given(/^a referred petition exists with action_en: "([^"]*)", action_gd: "([^"]*)", closed_at: "([^"]*)"$/) do |action_en, action_gd, closed_at|
+  @petition = FactoryBot.create(:referred_petition, action_en: action_en, action_gd: action_gd, closed_at: closed_at)
 end
 
-Given(/^a rejected petition exists with action_en: "([^"]*)", action_cy: "([^"]*)"$/) do |action_en, action_cy|
-  @petition = FactoryBot.create(:rejected_petition, action_en: action_en, action_cy: action_cy)
+Given(/^a rejected petition exists with action_en: "([^"]*)", action_gd: "([^"]*)"$/) do |action_en, action_gd|
+  @petition = FactoryBot.create(:rejected_petition, action_en: action_en, action_gd: action_gd)
 end
 
-Given(/^a hidden petition exists with action_en: "([^"]*)", action_cy: "([^"]*)"$/) do |action_en, action_cy|
-  @petition = FactoryBot.create(:hidden_petition, action_en: action_en, action_cy: action_cy)
+Given(/^a hidden petition exists with action_en: "([^"]*)", action_gd: "([^"]*)"$/) do |action_en, action_gd|
+  @petition = FactoryBot.create(:hidden_petition, action_en: action_en, action_gd: action_gd)
 end
 
-Then(/^a petition should exist with action_en: "([^"]*)", action_cy: nil, state: "([^"]*)", locale: "([^"]*)"$/) do |action_en, state, locale|
-  petition = Petition.where(action_en: action_en, action_cy: nil, state: state, locale: locale)
+Then(/^a petition should exist with action_en: "([^"]*)", action_gd: nil, state: "([^"]*)", locale: "([^"]*)"$/) do |action_en, state, locale|
+  petition = Petition.where(action_en: action_en, action_gd: nil, state: state, locale: locale)
   expect(petition).to exist
 end
 
-Then(/^a petition should exist with action_cy: "([^"]*)", action_en: nil, state: "([^"]*)", locale: "([^"]*)"$/) do |action_cy, state, locale|
-  petition = Petition.where(action_en: nil, action_cy: action_cy, state: state, locale: locale)
+Then(/^a petition should exist with action_gd: "([^"]*)", action_en: nil, state: "([^"]*)", locale: "([^"]*)"$/) do |action_gd, state, locale|
+  petition = Petition.where(action_en: nil, action_gd: action_gd, state: state, locale: locale)
   expect(petition).to exist
 end
 
