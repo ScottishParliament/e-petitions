@@ -6,13 +6,13 @@ module Arel
       end
     end
 
-    class Contains < Arel::Nodes::Binary
+    class Containz < Arel::Nodes::Binary
       def operator
         "@>"
       end
     end
 
-    class Overlaps < Arel::Nodes::Binary
+    class Overlapz < Arel::Nodes::Binary
       def operator
         "&&"
       end
@@ -25,11 +25,11 @@ module Arel
     end
 
     def contains(other)
-      Nodes::Contains.new(self, quoted_node(other))
+      Nodes::Containz.new(self, quoted_node(other))
     end
 
     def overlaps(other)
-      Nodes::Overlaps.new(self, quoted_node(other))
+      Nodes::Overlapz.new(self, quoted_node(other))
     end
   end
 
@@ -41,11 +41,11 @@ module Arel
         infix_value(o, collector, " <@ ")
       end
 
-      def visit_Arel_Nodes_Contains(o, collector)
+      def visit_Arel_Nodes_Containz(o, collector)
         infix_value(o, collector, " @> ")
       end
 
-      def visit_Arel_Nodes_Overlaps(o, collector)
+      def visit_Arel_Nodes_Overlapz(o, collector)
         infix_value(o, collector, " && ")
       end
     end
