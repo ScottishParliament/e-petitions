@@ -35,6 +35,7 @@ gem 'paperclip'
 gem 'maxminddb'
 gem 'redcarpet'
 gem 'notifications-ruby-client'
+gem "scrypt"
 
 gem 'aws-sdk-codedeploy'
 gem 'aws-sdk-cloudwatchlogs'
