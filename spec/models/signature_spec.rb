@@ -271,7 +271,7 @@ RSpec.describe Signature, type: :model do
     it "does not allow emails using plus addresses" do
       signature = FactoryBot.build(:signature, email: 'foobar+petitions@example.com')
       expect(signature).not_to have_valid(:email)
-      expect(signature.errors.full_messages).to include("You can’t use ‘plus addressing’ in your email address")
+      expect(signature.errors.messages[:email]).to include("You can’t use ‘plus addressing’ in your email address")
     end
 
     it "does not allow blank or unknown state" do
