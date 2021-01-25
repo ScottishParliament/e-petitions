@@ -165,9 +165,9 @@ select, input[type=text] {
   }
 
   &:active, &:focus {
-    background-color: $white;
+    background-color: $pink;
     border-color: $focus-color;
-    color: $text-color;
+    color: $white;
   }
 }
 

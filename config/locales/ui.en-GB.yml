@@ -75,7 +75,7 @@ en-GB:
       title_link_html: |-
         <a title="Go to the Petitions homepage" href="%{url}">Petitions</a>
       language_switcher_html: |-
-        <a class="language-switcher" title="Dangoswch y dudalen hon yn Gymraeg" href="%{url}">Cymraeg</a>
+        <a class="language-switcher" title="Dangoswch y dudalen hon yn Gymraeg" href="%{url}">Gàidhlig</a>
     sharing:
       email_html: |-
         <a rel="external" target="_blank" href="mailto:?body=%{url}&amp;subject=Petition%3A%20%{action}">Email</a>

@@ -53,7 +53,6 @@ body > header {
       font-weight: 800;
       margin-top: 12px;
       @include font-size(1.25rem, 1.5rem);
-      @include padding-left(72px, 84px);
     }
   }
 }
