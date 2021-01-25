@@ -81,5 +81,9 @@ Rails.application.configure do
     'Referrer-Policy' => 'origin-when-cross-origin'
   )
 
-  config.hosts << "welshpets.local"
+  config.hosts += [
+    "scotspets.local",
+    "albapets.local",
+    "moderatepets.local"
+  ]
 end
