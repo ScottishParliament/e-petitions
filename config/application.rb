@@ -40,11 +40,7 @@ module ScotsPets
     config.i18n.fallbacks = %i[en-GB]
 
     # Configure the cache store
-    config.cache_store = :atomic_dalli_store, nil, {
-      expires_in: 1.day, compress: true,
-      namespace: ENV.fetch('MEMCACHE_NAMESPACE') { 'spets' },
-      pool_size: ENV.fetch('RAILS_MAX_THREADS') { 5 }.to_i
-    }
+    config.cache_store = :mem_cache_store, ENV.fetch('MEMCACHE_SERVERS')
 
     # Configure Active Job queue adapter
     config.active_job.queue_adapter = :delayed_job
