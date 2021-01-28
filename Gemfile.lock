@@ -194,12 +194,12 @@ GEM
     htmlentities (4.3.4)
     i18n (1.8.7)
       concurrent-ruby (~> 1.0)
-    jasmine (3.5.0)
-      jasmine-core (~> 3.5.0)
+    jasmine (3.6.0)
+      jasmine-core (~> 3.6.0)
       phantomjs
       rack (>= 1.2.1)
       rake
-    jasmine-core (3.5.0)
+    jasmine-core (3.6.0)
     jasmine_selenium_runner (3.0.0)
       jasmine (~> 3.0)
       selenium-webdriver (~> 3.8)
