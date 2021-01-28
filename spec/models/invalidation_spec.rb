@@ -349,9 +349,7 @@ RSpec.describe Invalidation, type: :model do
       it "enqueues the invalidate signatures job" do
         expect {
           subject.start!
-        }.to change {
-          enqueued_jobs
-        }.from([]).to([job])
+        }.to have_enqueued_job(InvalidateSignaturesJob).on_queue(:high_priority).with(subject)
       end
 
       it "updates the enqueued_at timestamps" do
