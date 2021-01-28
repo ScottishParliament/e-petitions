@@ -42,6 +42,9 @@ module ScotsPets
     # Configure the cache store
     config.cache_store = :mem_cache_store, ENV.fetch('MEMCACHE_SERVERS')
 
+    # Configure Active Record to use cache versioning
+    config.active_record.cache_versioning = false
+
     # Configure Active Job queue adapter
     config.active_job.queue_adapter = :delayed_job
 

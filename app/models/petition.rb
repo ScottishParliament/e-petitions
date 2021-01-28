@@ -31,6 +31,8 @@ class Petition < ActiveRecord::Base
 
   DEBATE_STATES = %w[pending awaiting scheduled debated not_debated]
 
+  self.cache_timestamp_format = :stepped_cache_key
+
   has_perishable_token called: 'sponsor_token'
 
   translate :action, :additional_details, :background, :abms_link
@@ -911,24 +913,6 @@ class Petition < ActiveRecord::Base
   def deadline
     if published?
       (closed_at || Site.closed_at_for_opening(open_at))
-    end
-  end
-
-  def cache_key(*timestamp_names)
-    case
-    when new_record?
-      "petitions/new"
-    when timestamp_names.any?
-      timestamp = max_updated_column_timestamp(timestamp_names)
-      timestamp = timestamp.change(sec: (timestamp.sec.div(5) * 5))
-      timestamp = timestamp.utc.to_s(cache_timestamp_format)
-      "petitions/#{id}-#{timestamp}"
-    when timestamp = max_updated_column_timestamp
-      timestamp = timestamp.change(sec: (timestamp.sec.div(5) * 5))
-      timestamp = timestamp.utc.to_s(cache_timestamp_format)
-      "petitions/#{id}-#{timestamp}"
-    else
-      "petitions/#{id}"
     end
   end
 
