@@ -7,7 +7,7 @@ cache :browserconfig, expires_in: 5.minutes do
         xml.square150x150logo src: path_to_image('os-social/windows/square.png')
         xml.wide310x150logo src: path_to_image('os-social/windows/wide.png')
         xml.square310x310logo src: path_to_image('os-social/windows/large.png')
-        xml.TileColor "#008800"
+        xml.TileColor "#500778"
       end
     end
   end
