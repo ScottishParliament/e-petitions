@@ -6,9 +6,9 @@ class PetitionCreator
   extend ActiveModel::Translation
   include ActiveModel::Conversion
 
-  STAGES = %w[petition replay_petition creator replay_email]
+  STAGES = %w[petition replay_petition signature_collection creator replay_email]
 
-  PETITION_PARAMS     = [:action, :background, :additional_details]
+  PETITION_PARAMS     = [:action, :background, :additional_details, :collect_signatures]
   SIGNATURE_PARAMS    = [:name, :email, :phone_number, :address, :postcode, :location_code]
   PERMITTED_PARAMS    = [:q, :stage, :move_back, :move_next, petition_creator: PETITION_PARAMS + SIGNATURE_PARAMS]
 
@@ -110,8 +110,8 @@ class PetitionCreator
     petition_creator_params[:additional_details].to_s.strip
   end
 
-  def closing_at
-    nil
+  def collect_signatures
+    false
   end
 
   def name

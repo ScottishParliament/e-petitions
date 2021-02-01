@@ -401,31 +401,6 @@ en-GB:
             <button type="submit" name="move_next" class="button forward" data-disable-with="Preview petition">Preview petition</button>
           hint_standards_html: |-
             Remember, your petition must meet the %{standards_link}.
-        closing_date_stage:
-          heading: |-
-            How long would you like to collect signatures for?
-          duration:
-            hint:
-              custom: |-
-                Your petition will run until the date you specify (minimum 30 days, maximum six months).
-              default: |-
-                Your petition will run for six months after it’s published.
-            label:
-              custom: |-
-                I want to stop collecting signatures on a specific date
-              default: |-
-                I want to collect signatures for as long as possible
-          day:
-            label: "Day"
-          month:
-            label: "Month"
-          year:
-            label: "Year"
-          help_html: |-
-            <p>By default, petitions collect signatures for six months from the date that the petition is published. However, petitions are not considered by the Petitions Committee until <b>after</b> they have finished collecting signatures.</p>
-            <p>You can choose an earlier closing date if you would like your petition to be discussed sooner.</p>
-          submit_html: |-
-            <button type="submit" name="move_next" class="button forward" data-disable-with="Check closing date">Check closing date</button>
         replay_email_stage:
           heading: "Make sure this is right"
           submit_html: |-
@@ -442,14 +417,15 @@ en-GB:
             <p class="secondary">You can’t change your petition after this point.</p>
             <p class="secondary">This is a good time to check that your petition is clear. If you’ve included personal information, such as details about your health, your family or your job, think carefully about whether you are happy for this to be published.</p>
             <p class="secondary">Published petitions can only be removed from the site with the agreement of the Petitions Committee.</p>
-        replay_closing_date_stage:
-          heading: "Check your closing date"
-          custom_message_html: |-
-            <h1><span class="heading-secondary">Deadline</span>%{date}</h1>
-            <p>Your petition “%{action}” will be closed at midnight on this date. If it has received %{num} or more signatures then it will be referred to the Petitions Committee.</p>
-          default_message_html: |-
-            <h1><span class="heading-secondary">Deadline</span>Six months from publication</h1>
-            <p>Your petition “%{action}” will be closed at midnight on this date. If it has received %{num} or more signatures then it will be referred to the Petitions Committee.</p>
+        collect_signatures_stage:
+          heading: Do you want to collect signatures for your petition?
+          help_html: "<p>You can either write a letter to your parliament (because that's what a petition without signatures is, really) or collect signatures. Choose an option below.</p>"
+          label:
+            false: I want to lodge my petition immediately
+            true: I want to collect signatures
+          hint:
+            false: Just a letter then
+            true: Your petition will collect signatures for 4 weeks
           submit_html: |-
             <button type="submit" name="move_next" class="button forward" data-disable-with="This looks good">This looks good</button>
           go_back_html: |-
