@@ -60,7 +60,7 @@ Scenario: Charlie creates a petition when sponsor count is set to 0
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose the default closing date
+  And I choose to lodge my petition immediately
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
@@ -82,7 +82,7 @@ Scenario: Charlie creates a petition in Gaelic
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose the default closing date
+  And I choose to lodge my petition immediately
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
@@ -105,7 +105,7 @@ Scenario: Charlie creates a petition with invalid postcode SW14 9RQ
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose the default closing date
+  And I choose to lodge my petition immediately
   And I fill in my details as a creator with postcode "SW14 9RQ"
   And I fill in my creator contact details
   And I press "Continue"
@@ -157,43 +157,8 @@ Scenario: Charlie tries to submit an invalid petition
   And I press "Preview petition"
   And I press "This looks good"
 
-  Then I should see a heading called "How long would you like to collect signatures for?"
-
-  When I choose "I want to stop collecting signatures on a specific date"
-  And I press "Check closing date"
-
-  Then I should see "Closing date must be completed"
-
-  When I fill in "Day" with "0"
-  And I fill in "Month" with "0"
-  And I fill in "Year" with "0"
-  And I press "Check closing date"
-
-  Then I should see "Closing date not recognised"
-
-  When I fill in "Day" with "31"
-  And I fill in "Month" with "10"
-  And I fill in "Year" with "1968"
-  And I press "Check closing date"
-
-  Then I should see "Closing date is in the past"
-
-  When I fill in the closing date with a date 20 days from today
-  And I press "Check closing date"
-
-  Then I should see "Closing date must be at least 30 days from today"
-
-  When I fill in the closing date with a date 9 months from today
-  And I press "Check closing date"
-
-  Then I should see "Closing date must be no more than 6 months from today"
-
-  When I fill in the closing date with a date 3 months from today
-  And I press "Check closing date"
-
-  Then I should see a heading called "Check your closing date"
-
-  When I press "This looks good"
+  Then I should see a heading called "Do you want to collect signatures for your petition?"
+  When I press "Continue"
   Then I should see a heading called "Sign your petition"
 
   When I press "Continue"
@@ -247,7 +212,7 @@ Scenario: Charlie creates a petition with a typo in his email
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose the default closing date
+  And I choose to lodge my petition immediately
   And I fill in my details as a creator with email "charlie@hotmial.com"
   And I fill in my creator contact details
   And I press "Continue"
@@ -261,7 +226,7 @@ Scenario: Charlie creates a petition when his email is autocorrected wrongly
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose the default closing date
+  And I choose to lodge my petition immediately
   And I fill in my details as a creator with email "charlie@hotmial.com"
   And I fill in my creator contact details
   And I press "Continue"
@@ -277,7 +242,7 @@ Scenario: Charlie creates a petition when blocked
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose the default closing date
+  And I choose to lodge my petition immediately
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
@@ -296,7 +261,7 @@ Scenario: Charlie creates a petition when his IP address is rate limited
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose the default closing date
+  And I choose to lodge my petition immediately
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
