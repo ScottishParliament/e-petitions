@@ -236,6 +236,38 @@ When(/^I fill in the petition details/) do
   end
 end
 
+When(/^I choose to lodge my petition immediately$/) do
+  if I18n.locale == :"en-GB"
+    steps %Q(
+      When I choose "lodge my petition immediately"
+      When I press "This looks good"
+      Then I should see "Sign your petition"
+    )
+  else
+    steps %Q(
+      When I choose "lodge my petition immediately"
+      When I press "This looks good"
+      Then I should see "Sign your petition"
+    )
+  end
+end
+
+When(/^I choose to collect signatures$/) do
+  if I18n.locale == :"en-GB"
+    steps %Q(
+      When I choose "I want to collect signatures"
+      When I press "This looks good"
+      Then I should see "Sign your petition"
+    )
+  else
+    steps %Q(
+      When I choose "I want to collect signatures"
+      When I press "This looks good"
+      Then I should see "Sign your petition"
+    )
+  end
+end
+
 When(/^I choose the default closing date$/) do
   if I18n.locale == :"en-GB"
     steps %Q(
