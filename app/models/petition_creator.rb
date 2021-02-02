@@ -227,7 +227,7 @@ class PetitionCreator
   def validate
     validate_petition
 
-    if errors.empty? && past_stage?("creator")
+    if errors.empty? && reached_stage?("creator")
       validate_creator
     end
   end
@@ -276,7 +276,7 @@ class PetitionCreator
     @rate_limit ||= RateLimit.first_or_create!
   end
 
-  def past_stage?(other_stage)
+  def reached_stage?(other_stage)
     stage_index >= STAGES.index(other_stage)
   end
 end
