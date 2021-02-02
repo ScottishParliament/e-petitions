@@ -427,7 +427,7 @@ en-GB:
             false: Just a letter then
             true: Your petition will collect signatures for 4 weeks
           submit_html: |-
-            <button type="submit" name="move_next" class="button forward" data-disable-with="This looks good">This looks good</button>
+            <button type="submit" name="move_next" class="button forward" data-disable-with="Continue">Continue</button>
           go_back_html: |-
             <button type="submit" name="move_back" class="button-secondary back" data-disable-with="Go back and change it">Go back and change it</button>
           submit_warning_html: |-
