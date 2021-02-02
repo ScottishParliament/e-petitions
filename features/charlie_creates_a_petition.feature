@@ -27,35 +27,31 @@ Scenario: Charlie creates a petition
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose the default closing date
+  And I choose to lodge my petition immediately
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
   Then the markup should be valid
   And I am asked to review my email address
   When I press "Yes – this is my email address"
-  Then a petition should exist with action_en: "The wombats of wimbledon rock.", action_gd: nil, state: "pending", locale: "en-GB"
+  Then a petition should exist with attributes action_en: "The wombats of wimbledon rock.", action_gd: nil, state: "pending", locale: "en-GB", collect_signatures: false
   And there should be a "pending" signature with email "womboid@wimbledon.com" and name "Womboid Wibbledon"
   And "Womboid Wibbledon" wants to be notified about the petition's progress
   And "womboid@wimbledon.com" should be emailed a link for gathering support from sponsors
 
-Scenario: Charlie creates a petition with a custom closing date
+Scenario: Charlie creates a petition and wants to collect signatures
   Given the date is the "20 April, 2020"
   And I start a new petition
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose "I want to stop collecting signatures on a specific date"
-  And I fill in the closing date with "2020-08-31"
-  And I press "Check closing date"
-  Then I should see "31 August 2020"
-  When I press "This looks good"
+  And I choose to collect signatures
   And I fill in my details as a creator
   And I fill in my creator contact details
   And I press "Continue"
   Then I am asked to review my email address
   When I press "Yes – this is my email address"
-  Then the petition "The wombats of wimbledon rock." should exist with a closing date of "2020-08-31"
+  Then a petition should exist with attributes action_en: "The wombats of wimbledon rock.", collect_signatures: true
 
 Scenario: Charlie creates a petition when sponsor count is set to 0
   Given the site is not collecting sponsors
