@@ -70,19 +70,10 @@ guard :rspec, cmd: "bundle exec rspec" do
 end
 
 cucumber_options = {
-  # Below are examples overriding defaults
-
-  # cmd: 'bin/cucumber',
-  # cmd_additional_args: '--profile guard',
-
-  # all_after_pass: false,
-  # all_on_start: false,
-  # keep_failed: false,
-  # feature_sets: ['features/frontend', 'features/experimental'],
-
-  # run_all: { cmd_additional_args: '--profile guard_all' },
-  # focus_on: { 'wip' }, # @wip
-  # notification: false
+  cmd_additional_args: '--profile guard',
+  all_after_pass: false,
+  all_on_start: false,
+  keep_failed: false,
 }
 
 guard "cucumber", cucumber_options do
