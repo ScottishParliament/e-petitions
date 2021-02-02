@@ -83,6 +83,7 @@ RSpec.describe Petition, type: :model do
         around(:example) {|ex| I18n.with_locale(locale) { ex.run }}
         it { is_expected.to validate_presence_of(:action) }
         it { is_expected.to validate_presence_of(:background) }
+        it { is_expected.to validate_presence_of(:collect_signatures) }
         it { is_expected.to validate_length_of(:action).is_at_most(255) }
         it { is_expected.to validate_length_of(:background).is_at_most(3000) }
         it { is_expected.to validate_length_of(:additional_details).is_at_most(5000) }

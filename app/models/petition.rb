@@ -129,6 +129,7 @@ class Petition < ActiveRecord::Base
   validates :open_at, presence: true, if: :open?
   validates :creator, presence: true, unless: :completed?
   validates :state, inclusion: { in: STATES }
+  validates :collect_signatures, inclusion: [true, false]
 
   with_options allow_nil: true, prefix: true do
     delegate :name, :email, to: :creator
