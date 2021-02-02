@@ -153,10 +153,14 @@ Then(/^a petition should exist with action_en: "([^"]*)", action_gd: nil, state:
   expect(petition).to exist
 end
 
-Then(/^a petition should exist with attributes (.*)$/) do |str|
-  attributes = eval("{#{str}}")
-
-  petition = Petition.where(attributes)
+Then(/^a petition should exist with action_en: "([^"]*)", action_gd: nil, state: "([^"]*)", locale: "([^"]*)", collect_signatures: (\w+)$/) do |action_en, state, locale, collect_signatures|
+  petition = Petition.where(
+    action_en: action_en,
+    action_gd: nil,
+    state: state,
+    locale: locale,
+    collect_signatures: collect_signatures,
+  )
 
   expect(petition).to exist
 end

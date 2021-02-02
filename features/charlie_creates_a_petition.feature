@@ -34,7 +34,7 @@ Scenario: Charlie creates a petition
   Then the markup should be valid
   And I am asked to review my email address
   When I press "Yes – this is my email address"
-  Then a petition should exist with attributes action_en: "The wombats of wimbledon rock.", action_gd: nil, state: "pending", locale: "en-GB", collect_signatures: false
+  Then a petition should exist with action_en: "The wombats of wimbledon rock.", action_gd: nil, state: "pending", locale: "en-GB", collect_signatures: false
   And there should be a "pending" signature with email "womboid@wimbledon.com" and name "Womboid Wibbledon"
   And "Womboid Wibbledon" wants to be notified about the petition's progress
   And "womboid@wimbledon.com" should be emailed a link for gathering support from sponsors
@@ -51,7 +51,7 @@ Scenario: Charlie creates a petition and wants to collect signatures
   And I press "Continue"
   Then I am asked to review my email address
   When I press "Yes – this is my email address"
-  Then a petition should exist with attributes action_en: "The wombats of wimbledon rock.", collect_signatures: true
+  Then a petition should exist with action_en: "The wombats of wimbledon rock.", action_gd: nil, state: "pending", locale: "en-GB", collect_signatures: true
 
 Scenario: Charlie creates a petition when sponsor count is set to 0
   Given the site is not collecting sponsors
