@@ -50,6 +50,7 @@ class PetitionCreator
         p.action = action
         p.background = background
         p.additional_details = additional_details
+        p.collect_signatures = collect_signatures
 
         p.build_creator do |c|
           c.name = name
@@ -111,7 +112,7 @@ class PetitionCreator
   end
 
   def collect_signatures
-    false
+    petition_creator_params[:collect_signatures] || false
   end
 
   def name
