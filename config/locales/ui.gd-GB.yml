@@ -418,14 +418,11 @@ gd-GB:
             <p class="secondary">This is a good time to check that your petition is clear. If you’ve included personal information, such as details about your health, your family or your job, think carefully about whether you are happy for this to be published.</p>
             <p class="secondary">Published petitions can only be removed from the site with the agreement of the Petitions Committee.</p>
         collect_signatures_stage:
-          heading: Do you want to collect signatures for your petition?
-          help_html: "<p>You can either write a letter to your parliament (because that's what a petition without signatures is, really) or collect signatures. Choose an option below.</p>"
+          heading: Would you like to collect signatures on your petition?
+          help_html: "<p>Petitions submitted to the Scottish Parliament do not need to collect signatures.<p></p>If you choose to collect signatures, this will start once your petition has been published and run for four weeks. We will let you know when your petition is published and the closing date for collecting signatures.</p><p>Whether you choose to collect signatures or not, <strong>it will not affect how your petition is looked at by the Committee</strong>.</p>"
           label:
-            false: I want to lodge my petition immediately
-            true: I want to collect signatures
-          hint:
-            false: Just a letter then
-            true: Your petition will collect signatures for 4 weeks
+            false: No, I do not want to collect signatures
+            true: Yes, I want to collect signatures
           submit_html: |-
             <button type="submit" name="move_next" class="button forward" data-disable-with="Continue">Continue</button>
           go_back_html: |-

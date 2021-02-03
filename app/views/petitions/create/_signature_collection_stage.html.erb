@@ -13,13 +13,11 @@
   <div class="multiple-choice">
     <%= form.radio_button :collect_signatures, false %>
     <%= form.label :collect_signatures_false, t(:"ui.petitions.create.collect_signatures_stage.label.false"), for: "petition_creator_collect_signatures_false" %>
-    <span class="form-hint"><%= t(:"ui.petitions.create.collect_signatures_stage.hint.false") %></span>
   </div>
 
   <div class="multiple-choice">
     <%= form.radio_button :collect_signatures, true %>
     <%= form.label :collect_signatures_true, t(:"ui.petitions.create.collect_signatures_stage.label.true"), for: "petition_creator_collect_signatures_true" %>
-    <span class="form-hint"><%= t(:"ui.petitions.create.collect_signatures_stage.hint.true") %></span>
   </div>
 <% end %>
 

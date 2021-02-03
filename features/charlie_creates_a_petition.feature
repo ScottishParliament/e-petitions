@@ -27,7 +27,7 @@ Scenario: Charlie creates a petition
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose to lodge my petition immediately
+  And I choose not to collect signatures
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
@@ -60,7 +60,7 @@ Scenario: Charlie creates a petition when sponsor count is set to 0
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose to lodge my petition immediately
+  And I choose to collect signatures
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
@@ -82,7 +82,7 @@ Scenario: Charlie creates a petition in Gaelic
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose to lodge my petition immediately
+  And I choose to collect signatures
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
@@ -105,7 +105,7 @@ Scenario: Charlie creates a petition with invalid postcode SW14 9RQ
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose to lodge my petition immediately
+  And I choose to collect signatures
   And I fill in my details as a creator with postcode "SW14 9RQ"
   And I fill in my creator contact details
   And I press "Continue"
@@ -157,7 +157,7 @@ Scenario: Charlie tries to submit an invalid petition
   And I press "Preview petition"
   And I press "This looks good"
 
-  Then I should see a heading called "Do you want to collect signatures for your petition?"
+  Then I should see a heading called "Would you like to collect signatures on your petition?"
   When I press "Continue"
   Then I should see a heading called "Sign your petition"
 
@@ -212,7 +212,7 @@ Scenario: Charlie creates a petition with a typo in his email
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose to lodge my petition immediately
+  And I choose to collect signatures
   And I fill in my details as a creator with email "charlie@hotmial.com"
   And I fill in my creator contact details
   And I press "Continue"
@@ -226,7 +226,7 @@ Scenario: Charlie creates a petition when his email is autocorrected wrongly
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose to lodge my petition immediately
+  And I choose to collect signatures
   And I fill in my details as a creator with email "charlie@hotmial.com"
   And I fill in my creator contact details
   And I press "Continue"
@@ -242,7 +242,7 @@ Scenario: Charlie creates a petition when blocked
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose to lodge my petition immediately
+  And I choose to collect signatures
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
@@ -261,7 +261,7 @@ Scenario: Charlie creates a petition when his IP address is rate limited
   And I fill in the petition details
   And I press "Preview petition"
   And I press "This looks good"
-  And I choose to lodge my petition immediately
+  And I choose to collect signatures
   And I fill in my details as a creator
   And I fill in my creator contact details
   When I press "Continue"
