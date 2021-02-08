@@ -1,7 +1,7 @@
 class Admin::PetitionsController < Admin::AdminController
   before_action :redirect_to_show_page, only: [:index], if: :petition_id?
   before_action :fetch_petitions, only: [:index]
-  before_action :fetch_petition, only: [:show, :resend]
+  before_action :fetch_petition, only: [:show, :resend, :copy_content]
 
   after_action :set_back_location, only: [:index]
 
@@ -27,6 +27,12 @@ class Admin::PetitionsController < Admin::AdminController
     GatherSponsorsForPetitionEmailJob.perform_later(feedback_signature)
 
     redirect_to admin_petition_url(@petition), notice: :email_resent_to_creator
+  end
+
+  def copy_content
+    @petition.copy_content!
+
+    redirect_to admin_petition_url(@petition), notice: :petition_content_copied
   end
 
   protected

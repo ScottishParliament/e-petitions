@@ -147,5 +147,38 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         end
       end
     end
+
+    describe "POST /admin/petitions/:id/copy_content" do
+      context "when the petition does not exist" do
+        before { post :copy_content, params: { id: "999999" } }
+
+        it "redirects to the admin dashboard page" do
+          expect(response).to redirect_to("https://moderate.petitions.parliament.scot/admin")
+        end
+
+        it "sets the flash alert message" do
+          expect(flash[:alert]).to eq("Sorry, we couldn't find petition 999999")
+        end
+      end
+
+      context "when the petition exists" do
+        let!(:petition) { FactoryBot.create(:petition) }
+
+        before do
+          allow(petition).to receive(:copy_content!).and_return true
+          allow(Petition).to receive(:find).and_return petition
+
+          post :copy_content, params: { id: petition.id }
+        end
+
+        it "calls .copy_content! on the petition" do
+          expect(petition).to have_received(:copy_content!)
+        end
+
+        it "redirects to the petition page" do
+          expect(flash[:notice]).to eq("The petition's content has been copied over to the Gaelic version.")
+        end
+      end
+    end
   end
 end

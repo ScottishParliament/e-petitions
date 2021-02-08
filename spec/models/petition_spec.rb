@@ -2768,4 +2768,18 @@ RSpec.describe Petition, type: :model do
       I18n.with_locale(:"gd-GB") { expect(Petition.new.locale).to eq("gd-GB") }
     end
   end
+
+  describe "copy_content!" do
+    let(:petition) { FactoryBot.create(:petition, :english) }
+
+    before do
+      petition.copy_content!
+    end
+
+    it "copies the petition's content over to the Gaelic fields" do
+      [:action, :background, :additional_details].each do |field|
+        expect(petition["#{field}_gd".to_s]).to eq petition["#{field}_en".to_s]
+      end
+    end
+  end
 end

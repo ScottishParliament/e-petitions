@@ -452,6 +452,14 @@ Then(/^I should see the other parliamentary business items$/) do
   )
 end
 
+Then(/^the petition should be copied over$/) do
+  @petition.reload
+
+  %i[action details additional_details].each do |attr|
+    expect(@petition["#{attr}_gd"]).to eq @petition["#{attr}_en"]
+  end
+end
+
 When (/^I search all petitions for "(.*?)"$/) do |search_term|
   within :css, '.search-petitions' do
     fill_in :search, with: search_term

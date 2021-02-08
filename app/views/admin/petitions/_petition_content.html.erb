@@ -29,12 +29,12 @@
 </div>
 
 <p class="edit-petition-link">
+  Edit petition:
+  <%= link_to 'English', admin_petition_details_path(@petition, locale: "en-GB") %> |
+  <%= link_to 'Gaelic', admin_petition_details_path(@petition, locale: "gd-GB") %>
+
   <% if Site.disable_gaelic_website? %>
-    <%= link_to 'Edit details', admin_petition_details_path(@petition, locale: "en-GB") %>
-  <% else %>
-    Edit petition:
-    <%= link_to 'English', admin_petition_details_path(@petition, locale: "en-GB") %> |
-    <%= link_to 'Gaelic', admin_petition_details_path(@petition, locale: "gd-GB") %>
+    <%= button_to 'Copy content to Gaelic petition', copy_content_admin_petition_path(@petition), class: 'button' %>
   <% end %>
 </p>
 

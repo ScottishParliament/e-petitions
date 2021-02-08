@@ -128,6 +128,7 @@ Rails.application.routes.draw do
 
       resources :petitions, only: %i[show index], constraints: { id: /(PE|PP)?\d{1,11}/ } do
         post :resend, on: :member
+        post :copy_content, on: :member
 
         resources :emails, controller: 'petition_emails', except: %i[show]
         resource  :lock, only: %i[show create update destroy]

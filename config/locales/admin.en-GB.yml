@@ -86,6 +86,7 @@ en-GB:
       petition_not_found: "Cannot find petition with id: %{query}"
       petition_updated: "Petition has been successfully updated"
       petition_not_updated: "Petition could not be updated - please contact support"
+      petition_content_copied: "The petition's content has been copied over to the Gaelic version."
       preview_email_sent: "Preview email successfully sent"
       rate_limits_updated: "Rate limits updated successfully"
       rejection_reason_created: "Rejection reason created successfully"

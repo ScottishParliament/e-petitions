@@ -693,6 +693,14 @@ class Petition < ActiveRecord::Base
     gaelic? ? true : !additional_details_en? || additional_details_gd?
   end
 
+  def copy_content!
+    self.action_gd = action_en
+    self.background_gd = background_en
+    self.additional_details_gd = additional_details_en
+
+    save!
+  end
+
   def will_be_hidden?
     rejection && rejection.hide_petition?
   end
