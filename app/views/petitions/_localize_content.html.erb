@@ -1,0 +1,7 @@
+<% if gaelic_disabled? && petition.gaelic_translated? %>
+  <%= I18n.with_locale(:"gd-GB") { render "content", petition: petition } %>
+  <hr />
+  <%= I18n.with_locale(:"en-GB") { render "content", petition: petition } %>
+<% else %>
+  <%= render "content", petition: petition %>
+<% end %>
