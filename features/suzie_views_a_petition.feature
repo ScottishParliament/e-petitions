@@ -27,6 +27,12 @@ Feature: Suzie views a petition
     And I can share it via Twitter
     And I can share it via Whatsapp
 
+  Scenario: Suzie views a open, translated petition on the English-only website
+    Given the Gaelic website is disabled
+    And an open petition exists with action_en: "Raise benefits", action_gd: "Àrdaich buannachdan", background_en: "Because they're too low", background_gd: "Leis gu bheil iad ro ìosal"
+    When I go to the petition page for "Raise benefits"
+    Then I should see both petitions content
+
   Scenario: Suzie views a petition containing urls, email addresses and html tags
     Given an open petition exists with action: "Defence review", additional_details: "<i>We<i> like http://www.google.com and bambi@gmail.com"
     When I go to the petition page for "Defence review"

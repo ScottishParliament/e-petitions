@@ -460,7 +460,15 @@ Then(/^the petition should be copied over$/) do
   end
 end
 
-When (/^I search all petitions for "(.*?)"$/) do |search_term|
+Then(/^I should see both petitions content$/) do
+  s = %i[action details additional_details].map do |attr|
+    [@petition["#{attr}_gd"], @petition["#{attr}_en"]]
+  end.flatten
+
+  steps s.map { |content| "Then I should see \"#{content}\"" }.join("\n")
+end
+
+When(/^I search all petitions for "(.*?)"$/) do |search_term|
   within :css, '.search-petitions' do
     fill_in :search, with: search_term
 

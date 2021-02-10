@@ -1,5 +1,5 @@
 <%= cache_for :petition do %>
-  <%= render "content" %>
+  <%= render "content", petition: petition %>
 
   <% if @petition.referred? %>
     <section class="referral-notice" aria-labelledby="referral-notice-heading">

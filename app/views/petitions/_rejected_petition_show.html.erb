@@ -1,5 +1,5 @@
 <%= cache_for :petition do %>
-  <%= render "content" %>
+  <%= render "content", petition: petition %>
 
   <section class="rejection-reason" aria-labelledby="rejection-reason-heading">
     <h2 id="rejection-reason-heading"><%= t(:"ui.petitions.reject_reason_heading") %></h2>

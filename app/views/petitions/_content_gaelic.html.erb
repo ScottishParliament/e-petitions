@@ -1,0 +1,30 @@
+<h1>
+  <% if petition.open? %>
+    <span class="heading-secondary"><%= t(:"ui.petitions.heading_open")%> - <%= petition.to_param %></span>
+  <% elsif petition.rejected? %>
+    <span class="heading-secondary"><%= t(:"ui.petitions.heading_rejected") %></span>
+  <% else %>
+    <% if petition.completed? %>
+      <span class="heading-secondary"><%= t(:"ui.petitions.heading_completed") %> - <%= petition.to_param %></span>
+    <% else %>
+      <span class="heading-secondary"><%= t(:"ui.petitions.heading_closed") %> - <%= petition.to_param %></span>
+    <% end %>
+  <% end %>
+  <%= petition.action_gd %>
+</h1>
+
+<% if petition.committee_note? %>
+  <div class="committee-note">
+    <%= markdown_to_html(petition.committee_note) %>
+  </div>
+<% end %>
+
+<% if petition.background_gd? %>
+  <div class="petition-content"><%= apply_formatting(petition, :background_gd) %></div>
+<% end %>
+<% if petition.additional_details_gd? %>
+  <details>
+    <summary><span class="summary"><%= t(:"ui.petitions.more_details") %></span></summary>
+    <div class="petition-content"><%= apply_formatting(petition, :additional_details_gd) %></div>
+  </details>
+<% end %>

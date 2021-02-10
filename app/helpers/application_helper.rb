@@ -45,6 +45,10 @@ module ApplicationHelper
     request.original_url.force_encoding('utf-8')
   end
 
+  def gaelic_disabled?
+    Site.disable_gaelic_website?
+  end
+
   private
 
   def referer_url
