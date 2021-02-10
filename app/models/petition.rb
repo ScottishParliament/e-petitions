@@ -694,11 +694,11 @@ class Petition < ActiveRecord::Base
   end
 
   def copy_content!
-    self.action_gd = action_en
-    self.background_gd = background_en
-    self.additional_details_gd = additional_details_en
-
-    save!
+    update!(
+      action_gd:  action_en,
+      background_gd:  background_en,
+      additional_details_gd:  additional_details_en,
+    )
   end
 
   def will_be_hidden?
