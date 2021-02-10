@@ -1,24 +1,5 @@
 <%= cache_for :petition do %>
-  <h1>
-    <span class="heading-secondary"><%= t(:"ui.petitions.heading_rejected") %></span>
-    <%= petition.action %>
-  </h1>
-
-  <% if @petition.committee_note? %>
-    <div class="committee-note">
-      <%= markdown_to_html(@petition.committee_note) %>
-    </div>
-  <% end %>
-
-  <% if petition.background? %>
-    <div class="petition-content"><%= apply_formatting(petition, :background) %></div>
-  <% end %>
-  <% if petition.additional_details? %>
-    <details>
-      <summary><span class="summary"><%= t(:"ui.petitions.more_details") %></span></summary>
-      <div class="petition-content"><%= apply_formatting(petition, :additional_details) %></div>
-    </details>
-  <% end %>
+  <%= render "content" %>
 
   <section class="rejection-reason" aria-labelledby="rejection-reason-heading">
     <h2 id="rejection-reason-heading"><%= t(:"ui.petitions.reject_reason_heading") %></h2>
