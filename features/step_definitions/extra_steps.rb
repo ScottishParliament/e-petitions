@@ -116,6 +116,18 @@ Given(/^an open petition exists with action: "([^"]*)", background: "([^"]*)"$/)
   @petition = FactoryBot.create(:open_petition, action: action, background: background)
 end
 
+Given(/^an open, untranslated petition exists with action: "([^"]*)", background: "([^"]*)"$/) do |action, background|
+  @petition = FactoryBot.create(:open_petition, action: action, background: background)
+
+  remove_lang = @petition.english? ? 'gd' : 'en'
+
+  %i[action background additional_details].each do |attr|
+    @petition["#{attr}_#{remove_lang}"] = nil
+  end
+
+  @petition.save
+end
+
 Given(/^a pending petition exists with action_en: "([^"]*)", action_gd: "([^"]*)"$/) do |action_en, action_gd|
   @petition = FactoryBot.create(:pending_petition, action_en: action_en, action_gd: action_gd)
 end

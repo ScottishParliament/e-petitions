@@ -468,6 +468,10 @@ Then(/^I should see both petitions content$/) do
   steps s.map { |content| "Then I should see \"#{content}\"" }.join("\n")
 end
 
+Then(/^I should not see both petitions content$/) do
+  expect(page).to have_selector(:css, ".petition-content", count: 1)
+end
+
 When(/^I search all petitions for "(.*?)"$/) do |search_term|
   within :css, '.search-petitions' do
     fill_in :search, with: search_term

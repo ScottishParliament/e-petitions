@@ -1,4 +1,4 @@
-<% if gaelic_disabled? %>
+<% if petition.english_translated? && petition.gaelic_translated? && gaelic_disabled? %>
   <%= render "content_gaelic", petition: petition %>
   <hr />
   <%= render "content_english", petition: petition %>
