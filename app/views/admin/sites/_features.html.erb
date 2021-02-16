@@ -88,5 +88,18 @@
         <%= form.label :disable_trending_petitions, "No", for: "site_disable_constituency_api_false" %>
       </div>
     <% end %>
+
+    <%= form_row for: [form.object, :disable_notify_by_email], class: "inline" do %>
+      <%= form.label :disable_notify_by_email, "Disable email notifications?", class: "form-label" %>
+      <%= error_messages_for_field @site, :disable_notify_by_email %>
+      <div class="multiple-choice">
+        <%= form.radio_button :disable_notify_by_email, true %>
+        <%= form.label :disable_notify_by_email, "Yes", for: "site_disable_notify_by_email_true" %>
+      </div>
+      <div class="multiple-choice">
+        <%= form.radio_button :disable_notify_by_email, false %>
+        <%= form.label :disable_notify_by_email, "No", for: "site_disable_notify_by_email_false" %>
+      </div>
+    <% end %>
   </div>
 </div>
