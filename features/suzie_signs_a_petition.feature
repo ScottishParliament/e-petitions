@@ -283,3 +283,8 @@ Feature: Suzie signs a petition
     When I confirm my email address
     Then I should see "We’ve added your signature to the petition"
     And a signature should exist with email: "suzie@gmial.com", state: "validated"
+
+  Scenario: Suzie is not offered the option to stay informed if the site has disabled the option
+    Given the site has disabled email notifications
+    Given I am on the new signature page
+    Then I should not see "Email me whenever there’s an update about this petition"

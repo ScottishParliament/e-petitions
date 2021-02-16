@@ -18,6 +18,10 @@ Given(/^the Gaelic website is disabled$/) do
   Site.instance.update! feature_flags: { disable_gaelic_website: true }
 end
 
+Given(/^the site has disabled email notifications$/) do
+  Site.instance.update! feature_flags: { disable_notify_by_email: true }
+end
+
 Given(/^the request is not local$/) do
   page.driver.options[:headers] = { "REMOTE_ADDR" => "192.168.1.128" }
 end

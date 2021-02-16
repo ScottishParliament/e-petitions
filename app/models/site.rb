@@ -21,6 +21,7 @@ class Site < ActiveRecord::Base
     disable_feedback_sending
     disable_gaelic_website
     show_holding_page
+    disable_notify_by_email
   ]
 
   class << self
