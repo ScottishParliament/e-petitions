@@ -1,0 +1,37 @@
+// petition states diagram
+// 1. install graphviz
+// 2. compile with: `dot -Tpng ./petition-states.dot -o ./petition-states.png`
+
+digraph{
+        labelloc=t
+        label="Petition states (Scottish Parliament)\n\n\n"
+        dpi=120
+
+        node[shape=circle]
+
+        PETITION[shape="doublecircle"]
+        collecting_sponsors[label="collecting\nsponsors"]
+        sponsored
+        in_moderation_queue[label="in moderation\nqueue"]
+        flagged
+        rejected
+        published
+        collecting_signatures[label="collecting\nsignatures"]
+        not_collecting_signatures[label="not collecting\nsignatures"]
+        under_consideration[label="under\nconsideration\n by the P.O"]
+        closed
+
+        PETITION -> collecting_sponsors[label=" petitioner submits form"]
+        collecting_sponsors -> sponsored[label=" petitioner validates their email"]
+        sponsored -> in_moderation_queue
+        in_moderation_queue -> published[label=" P.O approves of the petition"]
+        in_moderation_queue -> flagged[label=" P.O needs further look     "]
+        in_moderation_queue -> rejected[label= "P.O disapproves of petition"]
+        flagged -> rejected[label=" no good       "]
+        flagged -> published[label=" all good"]
+        published -> collecting_signatures[label=" with signatures             "]
+        published -> not_collecting_signatures[label=" without signatures"]
+        collecting_signatures -> under_consideration[label=" signatures deadline reached         "]
+        not_collecting_signatures -> under_consideration[label=" immediately"]
+        under_consideration -> closed[label=" regardless of outcome"]
+}
