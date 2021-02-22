@@ -12,6 +12,7 @@ en-GB:
       public:
         - :all
         - :collecting_signatures
+        - :under_consideration
         - :closed
       admin:
         - :all
@@ -35,6 +36,7 @@ en-GB:
         public:
           - :all
           - :collecting_signatures
+          - :under_consideration
           - :closed
         admin:
           - :all

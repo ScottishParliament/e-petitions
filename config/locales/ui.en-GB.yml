@@ -328,6 +328,7 @@ en-GB:
           published: "Published petitions"
           not_debated: "Petitions not debated by Parliament"
           archived: "Archived petitions"
+          under_consideration: "Petitions under consideration"
       lists:
         all: "All petitions (%{quantity})"
         open: "Open petitions (%{quantity})"
@@ -338,6 +339,7 @@ en-GB:
         completed: "Completed petitions (%{quantity})"
         not_debated: "Not debated by Parliament (%{quantity})"
         archived: "Archived petitions"
+        under_consideration: "Under consideration (%{quantity})"
       local:
         all:
           heading: |-
