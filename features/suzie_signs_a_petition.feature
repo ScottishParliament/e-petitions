@@ -191,7 +191,7 @@ Feature: Suzie signs a petition
     And the petition has closed
     When I go to the new signature page
     Then I should be on the petition page
-    And I should see "Closed petition"
+    And I should see "Under consideration"
 
   Scenario: Suzie cannot create a new signature when the petition has closed
     Given I am on the new signature page
@@ -200,7 +200,7 @@ Feature: Suzie signs a petition
     When I fill in my details
     And I try to sign
     Then I should be on the petition page
-    And I should see "Closed petition"
+    And I should see "Under consideration"
 
   Scenario: Suzie cannot confirm her email when the petition has closed
     Given I am on the new signature page
@@ -211,7 +211,7 @@ Feature: Suzie signs a petition
 	And the petition has closed
     And I say I am happy with my email address
     Then I should be on the petition page
-    And I should see "Closed petition"
+    And I should see "Under consideration"
 
   Scenario: Suzie cannot validate her signature when the petition has closed
     Given I am on the new signature page
@@ -225,7 +225,7 @@ Feature: Suzie signs a petition
     And the petition has closed some time ago
     And I confirm my email address
     Then I should be on the petition page
-    And I should see "Closed petition"
+    And I should see "Under consideration"
     And I should see "1 signature"
 
   Scenario: Suzie can validate her signature when the petition has closed recently
@@ -243,7 +243,7 @@ Feature: Suzie signs a petition
     And I should see "2 signatures"
     When I follow "Do something!"
     Then I should be on the petition page
-    And I should see "Closed petition"
+    And I should see "Under consideration"
     And I should see "2 signatures"
 
   Scenario: Suzie cannot validate her signature when IP address is rate limited

@@ -123,6 +123,12 @@ When /^I view all petitions from the home page$/ do
   click_link "All petitions"
 end
 
+Then(/^I can choose the "(.*)" facet$/) do |facet|
+  within :css, 'details.lists-of-petitions' do
+    expect(page).to have_content(facet)
+  end
+end
+
 When(/^I check for similar petitions$/) do
   fill_in "q", :with => "Rioters should loose benefits"
   click_button("Continue")

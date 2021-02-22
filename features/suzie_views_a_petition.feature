@@ -72,10 +72,10 @@ Feature: Suzie views a petition
     Then I should see the petition details
     And I cannot sign the petition
 
-  Scenario: Suzie sees a 'closed' message when viewing a closed petition
+  Scenario: Suzie sees an 'under consideration' message when viewing a closed petition
     Given a petition "Spend more money on Defence" has been closed
     When I view the petition
-    Then I should see "Closed petition"
+    Then I should see "Under consideration"
 
   Scenario: Suzie does not see the creator when viewing a closed petition
     Given a petition "Spend more money on Defence" has been closed
@@ -88,10 +88,10 @@ Feature: Suzie views a petition
     Then I should see the petition details
     And I cannot sign the petition
 
-  Scenario: Suzie sees a 'completed' message when viewing a completed petition
+  Scenario: Suzie sees a 'closed' message when viewing a completed petition
     Given a petition "Spend more money on Defence" has been completed
     When I view the petition
-    Then I should see "Completed petition"
+    Then I should see "Closed petition"
 
   Scenario: Suzie does not see the creator when viewing a completed petition
     Given a petition "Spend more money on Defence" has been completed

@@ -9,31 +9,22 @@ Feature: Suzy Signer views all petitions
     Then I should see all petitions
     And the markup should be valid
 
+  Scenario: Suzie can browse with facets
+    Given I view all petitions from the home page
+    Then I can choose the "Collecting signatures" facet
+    And I can choose the "Under consideration" facet
+    And I can choose the "Closed" facet
+
   Scenario: Suzie browses open petitions
     Given a petition "Free the wombles" exists with a signature count of 500
     And a petition "Force supermarkets to give unsold food to charities" exists with a signature count of 500000
     And a petition "Make every monday bank holiday" exists with a signature count of 1000
-    When I browse to see only "Open" petitions
+    When I browse to see only "Collecting signatures" petitions
     Then I should see "3 petitions"
     And I should see the following ordered list of petitions:
      | Force supermarkets to give unsold food to charities |
      | Make every monday bank holiday                      |
      | Free the wombles                                    |
-    And the markup should be valid
-
-  Scenario: Suzie browses petitions which have been debated
-    Given a petition "Free the wombles" has been debated yesterday
-    And a petition "Ban Badger Baiting" has been debated 2 days ago
-    And a petition "Spend more money on Defence" has been debated 18 days ago
-    And a petition "Force supermarkets to give unsold food to charities" has been debated 234 days ago
-    And a petition "Make every monday bank holiday" exists
-    When I browse to see only "Debated by Parliament" petitions
-    Then I should see "4 petitions"
-    Then I should see the following ordered list of petitions:
-     | Free the wombles                                    |
-     | Ban Badger Baiting                                  |
-     | Spend more money on Defence                         |
-     | Force supermarkets to give unsold food to charities |
     And the markup should be valid
 
   Scenario: Suzie browses open petitions and can see numbering in the list view

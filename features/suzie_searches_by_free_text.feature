@@ -46,8 +46,8 @@ Feature: Suzy Singer searches by free text
       | Eavis vs na Wombles                | Rejected                                        |
     And the markup should be valid
 
-  Scenario: Search for open petitions
-    When I search for "Open petitions" with "Wombles"
+  Scenario: Search for petitions collecting signatures
+    When I search for "Collecting signatures" with "Wombles"
     Then I should see my search term "Wombles" filled in the search field
     And I should see "4 petitions"
     And I should not see "Wombles are great"
@@ -63,10 +63,10 @@ Feature: Suzy Singer searches by free text
     When I go to the petitions page
     And I fill in "Wombles" as my search term
     And I press "Search"
-    Then I should see an "open" petition count of 4
+    Then I should see a "collecting signatures" petition count of 4
 
   Scenario: Search for open petitions using multiple search terms
-    When I search for "Open petitions" with "overthrow the"
+    When I search for "Collecting signatures" with "overthrow the"
     Then I should see the following search results:
       | Overthrow the Wombles | 1 signature |
 
@@ -76,19 +76,14 @@ Feature: Suzy Singer searches by free text
     Then I should see the following search results:
       | Thoir thairis na Wombles | 1 signature |
 
-  Scenario: Search for referred petitions
-    When I search for "Referred to the Committee" with "WOMBLES"
+  Scenario: Search for petitions under consideration
+    When I search for "Under consideration" with "WOMBLES"
     Then I should see the following search results:
       | The Wombles will rock Glasto | 1 signature          |
 
-  Scenario: Search for petitions debated by Parliament
-    When I search for "Debated by Parliament" with "EU"
-    Then I should see the following search results:
-      | Leave EU                        | 1 signature |
-
   Scenario: Paginate through open petitions
     Given 51 open petitions exist with action: "International development spending"
-    When I search for "Open petitions" with "International"
+    When I search for "Collecting signatures" with "International"
     And I follow "Next"
     Then I should see 1 petition
     And I follow "Previous"
