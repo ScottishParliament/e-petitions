@@ -11,11 +11,8 @@ en-GB:
     facets:
       public:
         - :all
-        - :open
-        - :referred
-        - :debated
-        - :not_debated
-        - :completed
+        - :collecting_signatures
+        - :closed
       admin:
         - :all
         - :collecting_sponsors
@@ -37,9 +34,8 @@ en-GB:
       alternate:
         public:
           - :all
-          - :open
-          - :referred
-          - :completed
+          - :collecting_signatures
+          - :closed
         admin:
           - :all
           - :pending

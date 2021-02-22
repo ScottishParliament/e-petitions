@@ -262,6 +262,7 @@ en-GB:
         submit_button_html: |-
           <input type="submit" value="Search" class="inline-submit" data-disable-with="Search" tabindex="%{tabindex}">
         all_open_link: "View all open petitions"
+        all_collecting_signatures_link: "View all petitions collecting signatures"
       debated_petitions:
         video_url:
           title_html: |-
@@ -318,6 +319,7 @@ en-GB:
         page_titles:
           all: "All petitions"
           open: "Open petitions"
+          collecting_signatures: "Petitions collecting signatures"
           closed: "Closed petitions"
           debated: "Petitions debated by Parliament"
           referred: "Petitions referred to the Petitions Committee"
@@ -329,6 +331,7 @@ en-GB:
       lists:
         all: "All petitions (%{quantity})"
         open: "Open petitions (%{quantity})"
+        collecting_signatures: "Collecting signatures (%{quantity})"
         debated: "Debated by Parliament (%{quantity})"
         referred: "Referred to the Committee (%{quantity})"
         rejected: "Rejected petitions (%{quantity})"
