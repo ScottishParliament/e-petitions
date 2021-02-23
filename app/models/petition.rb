@@ -48,7 +48,7 @@ class Petition < ActiveRecord::Base
   facet :all,       -> { not_archived.by_most_recent }
   facet :open,      -> { not_archived.open_state.by_most_popular }
   facet :rejected,  -> { not_archived.rejected_state.by_most_recent }
-  facet :closed,    -> { not_archived.closed_state.not_referred.by_most_popular }
+  facet :closed,    -> { not_archived.completed_state.by_most_recently_completed }
   facet :referred,  -> { not_archived.closed_state.referred.by_most_recently_closed }
   facet :completed, -> { not_archived.completed_state.by_most_recently_closed }
   facet :hidden,    -> { not_archived.hidden_state.by_most_recent }
@@ -182,6 +182,10 @@ class Petition < ActiveRecord::Base
 
     def by_most_recently_closed
       reorder(closed_at: :desc)
+    end
+
+    def by_most_recently_completed
+      reorder(completed_at: :desc)
     end
 
     def by_most_recent_debate_outcome

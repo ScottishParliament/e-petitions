@@ -333,6 +333,7 @@ en-GB:
         all: "All petitions (%{quantity})"
         open: "Open petitions (%{quantity})"
         collecting_signatures: "Collecting signatures (%{quantity})"
+        closed: "Closed (%{quantity})"
         debated: "Debated by Parliament (%{quantity})"
         referred: "Referred to the Committee (%{quantity})"
         rejected: "Rejected petitions (%{quantity})"
@@ -526,8 +527,8 @@ en-GB:
       heading_open: "Petition"
       more_details: "More details"
       date_submitted: "Date submitted"
-      heading_closed: "Closed petition"
-      heading_completed: "Completed petition"
+      heading_closed: "Under consideration"
+      heading_completed: "Closed petition"
       standards_link: "petition standards"
       for_debate_date: "for a debate date"
       moderation_info:

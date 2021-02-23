@@ -519,7 +519,7 @@ gd-GB:
       heading_open: "Petition"
       more_details: "More details"
       date_submitted: "Date submitted"
-      heading_closed: "Closed petition"
+      heading_closed: "Under consideration"
       heading_completed: "Completed petition"
       standards_link: "petition standards"
       for_debate_date: "for a debate date"
