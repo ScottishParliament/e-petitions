@@ -14,6 +14,8 @@ en-GB:
         - :collecting_signatures
         - :under_consideration
         - :closed
+        - :debated
+        - :not_debated
       admin:
         - :all
         - :collecting_sponsors

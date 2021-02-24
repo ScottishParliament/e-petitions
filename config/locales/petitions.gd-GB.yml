@@ -11,11 +11,11 @@ gd-GB:
     facets:
       public:
         - :all
-        - :open
-        - :referred
+        - :collecting_signatures
+        - :under_consideration
+        - :closed
         - :debated
         - :not_debated
-        - :completed
       admin:
         - :all
         - :collecting_sponsors
@@ -37,9 +37,9 @@ gd-GB:
       alternate:
         public:
           - :all
-          - :open
-          - :referred
-          - :completed
+          - :collecting_signatures
+          - :under_consideration
+          - :closed
         admin:
           - :all
           - :pending
