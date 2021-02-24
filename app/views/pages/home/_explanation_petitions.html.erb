@@ -1,7 +1,7 @@
 <% explanation_petitions do |actioned| %>
   <section aria-labelledby="open-petitions-heading" id="petitions-open">
     <h2 id="open-petitions-heading"><%= t(:"ui.home_page.open_petitions.heading") %></h2>
-    <%= render "pages/home/collecting_signatures_petitions", actioned: actioned %>
+    <%= render "pages/home/open_petitions", actioned: actioned %>
   </section>
 
   <section aria-labelledby="referral-threshold-heading" id="petitions-referred">
