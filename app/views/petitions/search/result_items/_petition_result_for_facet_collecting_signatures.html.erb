@@ -1,1 +1,4 @@
 <h2><%= link_to petition.action, petition_path(petition) %></h2>
+<% if petition.collect_signatures? %>
+  <span><%= t('ui.petitions.search.results.items.facet_collecting_signatures.until', date: short_date_format(petition.closed_at)) %></span>
+<% end %>

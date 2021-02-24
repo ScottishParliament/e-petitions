@@ -466,6 +466,8 @@ en-GB:
           <input type="submit" value="Search" class="inline-submit" data-disable-with="Search" tabindex="%{tabindex}">
         results:
           items:
+            facet_collecting_signatures:
+              until: "Collecting signatures until %{date}"
             facet_all:
               rejected: "Rejected"
               completed: "Completed by the Petitions Committee on %{date}"

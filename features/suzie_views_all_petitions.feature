@@ -37,6 +37,18 @@ Feature: Suzy Signer views all petitions
     And I navigate to the next page of petitions
     Then I should see "2 of 3"
 
+  Scenario: Suzie browses petitions collecting signatures and can see the closing date
+    Given a petition "Good times" signed by "CHIC" that is collecting signatures
+    When I browse to see only "Collecting signatures" petitions
+    Then I should see "Good times"
+    And I should see "Collecting signatures until"
+
+  Scenario: Suzie browses open petitions and cannot see closing date for petitions not collecting signatures
+    Given a petition "Good times" signed by "CHIC" that is not collecting signatures
+    When I browse to see only "Collecting signatures" petitions
+    Then I should see "Good times"
+    But I should not see "Collecting signatures until"
+
   Scenario: Downloading the JSON data for petitions
     Given a set of petitions
     And I am on the all petitions page
