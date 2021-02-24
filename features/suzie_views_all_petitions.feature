@@ -22,8 +22,8 @@ Feature: Suzy Signer views all petitions
     When I browse to see only "Collecting signatures" petitions
     Then I should see "3 petitions"
     And I should see the following ordered list of petitions:
-     | Force supermarkets to give unsold food to charities |
      | Make every monday bank holiday                      |
+     | Force supermarkets to give unsold food to charities |
      | Free the wombles                                    |
     And the markup should be valid
 

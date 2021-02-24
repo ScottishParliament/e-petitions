@@ -71,7 +71,7 @@ class Petition < ActiveRecord::Base
   facet :tagged_in_moderation,         -> { tagged_in_moderation.by_most_recent_moderation_threshold_reached }
   facet :untagged_in_moderation,       -> { untagged_in_moderation.by_most_recent_moderation_threshold_reached }
 
-  facet :collecting_signatures, -> { not_archived.open_state.by_most_popular }
+  facet :collecting_signatures, -> { not_archived.open_state.by_most_recently_published }
   facet :under_consideration, -> { not_archived.closed_state.referred.by_most_recently_closed }
 
   filter :topic, ->(codes) { topics(codes) }
@@ -186,6 +186,10 @@ class Petition < ActiveRecord::Base
 
     def by_most_recently_completed
       reorder(completed_at: :desc)
+    end
+
+    def by_most_recently_published
+      reorder(open_at: :desc)
     end
 
     def by_most_recent_debate_outcome
