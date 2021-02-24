@@ -327,6 +327,7 @@ gd-GB:
         all: "All petitions (%{quantity})"
         open: "Open petitions (%{quantity})"
         collecting_signatures: "Collecting signatures (%{quantity})"
+        closed: "Closed (%{quantity})"
         debated: "Debated by Parliament (%{quantity})"
         referred: "Referred to the Committee (%{quantity})"
         rejected: "Rejected petitions (%{quantity})"
@@ -521,7 +522,7 @@ gd-GB:
       date_submitted: "Date submitted"
       date_completed: "Date closed"
       heading_closed: "Under consideration"
-      heading_completed: "Completed petition"
+      heading_completed: "Closed petition"
       standards_link: "petition standards"
       for_debate_date: "for a debate date"
       moderation_info:
