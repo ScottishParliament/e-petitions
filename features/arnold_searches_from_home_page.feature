@@ -21,12 +21,12 @@ Scenario: Arnold searches for petitions in English
   And I should see my search term "Wombles" filled in the search field
   And I should see "6 petitions"
   And I should see the following search results:
-    | Wombles                            | 1 signature                                     |
-    | Overthrow the Wombles              | 1 signature                                     |
-    | Uncle Bulgaria                     | 1 signature                                     |
-    | Common People                      | 1 signature                                     |
-    | The Wombles will rock Glasto       | 1 signature Referred to the Petitions Committee |
-    | Eavis vs the Wombles               | Rejected                                        |
+    | Wombles                      |                                     |
+    | Overthrow the Wombles        |                                     |
+    | Uncle Bulgaria               |                                     |
+    | Common People                |                                     |
+    | The Wombles will rock Glasto | Referred to the Petitions Committee |
+    | Eavis vs the Wombles         | Rejected                            |
 
 @gaelic
 Scenario: Arnold searches for petitions in Gaelic
@@ -35,10 +35,10 @@ Scenario: Arnold searches for petitions in Gaelic
   Then I should see my search term "Wombles" filled in the search field
   And I should see "6 petitions"
   And I should see the following search results:
-    | Wombles                            | 1 signature                                     |
-    | Thoir thairis na Wombles           | 1 signature                                     |
-    | Uncle Bulgaria                     | 1 signature                                     |
-    | Daoine Cumanta                     | 1 signature                                     |
-    | Bidh na Wombles a ’creag Glasto    | 1 signature Referred to the Petitions Committee |
-    | Eavis vs na Wombles                | Rejected                                        |
+    | Wombles                         |                                     |
+    | Thoir thairis na Wombles        |                                     |
+    | Uncle Bulgaria                  |                                     |
+    | Daoine Cumanta                  |                                     |
+    | Bidh na Wombles a ’creag Glasto | Referred to the Petitions Committee |
+    | Eavis vs na Wombles             | Rejected                            |
   And the markup should be valid

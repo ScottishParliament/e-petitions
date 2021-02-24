@@ -24,12 +24,12 @@ Feature: Suzy Singer searches by free text
     Then I should see my search term "Wombles" filled in the search field
     And I should see "6 petitions"
     And I should see the following search results:
-      | Wombles                            | 1 signature                                     |
-      | Overthrow the Wombles              | 1 signature                                     |
-      | Uncle Bulgaria                     | 1 signature                                     |
-      | Common People                      | 1 signature                                     |
-      | The Wombles will rock Glasto       | 1 signature Referred to the Petitions Committee |
-      | Eavis vs the Wombles               | Rejected                                        |
+      | Wombles                      |                                     |
+      | Overthrow the Wombles        |                                     |
+      | Uncle Bulgaria               |                                     |
+      | Common People                |                                     |
+      | The Wombles will rock Glasto | Referred to the Petitions Committee |
+      | Eavis vs the Wombles         | Rejected                            |
     And the markup should be valid
 
   @gaelic
@@ -38,12 +38,12 @@ Feature: Suzy Singer searches by free text
     Then I should see my search term "Wombles" filled in the search field
     And I should see "6 petitions"
     And I should see the following search results:
-      | Wombles                            | 1 signature                                     |
-      | Thoir thairis na Wombles           | 1 signature                                     |
-      | Uncle Bulgaria                     | 1 signature                                     |
-      | Daoine Cumanta                     | 1 signature                                     |
-      | Bidh na Wombles a ’creag Glasto    | 1 signature Referred to the Petitions Committee |
-      | Eavis vs na Wombles                | Rejected                                        |
+      | Wombles                         |                                     |
+      | Thoir thairis na Wombles        |                                     |
+      | Uncle Bulgaria                  |                                     |
+      | Daoine Cumanta                  |                                     |
+      | Bidh na Wombles a ’creag Glasto | Referred to the Petitions Committee |
+      | Eavis vs na Wombles             | Rejected                            |
     And the markup should be valid
 
   Scenario: Search for petitions collecting signatures
@@ -53,10 +53,10 @@ Feature: Suzy Singer searches by free text
     And I should not see "Wombles are great"
     And I should not see "The Wombles of Wimbledon"
     But I should see the following search results:
-      | Wombles                            | 1 signature |
-      | Overthrow the Wombles              | 1 signature |
-      | Uncle Bulgaria                     | 1 signature |
-      | Common People                      | 1 signature |
+      | Wombles                             |
+      | Overthrow the Wombles               |
+      | Uncle Bulgaria                      |
+      | Common People                       |
     And the markup should be valid
 
   Scenario: See search counts
@@ -68,18 +68,18 @@ Feature: Suzy Singer searches by free text
   Scenario: Search for open petitions using multiple search terms
     When I search for "Collecting signatures" with "overthrow the"
     Then I should see the following search results:
-      | Overthrow the Wombles | 1 signature |
+      | Overthrow the Wombles |
 
   @gaelic
   Scenario: Search for open petitions using multiple search terms in Gaelic
     When I search for "All petitions" with "Thoir thairis"
     Then I should see the following search results:
-      | Thoir thairis na Wombles | 1 signature |
+      | Thoir thairis na Wombles |
 
   Scenario: Search for petitions under consideration
     When I search for "Under consideration" with "WOMBLES"
     Then I should see the following search results:
-      | The Wombles will rock Glasto | 1 signature          |
+      | The Wombles will rock Glasto |
 
   Scenario: Paginate through open petitions
     Given 51 open petitions exist with action: "International development spending"
