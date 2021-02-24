@@ -1,6 +1,9 @@
 <h2><%= link_to petition.action, petition_path(petition) %></h2>
 <% case petition.state %>
 <% when "open" %>
+  <% if petition.collect_signatures? %>
+    <span><%= t('ui.petitions.search.results.items.facet_collecting_signatures.until', date: short_date_format(petition.closed_at)) %></span>
+  <% end %>
 <% when "closed" %>
   <% if petition.referred? %>
     <p><%= t(:"ui.petitions.search.results.items.facet_all.referred") %></p>

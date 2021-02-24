@@ -15,6 +15,16 @@ Feature: Suzy Signer views all petitions
     And I can choose the "Under consideration" facet
     And I can choose the "Closed" facet
 
+  Scenario: Suzie can see the closing date from the index page
+    Given a petition "Good times" signed by "CHIC" that is collecting signatures
+    When I view all petitions from the home page
+    Then I should see "Collecting signatures until"
+
+  Scenario: Suzie can't see the closing date from the index page if no petitions are collecting signatures
+    Given a petition "Good times" signed by "CHIC" that is not collecting signatures
+    When I view all petitions from the home page
+    Then I should not see "Collecting signatures until"
+
   Scenario: Suzie browses open petitions
     Given a petition "Free the wombles" exists with a signature count of 500
     And a petition "Force supermarkets to give unsold food to charities" exists with a signature count of 500000
