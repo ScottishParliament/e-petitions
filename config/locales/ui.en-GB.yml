@@ -469,7 +469,7 @@ en-GB:
             facet_all:
               rejected: "Rejected"
               completed: "Closed by the Public Petitions Committee on %{date}"
-              closed: "Under consideration"
+              closed: "Referred to the Public Petitions Committee on %{date}"
               referred: "Referred to the Public Petitions Committee on %{date}"
             facet_debated:
               debated_date: "Debated on %{date}"

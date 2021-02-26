@@ -20,21 +20,21 @@ Feature: Suzy Signer views all petitions
     When I view all petitions from the home page
     Then I should see "Collecting signatures until"
 
-  Scenario: Suzie can't see the closing date from the index page if no petitions are collecting signatures
-    Given a petition "Good times" signed by "CHIC" that is not collecting signatures
+  Scenario: Suzie can see the closing date from the index page if no petitions are collecting signatures
+    Given a petition "Good times" has been closed
     When I view all petitions from the home page
-    Then I should not see "Collecting signatures until"
+    Then I should see "Referred to the Public Petitions Committee on"
 
   Scenario: Suzie browses open petitions
-    Given a petition "Free the wombles" exists with a signature count of 500
-    And a petition "Force supermarkets to give unsold food to charities" exists with a signature count of 500000
-    And a petition "Make every monday bank holiday" exists with a signature count of 1000
+    Given a petition "Good Times" signed by "CHIC" that is collecting signatures
+    And a petition "Everybody Dance" signed by "CHIC" that is collecting signatures
+    And a petition "Le Freak" signed by "CHIC" that is collecting signatures
     When I browse to see only "Collecting signatures" petitions
     Then I should see "3 petitions"
     And I should see the following ordered list of petitions:
-     | Make every monday bank holiday                      |
-     | Force supermarkets to give unsold food to charities |
-     | Free the wombles                                    |
+      | Le Freak        |
+      | Everybody Dance |
+      | Good Times      |
     And the markup should be valid
 
   Scenario: Suzie browses open petitions and can see numbering in the list view
@@ -52,12 +52,6 @@ Feature: Suzy Signer views all petitions
     When I browse to see only "Collecting signatures" petitions
     Then I should see "Good times"
     And I should see "Collecting signatures until"
-
-  Scenario: Suzie browses open petitions and cannot see closing date for petitions not collecting signatures
-    Given a petition "Good times" signed by "CHIC" that is not collecting signatures
-    When I browse to see only "Collecting signatures" petitions
-    Then I should see "Good times"
-    But I should not see "Collecting signatures until"
 
   Scenario: Downloading the JSON data for petitions
     Given a set of petitions

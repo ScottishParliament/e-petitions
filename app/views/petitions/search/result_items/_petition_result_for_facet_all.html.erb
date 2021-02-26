@@ -5,11 +5,7 @@
     <span><%= t('ui.petitions.search.results.items.facet_collecting_signatures.until', date: short_date_format(petition.closed_at)) %></span>
   <% end %>
 <% when "closed" %>
-  <% if petition.referred? %>
-    <p><%= t(:"ui.petitions.search.results.items.facet_all.referred", date: short_date_format(petition.closed_at)) %></p>
-  <% else %>
-    <p><%= t(:"ui.petitions.search.results.items.facet_all.closed") %></p>
-  <% end %>
+  <p><%= t(:"ui.petitions.search.results.items.facet_all.referred", date: short_date_format(petition.closed_at)) %></p>
 <% when "completed" %>
   <p><%= t(:"ui.petitions.search.results.items.facet_all.completed", date: short_date_format(petition.completed_at)) %></p>
 <% when "rejected" %>

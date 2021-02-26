@@ -69,7 +69,7 @@ end
 Then(/^I should see (\d+) petitions counted in the open petitions section$/) do |count|
   within(:css, "section[aria-labelledby=open-petitions-heading]") do
     link_text = "See all petitions collecting signatures (#{count})"
-    expect(page).to have_link(link_text, href: petitions_path(state: :open))
+    expect(page).to have_link(link_text, href: petitions_path(state: :collecting_signatures))
   end
 end
 
