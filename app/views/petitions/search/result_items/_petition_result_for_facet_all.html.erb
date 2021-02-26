@@ -6,7 +6,7 @@
   <% end %>
 <% when "closed" %>
   <% if petition.referred? %>
-    <p><%= t(:"ui.petitions.search.results.items.facet_all.referred") %></p>
+    <p><%= t(:"ui.petitions.search.results.items.facet_all.referred", date: short_date_format(petition.closed_at)) %></p>
   <% else %>
     <p><%= t(:"ui.petitions.search.results.items.facet_all.closed") %></p>
   <% end %>

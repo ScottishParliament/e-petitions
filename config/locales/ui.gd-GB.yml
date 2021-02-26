@@ -468,9 +468,9 @@ gd-GB:
               until: "Collecting signatures until %{date}"
             facet_all:
               rejected: "Rejected"
-              completed: "Completed by the Public Petitions Committee on %{date}"
-              closed: "Closed for new signatures"
-              referred: "Referred to the Public Petitions Committee"
+              completed: "Closed by the Public Petitions Committee on %{date}"
+              closed: "Under consideration"
+              referred: "Referred to the Public Petitions Committee on %{date}"
             facet_debated:
               debated_date: "Debated on %{date}"
             facet_referred:

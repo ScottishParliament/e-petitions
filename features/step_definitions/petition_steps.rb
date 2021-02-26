@@ -30,6 +30,10 @@ Given(/^a petition "([^"]*)" with a scheduled debate date of "(.*?)"$/) do |acti
   @petition = FactoryBot.create(:scheduled_debate_petition, action: action, scheduled_debate_date: date)
 end
 
+Given(/^an archived petition with action: "([^"]*)"$/) do |action|
+  @petition = FactoryBot.create(:archived_petition, action: action)
+end
+
 Given(/^the petition "([^"]*)" has (\d+) validated and (\d+) pending signatures$/) do |petition_action, no_validated, no_pending|
   petition = Petition.find_by(action: petition_action)
   (no_validated - 1).times { FactoryBot.create(:validated_signature, petition: petition) }
