@@ -49,8 +49,8 @@ en-GB:
           - :overdue_in_moderation
           - :tagged_in_moderation
           - :untagged_in_moderation
-          - :open
-          - :referred
+          - :collecting_signatures
+          - :under_consideration
           - :rejected
           - :hidden
           - :completed
@@ -67,6 +67,8 @@ en-GB:
           tagged_in_moderation: "Awaiting moderation - tagged (%{quantity})"
           untagged_in_moderation: "Awaiting moderation - untagged (%{quantity})"
           open: "Open (%{quantity})"
+          collecting_signatures: "Collecting signatures (%{quantity})"
+          under_consideration: "Under consideration (%{quantity})"
           referred: "Referred (%{quantity})"
           rejected: "Rejected (%{quantity})"
           hidden: "Hidden (%{quantity})"
