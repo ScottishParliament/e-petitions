@@ -119,6 +119,21 @@ module AdminHelper
     end
   end
 
+  def format_petition_status(status)
+    formatted = case status
+                when 'open'
+                  'collecting_signatures'
+                when 'referred'
+                  'under_consideration'
+                when 'completed'
+                  'closed'
+                else
+                  status
+                end
+
+    formatted.humanize
+  end
+
   private
 
   def admin_petition_facets

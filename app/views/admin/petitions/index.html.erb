@@ -77,7 +77,7 @@
           <% end %>
         </td>
         <td class="petition-id"><%= petition.to_param %></td>
-        <td class="state"><%= petition.state.humanize %></td>
+        <td class="state"><%= format_petition_status(petition.state) %></td>
         <% if show_tags_column?(@petitions.scope) %>
           <td class="tags"><%= tag_names(petition.tags).presence || "—" %></td>
         <% else %>
