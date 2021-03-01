@@ -250,18 +250,18 @@ end
 
 When(/^I fill in the English petition details$/) do
   within(".//fieldset[@id='english-details']") do
-    fill_in "Action", with: "Do stuff!"
-    fill_in "Background", with: "For reasons"
+    fill_in "Title", with: "Do stuff!"
+    fill_in "Summary", with: "For reasons"
     fill_in "Previous action", with: "Here's what I've done before"
-    fill_in "Additional details", with: "Here's some more reasons"
+    fill_in "Background information", with: "Here's some more reasons"
   end
 end
 
 When(/^I fill in the Gaelic petition details$/) do
   within(".//fieldset[@id='gaelic-details']") do
-    fill_in "Action", with: "Dèan stuth!"
-    fill_in "Background", with: "Airson adhbharan"
+    fill_in "Title", with: "Dèan stuth!"
+    fill_in "Summary", with: "Airson adhbharan"
     fill_in "Previous action", with: "Seo na rinn mi roimhe"
-    fill_in "Additional details", with: "Seo beagan a bharrachd adhbharan"
+    fill_in "Background information", with: "Seo beagan a bharrachd adhbharan"
   end
 end

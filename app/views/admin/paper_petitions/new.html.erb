@@ -10,14 +10,14 @@
           <legend><h2>Petition details in English</h2></legend>
         <% end %>
         <%= form_row for: [form.object, :action_en] do %>
-          <%= form.label :action_en, "Action", class: "form-label" %>
+          <%= form.label :action_en, "Title", class: "form-label" %>
           <%= error_messages_for_field @paper_petition, :action_en %>
           <%= form.text_area :action_en, tabindex: increment, rows: 3, class: "form-control", data: { max_length: 100 } %>
           <p class="character-count">100 characters max</p>
         <% end %>
 
         <%= form_row for: [form.object, :background_en] do %>
-          <%= form.label :background_en, "Background", class: "form-label" %>
+          <%= form.label :background_en, "Summary", class: "form-label" %>
           <%= error_messages_for_field @paper_petition, :background_en %>
           <%= form.text_area :background_en, tabindex: increment, rows: 5, class: "form-control", data: { max_length: 500 } %>
           <p class="character-count">500 characters max</p>
@@ -31,7 +31,7 @@
         <% end %>
 
         <%= form_row for: [form.object, :additional_details_en] do %>
-          <%= form.label :additional_details_en, "Additional details", class: "form-label" %>
+          <%= form.label :additional_details_en, "Background information", class: "form-label" %>
           <%= error_messages_for_field @paper_petition, :additional_details_en %>
           <%= form.text_area :additional_details_en, tabindex: increment, rows: 7, class: "form-control", data: { max_length: 1100 } %>
           <p class="character-count">1100 characters max</p>
@@ -42,14 +42,14 @@
         <fieldset id="gaelic-details">
           <legend><h2>Petition details in Gaelic</h2></legend>
           <%= form_row for: [form.object, :action_gd] do %>
-            <%= form.label :action_gd, "Action", class: "form-label" %>
+            <%= form.label :action_gd, "Title", class: "form-label" %>
             <%= error_messages_for_field @paper_petition, :action_gd %>
             <%= form.text_area :action_gd, tabindex: increment, rows: 3, class: "form-control", data: { max_length: 100 } %>
             <p class="character-count">100 characters max</p>
           <% end %>
 
           <%= form_row for: [form.object, :background_gd] do %>
-            <%= form.label :background_gd, "Background", class: "form-label" %>
+            <%= form.label :background_gd, "Summary", class: "form-label" %>
             <%= error_messages_for_field @paper_petition, :background_gd %>
             <%= form.text_area :background_gd, tabindex: increment, rows: 5, class: "form-control", data: { max_length: 500 } %>
             <p class="character-count">500 characters max</p>
@@ -63,7 +63,7 @@
           <% end %>
 
           <%= form_row for: [form.object, :additional_details_gd] do %>
-            <%= form.label :additional_details_gd, "Additional details", class: "form-label" %>
+            <%= form.label :additional_details_gd, "Background information", class: "form-label" %>
             <%= error_messages_for_field @paper_petition, :additional_details_gd %>
             <%= form.text_area :additional_details_gd, tabindex: increment, rows: 7, class: "form-control", data: { max_length: 1100 } %>
             <p class="character-count">1100 characters max</p>

@@ -13,14 +13,14 @@ Feature: Moderator submits a paper petition
     Then I should see "Submit a paper petition"
     When I press "Save"
     Then I should see "Unable to submit paper petition - please check the form for errors"
-    And I should see "Action must be completed"
-    And I should see "Background must be completed"
+    And I should see "Title must be completed"
+    And I should see "Summary must be completed"
     And I should see "Previous action must be completed"
-    And I should see "Additional details must be completed"
+    And I should see "Background information must be completed"
     When I fill in the English petition details
     And I fill in the Gaelic petition details
     And I press "Save"
-    Then I should not see "Action must be completed"
+    Then I should not see "Title must be completed"
     But I should see "Signature count must be completed"
     When I fill in "Signature count" with "25"
     And I press "Save"

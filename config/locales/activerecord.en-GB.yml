@@ -5,25 +5,25 @@ en-GB:
         paper_petition:
           attributes:
             action_en:
-              blank: "Action must be completed"
-              invalid: "Action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+              blank: "Title must be completed"
+              invalid: "Title can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
-                other: "Action is too long (maximum is %{count} characters)"
+                other: "Title is too long (maximum is %{count} characters)"
             action_gd:
-              blank: "Action must be completed"
-              invalid: "Action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+              blank: "Title must be completed"
+              invalid: "Title can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
-                other: "Action is too long (maximum is %{count} characters)"
+                other: "Title is too long (maximum is %{count} characters)"
             background_en:
-              blank: "Background must be completed"
-              invalid: "Background can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+              blank: "Summary must be completed"
+              invalid: "Summary can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
-                other: "Background is too long (maximum is %{count} characters)"
+                other: "Summary is too long (maximum is %{count} characters)"
             background_gd:
-              blank: "Background must be completed"
-              invalid: "Background can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+              blank: "Summary must be completed"
+              invalid: "Summary can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
-                other: "Background is too long (maximum is %{count} characters)"
+                other: "Summary is too long (maximum is %{count} characters)"
             previous_action_en:
               blank: "Previous action must be completed"
               invalid: "Previous action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
@@ -35,15 +35,15 @@ en-GB:
               too_long:
                 other: "Previous action is too long (maximum is %{count} characters)"
             additional_details_en:
-              blank: "Additional details must be completed"
-              invalid: "Additional details can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+              blank: "Background information must be completed"
+              invalid: "Background information can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
-                other: "Additional details is too long (maximum is %{count} characters)"
+                other: "Background information is too long (maximum is %{count} characters)"
             additional_details_gd:
-              blank: "Additional details must be completed"
-              invalid: "Additional details can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+              blank: "Background information must be completed"
+              invalid: "Background information can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
-                other: "Additional details is too long (maximum is %{count} characters)"
+                other: "Background information is too long (maximum is %{count} characters)"
             locale:
               blank: "Location must be completed"
             location_code:
