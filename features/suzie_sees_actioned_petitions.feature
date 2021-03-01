@@ -37,7 +37,7 @@ Feature: Suzie sees actioned petitions
     And there are 2 petitions debated by Parliament
     And I am on the home page
     Then I should see 7 petitions counted in the referral threshold section
-    And I should see 3 petitions listed in the referral threshold section
+    And I should see 4 petitions listed in the referral threshold section
     And I should see 2 petitions counted in the debate threshold section
     And I should see 2 petitions listed in the debate threshold section
 

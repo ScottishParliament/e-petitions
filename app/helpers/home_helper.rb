@@ -7,6 +7,11 @@ module HomeHelper
       :not_debated
     ]
 
+    LIMITS = {
+      :open => 2,
+      :referred => 4
+    }
+
     delegate :each, to: :actioned
 
     def empty?
@@ -36,7 +41,7 @@ module HomeHelper
 
       FACETS.each_with_object({}) do |action, actioned|
         facet = scope.instance_exec(&facets[action])
-        actioned[action] = { count: facet.count, list: facet.limit(limit) }
+        actioned[action] = { count: facet.count, list: facet.limit(LIMITS[action] || limit) }
       end
     end
   end
