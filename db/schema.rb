@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_15_143808) do
+ActiveRecord::Schema.define(version: 2021_03_01_074228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "intarray"
@@ -277,8 +277,8 @@ ActiveRecord::Schema.define(version: 2021_02_15_143808) do
     t.string "background_gd", limit: 3000
     t.datetime "completed_at"
     t.datetime "referred_at"
-    t.string "abms_link_en"
-    t.string "abms_link_gd"
+    t.string "scot_parl_link_en"
+    t.string "scot_parl_link_gd"
     t.boolean "submitted_on_paper", default: false, null: false
     t.date "submitted_on"
     t.datetime "archived_at"

@@ -1,4 +1,4 @@
-class Admin::AbmsLinkController < Admin::AdminController
+class Admin::ScotParlLinkController < Admin::AdminController
   before_action :fetch_petition
 
   def show
@@ -20,6 +20,6 @@ class Admin::AbmsLinkController < Admin::AdminController
   end
 
   def petition_params
-    params.require(:petition).permit(:abms_link_en, :abms_link_gd)
+    params.require(:petition).permit(:scot_parl_link_en, :scot_parl_link_gd)
   end
 end

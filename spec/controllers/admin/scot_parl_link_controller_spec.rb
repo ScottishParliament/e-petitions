@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Admin::AbmsLinkController, type: :controller, admin: true do
+RSpec.describe Admin::ScotParlLinkController, type: :controller, admin: true do
 
   let!(:petition) { FactoryBot.create(:closed_petition) }
 
@@ -59,8 +59,8 @@ RSpec.describe Admin::AbmsLinkController, type: :controller, admin: true do
     describe "PATCH /update" do
       let(:attributes) do
         {
-          abms_link_en: "https://beta.parliament.scot/getting-involved/petitions/PE01319",
-          abms_link_gd: "https://beta.parlamaid-alba.scot/a-dol-an-sas/athchuingean/PE01319"
+          scot_parl_link_en: "https://beta.parliament.scot/getting-involved/petitions/PE01319",
+          scot_parl_link_gd: "https://beta.parlamaid-alba.scot/a-dol-an-sas/athchuingean/PE01319"
         }
       end
 
@@ -84,7 +84,7 @@ RSpec.describe Admin::AbmsLinkController, type: :controller, admin: true do
         expect {
           petition.reload
         }.to change {
-          petition.abms_link_en
+          petition.scot_parl_link_en
         }.from(nil).to(a_string_matching("beta.parliament.scot"))
       end
 
@@ -92,7 +92,7 @@ RSpec.describe Admin::AbmsLinkController, type: :controller, admin: true do
         expect {
           petition.reload
         }.to change {
-          petition.abms_link_gd
+          petition.scot_parl_link_gd
         }.from(nil).to(a_string_matching("beta.parlamaid-alba.scot"))
       end
     end

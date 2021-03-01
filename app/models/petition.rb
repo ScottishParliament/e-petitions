@@ -35,7 +35,7 @@ class Petition < ActiveRecord::Base
 
   has_perishable_token called: 'sponsor_token'
 
-  translate :action, :additional_details, :background, :previous_action, :abms_link
+  translate :action, :additional_details, :background, :previous_action, :scot_parl_link
 
   before_save :build_pe_number, if: :publishing?
   before_save :update_debate_state, if: :scheduled_debate_date_changed?

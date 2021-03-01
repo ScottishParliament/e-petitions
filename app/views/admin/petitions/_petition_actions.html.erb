@@ -31,7 +31,7 @@
       </li>
 
       <li class="petition-action">
-        <%= render 'petition_action_abms_link', petition: @petition %>
+        <%= render 'petition_action_scot_parl_link', petition: @petition %>
       </li>
 
       <% if !Site.disable_thresholds_and_debates? && @petition.can_have_debate_added? %>

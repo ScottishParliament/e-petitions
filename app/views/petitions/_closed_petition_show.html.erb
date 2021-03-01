@@ -11,8 +11,8 @@
         <% end %>
       </h2>
 
-      <% if @petition.abms_link? %>
-        <p class="secondary"><%= t(:"ui.petitions.referral_threshold.referred.link_html", link: @petition.abms_link) %></p>
+      <% if @petition.scot_parl_link? %>
+        <p class="secondary"><%= t(:"ui.petitions.referral_threshold.referred.link_html", link: @petition.scot_parl_link) %></p>
       <% end %>
     </section>
   <% else %>
