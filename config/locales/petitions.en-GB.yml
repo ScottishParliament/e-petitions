@@ -74,7 +74,7 @@ en-GB:
           awaiting_debate_date: "Awaiting a debate by Parliament (%{quantity})"
           with_debate_outcome: "Has been debated by Parliament (%{quantity})"
           in_debate_queue: "In debate queue (%{quantity})"
-          completed: "Completed (%{quantity})"
+          completed: "Closed (%{quantity})"
           archived: "Archived (%{quantity})"
 
     action_counts:
