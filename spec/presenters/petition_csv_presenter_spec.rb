@@ -12,7 +12,7 @@ RSpec.describe PetitionCSVPresenter do
 
   describe ".fields" do
     it "returns a list of all the fields to serialize" do
-      expect(described_class.fields).to be_a Array
+      expect(described_class.fields).to be_an Array
     end
   end
 
