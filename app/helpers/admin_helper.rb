@@ -127,6 +127,8 @@ module AdminHelper
                   'under_consideration'
                 when 'completed'
                   'closed'
+                when 'hidden'
+                  'rejected'
                 else
                   status
                 end

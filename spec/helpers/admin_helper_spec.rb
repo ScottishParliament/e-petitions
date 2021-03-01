@@ -82,7 +82,7 @@ RSpec.describe AdminHelper, type: :helper do
     end
 
     it "generates the correct option for 'completed'" do
-      expect(subject).to have_css("option:nth-of-type(16)[value='completed']", text: "Completed (16)")
+      expect(subject).to have_css("option:nth-of-type(16)[value='completed']", text: "Closed (16)")
     end
 
     it "generates the correct option for 'archived'" do
@@ -354,6 +354,7 @@ RSpec.describe AdminHelper, type: :helper do
         ["completed", "Closed"],
         ["open", "Collecting signatures"],
         ["referred", "Under consideration"],
+        ["hidden", "Rejected"],
         ["something else", "Something else"]
       ]
 

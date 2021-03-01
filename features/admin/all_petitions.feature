@@ -74,11 +74,8 @@ Feature: A moderator user views all petitions
 
     And I filter the list to show "Rejected" petitions
     Then I should see the following list of petitions:
+     | My hidden petition   |
      | My rejected petition |
-
-    And I filter the list to show "Hidden" petitions
-    Then I should see the following list of petitions:
-     | My hidden petition |
 
     And I filter the list to show "Awaiting a debate by Parliament" petitions
     Then I should see the following list of petitions:
