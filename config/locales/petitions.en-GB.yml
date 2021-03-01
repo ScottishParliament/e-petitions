@@ -79,7 +79,7 @@ en-GB:
 
     action_counts:
       in_moderation_html: "<span class=\"count\">%{formatted_count}</span> Moderation queue"
-      referred_html: "<span class=\"count\">%{formatted_count}</span> Referred queue"
+      referred_html: "<span class=\"count\">%{formatted_count}</span> Under consideration"
       in_debate_queue_html: "<span class=\"count\">%{formatted_count}</span> Debate queue"
       completed_html: "<span class=\"count\">%{formatted_count}</span> Closed"
       all_html: "<span class=\"count\">%{formatted_count}</span> All petitions"

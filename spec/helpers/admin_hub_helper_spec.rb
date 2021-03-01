@@ -115,13 +115,13 @@ RSpec.describe AdminHubHelper, type: :helper do
 
       context "when the action count is 1" do
         it "returns a correctly formatted action count" do
-          expect(helper.action_count(:referred, 1)).to eq("<span class=\"count\">1</span> Referred queue")
+          expect(helper.action_count(:referred, 1)).to eq("<span class=\"count\">1</span> Under consideration")
         end
       end
 
       context "when the action count is 1000" do
         it "returns a correctly formatted action count" do
-          expect(helper.action_count(:referred, 1000)).to eq("<span class=\"count\">1,000</span> Referred queue")
+          expect(helper.action_count(:referred, 1000)).to eq("<span class=\"count\">1,000</span> Under consideration")
         end
       end
     end
