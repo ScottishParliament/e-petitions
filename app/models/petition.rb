@@ -1099,4 +1099,18 @@ class Petition < ActiveRecord::Base
   def thresholds_disabled?
     Site.disable_thresholds_and_debates?
   end
+
+  def status
+    if closed? && !completed?
+      'under_consideration'
+    elsif completed?
+      'closed'
+    elsif open?
+      'collecting_signatures'
+    elsif hidden?
+      'rejected'
+    else
+      state
+    end
+  end
 end

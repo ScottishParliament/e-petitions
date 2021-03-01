@@ -347,21 +347,4 @@ RSpec.describe AdminHelper, type: :helper do
       end
     end
   end
-
-  describe "#format_petition_status" do
-    mappings =
-      [
-        ["completed", "Closed"],
-        ["open", "Collecting signatures"],
-        ["referred", "Under consideration"],
-        ["hidden", "Rejected"],
-        ["something else", "Something else"]
-      ]
-
-    mappings.each do |status, mapping|
-      it "maps '#{status}' to '#{mapping}" do
-        expect(helper.format_petition_status(status)).to eq mapping
-      end
-    end
-  end
 end

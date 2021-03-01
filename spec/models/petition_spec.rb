@@ -2962,4 +2962,22 @@ RSpec.describe Petition, type: :model do
       }.from("I've campaigned about it for years").to(nil)
     end
   end
+
+  describe "#status" do
+    mapping = [
+      ['closed', 'under_consideration'],
+      ['completed', 'closed'],
+      ['open', 'collecting_signatures'],
+      ['hidden', 'rejected'],
+      ['pending', 'pending']
+    ]
+
+    mapping.each do |state, status|
+      context "when the petition is #{state}" do
+        it "returns '#{status}'" do
+          expect(FactoryBot.build("#{state}_petition").status).to eq status
+        end
+      end
+    end
+  end
 end
