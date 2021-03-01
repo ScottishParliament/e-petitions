@@ -50,8 +50,8 @@ en-GB:
       nav:
         home: "Home"
         privacy: "Privacy"
-        contact: "Contact"
         feedback: "Feedback"
+        contact: "Contact"
         cookies: "Cookies"
         all_petitions: "All petitions"
         start_a_petition: "Start a petition"
@@ -540,7 +540,7 @@ en-GB:
             </div>
           </details>
       created_by: "Created by"
-      date_closed: "Date closed"
+      date_closed: "Date referred"
       other_lists: "Other lists of petitions"
       heading_open: "Collecting signatures"
       more_details: "More details"
@@ -552,11 +552,11 @@ en-GB:
       for_debate_date: "for a debate date"
       moderation_info:
         heading: "We’re checking this petition"
-        try_again_later: "Please try again in a few days."
+        try_again_later: "We will get in touch with you as soon as we can. Over a holiday or recess period it may take longer for us to get back to you."
         min_supporters_reached: |
           %{min_supporters} people have already supported %{creator_name}’s petition.
         checking_standards_html: |-
-          We need to check it meets the %{standards_link} before we publish it.
+          The petitions team need to check your petition meets the Parliament's rules and is clear.
       notice_rejected: "This petition was rejected"
       heading_rejected: "Rejected petition"
       topic_debated_on: "This topic was debated on %{date}"
@@ -573,25 +573,23 @@ en-GB:
         hint_optional: "Background information, evidence and references"
       referral_threshold:
         waiting:
-          heading: "The Public Petitions Committee will consider this petition"
-          referral_threshold: |-
-            All petitions with more than %{threshold} signatures will be discussed by the Public Petitions Committee after they have finished collecting signatures
-          referral_waiting_time: |-
-            for the Public Petitions Committee to consider this petition
+          heading: "This petition is now under consideration by the Public Petitions Committee"
+          link_html: |-
+            <a href=\"%{link}\">Find out about the Public Petitions Committee’s discussion of this petition</a>
         closed:
-          heading: "Closed for new signatures"
-          description: |-
-            A decision on whether to refer or reject this petition will be made shortly - petitions that collect more than %{threshold} signatures are discussed by the Petitions Committee.
+          heading: "This petition is now under consideration by the Public Petitions Committee"
+          link_html: |-
+            <a href=\"%{link}\">Find out about the Public Petitions Committee’s discussion of this petition</a>
         referred:
           heading: |-
-            This petition is now under consideration by the Petitions Committee
+            This petition is now under consideration by the Public Petitions Committee
           link_html: |-
             <a href="%{link}">Find out about the Public Petitions Committee’s discussion of this petition</a>
         completed:
           heading: |-
-            This petition was considered by the Public Petitions Committee
+            This petition was considered by the Scottish Parliament
           link_html: |-
-            <a href="%{link}">Find out about the Public Petitions Committee’s discussion of this petition</a>
+            <a href=\"%{link}\">Find out about the Scottish Parliament’s discussion of this petition</a>
         needs_more_signatures:
           heading: "At %{threshold} signatures…"
           referral_threshold: |-

@@ -13,7 +13,6 @@ Feature: Suzie views a petition
     Given a sponsored petition "Spend more money on Defence"
     When I view the petition
     Then I should see "We’re checking this petition"
-    And I should see a link called "rules for petitions" linking to "/help#standards"
 
   Scenario: Suzie views an open petition
     Given an open petition "Spend more money on Defence"

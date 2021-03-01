@@ -21,7 +21,9 @@
         <%= t(:"ui.petitions.referral_threshold.closed.heading") %>
       </h2>
 
-      <p><%= t(:"ui.petitions.referral_threshold.closed.description", threshold: Site.formatted_threshold_for_referral) %></p>
+      <% if @petition.scot_parl_link? %>
+        <p><%= t(:"ui.petitions.referral_threshold.closed.link_html", link: @petition.scot_parl_link) %></p>
+      <% end %>
     </section>
   <% end %>
 
