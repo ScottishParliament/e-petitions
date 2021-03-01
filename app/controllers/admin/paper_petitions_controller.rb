@@ -24,6 +24,7 @@ class Admin::PaperPetitionsController < Admin::AdminController
       action_en action_gd
       background_en background_gd
       additional_details_en additional_details_gd
+      previous_action_en previous_action_gd
       signature_count locale submitted_on
       name email phone_number address postcode
     ]

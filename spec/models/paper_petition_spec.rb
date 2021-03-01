@@ -13,6 +13,7 @@ RSpec.describe PaperPetition, type: :model do
     [
       [%i[action_en action_gd], 100],
       [%i[background_en background_gd address], 500],
+      [%i[previous_action_en previous_action_gd], 500],
       [%i[additional_details_en additional_details_gd], 1100],
       [%i[email postcode], 255],
       [%i[phone_number], 31]
@@ -23,8 +24,8 @@ RSpec.describe PaperPetition, type: :model do
     end
 
     %i[
-      action_en background_en additional_details_en
-      action_gd background_gd additional_details_gd
+      action_en background_en additional_details_en previous_action_en
+      action_gd background_gd additional_details_gd previous_action_gd
       name phone_number address
     ].each do |attribute|
       it { is_expected.not_to allow_value("-").for(attribute).with_message(:invalid) }
@@ -74,6 +75,20 @@ RSpec.describe PaperPetition, type: :model do
     it "strips whitespace from the beginning and end" do
       subject.background_gd = " Am resymau  "
       expect(subject.background_gd).to eq("Am resymau")
+    end
+  end
+
+  describe "#previous_action_en=" do
+    it "strips whitespace from the beginning and end" do
+      subject.previous_action_en = " For reasons  "
+      expect(subject.previous_action_en).to eq("For reasons")
+    end
+  end
+
+  describe "#previous_action_gd=" do
+    it "strips whitespace from the beginning and end" do
+      subject.previous_action_gd = " Am resymau  "
+      expect(subject.previous_action_gd).to eq("Am resymau")
     end
   end
 
@@ -167,10 +182,12 @@ RSpec.describe PaperPetition, type: :model do
     context "when the params are valid" do
       let(:params) do
         {
-          action_en: "Do stuff!", action_gd: "Gwnewch bethau!",
-          background_en: "For reasons", background_gd: "Am resymau",
+          action_en: "Do stuff!", action_gd: "Dèan stuth!",
+          background_en: "For reasons", background_gd: "Airson adhbharan",
+          previous_action_en: "Here's what I've done before",
+          previous_action_gd: "Seo na rinn mi roimhe",
           additional_details_en: "Here's some more reasons",
-          additional_details_gd: "Dyma ychydig mwy o resymau",
+          additional_details_gd: "Seo beagan a bharrachd adhbharan",
           locale: "gd-GB", signature_count: 6000, submitted_on: "2020-04-30",
           name: "Alice Smith", email: "alice@example.com", postcode: "G34 0BX",
           address: "1 Nowhere Road\nGlasgow", phone_number: "0141 496 1234"
@@ -189,11 +206,13 @@ RSpec.describe PaperPetition, type: :model do
           submitted_on_paper: true,
           submitted_on: Date.civil(2020, 4, 30),
           action_en: "Do stuff!",
-          action_gd: "Gwnewch bethau!",
+          action_gd: "Dèan stuth!",
           background_en: "For reasons",
-          background_gd: "Am resymau",
+          background_gd: "Airson adhbharan",
+          previous_action_en: "Here's what I've done before",
+          previous_action_gd: "Seo na rinn mi roimhe",
           additional_details_en: "Here's some more reasons",
-          additional_details_gd: "Dyma ychydig mwy o resymau",
+          additional_details_gd: "Seo beagan a bharrachd adhbharan",
           locale: "gd-GB", signature_count: 6000,
           open_at: Time.utc(2020, 3, 1, 12, 0, 0),
           closed_at: Time.utc(2020, 4, 30, 11, 0, 0),

@@ -1,3 +1,5 @@
+require 'postcode_sanitizer'
+
 class PaperPetition
   include ActiveModel::Model
   include ActiveModel::Attributes
@@ -9,6 +11,8 @@ class PaperPetition
   attribute :action_gd, :string
   attribute :background_en, :string
   attribute :background_gd, :string
+  attribute :previous_action_en, :string
+  attribute :previous_action_gd, :string
   attribute :additional_details_en, :string
   attribute :additional_details_gd, :string
   attribute :locale, :string, default: "en-GB"
@@ -42,10 +46,10 @@ class PaperPetition
   end
 
   with_options length: { maximum: 500 } do
-    validates :background_en, :address
+    validates :background_en, :previous_action_en, :address
 
     with_options unless: :gaelic_disabled? do
-      validates :background_gd
+      validates :background_gd, :previous_action_gd
     end
   end
 
@@ -62,11 +66,11 @@ class PaperPetition
   end
 
   with_options format: { with: /\A[^-=+@]/, allow_blank: true } do
-    validates :action_en, :background_en, :additional_details_en
+    validates :action_en, :background_en, :previous_action_en, :additional_details_en
     validates :name, :phone_number, :address
 
     with_options unless: :gaelic_disabled? do
-      validates :action_gd, :background_gd, :additional_details_gd
+      validates :action_gd, :background_gd, :previous_action_gd, :additional_details_gd
     end
   end
 
@@ -93,6 +97,22 @@ class PaperPetition
 
   def background_gd=(value)
     super(value.to_s.strip)
+  end
+
+  def previous_action_en=(value)
+    super(value.to_s.strip)
+  end
+
+  def previous_action_gd=(value)
+    super(value.to_s.strip)
+  end
+
+  def previous_action_en?
+    previous_action_en.present?
+  end
+
+  def previous_action_gd?
+    previous_action_gd.present?
   end
 
   def additional_details_en=(value)
@@ -145,8 +165,10 @@ class PaperPetition
     {
       state: "closed", submitted_on_paper: true,
       action_en: action_en, background_en: background_en,
+      previous_action_en: previous_action_en,
       additional_details_en: additional_details_en,
       action_gd: action_gd, background_gd: background_gd,
+      previous_action_gd: previous_action_gd,
       additional_details_gd: additional_details_gd,
       locale: locale, signature_count: signature_count,
       submitted_on: submitted_on, open_at: open_at,

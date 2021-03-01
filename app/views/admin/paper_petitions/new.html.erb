@@ -23,16 +23,18 @@
           <p class="character-count">500 characters max</p>
         <% end %>
 
-        <%= content_tag :details, open: @paper_petition.additional_details_en? do %>
-          <summary>
-            <%= form.label :additional_details_en, "Additional details" %>
-          </summary>
+        <%= form_row for: [form.object, :previous_action_en] do %>
+          <%= form.label :previous_action_en, "Previous action", class: "form-label" %>
+          <%= error_messages_for_field @paper_petition, :previous_action_en %>
+          <%= form.text_area :previous_action_en, tabindex: increment, rows: 5, class: "form-control", data: { max_length: 500 } %>
+          <p class="character-count">500 characters max</p>
+        <% end %>
 
-          <%= form_row for: [form.object, :additional_details_en] do %>
-            <%= error_messages_for_field @paper_petition, :additional_details_en %>
-            <%= form.text_area :additional_details_en, tabindex: increment, rows: 7, class: "form-control", data: { max_length: 1100 } %>
-            <p class="character-count">1100 characters max</p>
-          <% end %>
+        <%= form_row for: [form.object, :additional_details_en] do %>
+          <%= form.label :additional_details_en, "Additional details", class: "form-label" %>
+          <%= error_messages_for_field @paper_petition, :additional_details_en %>
+          <%= form.text_area :additional_details_en, tabindex: increment, rows: 7, class: "form-control", data: { max_length: 1100 } %>
+          <p class="character-count">1100 characters max</p>
         <% end %>
       </fieldset>
 
@@ -53,17 +55,18 @@
             <p class="character-count">500 characters max</p>
           <% end %>
 
-          <%= content_tag :details, open: @paper_petition.additional_details_gd? do %>
-            <summary>
-              <%= form.label :additional_details_gd, "Additional details" %>
-            </summary>
+          <%= form_row for: [form.object, :previous_action_gd] do %>
+            <%= form.label :previous_action_gd, "Previous action", class: "form-label" %>
+            <%= error_messages_for_field @paper_petition, :previous_action_gd %>
+            <%= form.text_area :previous_action_gd, tabindex: increment, rows: 5, class: "form-control", data: { max_length: 500 } %>
+            <p class="character-count">500 characters max</p>
+          <% end %>
 
-            <%= form_row for: [form.object, :additional_details_gd] do %>
-              <%= form.label :additional_details_gd, "Additional details", class: "form-label" %>
-              <%= error_messages_for_field @paper_petition, :additional_details_gd %>
-              <%= form.text_area :additional_details_gd, tabindex: increment, rows: 7, class: "form-control", data: { max_length: 1100 } %>
-              <p class="character-count">1100 characters max</p>
-            <% end %>
+          <%= form_row for: [form.object, :additional_details_gd] do %>
+            <%= form.label :additional_details_gd, "Additional details", class: "form-label" %>
+            <%= error_messages_for_field @paper_petition, :additional_details_gd %>
+            <%= form.text_area :additional_details_gd, tabindex: increment, rows: 7, class: "form-control", data: { max_length: 1100 } %>
+            <p class="character-count">1100 characters max</p>
           <% end %>
         </fieldset>
       <% end %>

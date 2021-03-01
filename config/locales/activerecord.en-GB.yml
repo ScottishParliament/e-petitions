@@ -24,6 +24,14 @@ en-GB:
               invalid: "Background can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
                 other: "Background is too long (maximum is %{count} characters)"
+            previous_action_en:
+              invalid: "Previous action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+              too_long:
+                other: "Previous action is too long (maximum is %{count} characters)"
+            previous_action_gd:
+              invalid: "Previous action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+              too_long:
+                other: "Previous action is too long (maximum is %{count} characters)"
             additional_details_en:
               invalid: "Additional details can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
