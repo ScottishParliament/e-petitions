@@ -552,7 +552,7 @@ gd-GB:
       additional_details:
         label: "Background information"
         help_html: ""
-        hint_optional: "Optional - background information, evidence and references"
+        hint_optional: "Background information, evidence and references"
       referral_threshold:
         waiting:
           heading: "The Public Petitions Committee will consider this petition"

@@ -4,6 +4,8 @@ RSpec.describe PaperPetition, type: :model do
   describe "validations" do
     %i[
       action_en background_en action_gd background_gd
+      previous_action_en previous_action_gd
+      additional_details_en additional_details_gd
       locale location_code signature_count submitted_on
       name email phone_number address postcode
     ].each do |attribute|

@@ -56,6 +56,7 @@ Feature: Moderator respond to petition
     Then I should see "Title must be completed"
     And I should see "Summary must be completed"
     And I should see "Previous action must be completed"
+    And I should see "Background information must be completed"
 
   Scenario: Moderator cancel editing petition
     Given I am logged in as a moderator

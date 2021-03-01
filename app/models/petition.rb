@@ -125,6 +125,7 @@ class Petition < ActiveRecord::Base
     errors.add :action, :blank unless t.action.present?
     errors.add :action, :too_long, count: 255 if t.action.length > 255
     errors.add :background, :blank unless t.background.present?
+    errors.add :additional_details, :blank unless t.additional_details.present?
     errors.add :previous_action, :blank unless t.previous_action.present?
     # allow extra characters to account for carriage returns
     errors.add :background, :too_long, count: 3000 if t.background.length > 3000

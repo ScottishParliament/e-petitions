@@ -25,18 +25,22 @@ en-GB:
               too_long:
                 other: "Background is too long (maximum is %{count} characters)"
             previous_action_en:
+              blank: "Previous action must be completed"
               invalid: "Previous action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
                 other: "Previous action is too long (maximum is %{count} characters)"
             previous_action_gd:
+              blank: "Previous action must be completed"
               invalid: "Previous action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
                 other: "Previous action is too long (maximum is %{count} characters)"
             additional_details_en:
+              blank: "Additional details must be completed"
               invalid: "Additional details can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
                 other: "Additional details is too long (maximum is %{count} characters)"
             additional_details_gd:
+              blank: "Additional details must be completed"
               invalid: "Additional details can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
               too_long:
                 other: "Additional details is too long (maximum is %{count} characters)"

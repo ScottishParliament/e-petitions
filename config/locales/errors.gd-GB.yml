@@ -8,16 +8,21 @@ gd-GB:
       creator:
         blank: "Creator must be completed"
       action:
-        invalid: "Action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
-        blank: "Action must be completed"
-        too_long: "Action is too long"
+        invalid: "Title can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+        blank: "Title must be completed"
+        too_long: "Title is too long"
       background:
-        invalid: "Background can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
-        blank: "Background must be completed"
-        too_long: "Background is too long"
+        invalid: "Summary can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+        blank: "Summary must be completed"
+        too_long: "Summary is too long"
+      previous_action:
+        invalid: "Previous action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+        blank: "Previous action must be completed"
+        too_long: "Previous action is too long"
       additional_details:
-        invalid: "Additional details can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
-        too_long: "Additional details is too long"
+        invalid: "Background information can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+        blank: "Background information must be completed"
+        too_long: "Background information is too long"
       closing_date:
         blank: "Closing date must be completed"
         invalid: "Closing date not recognised"

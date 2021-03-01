@@ -193,6 +193,7 @@ class PetitionCreator
     errors.add(:previous_action, :blank) unless previous_action.present?
     errors.add(:previous_action, :invalid) if previous_action =~ /\A[-=+@]/
     errors.add(:previous_action, :too_long, count: 500) if previous_action.length > 500
+    errors.add(:additional_details, :blank) unless additional_details.present?
     errors.add(:additional_details, :invalid) if additional_details =~ /\A[-=+@]/
     errors.add(:additional_details, :too_long, count: 1100) if additional_details.length > 1100
 

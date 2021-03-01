@@ -27,6 +27,7 @@ class PaperPetition
 
   with_options presence: true do
     validates :action_en, :background_en
+    validates :previous_action_en, :additional_details_en
     validates :locale, :location_code
     validates :signature_count, :submitted_on
     validates :name, :email, :phone_number
@@ -34,6 +35,7 @@ class PaperPetition
 
     with_options unless: :gaelic_disabled? do
       validates :action_gd, :background_gd
+      validates :previous_action_gd, :additional_details_gd
     end
   end
 

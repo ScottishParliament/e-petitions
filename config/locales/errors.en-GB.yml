@@ -21,6 +21,7 @@ en-GB:
         too_long: "Previous action is too long"
       additional_details:
         invalid: "Background information can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
+        blank: "Background information must be completed"
         too_long: "Background information is too long"
       closing_date:
         blank: "Closing date must be completed"
