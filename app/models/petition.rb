@@ -47,7 +47,7 @@ class Petition < ActiveRecord::Base
 
   facet :all,       -> { not_archived.by_most_recent }
   facet :open,      -> { not_archived.open_state.by_most_popular }
-  facet :rejected,  -> { not_archived.rejected_state.by_most_recent }
+  facet :rejected,  -> { not_archived.rejected_state.or(hidden_state).by_most_recent }
   facet :closed,    -> { not_archived.completed_state.by_most_recently_completed }
   facet :referred,  -> { not_archived.closed_state.referred.by_most_recently_closed }
   facet :completed, -> { not_archived.completed_state.by_most_recently_closed }

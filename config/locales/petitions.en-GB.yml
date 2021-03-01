@@ -52,7 +52,6 @@ en-GB:
           - :collecting_signatures
           - :under_consideration
           - :rejected
-          - :hidden
           - :completed
           - :archived
       names:
