@@ -262,7 +262,7 @@ en-GB:
         submit_button_html: |-
           <input type="submit" value="Search" class="inline-submit" data-disable-with="Search" tabindex="%{tabindex}">
         all_open_link: "View all open petitions"
-        all_collecting_signatures_link: "View all petitions collecting signatures"
+        all_petitions_link: "View all petitions"
       debated_petitions:
         video_url:
           title_html: |-
