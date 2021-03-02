@@ -35,16 +35,29 @@ RSpec.describe PetitionCSVPresenter do
       end
     end
 
-    describe "closed_at" do
+    describe "mappings" do
       let(:petition) { FactoryBot.create(:completed_petition) }
-      let(:index) { PetitionCSVPresenter.fields.find_index(:closed_at) }
 
-      it "is present in the CSV headers" do
-        expect(index).to_not be_nil
+      describe "under_consideration_at" do
+        it "maps to the petition's closed_at" do
+          expect(PetitionCSVPresenter.fields).to include :under_consideration_at
+
+          index = PetitionCSVPresenter.fields.find_index :under_consideration_at
+          row = CSV.parse(subject).first
+
+          expect(row.at(index)).to eq timestampify(petition.closed_at)
+        end
       end
 
-      it "maps to the petition completed_at value" do
-        expect(CSV.parse(subject).first.at(index)).to eq timestampify(petition.completed_at)
+      describe "closed_at" do
+        it "maps to the petition's completed_at" do
+          expect(PetitionCSVPresenter.fields).to include :closed_at
+
+          index = PetitionCSVPresenter.fields.find_index :closed_at
+          row = CSV.parse(subject).first
+
+          expect(row.at(index)).to eq timestampify(petition.completed_at)
+        end
       end
     end
   end
@@ -73,6 +86,7 @@ RSpec.describe PetitionCSVPresenter do
       timestampify(petition.created_at),
       timestampify(petition.updated_at),
       timestampify(petition.open_at),
+      timestampify(petition.closed_at),
       timestampify(petition.completed_at),
       datestampify(petition.scheduled_debate_date),
       timestampify(petition.referral_threshold_reached_at),
@@ -108,6 +122,7 @@ RSpec.describe PetitionCSVPresenter do
       timestampify(petition.created_at),
       timestampify(petition.updated_at),
       timestampify(petition.open_at),
+      timestampify(petition.closed_at),
       timestampify(petition.completed_at),
       datestampify(petition.scheduled_debate_date),
       timestampify(petition.referral_threshold_reached_at),
