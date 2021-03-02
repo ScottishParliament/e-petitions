@@ -289,8 +289,6 @@ gd-GB:
         heading: "Popular petitions"
       open_petitions:
         heading: "Collecting signatures"
-        description: |-
-          These petitions are currently collecting signatures but all of them will be considered by the Public Petitions Committee once they have closed
         none_open: |-
           There are no petitions currently collecting signatures
         open_date: "Collecting signatures until %{date}"

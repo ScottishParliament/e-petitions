@@ -1,7 +1,6 @@
 <% if actioned[:open][:count].zero? %>
   <p><%= t(:"ui.home_page.open_petitions.none_open") %></p>
 <% else %>
-  <p><%= t(:"ui.home_page.open_petitions.description") %></p>
   <ol class="threshold-petitions">
     <% actioned[:open][:list].each do |petition| %>
       <li class="petition-item">
