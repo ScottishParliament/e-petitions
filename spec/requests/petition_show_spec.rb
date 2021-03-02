@@ -53,7 +53,7 @@ RSpec.describe "API request to show a petition", type: :request, show_exceptions
           "background_information" => a_string_matching(petition.additional_details),
           "petitioner" => a_string_matching(petition.creator.name),
           "committee_note" => a_string_matching(petition.committee_note),
-          "state" => a_string_matching(petition.state),
+          "status" => a_string_matching(petition.status),
           "signature_count" => eq_to(petition.signature_count),
           "opened_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z]),
           "created_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z]),
@@ -62,46 +62,57 @@ RSpec.describe "API request to show a petition", type: :request, show_exceptions
       )
     end
 
-    it "returns the closed_at timestamp if the petition is closed" do
-      petition = FactoryBot.create :closed_petition
+    context "when the petition is closed" do
+      let(:petition) { FactoryBot.create :closed_petition }
 
-      get "/petitions/#{petition.to_param}.json"
-      expect(response).to be_successful
+      it "returns the closed_at timestamp as under_consideration_at" do
+        get "/petitions/#{petition.to_param}.json"
 
-      expect(attributes).to match(
-        a_hash_including(
-          "state" => "closed",
-          "closed_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z])
-        )
-      )
+        expect(response).to be_successful
+
+        expect(attributes)
+          .to match(
+                a_hash_including(
+                  "status" => "under_consideration",
+                  "under_consideration_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z])
+                )
+              )
+      end
     end
 
-    it "returns the completed_at timestamp date if the petition is completed" do
-      petition = FactoryBot.create :completed_petition
+    context "when the petition is completed" do
+      let(:petition) { FactoryBot.create :completed_petition }
 
-      get "/petitions/#{petition.to_param}.json"
-      expect(response).to be_successful
+      it "returns the completed_at timestamp as closed_at" do
+        get "/petitions/#{petition.to_param}.json"
 
-      expect(attributes).to match(
-        a_hash_including(
-          "state" => "completed",
-          "completed_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z])
-        )
-      )
+        expect(response).to be_successful
+
+        expect(attributes)
+          .to match(
+                a_hash_including(
+                  "status" => "closed",
+                  "closed_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z])
+                )
+              )
+      end
     end
 
-    it "returns the archived_at timestamp date if the petition is archived" do
-      petition = FactoryBot.create :archived_petition
+    context "when the petition is archived" do
+      let(:petition) { FactoryBot.create :archived_petition }
 
-      get "/petitions/#{petition.to_param}.json"
-      expect(response).to be_successful
+      it "returns the archived_at timestamp date if the petition is archived" do
+        get "/petitions/#{petition.to_param}.json"
+        expect(response).to be_successful
 
-      expect(attributes).to match(
-        a_hash_including(
-          "state" => "completed",
-          "archived_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z])
-        )
-      )
+        expect(attributes)
+          .to match(
+                a_hash_including(
+                  "status" => "closed",
+                  "archived_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z])
+                )
+              )
+      end
     end
 
     it "returns the submitted_on date if the petition was submitted on paper" do
