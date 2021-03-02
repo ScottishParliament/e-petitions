@@ -122,9 +122,9 @@ Scenario: Charlie tries to submit an invalid petition
   Then I should see "Background information must be completed"
 
   When I am allowed to make the petition action too long
-  When I fill in "Title" with text longer than 100 characters
-  And I fill in "Summary" with text longer than 500 characters
-  And I fill in "Previous action" with text longer than 500 characters
+  When I fill in "What do you want us to do?" with text longer than 100 characters
+  And I fill in "Petition summary" with text longer than 500 characters
+  And I fill in "What action have you taken previously to resolve this issue?" with text longer than 500 characters
   And I fill in "Background information" with text longer than 1100 characters
   And I press "Preview petition"
 
@@ -133,9 +133,9 @@ Scenario: Charlie tries to submit an invalid petition
   And I should see "Previous action is too long"
   And I should see "Background information is too long"
 
-  When I fill in "Title" with "=cmd"
-  And I fill in "Summary" with "@cmd"
-  And I fill in "Previous action" with "@cmd"
+  When I fill in "What do you want us to do?" with "=cmd"
+  And I fill in "Petition summary" with "@cmd"
+  And I fill in "What action have you taken previously to resolve this issue?" with "@cmd"
   And I fill in "Background information" with "+cmd"
   And I press "Preview petition"
 
@@ -144,9 +144,9 @@ Scenario: Charlie tries to submit an invalid petition
   And I should see "Previous action can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
   And I should see "Background information can’t start with a ‘=’, ‘+’, ‘-’ or ‘@’"
 
-  When I fill in "Title" with "The wombats of wimbledon rock."
-  And I fill in "Summary" with "Give half of Wimbledon rock to wombats!"
-  And I fill in "Previous action" with "I asked my MP and she said to create a petition"
+  When I fill in "What do you want us to do?" with "The wombats of wimbledon rock."
+  And I fill in "Petition summary" with "Give half of Wimbledon rock to wombats!"
+  And I fill in "What action have you taken previously to resolve this issue?" with "I asked my MP and she said to create a petition"
   And I fill in "Background information" with "The racial tensions between the wombles and the wombats are heating up. Racial attacks are a regular occurrence and the death count is already in 5 figures. The only resolution to this crisis is to give half of Wimbledon common to the Wombats and to recognise them as their own independent state."
   And I press "Preview petition"
 
@@ -157,9 +157,9 @@ Scenario: Charlie tries to submit an invalid petition
   And I should see "The racial tensions between the wombles and the wombats are heating up. Racial attacks are a regular occurrence and the death count is already in 5 figures. The only resolution to this crisis is to give half of Wimbledon common to the Wombats and to recognise them as their own independent state."
 
   And I press "Go back and make changes"
-  And the "Title" field should contain "The wombats of wimbledon rock."
-  And the "Summary" field should contain "Give half of Wimbledon rock to wombats!"
-  And the "Previous action" field should contain "I asked my MP and she said to create a petition"
+  And the "What do you want us to do?" field should contain "The wombats of wimbledon rock."
+  And the "Petition summary" field should contain "Give half of Wimbledon rock to wombats!"
+  And the "What action have you taken previously to resolve this issue?" field should contain "I asked my MP and she said to create a petition"
   And the "Background information" field should contain "The racial tensions between the wombles and the wombats are heating up. Racial attacks are a regular occurrence and the death count is already in 5 figures. The only resolution to this crisis is to give half of Wimbledon common to the Wombats and to recognise them as their own independent state."
 
   And I press "Preview petition"

@@ -2,9 +2,7 @@
   <%= t(:"ui.application.back") %>
 <% end %>
 
-<h1 class="page-title"><%= t(:"ui.petitions.create.petition_stage.heading") %></h1>
-
-<p class="form-hint petition-standards"><%= t(:"ui.petitions.create.petition_stage.hint_standards_html", standards_link: petition_standards_link) %></p>
+<%= t(:"ui.petitions.create.petition_stage.intro_html") %>
 
 <%= render "petitions/create/error_summary", form: form %>
 
@@ -18,6 +16,7 @@
 
 <%= form_row for: [petition, :background] do %>
   <%= form.label :background, t(:"ui.petitions.background.label"), class: "form-label" %>
+  <p><%= t(:"ui.petitions.background.preamble") %></p>
   <%= error_messages_for_field petition, :background %>
   <%= form.text_area :background, rows: 5, data: { max_length: 500 }, class: "form-control" %>
   <p class="character-count"><%= t(:"ui.application.character_count", count: 500) %></p>
@@ -33,10 +32,7 @@
 <% end %>
 
 <%= form_row for: [petition, :additional_details] do %>
-  <%= form.label :additional_details, class: "form-label" do %>
-    <%= t(:"ui.petitions.additional_details.label") %>
-    <span class="form-hint"><%= t(:"ui.petitions.additional_details.hint_optional") %></span>
-  <% end %>
+  <%= form.label :additional_details, t(:"ui.petitions.additional_details.label"), class: "form-label" %>
   <%= error_messages_for_field petition, :additional_details %>
   <%= form.text_area :additional_details, rows: 7, data: { max_length: 1000 }, class: "form-control" %>
   <p class="character-count"><%= t(:"ui.application.character_count", count: 1000) %></p>

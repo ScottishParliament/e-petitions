@@ -296,7 +296,9 @@ en-GB:
         open_date: "Collecting signatures until %{date}"
     petitions:
       check:
-        heading: "Start a petition"
+        intro_html: |-
+          <h1 class="page-title">Start a petition</h1>
+          <p>Remember, your petition must meet the <a href="/rules">rules for petitions</a></p>
         action:
           label: "What do you want us to do?"
         results:
@@ -367,22 +369,23 @@ en-GB:
         member_name_link_html: |-
           Your Member of the Scottish Parliament for the <strong>%{constituency_name}</strong> constituency is %{member_name_link}
       action:
-        label: "Title"
+        label: "What do you want us to do?"
         help_html: |-
           <p class="form-hint">Example: Introduce a 10p charge for single use plastic bags</p>
           <details class="form-group-help">
             <summary><span class="summary">Show more examples</span></summary>
             <div class="panel-indent">
-              <p>Good petitions say clearly what they want Parliament or Scottish Government to do.</p>
+              <p>This will be the title of your petition and should explain what the petition is about in a few words.</p>
+              <p>Good petitions say clearly what they want the Scottish Parliament to do and must  not be a slogan or campaign name.</p>
               <p>Good examples:</p>
               <ul class="list-bullet">
-                <li>Ban the use of wild animals in circuses</li>
-                <li>Lower the voting age to 16 for Parliament elections</li>
+                <li>Improve NHS complaints procedures</li>
+                <li>Increase pay for key public workers</li>
               </ul>
               <p>Bad examples:</p>
               <ul class="list-bullet">
                 <li>Help young people</li>
-                <li>Justice for Stephen</li>
+                <li>Justice for Betty</li>
               </ul>
             </div>
           </details>
@@ -426,7 +429,9 @@ en-GB:
             other: "Please fix the following errors:"
           heading: "We couldn’t create this petition"
         petition_stage:
-          heading: "Start a petition"
+          intro_html: |-
+            <h1 class="page-title">Start a petition</h1>
+            <p>Remember, your petition must meet the <a href="/rules">rules for petitions</a></p>
           submit_html: |-
             <button type="submit" name="move_next" class="button forward" data-disable-with="Preview petition">Preview petition</button>
           hint_standards_html: |-
@@ -502,23 +507,34 @@ en-GB:
         n_sponsors_needed_heading: |-
           You need %{count} supporters
       previous_action:
-        label: "Previous action"
+        label: "What action have you taken previously to resolve this issue?"
         help_html: |-
           <details class="form-group-help">
             <summary><span class="summary">Help writing previous action</span></summary>
             <div class="panel-indent">
-              <p>Use this section to explain the previous action you've taken prior to creating a petition.</p>
-              <p>For example, you may have contacted your local MP to discuss this matter.</p>
+              <p>Before you petition the Scottish Parliament, you need to have taken some action to raise the issue. This can be a range of activities but <strong>should include contacting a decision maker such as one of your MSP(s) or the Scottish Government</strong>.</p>
+              <p>Please let us know what outcome of this activity was. For example, if you contacted an MSP, what was their response to your petition idea?</p>
+              <p>Good examples</p>
+              <ul class="list-bullet">
+                <li>I have raised the issue with Rhoda Grant MSP who held a debate in the chamber.</li>
+                <li>I met with the Minister for Children and Young People who explained the wellbeing and safety of children and young people in Scotland is a key priority for the Scottish Government.</li>
+              </ul>
+              <p>Bad examples</p>
+              <ul class="list-bullet">
+                <li>I have made my views known on social media</li>
+                <li>I have started a petition on change.org</li>
+                <li>Only the Parliament can take the action I am calling for</li>
+              </ul>
             </div>
           </details>
       background:
-        label: "Summary"
+        label: "Petition summary"
+        preamble: "Calling on the Scottish Parliament to urge the Scottish Government to…"
         help_html: |-
           <details class="form-group-help">
             <summary><span class="summary">Help writing summary</span></summary>
             <div class="panel-indent">
-              <p>Use this section to back up why you want action. Some people include a personal story here.</p>
-              <p>Remember that people won’t always know that much about the issue you’re petitioning about - explain it.</p>
+              <p>This section should be one or two sentences and should state clearly what action you want the Parliament to take.</p>
             </div>
           </details>
       created_by: "Created by"
@@ -551,8 +567,16 @@ en-GB:
       parliament_debated_on: "Parliament debated this petition on %{date}"
       additional_details:
         label: "Background information"
-        help_html: ""
-        hint_optional: "Background information, evidence and references"
+        help_html: |-
+          <details class="form-group-help">
+            <summary><span class="summary">Help writing the background information</span></summary>
+            <div class="panel-indent">
+              <p>In this section, you can provide any other information you want to let the Parliament know about to help the Public Petitions Committee understand why you would like it to consider the issue(s) you have raised.</p>
+              <p>You might want to add links to any webpages you think might be helpful. Just make sure these don’t link to webpages with commenting sections (like news articles which we can’t publish).</p>
+              <p>We’re unable to accept supplementary information, such as correspondence, legal documents, photographs, or copies of Freedom of Information requests as part of your petition, but there may be a way to summarise this information, so long as it meets our <a href="/rules">rules about petitions</a>.</p>
+              <p>Also make sure your petition does not name anybody or include information that could lead to the identification of that person, unless they are an MSP or senior leader (like the chief executive of an organisation).</p>
+            </div>
+          </details>
       referral_threshold:
         open:
           heading: "What happens next?"
@@ -1024,71 +1048,51 @@ en-GB:
       tomorrow: "Scheduled for debate tomorrow"
     rules_page:
       body_html: |-
-        <h1 class="page-title">Determination by the Presiding Officer under Standing Order 23.3 of the Proper Form of Petitions</h1>
+        <h1>Scottish Parliament Petition Rules</h1>
 
-        <p>The Presiding Officer has made the following determination of the proper form of public petitions submitted under Standing Order 23.</p>
+        <p>The rules for petitions to the Scottish Parliament are set out in two places: the Standing Orders of the Scottish Parliament (the rule book for how the Parliament works) and a document (known as a determination) agreed by the Public Petitions Committee.</p>
 
-        <ol class="list-number">
-          <li>
-            <h2>Means and format for submission</h2>
-            <p>Petitions may be submitted on paper or electronically using Parliament’s online petitions system. Petitions may collect signatures for a maximum period of four weeks.</p>
-            <p>For a paper petition the petition wording should be set out in full on each sheet (or side of a sheet) where signatures are asked for. A template is available on request.</p>
-          </li>
+        <section aria-labelledby="standing-orders">
+          <h2 id="standing-orders">Standing Orders Rules</h2>
 
-          <li>
-            <h2>Wording</h2>
-            <p>Petitions should be submitted in good faith. They should call for Parliament or the Scottish Government to take some specific action.</p>
-          </li>
+          <h3>Rule 15.4.2</h3>
+          <p>A petition must clearly state: (a) the name of the petitioner; (b) an address of the petitioner to which all communications concerning the petition should be sent; and (c) the name and address of any person supporting the petition.</p>
 
-          <li>
-            <h2>Basic Requirements</h2>
-            <p>Petitions must clearly indicate:</p>
-            <ul class="list-bullet">
-              <li>the name of the petitioner, who may be an individual or an organisation;</li>
-              <li>the petitioner’s address, which must be in Wales, to which all communications concerning the petition should be sent;</li>
-              <li>signatures from at least 50 people who support the petition and their names and addresses.</li>
-            </ul>
-            <p>Petitions must not:</p>
-            <ul class="list-bullet">
-              <li>contain language which is offensive, intemperate, or provocative. This not only includes obvious profanities swear words and insults, but any language which a reasonable person would regard as offensive;</li>
-              <li>ask Parliament to do anything which it clearly has no power to do (in particular petitions about matters that are not devolved are not admissible);</li>
-              <li>be the same as, or substantially similar to, a petition which was closed less than a year earlier.</li>
-            </ul>
-            <p>Petitions must comply in other ways with this determination.</p>
-          </li>
+          <h3>Rule 15.5.1</h3>
+          <p>A petition is admissible unless it: (a) does not comply with Rule 15.4.2 or is otherwise not in proper form; (aa) is frivolous; (ab) breaches any enactment or rule of law; (ac) refers to any matter in relation to which legal proceedings are active; (b) contains language which is offensive; (ba) fails to raise issues of national policy or practice; (c) requests the Parliament to do anything which the Parliament clearly has no power to do; or (d) is the same as, or in substantially similar terms to, a petition brought during the same session of the Parliament and which was closed less than a year earlier.</p>
+        </section>
 
-          <li>
-            <h2>Other factors concerning admissibility</h2>
-            <p>Petitions that include or ask Parliament to consider the following are not admissible:</p>
-            <ul class="list-bullet">
-              <li>to intervene in the operational decisions or actions of local authorities and National Park Authorities, including planning decisions;</li>
-              <li>to adjudicate, arbitrate or mediate personal or commercial interests (this is the role of a court or tribunal);</li>
-              <li>matters that are ‘sub judice’ (subject to legal proceedings in the courts);</li>
-              <li>matters that are already subject to determination by an ombudsman (or person with similar powers).</li>
-            </ul>
-            <p>Petitions must not contain:</p>
-            <ul class="list-bullet">
-              <li>potentially false or potentially defamatory statements;</li>
-              <li>information which is prohibited from being published by an order of a court or a body or person with similar power;</li>
-              <li>material which is potentially confidential, commercially sensitive, or which may cause personal distress or loss;</li>
-              <li>any commercial endorsement, promotion of any product, service or publication or statements that amount to advertisements;</li>
-              <li>the names of officials of public bodies, unless they are part of the senior management of those organisations;</li>
-              <li>the names of family members of elected representatives or officials of public bodies;</li>
-              <li>the names of individuals, or information where they may be identified, in relation to criminal charges;</li>
-              <li>issues for which a petition is not the appropriate channel (for example, correspondence about a personal issue).</li>
-            </ul>
-          </li>
+        <section aria-labelledby="determination">
+          <h2 id="determination">Public Petitions Committee</h2>
+        
+          <h3>Determination on proper form of petitions</h3>
+        
+          <p>To be read alongside the Parliament’s rules on public petitions, the Public Petitions Committee has made the following determination under Rule 15.4.3 on proper form of petitions.</p>
 
-          <li>
-            <h2>Freedom of Information (FOI) requests</h2>
-            <p>Petitions that are essentially FOI requests will not be allowed. There are other specific arrangements for FOI requests.</p>
-          </li>
-
-          <li>
-            <h2>Public Services Ombudsman for Wales (PSOW) cases</h2>
-            <p>Petitions alleging specific cases of maladministration or service failure by public bodies are not admissible. In these cases petitioners are advised to contact the PSOW to take forward their concerns.</p>
-          </li>
-        </ol>
+          <ul class="list-bullet">
+            <li>Petitions should be submitted using the Scottish Parliament’s online petitions site. All sections should be completed.</li>
+            <li>If an individual has no access to or difficulty in using the online petitions site, or if the site is unavailable, a petition may be submitted in paper form using the word template (available from the clerks).</li>
+            <li>A petition may be brought in any language. Where a language other than English is used, the Parliament will provide a translation.</li>
+            <li>Petitions should be brief and state clearly what action is being sought.</li>
+            <li>No supplementary information (such as correspondence, legal information, photographs, or copies of Freedom of Information requests) will be accepted as part of a petition.</li>
+            <li>Petitions must relate to national policy or practice as opposed to a local or individual matter.</li>
+            <li>Petition titles should be a short factual description of what is being looked for not a slogan or campaign name. For example “changes to the law governing fatal accident inquiries” would be an appropriate title. “Betty’s Law” or “Justice for Betty” would not be.</li>
+            <li>Previous action taken on a petition must include raising the issue with a relevant decision maker such as the Scottish Government (or other relevant public body) or an elected representative such as an MSP.</li>
+            <li>A petition will not be considered by the Public Petitions Committee if the same (or substantially similar) petition, submitted by the same petitioner, has previously been considered by the Committee and closed at its first consideration on three consecutive occasions.</li>
+            <li>
+              <p>Petitions should not:</p>
+              <ul class="list-bullet">
+                <li>Name individuals or otherwise contain information that could lead to the identification of any individual. This excludes elected representatives and senior managers of public bodies.</li>
+                <li>Contain any false statements. It is the responsibility of the petitioner to ensure that statements are accurate.</li>
+                <li>Refer to any matter that is the subject of continuing court proceedings.</li>
+                <li>Seek an adjudication or decision on an individual or commercial matter.</li>
+                <li>Seek to involve the Public Petitions Committee in a decision that is more properly the domain of another body (for example complaints, court appeals, planning appeals, local authority expenditure decisions etc.)</li>
+                <li>Include language or wording that is defamatory, offensive or inappropriate, for example swear words, insults, sarcasm or other language that could reasonably be considered offensive by a reader.</li>
+              </ul>
+            </li>
+            <li>All petitions which meet the Parliament’s rules will be published and considered by the Public Petitions Committee. Petitions should be submitted using the Parliament’s online system but may be submitted in hard copy or email if a petitioner is not able to use the petitions system or the system is unavailable.</li>
+          </ul>
+        </section>
     accessibility_page:
       body_html: |-
         <h1 class="page-title">Accessibility statement</h1>
