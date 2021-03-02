@@ -1,5 +1,5 @@
 csv_builder = lambda do |csv|
-  csv << ['Petition', 'URL', 'PE Number', 'Petitioner', 'State', 'Signatures Count', 'Summary', 'Previous action', 'Background Information']
+  csv << ['Petition', 'URL', 'PE Number', 'Petitioner', 'Status', 'Signatures Count', 'Summary', 'Previous action', 'Background Information']
 
   @petitions.find_each do |petition|
     csv << [
@@ -7,7 +7,7 @@ csv_builder = lambda do |csv|
       petition_url(petition),
       petition.to_param,
       petition.creator.name,
-      petition.state,
+      petition.status,
       petition.signature_count,
       csv_escape(petition.background),
       csv_escape(petition.previous_action),
