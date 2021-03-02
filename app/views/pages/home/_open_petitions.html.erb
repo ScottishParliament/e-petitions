@@ -9,4 +9,5 @@
       </li>
     <% end -%>
   </ol>
+  <p><%= link_to petition_count(:open_explanation, actioned[:open][:count]), petitions_path(state: :collecting_signatures), class: "view-all" %></p>
 <% end %>

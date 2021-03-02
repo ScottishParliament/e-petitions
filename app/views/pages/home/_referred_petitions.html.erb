@@ -13,4 +13,5 @@
       </li>
     <% end -%>
   </ol>
+  <p><%= link_to petition_count(:referred_explanation, actioned[:referred][:count]), petitions_path(state: :referred), class: "view-all" %></p>
 <% end %>
