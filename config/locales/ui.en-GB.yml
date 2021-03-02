@@ -279,7 +279,7 @@ en-GB:
         none_debated: "Parliament has not debated any petitions yet"
         topic_debated_date: "This topic was debated on %{date}"
       referred_petitions:
-        title: "Under consideration"
+        title: "Petitions under consideration"
         introduction: |-
           The Public Petitions Committee looks at all published petitions, regardless of whether signatures are collected.
         none_referred: |-
@@ -288,7 +288,7 @@ en-GB:
       trending_petitions:
         heading: "Popular petitions"
       open_petitions:
-        heading: "Collecting signatures"
+        heading: "Petitions collecting signatures"
         none_open: |-
           There are no petitions currently collecting signatures
         open_date: "Collecting signatures until %{date}"
