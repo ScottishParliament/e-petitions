@@ -12,15 +12,15 @@ json.attributes do
   json.background_information petition.additional_details
   json.petitioner petition.creator.name
   json.committee_note petition.committee_note
-  json.state petition.state
+  json.status petition.status
   json.signature_count petition.signature_count
 
   json.created_at api_date_format(petition.created_at)
   json.updated_at api_date_format(petition.updated_at)
   json.rejected_at api_date_format(petition.rejected_at)
   json.opened_at api_date_format(petition.opened_at)
-  json.closed_at api_date_format(petition.closed_at)
-  json.completed_at api_date_format(petition.closed_at)
+  json.under_consideration_at api_date_format(petition.closed_at)
+  json.closed_at api_date_format(petition.completed_at)
 
   unless Site.disable_thresholds_and_debates?
     json.moderation_threshold_reached_at api_date_format(petition.moderation_threshold_reached_at)
