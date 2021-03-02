@@ -1,4 +1,5 @@
 <% if Site.disable_thresholds_and_debates? %>
+  <p id="referred-petitions-intro"><%= t(:"ui.home_page.referred_petitions.introduction") %></h2>
   <h2 id="referral-threshold-heading"><%= t(:"ui.home_page.referred_petitions.title") %></h2>
 <% end %>
 <% if actioned[:referred][:count].zero? %>
