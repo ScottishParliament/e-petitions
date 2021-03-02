@@ -43,13 +43,13 @@ class PetitionCSVPresenter
   def self.timestamps
     if Site.disable_thresholds_and_debates?
       [
-        :created_at, :updated_at, :open_at, :closed_at, :rejected_at, :completed_at
+        :created_at, :updated_at, :open_at, :closed_at, :rejected_at
       ]
     else
       [
         :created_at, :updated_at, :open_at, :closed_at, :scheduled_debate_date,
         :referral_threshold_reached_at, :debate_threshold_reached_at, :rejected_at,
-        :debate_outcome_at, :moderation_threshold_reached_at, :completed_at
+        :debate_outcome_at, :moderation_threshold_reached_at
       ]
     end
   end
@@ -85,8 +85,17 @@ class PetitionCSVPresenter
   end
 
   timestamps.each do |timestamp|
-    define_method timestamp do
-      api_date_format petition.send timestamp
+    case timestamp
+    when :closed_at
+      class_eval <<~RUBY
+        def closed_at
+          api_date_format petition.send :completed_at
+        end
+      RUBY
+    else
+      define_method timestamp do
+        api_date_format petition.send timestamp
+      end
     end
   end
 end

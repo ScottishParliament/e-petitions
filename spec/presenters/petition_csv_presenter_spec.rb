@@ -34,6 +34,19 @@ RSpec.describe PetitionCSVPresenter do
         specify { is_expected.to eq(csvd_not_public_petition petition) }
       end
     end
+
+    describe "closed_at" do
+      let(:petition) { FactoryBot.create(:completed_petition) }
+      let(:index) { PetitionCSVPresenter.fields.find_index(:closed_at) }
+
+      it "is present in the CSV headers" do
+        expect(index).to_not be_nil
+      end
+
+      it "maps to the petition completed_at value" do
+        expect(CSV.parse(subject).first.at(index)).to eq timestampify(petition.completed_at)
+      end
+    end
   end
 
   def csvd_not_public_petition(petition)
@@ -60,14 +73,13 @@ RSpec.describe PetitionCSVPresenter do
       timestampify(petition.created_at),
       timestampify(petition.updated_at),
       timestampify(petition.open_at),
-      timestampify(petition.closed_at),
+      timestampify(petition.completed_at),
       datestampify(petition.scheduled_debate_date),
       timestampify(petition.referral_threshold_reached_at),
       timestampify(petition.debate_threshold_reached_at),
       timestampify(petition.rejected_at),
       timestampify(petition.debate_outcome_at),
       timestampify(petition.moderation_threshold_reached_at),
-      timestampify(petition.completed_at),
       petition.note.try(:details)
     ].join(",") + "\n"
   end
@@ -96,14 +108,13 @@ RSpec.describe PetitionCSVPresenter do
       timestampify(petition.created_at),
       timestampify(petition.updated_at),
       timestampify(petition.open_at),
-      timestampify(petition.closed_at),
+      timestampify(petition.completed_at),
       datestampify(petition.scheduled_debate_date),
       timestampify(petition.referral_threshold_reached_at),
       timestampify(petition.debate_threshold_reached_at),
       timestampify(petition.rejected_at),
       timestampify(petition.debate_outcome_at),
       timestampify(petition.moderation_threshold_reached_at),
-      timestampify(petition.completed_at),
       petition.note.try(:details)
     ].join(",") + "\n"
   end
