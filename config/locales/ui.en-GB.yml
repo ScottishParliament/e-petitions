@@ -32,7 +32,7 @@ en-GB:
       debated_explanation_html: |-
         See all petitions debated by Parliament (%{num})
       referred_explanation_html: |-
-        See all petitions referred to the Public Petitions Committee (%{num})
+        See all petitions under consideration (%{num})
       open_explanation_html: |-
         See all petitions collecting signatures (%{num})
       with_debated_outcome_html:
