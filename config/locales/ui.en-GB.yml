@@ -280,8 +280,6 @@ en-GB:
         topic_debated_date: "This topic was debated on %{date}"
       referred_petitions:
         title: "Under consideration"
-        description: |-
-          All petitions accepted for publication will be lodged with the committee irrespective of the number of signatures they gather
         none_referred: |-
           No petitions have been referred to the Public Petitions Committee yet
         referred_date: "Referred to the Public Petitions Committee on %{date}"

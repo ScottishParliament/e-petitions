@@ -4,7 +4,6 @@
 <% if actioned[:referred][:count].zero? %>
   <p><%= t(:"ui.home_page.referred_petitions.none_referred") %></p>
 <% else %>
-  <p><%= t(:"ui.home_page.referred_petitions.description") %></p>
   <ol class="threshold-petitions">
     <% actioned[:referred][:list].each do |petition| %>
       <li class="petition-item">
