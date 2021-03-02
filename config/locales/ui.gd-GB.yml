@@ -284,7 +284,7 @@ gd-GB:
           The Public Petitions Committee looks at all published petitions, regardless of whether signatures are collected.
         none_referred: |-
           No petitions have been referred to the Public Petitions Committee yet
-        referred_date: "Referred to the Public Petitions Committee on %{date}"
+        referred_date: "Under consideration from %{date}"
       trending_petitions:
         heading: "Popular petitions"
       open_petitions:
