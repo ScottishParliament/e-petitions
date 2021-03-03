@@ -1,3 +1,4 @@
+@wip
 Feature: Arnold searches from the home page
   In order to reduce the likelihood of a duplicate petition being made
   As a petition moderator
@@ -21,12 +22,12 @@ Scenario: Arnold searches for petitions in English
   And I should see my search term "Wombles" filled in the search field
   And I should see "6 petitions"
   And I should see the following search results:
-    | Wombles                      |                                            |
-    | Overthrow the Wombles        |                                            |
-    | Uncle Bulgaria               |                                            |
-    | Common People                |                                            |
-    | The Wombles will rock Glasto | Referred to the Public Petitions Committee |
-    | Eavis vs the Wombles         | Rejected                                   |
+    | Wombles                      |                          |
+    | Overthrow the Wombles        |                          |
+    | Uncle Bulgaria               |                          |
+    | Common People                |                          |
+    | The Wombles will rock Glasto | Under consideration from |
+    | Eavis vs the Wombles         | Rejected                 |
 
 @gaelic
 Scenario: Arnold searches for petitions in Gaelic
@@ -35,10 +36,10 @@ Scenario: Arnold searches for petitions in Gaelic
   Then I should see my search term "Wombles" filled in the search field
   And I should see "6 petitions"
   And I should see the following search results:
-    | Wombles                         |                                            |
-    | Thoir thairis na Wombles        |                                            |
-    | Uncle Bulgaria                  |                                            |
-    | Daoine Cumanta                  |                                            |
-    | Bidh na Wombles a ’creag Glasto | Referred to the Public Petitions Committee |
-    | Eavis vs na Wombles             | Rejected                                   |
+    | Wombles                         |                          |
+    | Thoir thairis na Wombles        |                          |
+    | Uncle Bulgaria                  |                          |
+    | Daoine Cumanta                  |                          |
+    | Bidh na Wombles a ’creag Glasto | Under consideration from |
+    | Eavis vs na Wombles             | Rejected                 |
   And the markup should be valid

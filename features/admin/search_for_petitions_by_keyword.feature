@@ -31,10 +31,10 @@ Feature: Maggie searches for petitions by keyword
     And an open petition exists with action: "My open petition about something else"
     When I search for petitions with keyword "benefits"
     Then I should see the following list of petitions:
-          | My hidden petition about benefits   |
-          | My rejected petition about benefits |
-          | My closed petition about benefits   |
-          | My open petition about benefits     |
+      | My rejected petition about benefits |
+      | My hidden petition about benefits   |
+      | My open petition about benefits     |
+      | My closed petition about benefits   |
 
   Scenario: A user can search by keyword from the admin hub
     Given an open petition exists with action: "Raise benefits"

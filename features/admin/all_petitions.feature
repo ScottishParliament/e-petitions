@@ -37,18 +37,18 @@ Feature: A moderator user views all petitions
 
     When I view all petitions
     Then I should see the following list of petitions:
-     | My referred petition with scheduled debate date |
-     | My referred petition awaiting debate date       |
-     | My referred petition with debate outcome        |
-     | My hidden petition                              |
-     | My rejected petition                            |
-     | My referred petition                            |
-     | My open petition                                |
-     | My flagged petition                             |
-     | My other sponsored petition                     |
-     | My sponsored petition                           |
-     | My validated petition                           |
-     | My pending petition                             |
+      | My rejected petition                            |
+      | My validated petition                           |
+      | My sponsored petition                           |
+      | My other sponsored petition                     |
+      | My flagged petition                             |
+      | My pending petition                             |
+      | My hidden petition                              |
+      | My open petition                                |
+      | My referred petition with scheduled debate date |
+      | My referred petition awaiting debate date       |
+      | My referred petition with debate outcome        |
+      | My referred petition                            |
 
     And I filter the list to show "Collecting sponsors" petitions
     Then I should see the following list of petitions:
