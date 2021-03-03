@@ -45,7 +45,7 @@ class Petition < ActiveRecord::Base
   extend Searchable(:action_en, :action_gd, :background_en, :background_gd, :additional_details_en, :additional_details_gd)
   include Browseable, Taggable, Topics
 
-  facet :all,       -> { not_archived.by_most_recent }
+  facet :all,       -> { not_archived.by_most_recently_published }
   facet :open,      -> { not_archived.open_state.by_most_popular }
   facet :rejected,  -> { not_archived.rejected_state.or(hidden_state).by_most_recent }
   facet :closed,    -> { not_archived.completed_state.by_most_recently_completed }
