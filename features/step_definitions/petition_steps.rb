@@ -505,6 +505,12 @@ Then(/^I should not see both petitions content$/) do
   expect(page).to have_selector(:css, ".petition-content", count: 2)
 end
 
+Then(/^I should see the petition's (\w+) timestamp$/) do |attribute|
+  timestamp = @petition.send attribute
+
+  expect(page).to have_text(DateHelpers.short_date_format(timestamp).gsub("\u00A0", " "))
+end
+
 When(/^I search all petitions for "(.*?)"$/) do |search_term|
   within :css, '.search-petitions' do
     fill_in :search, with: search_term

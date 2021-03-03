@@ -47,6 +47,12 @@ Feature: Suzy Signer views all petitions
       | Good Times      |
       | Everybody Dance |
 
+  Scenario: Suzie browses referred petitions and can see when they've been closed
+    Given a referred petition exists with action: "Le Freak", closed_at: 3.days.ago
+    When I browse to see only "Under consideration" petitions
+    Then I should see "Under consideration from"
+    And I should see the petition's closed_at timestamp
+
   Scenario: Suzie browses open petitions and can see numbering in the list view
     Given a set of 101 petitions
     When I view all petitions from the home page

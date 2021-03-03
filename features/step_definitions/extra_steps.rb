@@ -161,6 +161,7 @@ Given(/^a referred petition exists with action: "([^"]*)", closed_at: (.*)$/) do
 
   @petition = FactoryBot.create(:referred_petition, action: action, closed_at: timestamp)
 end
+
 Given(/^a rejected petition exists with action_en: "([^"]*)", action_gd: "([^"]*)"$/) do |action_en, action_gd|
   @petition = FactoryBot.create(:rejected_petition, action_en: action_en, action_gd: action_gd)
 end
