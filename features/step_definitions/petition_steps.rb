@@ -53,6 +53,10 @@ Given(/^a petition "([^"]*)" exists with a signature count of (\d+)$/) do |petit
   @petition.update_attribute(:signature_count, count)
 end
 
+Given(/^a closed petition "([^"]*)" that is (not )?collecting signatures$/) do |action, not_collecting_signatures|
+  @petition = FactoryBot.create(:closed_petition, action: action, collect_signatures: !not_collecting_signatures)
+end
+
 Given(/^a petition "(.*?)" passed the threshold for a debate less than a day ago and has no debate date set$/) do |action|
   petition = FactoryBot.create(:awaiting_debate_petition, action: action, debate_threshold_reached_at: 2.hours.ago)
   petition.debate_outcome = nil

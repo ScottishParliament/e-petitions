@@ -162,3 +162,13 @@ Feature: Suzie views a petition
     Then I should not see "At 50 signatures…"
     Then I should not see "At 5,000 signatures…"
     And I should see a summary of the debate outcome
+
+  Scenario: Suzie sees a closed petition that collected signatures
+    Given a closed petition "Spend more money on science" that is collecting signatures
+    When I view the petition
+    Then I should see "1 signature"
+
+  Scenario: Suzie sees a closed petition that did not collect signatures
+    Given a closed petition "Spend more money on science" that is not collecting signatures
+    When I view the petition
+    Then I should see " This petition did not collect signatures"

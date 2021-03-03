@@ -1014,6 +1014,7 @@ en-GB:
       image_tag_html: |-
         <img srcset="%{srcset}" alt="Watch the petition ‘%{action}’ being debated" src="%{url}">
     signature_counts:
+      not_applicable: "This petition did not collect signatures"
       default_html:
         one: |-
           <span class="count" data-count="%{count}">%{num}</span> <span class="text">signature</span>
