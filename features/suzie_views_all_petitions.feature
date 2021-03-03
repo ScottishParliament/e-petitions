@@ -20,15 +20,17 @@ Feature: Suzy Signer views all petitions
     When I view all petitions from the home page
     Then I should see "Collecting signatures until"
 
-  Scenario: Suzie can see the closing date from the index page if no petitions are collecting signatures
+  Scenario: Suzie can see the closing date from the index page
     Given a petition "Good times" has been closed
     When I view all petitions from the home page
     Then I should see "Under consideration from "
+    And I should see the petition's closed_at timestamp
 
   Scenario: Suzie can see the completion date from the index page
     Given a petition "Good times" has been completed
     When I view all petitions from the home page
     Then I should see "Closed on "
+    And I should see the petition's completed_at timestamp
 
   Scenario: Suzie browses open petitions
     Given a petition "Good Times" signed by "CHIC" that is collecting signatures
