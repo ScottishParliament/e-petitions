@@ -190,6 +190,7 @@ blockquote {
     position: relative;
 
     &::before {
+      box-sizing: border-box;
       background-color: $text-color;
       content: "";
       position: absolute;
@@ -205,6 +206,13 @@ blockquote {
         width: 7px;
         top: 7px;
       }
+    }
+  }
+
+  .list-bullet > li {
+    &::before {
+      background-color: $white;
+      border: 1px solid $text-color;
     }
   }
 }
@@ -224,5 +232,18 @@ blockquote {
       position: absolute;
       left: 0;
     }
+  }
+}
+
+.list-alpha > li {
+  margin-top: 12px;
+  padding-left: 36px;
+  position: relative;
+
+  & > span {
+    position: absolute;
+    left: 0;
+    text-align: left;
+    width: 30px;
   }
 }
