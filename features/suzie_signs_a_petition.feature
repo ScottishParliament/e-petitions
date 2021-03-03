@@ -4,7 +4,7 @@ Feature: Suzie signs a petition
   I want to sign an existing petition
 
   Background:
-    Given a petition "Do something!"
+    Given a petition "Do something!" that is collecting signatures
 
   Scenario: Suzie signs a petition after validating her email
     When I decide to sign the petition
@@ -195,7 +195,7 @@ Feature: Suzie signs a petition
 
   Scenario: Suzie cannot create a new signature when the petition has closed
     Given I am on the new signature page
-	And the petition has reached the referral threshold
+    And the petition has reached the referral threshold
     And the petition has closed
     When I fill in my details
     And I try to sign
@@ -221,7 +221,7 @@ Feature: Suzie signs a petition
     When I say I am happy with my email address
     Then I am told to check my inbox to complete signing
     And "womboid@wimbledon.com" should receive 1 email
-	When the petition has reached the referral threshold
+    When the petition has reached the referral threshold
     And the petition has closed some time ago
     And I confirm my email address
     Then I should be on the petition page
