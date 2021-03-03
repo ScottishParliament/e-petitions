@@ -37,6 +37,16 @@ Feature: Suzy Signer views all petitions
       | Good Times      |
     And the markup should be valid
 
+  Scenario: Suzie browses referred petitions by most recently closed
+    Given a referred petition exists with action: "Good Times", closed_at: 1.year.ago
+    And a referred petition exists with action: "Everybody Dance", closed_at: 2.years.ago
+    And a referred petition exists with action: "Le Freak", closed_at: 3.days.ago
+    When I browse to see only "Under consideration" petitions
+    Then I should see the following ordered list of petitions:
+      | Le Freak        |
+      | Good Times      |
+      | Everybody Dance |
+
   Scenario: Suzie browses open petitions and can see numbering in the list view
     Given a set of 101 petitions
     When I view all petitions from the home page
