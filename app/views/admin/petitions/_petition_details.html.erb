@@ -1,6 +1,6 @@
 <dl>
   <dt>Status</dt>
-  <dd class="petition-meta-state"><%= @petition.state.capitalize %></dd>
+  <dd class="petition-meta-state"><%= @petition.status.humanize %></dd>
 
   <% if @petition.archived? %>
     <dt>Archived</dt>
