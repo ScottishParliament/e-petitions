@@ -52,7 +52,7 @@ class Petition < ActiveRecord::Base
   facet :referred,  -> { not_archived.closed_state.referred.by_most_recently_closed }
   facet :completed, -> { not_archived.completed_state.by_most_recently_closed }
   facet :hidden,    -> { not_archived.hidden_state.by_most_recent }
-  facet :archived,  -> { archived.by_most_recently_closed }
+  facet :archived,  -> { archived.by_most_recently_archived }
   facet :awaiting_debate,      -> { not_archived.awaiting_debate.by_most_relevant_debate_date }
   facet :awaiting_debate_date, -> { not_archived.awaiting_debate_date.by_waiting_for_debate_longest }
   facet :with_debate_outcome,  -> { not_archived.with_debate_outcome.by_most_recent_debate_outcome }
@@ -215,6 +215,10 @@ class Petition < ActiveRecord::Base
 
     def by_referred_longest
       reorder(referred_at: :asc, created_at: :desc)
+    end
+
+    def by_most_recently_archived
+      reorder(archived_at: :desc)
     end
 
     def current
