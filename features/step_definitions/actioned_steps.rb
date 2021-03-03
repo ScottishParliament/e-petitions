@@ -82,7 +82,7 @@ end
 Then(/^I should see (\d+) petitions counted in the referral threshold section$/) do |count|
   within(:css, "section[aria-labelledby=referral-threshold-heading]") do
     link_text = "See all petitions under consideration (#{count})"
-    expect(page).to have_link(link_text, href: petitions_path(state: :referred))
+    expect(page).to have_link(link_text, href: petitions_path(state: :under_consideration))
   end
 end
 
