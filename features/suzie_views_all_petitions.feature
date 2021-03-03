@@ -23,7 +23,7 @@ Feature: Suzy Signer views all petitions
   Scenario: Suzie can see the closing date from the index page if no petitions are collecting signatures
     Given a petition "Good times" has been closed
     When I view all petitions from the home page
-    Then I should see "Referred to the Public Petitions Committee on"
+    Then I should see "Under consideration from "
 
   Scenario: Suzie browses open petitions
     Given a petition "Good Times" signed by "CHIC" that is collecting signatures

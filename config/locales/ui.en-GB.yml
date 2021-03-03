@@ -475,7 +475,7 @@ en-GB:
               rejected: "Rejected"
               completed: "Closed by the Public Petitions Committee on %{date}"
               closed: "Referred to the Public Petitions Committee on %{date}"
-              referred: "Referred to the Public Petitions Committee on %{date}"
+              referred: "Under consideration from %{date}"
             facet_debated:
               debated_date: "Debated on %{date}"
             facet_referred:
@@ -1051,7 +1051,7 @@ en-GB:
         <h1>Rules about petitions</h1>
 
         <p>The rules for petitions are in:</p>
-        
+
         <ul class="list-bullet">
           <li>the Standing Orders of the Scottish Parliament (the rules for how the Parliament works)</li>
           <li>a “determination” (rules) agreed by the Public Petitions Committee</li>
@@ -1084,7 +1084,7 @@ en-GB:
 
         <section aria-labelledby="determination">
           <h2 id="determination">Determination on proper form of petitions</h2>
-        
+
           <p>To be read alongside the Parliament’s rules on public petitions, the Public Petitions Committee has made the following determination under Rule 15.4.3 on proper form of petitions.</p>
 
           <ul class="list-bullet">
