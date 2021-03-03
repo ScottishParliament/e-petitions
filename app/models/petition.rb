@@ -190,7 +190,7 @@ class Petition < ActiveRecord::Base
     end
 
     def by_most_recently_published
-      reorder(open_at: :desc)
+      reorder(open_at: :desc, created_at: :desc)
     end
 
     def by_most_recent_debate_outcome

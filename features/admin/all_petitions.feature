@@ -37,13 +37,13 @@ Feature: A moderator user views all petitions
 
     When I view all petitions
     Then I should see the following list of petitions:
-      | My rejected petition                            |
-      | My validated petition                           |
-      | My sponsored petition                           |
-      | My other sponsored petition                     |
-      | My flagged petition                             |
-      | My pending petition                             |
       | My hidden petition                              |
+      | My rejected petition                            |
+      | My flagged petition                             |
+      | My other sponsored petition                     |
+      | My sponsored petition                           |
+      | My validated petition                           |
+      | My pending petition                             |
       | My open petition                                |
       | My referred petition with scheduled debate date |
       | My referred petition awaiting debate date       |
