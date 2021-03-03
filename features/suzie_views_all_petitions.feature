@@ -25,6 +25,11 @@ Feature: Suzy Signer views all petitions
     When I view all petitions from the home page
     Then I should see "Under consideration from "
 
+  Scenario: Suzie can see the completion date from the index page
+    Given a petition "Good times" has been completed
+    When I view all petitions from the home page
+    Then I should see "Closed on "
+
   Scenario: Suzie browses open petitions
     Given a petition "Good Times" signed by "CHIC" that is collecting signatures
     And a petition "Everybody Dance" signed by "CHIC" that is collecting signatures
@@ -37,7 +42,7 @@ Feature: Suzy Signer views all petitions
       | Good Times      |
     And the markup should be valid
 
-  Scenario: Suzie browses referred petitions by most recently closed
+  Scenario: Suzie browses referred petitions and sees them by most recently published
     Given a referred petition exists with action: "Good Times", closed_at: 1.year.ago
     And a referred petition exists with action: "Everybody Dance", closed_at: 2.years.ago
     And a referred petition exists with action: "Le Freak", closed_at: 3.days.ago
@@ -52,6 +57,22 @@ Feature: Suzy Signer views all petitions
     When I browse to see only "Under consideration" petitions
     Then I should see "Under consideration from"
     And I should see the petition's closed_at timestamp
+
+  Scenario: Suzie browses closed petitions and sees them by most recently completed
+    Given a completed petition exists with action: "Good Times", completed_at: 1.year.ago
+    And a completed petition exists with action: "Everybody Dance", completed_at: 2.years.ago
+    And a completed petition exists with action: "Le Freak", completed_at: 3.days.ago
+    When I browse to see only "Closed" petitions
+    Then I should see the following ordered list of petitions:
+      | Le Freak        |
+      | Good Times      |
+      | Everybody Dance |
+
+  Scenario: Suzie browses closed petitions and sees them by most recently completed
+    Given a completed petition exists with action: "Good Times", completed_at: 1.year.ago
+    When I browse to see only "Closed" petitions
+    Then I should see "Closed by the Scottish Parliament on"
+    Then I should see the petition's completed_at timestamp
 
   Scenario: Suzie browses open petitions and can see numbering in the list view
     Given a set of 101 petitions
