@@ -481,7 +481,7 @@ en-GB:
             facet_referred:
               referred_date: "Under consideration from %{date}"
             facet_completed:
-              completed_date: "Closed by the Scottish Parliament on %{date}"
+              completed_date: "Closed on %{date}"
           no_match: "No petitions could be found matching your search terms."
         filtered_result_count:
           one: "1 petition"

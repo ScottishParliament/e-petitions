@@ -73,7 +73,7 @@ Feature: Suzy Signer views all petitions
   Scenario: Suzie browses closed petitions and sees them by most recently completed
     Given a completed petition exists with action: "Good Times", completed_at: 1.year.ago
     When I browse to see only "Closed" petitions
-    Then I should see "Closed by the Scottish Parliament on"
+    Then I should see "Closed on"
     Then I should see the petition's completed_at timestamp
 
   Scenario: Suzie browses open petitions and can see numbering in the list view
