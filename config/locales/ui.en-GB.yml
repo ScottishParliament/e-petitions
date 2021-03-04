@@ -585,16 +585,16 @@ en-GB:
         waiting:
           heading: "This petition is now under consideration by the Public Petitions Committee"
           link_html: |-
-            <a href="%{link}">Find out about the decisions taken on this petition</a>
+            <a href="%{link}">Find out about the Public Petitions Committee’s discussion of this petition</a>
         closed:
           heading: "This petition is now under consideration by the Public Petitions Committee"
           link_html: |-
-            <a href="%{link}">Find out about the decisions taken on this petition</a>
+            <a href="%{link}">Find out about the Public Petitions Committee’s discussion of this petition</a>
         referred:
           heading: |-
             This petition is now under consideration by the Public Petitions Committee
           link_html: |-
-            <a href="%{link}">Find out about the decisions taken on this petition</a>
+            <a href="%{link}">Find out about the Public Petitions Committee’s discussion of this petition</a>
         completed:
           heading: |-
             This petition was considered by the Scottish Parliament
