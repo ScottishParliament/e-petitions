@@ -1,4 +1,3 @@
-@wip
 Feature: Arnold searches from the home page
   In order to reduce the likelihood of a duplicate petition being made
   As a petition moderator
