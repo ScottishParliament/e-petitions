@@ -28,12 +28,12 @@ class PetitionCSVPresenter
   def self.attributes
     if Site.disable_thresholds_and_debates?
       [
-        :action, :summary, :previous_action, :background_information, :status,
+        :title, :summary, :previous_action, :background_information, :status,
         :creator_name, :creator_email, :signature_count, :rejection_code, :rejection_details
       ]
     else
       [
-        :action, :summary, :previous_action, :background_information, :status,
+        :title, :summary, :previous_action, :background_information, :status,
         :creator_name, :creator_email, :signature_count, :rejection_code, :rejection_details,
         :debate_date, :debate_transcript_url, :debate_video_url, :debate_pack_url, :debate_overview
       ]
@@ -90,6 +90,12 @@ class PetitionCSVPresenter
       class_eval <<~RUBY
         def background_information
           csv_escape petition.send(:additional_details)
+        end
+      RUBY
+    when :title
+      class_eval <<~RUBY
+        def title
+          csv_escape petition.send(:action)
         end
       RUBY
     else
