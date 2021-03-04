@@ -43,7 +43,8 @@ RSpec.describe PetitionCSVPresenter do
       [
         [:closed_at, :completed_at, ->(petition) { timestampify(petition.completed_at) }],
         [:under_consideration_at, :closed_at, ->(petition) { timestampify(petition.closed_at) }],
-        [:summary, :background]
+        [:summary, :background],
+        [:background_information, :additional_details]
       ].each do |mapping, attr, resolver|
         describe "#{mapping}" do
           it "maps to the petition's #{attr}" do
