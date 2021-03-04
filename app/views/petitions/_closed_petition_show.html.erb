@@ -12,7 +12,11 @@
       </h2>
 
       <% if @petition.scot_parl_link? %>
-        <p class="secondary"><%= t(:"ui.petitions.referral_threshold.referred.link_html", link: @petition.scot_parl_link) %></p>
+        <% if @petition.completed? %>
+          <p class="secondary"><%= t(:"ui.petitions.referral_threshold.completed.link_html", link: @petition.scot_parl_link) %></p>
+        <% else %>
+          <p class="secondary"><%= t(:"ui.petitions.referral_threshold.closed.link_html", link: @petition.scot_parl_link) %></p>
+        <% end %>
       <% end %>
     </section>
   <% else %>

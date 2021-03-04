@@ -599,7 +599,7 @@ gd-GB:
           heading: |-
             This petition was considered by the Scottish Parliament
           link_html: |-
-            <a href="%{link}">Find out about the Scottish Parliament’s discussion of this petition</a>
+            <a href="%{link}">Find out about the decisions taken on this petition</a>
         needs_more_signatures:
           heading: "At %{threshold} signatures…"
           referral_threshold: |-

@@ -172,3 +172,14 @@ Feature: Suzie views a petition
     Given a closed petition "Spend more money on science" that is not collecting signatures
     When I view the petition
     Then I should see " This petition did not collect signatures"
+
+  Scenario Outline: Suzie sees the correct wording for petitions with a ScotParl link
+    Given a <state> petition "My petition" exists
+    And the petition has a ScotParl link "some URL"
+    When I view the petition
+    Then I should see a link called "<copy>" linking to "some URL"
+
+    Scenarios:
+      | state     | copy                                                                        |
+      | closed    | Find out about the Public Petitions Committee’s discussion of this petition |
+      | completed | Find out about the decisions taken on this petition                         |

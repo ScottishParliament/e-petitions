@@ -526,3 +526,7 @@ When(/^I search all petitions for "(.*?)"$/) do |search_term|
     end
   end
 end
+
+Given(/^the petition has a ScotParl link "([^"]*)"$/) do |url|
+  @petition.update!(scot_parl_link: url)
+end
