@@ -38,25 +38,23 @@ RSpec.describe PetitionCSVPresenter do
     describe "mappings" do
       let(:petition) { FactoryBot.create(:completed_petition) }
 
-      describe "under_consideration_at" do
-        it "maps to the petition's closed_at" do
-          expect(PetitionCSVPresenter.fields).to include :under_consideration_at
+      extend TimestampsSpecHelper
 
-          index = PetitionCSVPresenter.fields.find_index :under_consideration_at
-          row = CSV.parse(subject).first
+      [
+        [:closed_at, :completed_at, ->(petition) { timestampify(petition.completed_at) }],
+        [:under_consideration_at, :closed_at, ->(petition) { timestampify(petition.closed_at) }],
+      ].each do |mapping, attr, resolver|
+        describe "#{mapping}" do
+          it "maps to the petition's #{attr}" do
+            expect(PetitionCSVPresenter.fields).to include mapping
 
-          expect(row.at(index)).to eq timestampify(petition.closed_at)
-        end
-      end
+            index = PetitionCSVPresenter.fields.find_index mapping
+            value = resolver ? resolver.call(petition) : petition.send(attr)
 
-      describe "closed_at" do
-        it "maps to the petition's completed_at" do
-          expect(PetitionCSVPresenter.fields).to include :closed_at
+            row = CSV.parse(subject).first
 
-          index = PetitionCSVPresenter.fields.find_index :closed_at
-          row = CSV.parse(subject).first
-
-          expect(row.at(index)).to eq timestampify(petition.completed_at)
+            expect(row.at(index)).to eq value
+          end
         end
       end
     end
