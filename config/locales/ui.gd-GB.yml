@@ -863,7 +863,7 @@ gd-GB:
 
           <p>Electronic information will be stored on Scottish Parliament ICT systems, which includes third party cloud services provided by Microsoft. Any transfer of data by Microsoft outside of the EEA is covered by contractual clauses under which Microsoft ensure that personal data is treated in line with European legislation.</p>
 
-          <p>The petitions system uses Amazon Web Services (AWS) cloud storage to store your data and to send emails relating to the petitions process. AWS store data within the European Economic Area (EEA). Emails sent are stored for 7 days. The privacy notice for Amazon Web Services (AWS) is available here: <a href="https://aws.amazon.com/privacy/">aws.amazon.com/privacy</a>.</p>
+          <p>The petitions system uses Amazon Web Services (AWS) cloud storage to store your data and to send emails relating to the petitions process. AWS store data within the European Economic Area (EEA). Emails sent are stored for 6 months. The privacy notice for Amazon Web Services (AWS) is available here: <a href="https://aws.amazon.com/privacy/">aws.amazon.com/privacy</a>.</p>
 
           <p>Petitions will be transferred to the national Records of Scotland (NRS) according to the SPCB’s document retention schedule and will continue to be publicly searchable on a permanent basis both via the Parliament’s website and the NRS.</p>
 
