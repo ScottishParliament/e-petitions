@@ -83,6 +83,11 @@ Then(/^a petition exists with state: "([^"]*)", action_en: "([^"]*)", action_gd:
   expect(petition).to exist
 end
 
+Then(/^a petition exists with state: "([^"]*)", action_en: "([^"]*)", action_gd: "([^"]*)"$/) do |state, action_en, action_gd|
+  petition = Petition.where(state: state, action_en: action_en, action_gd: action_gd)
+  expect(petition).to exist
+end
+
 Then(/^a signature exists with state: "([^"]*)", name: "([^"]*)", email: "([^"]*)", postcode: "([^"]*)"$/) do |state, name, email, postcode|
   signature = Signature.where(state: state, name: name, email: email, postcode: postcode)
   expect(signature).to exist

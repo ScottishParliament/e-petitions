@@ -45,6 +45,8 @@ Feature: Moderator submits a paper petition
     And I fill in "Postcode" with "G34 0BX"
     And I press "Save"
     Then I should see "Paper petition submitted successfully"
-    And a petition exists with state: "closed", action_en: "Do stuff!", action_gd: "Dèan stuth!", closed_at: "2020-04-30T11:00:00Z"
+    And a petition exists with state: "open", action_en: "Do stuff!", action_gd: "Dèan stuth!"
     And a signature exists with state: "pending", name: "Alice Smith", email: "alice@example.com", postcode: "G340BX"
     And a contact exists with address: "1 Nowhere Road\nGlasgow", phone_number: "01414961234"
+    And I am on the home page
+    Then I should see "Do stuff!"
