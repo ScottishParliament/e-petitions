@@ -204,7 +204,7 @@ RSpec.describe PaperPetition, type: :model do
         expect(subject.save).to eq(true)
 
         expect(petition).to have_attributes(
-          state: "closed",
+          state: "open",
           submitted_on_paper: true,
           submitted_on: Date.civil(2020, 4, 30),
           action_en: "Do stuff!",
@@ -216,8 +216,8 @@ RSpec.describe PaperPetition, type: :model do
           additional_details_en: "Here's some more reasons",
           additional_details_gd: "Seo beagan a bharrachd adhbharan",
           locale: "gd-GB", signature_count: 6000,
-          open_at: Time.utc(2020, 3, 1, 12, 0, 0),
-          closed_at: Time.utc(2020, 4, 30, 11, 0, 0),
+          open_at: Time.utc(2020, 4, 30, 11, 0, 0),
+          closed_at: nil,
           moderation_threshold_reached_at: Time.utc(2020, 4, 30, 11, 0, 0),
           referral_threshold_reached_at: Time.utc(2020, 4, 30, 11, 0, 0),
           debate_threshold_reached_at: Time.utc(2020, 4, 30, 11, 0, 0),

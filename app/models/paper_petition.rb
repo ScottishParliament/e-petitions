@@ -166,7 +166,7 @@ class PaperPetition
 
   def petition_params
     {
-      state: "closed", submitted_on_paper: true,
+      state: "open", submitted_on_paper: true,
       action_en: action_en, background_en: background_en,
       previous_action_en: previous_action_en,
       additional_details_en: additional_details_en,
@@ -175,11 +175,11 @@ class PaperPetition
       additional_details_gd: additional_details_gd,
       locale: locale, signature_count: signature_count,
       submitted_on: submitted_on, open_at: open_at,
-      moderation_threshold_reached_at: closed_at,
-      referral_threshold_reached_at: closed_at,
+      moderation_threshold_reached_at: open_at,
+      referral_threshold_reached_at: open_at,
       debate_threshold_reached_at: debate_threshold_reached_at,
-      closed_at: closed_at, last_signed_at: closed_at,
-      referred_at: closed_at, collect_signatures: collect_signatures
+      last_signed_at: open_at, referred_at: open_at, 
+      collect_signatures: collect_signatures
     }
   end
 
@@ -195,16 +195,13 @@ class PaperPetition
     { address: address, phone_number: phone_number }
   end
 
-  def open_at
-    60.days.before(closed_at)
-  end
 
-  def closed_at
+  def open_at
     submitted_on.noon
   end
 
   def debate_threshold_reached_at
-    signature_count >= threshold_for_debate ? closed_at : nil
+    signature_count >= threshold_for_debate ? open_at : nil
   end
 
   def gaelic_disabled?
