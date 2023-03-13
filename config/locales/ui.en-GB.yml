@@ -923,7 +923,7 @@ en-GB:
 
           <p>Unboxed Consulting Limited who provide technical support for the petitions system will also have access to the system for troubleshooting and maintenance purposes only.</p>
 
-          <p>Electronic information will be stored on Scottish Parliament Information and Communication Technologies (ICT) systems, which includes third party cloud services provided by Microsoft. Any transfer of data by Microsoft outside of the European Economic Area (EEA) is covered by contractual clauses under which Microsoft ensure that personal data is treated in line with European legislation.</p>
+          <p>Electronic information will be stored on Scottish Parliament Information and Communication Technologies (ICT) systems, which includes third party cloud services provided by Microsoft. Any transfer of data by Microsoft outside of the UK is covered by Standard Contractual Clauses under which Microsoft ensure that personal data is treated in line with UK GDPR.</p>
 
           <p>The petitions system uses Amazon Web Services (AWS) cloud storage to store your data and to send emails relating to the petitions process. Emails sent are stored for 6 months. The privacy notice for AWS is available here: <a href="https://aws.amazon.com/privacy/">https://aws.amazon.com/privacy</a>.</p>
 
