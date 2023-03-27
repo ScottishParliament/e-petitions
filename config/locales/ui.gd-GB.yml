@@ -648,7 +648,7 @@ gd-GB:
         open:
           heading: "What happens next?"
           link_html: |-
-            <a href="%{link}">This petition is now under consideration by the Citizen Participation and Public Petitions Committee. Click here for further information about the Citizen Participation and Public Petition Committee's consideration of this petition.</a>
+            <a href="%{link}">Click here for further information about the Citizen Participation and Public Petition Committee's consideration of this petition.</a>
         waiting:
           heading: "This petition is now under consideration by the Citizen Participation and Public Petitions Committee"
           link_html: |-
