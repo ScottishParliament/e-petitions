@@ -599,7 +599,7 @@ en-GB:
       created_by: "Created by"
       date_referred: "Considered from"
       other_lists: "Other lists of petitions"
-      heading_open: "Collecting signatures"
+      heading_open: "Under consideration"
       more_details: "More details"
       date_submitted: "Date submitted"
       date_completed: "Date closed"
@@ -647,9 +647,9 @@ en-GB:
         open:
           heading: "What happens next?"
           link_html: |-
-            <a href="%{link}">Click here for further information about the Citizen Participation and Public Petition Committee's consideration of this petition.</a>
+            <a href="%{link}">Click here for further information about the consideration of this petition.</a>
         waiting:
-          heading: "This petition is now under consideration by the Citizen Participation and Public Petitions Committee"
+          heading: "This petition is now under consideration"
           link_html: |-
             <a href="%{link}">Find out about the Citizen Participation and Public Petitions Committee’s discussion of this petition</a>
         closed:
@@ -658,7 +658,7 @@ en-GB:
             <a href="%{link}">Find out about the Citizen Participation and Public Petitions Committee’s discussion of this petition</a>
         referred:
           heading: |-
-            This petition is now under consideration by the Citizen Participation and Public Petitions Committee
+            This petition is now under consideration
           link_html: |-
             <a href="%{link}">Find out about the Citizen Participation and Public Petitions Committee’s discussion of this petition</a>
         completed:
@@ -691,7 +691,7 @@ en-GB:
       petition_closed_notice: |-
         This petition is closed
       petitions_run_length: |-
-        Petitions can collect signatures until the Citizen and Public Participation Committee closes the petition
+        Petitions can collect signatures until the petition has been closed
       about_petition_data_html: |-
         <details>
           <summary>About petition data</summary>
