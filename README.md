@@ -4,7 +4,7 @@ This is the code base for the Scottish Parliament's petitions service (https://p
 
 ## Setup
 
-We recommend using [Docker Desktop][1] to get setup quickly. If you'd prefer not to use Docker then you'll need Ruby (2.4+), Node (10+), PostgreSQL (9.6+) and Memcached (1.4+) installed.
+We recommend using [Docker Desktop][1] to get setup quickly. If you'd prefer not to use Docker then you'll need Ruby (2.7+), Node (14+), PostgreSQL (12+) and Memcached (1.5+) installed.
 
 ### DNS
 
@@ -27,25 +27,25 @@ If you do this before running the app for the first time it will automatically p
 ### Create the database
 
 ```sh
-docker-compose run --rm web rake db:prepare
+docker compose run --rm web rake db:prepare
 ```
 
 ### Create an admin user
 
 ```sh
-docker-compose run --rm web rake spets:add_sysadmin_user
+docker compose run --rm web rake spets:add_sysadmin_user
 ```
 
 ### Load the postcode, constituency and region data
 
 ```sh
-docker-compose run --rm web rake spets:geography:import
+docker compose run --rm web rake spets:geography:import
 ```
 
 ### Fetch the member list
 
 ```sh
-docker-compose run --rm web rails runner 'FetchMembersJob.perform_now'
+docker compose run --rm web rails runner 'FetchMembersJob.perform_now'
 ```
 
 ### Enable signature counting
@@ -57,44 +57,43 @@ docker-compose run --rm web rails runner 'Site.enable_signature_counts!(interval
 ### Start the services
 
 ```sh
-docker-compose up
+docker compose up
 ```
 
-Once the services have started you can access the [front end][2], [back end][3] and any [emails sent][4].
+Once the services have started you can access the [front end][2] and [back end][3].
 
 ## Tests
 
 Before running any tests the database needs to be prepared:
 
 ```
-docker-compose run --rm web rake db:test:prepare
+docker compose run --rm web rake db:test:prepare
 ```
 
 You can run the full test suite using following command:
 
 ```sh
-docker-compose run --rm web rake
+docker compose run --rm web rake
 ```
 
 Individual specs can be run using the following command:
 
 ```sh
-docker-compose run --rm web rspec spec/models/site_spec.rb
+docker compose run --rm web rspec spec/models/site_spec.rb
 ```
 
 Similarly, individual cucumber features can be run using the following command:
 
 ```sh
-docker-compose run --rm web cucumber features/suzie_views_a_petition.feature
+docker compose run --rm web cucumber features/suzie_views_a_petition.feature
 ```
 
 Specs can be automatically run on file changes with `guard`:
 
 ```sh
-docker-compose run --rm web bundle exec guard
+docker compose run --rm web bundle exec guard
 ```
 
 [1]: https://www.docker.com/products/docker-desktop
 [2]: http://localhost:3000/
 [3]: http://localhost:3000/admin
-[4]: http://localhost:1080/
