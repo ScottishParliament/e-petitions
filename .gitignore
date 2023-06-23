@@ -15,6 +15,9 @@
 # Ignore precompiled assets
 /public/assets
 
+# Ignore npm packages
+/node_modules/*
+
 # Ignore build packages
 /pkg
 

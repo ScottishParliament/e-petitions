@@ -47,8 +47,6 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit', require: false
   gem 'rspec-rails'
-  gem 'jasmine'
-  gem 'jasmine_selenium_runner', require: false
   gem 'pry'
   gem 'guard'
   gem 'guard-cucumber', require: false

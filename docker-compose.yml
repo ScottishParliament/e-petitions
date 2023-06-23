@@ -1,20 +1,26 @@
 version: "3.7"
 
 x-application: &application
-  image: unboxed/epetitions
+  image: scottish-petitions/ruby
   build: .
   entrypoint: ./docker-entrypoint.sh
   environment:
-    - DATABASE_URL=postgres://postgres:fUG1DnZpy1rNkxiO@postgres:5432
-    - MEMCACHE_SERVERS=memcached:11211
-    - SPROCKETS_CACHE=/cache
   volumes:
     - .:/app
     - bundle:/bundle
     - cache:/cache
+    - node_modules:/app/node_modules
+  tmpfs:
+    - /tmp/pids/
   depends_on:
     - postgres
     - memcached
+
+x-environment: &environment
+  DATABASE_URL: "postgres://postgres:fUG1DnZpy1rNkxiO@postgres:5432"
+  MEMCACHE_SERVERS: "memcached:11211"
+  SPROCKETS_CACHE: "/cache"
+  PIDFILE: "/tmp/pids/server.pid"
 
 services:
   postgres:
@@ -25,29 +31,33 @@ services:
       - POSTGRES_PASSWORD=fUG1DnZpy1rNkxiO
       - POSTGRES_DB=postgres
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     volumes:
       - db:/var/lib/postgresql/data
 
   memcached:
     image: memcached:1.5
-    ports:
-      - "11211:11211"
+    expose:
+      - "11121"
 
   web:
     <<: *application
+    environment:
+      <<: *environment
     command: [
       "rails", "server",
       "-b", "0.0.0.0",
       "-p", "3000"
     ]
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     stdin_open: true
     tty: true
 
   worker:
     <<: *application
+    environment:
+      <<: *environment
     command: [
       "bin/delayed_job", "start",
       "-p", "worker",
@@ -57,6 +67,8 @@ services:
 
   counter:
     <<: *application
+    environment:
+      <<: *environment
     command: [
       "bin/delayed_job", "start",
       "-p", "counter",
@@ -68,3 +80,4 @@ volumes:
   bundle:
   db:
   cache:
+  node_modules:
