@@ -39,3 +39,4 @@ namespace :errors do
 end
 
 task 'assets:precompile' => 'errors:precompile'
+task 'assets:clobber' => 'errors:clobber'
