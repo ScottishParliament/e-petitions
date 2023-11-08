@@ -3,7 +3,6 @@ version: "3.7"
 x-application: &application
   image: scottish-petitions/ruby
   build: .
-  entrypoint: ./docker-entrypoint.sh
   environment:
   volumes:
     - .:/app
@@ -58,23 +57,15 @@ services:
     <<: *application
     environment:
       <<: *environment
-    command: [
-      "bin/delayed_job", "start",
-      "-p", "worker",
-      "--min-priority", "10",
-      "--daemon_options", "-t"
-    ]
+      MIN_PRIORITY: "10"
+    command: [ "rake", "jobs:work" ]
 
   counter:
     <<: *application
     environment:
       <<: *environment
-    command: [
-      "bin/delayed_job", "start",
-      "-p", "counter",
-      "--max-priority", "5",
-      "--daemon_options", "-t"
-    ]
+      MAX_PRIORITY: "5"
+    command: [ "rake", "jobs:work" ]
 
 volumes:
   bundle:
