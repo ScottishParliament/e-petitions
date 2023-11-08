@@ -62,7 +62,7 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
-    appsignal (3.0.22)
+    appsignal (3.4.14)
       rack
     authlogic (6.4.0)
       activemodel (>= 5.2, < 6.2)
