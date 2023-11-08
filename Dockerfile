@@ -32,4 +32,8 @@ RUN mkdir -p "/root/.config/chromium/Crash Reports/pending/"
 
 WORKDIR /app
 
+COPY ./docker-entrypoint.sh /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
 CMD ["/bin/bash"]

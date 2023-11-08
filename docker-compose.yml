@@ -3,7 +3,6 @@ version: "3.7"
 x-application: &application
   image: scottish-petitions/ruby
   build: .
-  entrypoint: ./docker-entrypoint.sh
   environment:
   volumes:
     - .:/app
