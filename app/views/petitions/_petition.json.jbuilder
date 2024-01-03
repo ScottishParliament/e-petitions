@@ -8,7 +8,6 @@ end if defined?(is_collection)
 json.attributes do
   json.title petition.action
   json.summary petition.background
-  json.previous_action petition.previous_action
   json.background_information petition.additional_details
   json.petitioner petition.creator.name
   json.status petition.status

@@ -10,7 +10,6 @@ csv_builder = lambda do |csv|
       petition.status,
       petition.signature_count,
       csv_escape(petition.background),
-      csv_escape(petition.previous_action),
       csv_escape(petition.additional_details),
       csv_date_format(petition.created_at),
       csv_date_format(petition.opened_at),

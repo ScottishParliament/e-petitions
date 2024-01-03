@@ -153,7 +153,6 @@ end
 Then(/^I should see the petition details$/) do
   expect(page).to have_content(@petition.action)
   expect(page).to have_content(@petition.background) if @petition.background?
-  expect(page).to have_content(@petition.previous_action) if @petition.previous_action?
 
   if @petition.additional_details?
     expect(page).to have_content(@petition.additional_details)
