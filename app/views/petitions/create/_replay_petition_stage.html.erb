@@ -12,10 +12,6 @@
   <div class="background">
     <%= auto_link(simple_format(h(petition.summary)), html: { rel: "nofollow" }) %>
   </div>
-  <div class="previous-action">
-    <h3><%= t(:"ui.petitions.previous_action.heading") %></h3>
-    <%= auto_link(simple_format(h(petition.previous_action)), html: { rel: "nofollow" }) %>
-  </div>
   <div class="additional-details">
     <h3><%= t(:"ui.petitions.additional_details.heading") %></h3>
     <%= auto_link(simple_format(h(petition.additional_details)), html: { rel: "nofollow" }) %>

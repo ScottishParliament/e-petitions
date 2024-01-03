@@ -49,7 +49,6 @@ RSpec.describe "API request to show a petition", type: :request, show_exceptions
         a_hash_including(
           "title" => a_string_matching(petition.action),
           "summary" => a_string_matching(petition.background),
-          "previous_action" => a_string_matching(petition.previous_action),
           "background_information" => a_string_matching(petition.additional_details),
           "petitioner" => a_string_matching(petition.creator.name),
           "status" => a_string_matching(petition.status),
@@ -57,6 +56,12 @@ RSpec.describe "API request to show a petition", type: :request, show_exceptions
           "opened_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z]),
           "created_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z]),
           "updated_at" => a_string_matching(%r[\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\z])
+        )
+      )
+
+      expect(attributes).not_to match(
+        a_hash_including(
+          "previous_action" => a_string_matching(petition.previous_action)
         )
       )
     end
