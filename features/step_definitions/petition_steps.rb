@@ -476,3 +476,9 @@ end
 Given(/^the petition has a ScotParl link "([^"]*)"$/) do |url|
   @petition.update!(scot_parl_link: url)
 end
+
+Given(/^an open petition "([^"]*)" with a previous action of "([^"]*)" was created on "([^"]*)"$/) do |action, previous_action, date|
+  travel_to(date) do
+    @petition = FactoryBot.create(:open_petition, action: action, previous_action: previous_action)
+  end
+end

@@ -19,6 +19,12 @@
       <%= apply_formatting(petition, :background) %>
     </div>
   <% end %>
+  <% if petition.show_previous_action? %>
+    <div class="previous-action">
+      <h3><%= t(:"ui.petitions.previous_action.heading") %></h3>
+      <%= apply_formatting(petition, :previous_action) %>
+    </div>
+  <% end %>
   <% if petition.additional_details? %>
     <div class="additional-details">
       <h3><%= t(:"ui.petitions.additional_details.heading") %></h3>
