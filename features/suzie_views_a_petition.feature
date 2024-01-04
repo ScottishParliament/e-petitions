@@ -196,3 +196,13 @@ Feature: Suzie views a petition
     When I view the petition
     Then I should see "The Scottish Parliament Election will be held on 6 May 2021"
     And I cannot sign the petition
+
+  Scenario: Suzie sees previous action details on petitions created before 1 Jan 2024
+    Given an open petition "Ban Badger Baiting" with a previous action of "Written to my MSP" was created on "2023/12/12"
+    When I view the petition
+    Then I should see "Written to my MSP"
+
+  Scenario: Suzie sees previous action details on petitions created before 1 Jan 2024
+    Given an open petition "Ban Badger Baiting" with a previous action of "Written to my MSP" was created on "2024/01/02"
+    When I view the petition
+    Then I should not see "Written to my MSP"

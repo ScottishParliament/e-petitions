@@ -34,6 +34,8 @@ class Petition < ActiveRecord::Base
 
   DEBATE_STATES = %w[pending awaiting scheduled debated not_debated]
 
+  PREVIOUS_ACTION_CUTOFF = Time.utc(2024, 1, 1, 0, 0, 0)
+
   self.cache_timestamp_format = :stepped_cache_key
 
   has_perishable_token called: 'sponsor_token'
@@ -1180,5 +1182,9 @@ class Petition < ActiveRecord::Base
     else
       state
     end
+  end
+
+  def show_previous_action?(now = Time.current)
+    (created_at || now) < PREVIOUS_ACTION_CUTOFF && previous_action?
   end
 end
