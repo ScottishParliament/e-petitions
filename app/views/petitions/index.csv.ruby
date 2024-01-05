@@ -1,5 +1,5 @@
 csv_builder = lambda do |csv|
-  csv << ['Petition', 'URL', 'PE Number', 'Petitioner', 'Status', 'Signatures Count', 'Summary', 'Previous action', 'Background Information', 'Created At', 'Opened At', 'Under Consideration At', 'Topics']
+  csv << ['Petition', 'URL', 'PE Number', 'Petitioner', 'Status', 'Signatures Count', 'Summary', 'Background Information', 'Created At', 'Opened At', 'Under Consideration At', 'Topics']
 
   @petitions.find_each do |petition|
     csv << [
