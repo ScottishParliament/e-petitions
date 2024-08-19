@@ -35,7 +35,7 @@ jobs:
 
     - name: Install gems
       run: |
-        gem install bundler -v 1.17.3
+        gem install bundler -v 2.3.27
         bundle install --jobs 4 --retry 3 --path vendor/bundle
 
     - name: Configure AWS credentials
