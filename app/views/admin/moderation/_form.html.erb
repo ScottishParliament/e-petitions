@@ -53,7 +53,7 @@
         if ($reject_control.is(':checked')) {
           // Display if the rejection control was checked
           $rejection_controls.show();
-        } else if ($rejection_controls.find('.error-message').size() === 0) {
+        } else if ($rejection_controls.find('.error-message').length === 0) {
           // Hide it straight away if there were no errors displayed
           $rejection_controls.hide();
         }
