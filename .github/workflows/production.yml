@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     environment:
       name: scottish-petitions-production
@@ -33,9 +33,9 @@ jobs:
       uses: actions/cache@v1
       with:
         path: vendor/bundle
-        key: ubuntu-20.04-gems-${{ hashFiles('/Gemfile.lock') }}
+        key: ubuntu-22.04-gems-${{ hashFiles('/Gemfile.lock') }}
         restore-keys: |
-          ubuntu-20.04-gems-
+          ubuntu-22.04-gems-
 
     - name: Install gems
       run: |
