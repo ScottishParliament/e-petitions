@@ -34,6 +34,7 @@ gem 'image_processing'
 gem 'maxminddb'
 gem 'redcarpet'
 gem 'scrypt'
+gem 'webrick'
 
 gem 'aws-sdk-codedeploy', require: false
 gem 'aws-sdk-cloudwatchlogs', require: false
