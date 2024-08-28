@@ -14,6 +14,9 @@ class PackageBuilder
 
     def deploy!(environment)
       new(environment).deploy!
+    rescue Aws::Errors::InvalidSSOCredentials => e
+      $stdout.puts(e.message)
+      exit(false)
     end
   end
 
