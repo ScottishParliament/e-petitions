@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     environment:
       name: scottish-petitions-preview
@@ -20,7 +20,11 @@ jobs:
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7
+        ruby-version: "3.0"
+
+    - name: Update package list
+      run: |
+        sudo apt-get update
 
     - name: Install postgres client
       run: |
@@ -30,9 +34,9 @@ jobs:
       uses: actions/cache@v1
       with:
         path: vendor/bundle
-        key: ubuntu-20.04-gems-${{ hashFiles('/Gemfile.lock') }}
+        key: ubuntu-22.04-gems-${{ hashFiles('/Gemfile.lock') }}
         restore-keys: |
-          ubuntu-20.04-gems-
+          ubuntu-22.04-gems-
 
     - name: Install gems
       run: |
