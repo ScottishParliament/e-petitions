@@ -269,7 +269,7 @@ GEM
     multi_test (0.1.2)
     multipart-post (2.4.1)
     nenv (0.3.0)
-    net-http-persistent (4.0.2)
+    net-http-persistent (4.0.4)
       connection_pool (~> 2.2)
     net-imap (0.4.16)
       date
