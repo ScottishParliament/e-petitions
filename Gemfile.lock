@@ -123,7 +123,7 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
-    cucumber (2.4.0)
+    cucumber (2.99.0)
       builder (>= 2.1.2)
       cucumber-core (~> 1.5.0)
       cucumber-wire (~> 0.0.1)
@@ -243,8 +243,8 @@ GEM
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     minitest (5.25.1)
-    multi_json (1.14.1)
-    multi_test (0.1.2)
+    multi_json (1.15.0)
+    multi_test (1.1.0)
     multipart-post (2.4.1)
     net-http-persistent (4.0.4)
       connection_pool (~> 2.2)
@@ -424,7 +424,7 @@ DEPENDENCIES
   bundler-audit
   capybara
   connection_pool
-  cucumber (~> 2.4.0)
+  cucumber (~> 2.99.0)
   cucumber-rails
   daemons
   dalli
