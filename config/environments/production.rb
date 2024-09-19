@@ -29,7 +29,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = :terser
 
   # Rather than use a CSS compressor, use the SASS style to perform compression
   config.sass.style = :compressed
