@@ -50,9 +50,6 @@ group :development, :test do
   gem 'bundler-audit', require: false
   gem 'rspec-rails'
   gem 'pry'
-  gem 'guard'
-  gem 'guard-cucumber', require: false
-  gem 'guard-rspec', require: false
 end
 
 group :test do
