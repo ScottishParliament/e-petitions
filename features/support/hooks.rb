@@ -42,7 +42,7 @@ Before('@gaelic') do
   I18n.locale = :"gd-GB"
 end
 
-Before('~@gaelic') do
+Before('not @gaelic') do
   I18n.locale = :"en-GB"
 end
 
@@ -59,7 +59,7 @@ Before('@admin') do
   Capybara.default_host = 'https://moderate.petitions.parliament.scot'
 end
 
-Before('~@admin') do
+Before('not @admin') do
   Capybara.app_host = 'https://petitions.parliament.scot'
   Capybara.default_host = 'https://petitions.parliament.scot'
 end
