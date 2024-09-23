@@ -52,10 +52,6 @@ Given(/^an open petition exists with action: "([^"]*)"$/) do |action|
   @petition = FactoryBot.create(:open_petition, action: action)
 end
 
-Given(/^a referred petition exists with action: "([^"]*)"$/) do |action|
-  @petition = FactoryBot.create(:referred_petition, action: action)
-end
-
 Given(/^a rejected petition exists with action: "([^"]*)"$/) do |action|
   @petition = FactoryBot.create(:rejected_petition, action: action)
 end
@@ -75,11 +71,6 @@ end
 
 Then(/^a petition should exist with action: "([^"]*)", state: "([^"]*)"$/) do |action, state|
   petition = Petition.where(action: action, state: state)
-  expect(petition).to exist
-end
-
-Then(/^a petition exists with state: "([^"]*)", action_en: "([^"]*)", action_gd: "([^"]*)", closed_at: "([^"]*)"$/) do |state, action_en, action_gd, closed_at|
-  petition = Petition.where(state: state, action_en: action_en, action_gd: action_gd, closed_at: closed_at)
   expect(petition).to exist
 end
 
@@ -139,10 +130,6 @@ end
 
 Given(/^a validated petition exists with action_en: "([^"]*)", action_gd: "([^"]*)"$/) do |action_en, action_gd|
   @petition = FactoryBot.create(:validated_petition, action_en: action_en, action_gd: action_gd)
-end
-
-Given('an open petition exists with action_en: {string}, additional_details_en: {string}, action_gd: {string}, additional_details_gd: {string}, closed_at: {timestamp}') do |action_en, additional_details_en, action_gd, additional_details_gd, closed_at|
-  @petition = FactoryBot.create(:open_petition, action_en: action_en, additional_details_en: additional_details_en, action_gd: action_gd, additional_details_gd: additional_details_gd, closed_at: closed_at)
 end
 
 Given('an open petition exists with action_en: {string}, additional_details_en: {string}, action_gd: {string}, additional_details_gd: {string}, referred_at: {timestamp}') do |action_en, additional_details_en, action_gd, additional_details_gd, referred_at|
