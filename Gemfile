@@ -22,7 +22,6 @@ gem 'terser'
 gem 'bcrypt'
 gem 'faker', require: false
 gem 'slack-notifier'
-gem 'daemons'
 gem 'jquery-rails'
 gem 'delayed-web'
 gem 'dalli'
@@ -41,6 +40,7 @@ gem 'ffi', force_ruby_platform: true
 gem 'aws-sdk-codedeploy', require: false
 gem 'aws-sdk-cloudwatchlogs', require: false
 gem 'aws-sdk-s3', require: false
+
 gem 'aws-sdk-sesv2', require: false
 gem 'aws-sdk-sqs', require: false
 gem 'shoryuken', require: false

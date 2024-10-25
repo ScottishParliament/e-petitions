@@ -22,7 +22,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -64,7 +64,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -106,7 +106,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -152,7 +152,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -198,7 +198,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -244,7 +244,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -290,7 +290,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -336,7 +336,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -382,7 +382,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -427,7 +427,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
@@ -474,7 +474,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
       memcached:
-        image: memcached:1.5.16
+        image: memcached:1.5
         ports: ["11211:11211"]
 
     steps:
