@@ -38,7 +38,7 @@ gem 'puma'
 gem 'ffi', force_ruby_platform: true
 
 gem 'net-imap', '< 0.5'
-gem 'zeitwerk', '< 2.7'
+gem 'zeitwerk', '< 2.8'
 
 gem 'aws-sdk-codedeploy', require: false
 gem 'aws-sdk-cloudwatchlogs', require: false

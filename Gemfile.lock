@@ -421,7 +421,7 @@ GEM
     will_paginate (3.3.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.18)
+    zeitwerk (2.7.1)
 
 PLATFORMS
   aarch64-linux
@@ -486,7 +486,7 @@ DEPENDENCIES
   webrick
   whenever
   will_paginate
-  zeitwerk (< 2.7)
+  zeitwerk (< 2.8)
 
 BUNDLED WITH
    2.3.27
