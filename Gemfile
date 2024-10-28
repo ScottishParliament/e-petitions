@@ -37,7 +37,7 @@ gem 'webrick'
 gem 'puma'
 gem 'ffi', force_ruby_platform: true
 
-gem 'net-imap', '< 0.5'
+gem 'net-imap', '< 0.6'
 gem 'zeitwerk', '< 2.7'
 
 gem 'aws-sdk-codedeploy', require: false
