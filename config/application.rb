@@ -41,13 +41,6 @@ module ScotsPets
     config.i18n.default_locale = :'en-GB'
     config.i18n.fallbacks = %i[en-GB]
 
-    # Configure the cache store
-    config.cache_store = :mem_cache_store, nil, {
-      expires_in: 1.day, compress: true,
-      namespace: ENV.fetch('MEMCACHE_NAMESPACE') { 'spets' },
-      pool_size: ENV.fetch('WEB_CONCURRENCY_MAX_THREADS') { 16 }.to_i
-    }
-
     # Configure Active Record to use cache versioning
     config.active_record.cache_versioning = false
 

@@ -30,10 +30,6 @@ ensure
   ::RSpec::Mocks.teardown
 end
 
-Before do
-  Rails.cache.clear
-end
-
 After do
   Site.reload
 end

@@ -19,10 +19,4 @@ csv_builder = lambda do |csv|
   end
 end
 
-if @petitions.query.present?
-  CSV.generate(&csv_builder)
-else
-  csv_cache [I18n.locale, :petitions, @petitions.scope], expires_in: 5.minutes do
-    CSV.generate(&csv_builder)
-  end
-end
+CSV.generate(&csv_builder)

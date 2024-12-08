@@ -62,11 +62,4 @@ namespace :spets do
       end
     end
   end
-
-  namespace :cache do
-    desc "Clear the cache"
-    task :clear => :environment do
-      Rails.cache.clear
-    end
-  end
 end

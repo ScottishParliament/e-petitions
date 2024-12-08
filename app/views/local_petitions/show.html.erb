@@ -1,50 +1,48 @@
-<%= cache_for :local_petitions_page do %>
-  <section aria-labelledby="page-heading">
-    <h1 class="page-heading">
-      <%= t(:"ui.petitions.local.show.heading", constituency_name: @constituency.name) %>
-    </h1>
+<section aria-labelledby="page-heading">
+  <h1 class="page-heading">
+    <%= t(:"ui.petitions.local.show.heading", constituency_name: @constituency.name) %>
+  </h1>
 
-    <p class="heading-link">
-      <%= link_to t(:"ui.petitions.local.show.all_popular_link", constituency_name: @constituency.name), all_local_petition_path(@constituency), class: 'view-all' %>
-    </p>
+  <p class="heading-link">
+    <%= link_to t(:"ui.petitions.local.show.all_popular_link", constituency_name: @constituency.name), all_local_petition_path(@constituency), class: 'view-all' %>
+  </p>
 
-    <% if @member.present? %>
-      <p><%= t(:"ui.petitions.local.member_name_link_html", member_name_link: link_to(@member.name, @member.url, rel: 'external', class: 'view-all'), constituency_name: @constituency.name) %></p>
-    <% end %>
+  <% if @member.present? %>
+    <p><%= t(:"ui.petitions.local.member_name_link_html", member_name_link: link_to(@member.name, @member.url, rel: 'external', class: 'view-all'), constituency_name: @constituency.name) %></p>
+  <% end %>
 
-    <% if @members.any? %>
-      <p><%= t(:"ui.petitions.local.regional_members.heading_html", region: @region.name) %></p>
-      <ul class="member-list">
-        <% @members.each do |member| %>
-          <li><%= link_to(member.name, member.url) %></li>
-        <% end %>
-      </ul>
-    <% end %>
-
-    <div class="section-panel local-petitions">
-      <% if @petitions.empty? %>
-        <p><%= t(:"ui.petitions.local.all.results.empty") %></p>
-      <% else %>
-        <ol>
-          <% @petitions.each do |petition| %>
-            <li class="petition-item petition-<%= petition.state %>">
-              <h3><%= link_to petition.action, petition_path(petition) %></h3>
-              <p><%= signature_count(:in_your_constituency, petition.constituency_signature_count, constituency: @constituency.name) %><br/>
-              (<%= signature_count(:in_total, petition.signature_count) %>)</p>
-            </li>
-          <% end -%>
-        </ol>
+  <% if @members.any? %>
+    <p><%= t(:"ui.petitions.local.regional_members.heading_html", region: @region.name) %></p>
+    <ul class="member-list">
+      <% @members.each do |member| %>
+        <li><%= link_to(member.name, member.url) %></li>
       <% end %>
-    </div>
-
-    <ul class="petition-meta">
-      <li class="meta-json">
-        <span class="note"><%= t(
-          :"ui.application.get_json_csv_html",
-          json_link: link_to("JSON", local_petition_path(@constituency, :json)),
-          csv_link: link_to('CSV', local_petition_path(@constituency, :csv))
-        ) %></span>
-      </li>
     </ul>
-  </section>
-<% end %>
+  <% end %>
+
+  <div class="section-panel local-petitions">
+    <% if @petitions.empty? %>
+      <p><%= t(:"ui.petitions.local.all.results.empty") %></p>
+    <% else %>
+      <ol>
+        <% @petitions.each do |petition| %>
+          <li class="petition-item petition-<%= petition.state %>">
+            <h3><%= link_to petition.action, petition_path(petition) %></h3>
+            <p><%= signature_count(:in_your_constituency, petition.constituency_signature_count, constituency: @constituency.name) %><br/>
+            (<%= signature_count(:in_total, petition.signature_count) %>)</p>
+          </li>
+        <% end -%>
+      </ol>
+    <% end %>
+  </div>
+
+  <ul class="petition-meta">
+    <li class="meta-json">
+      <span class="note"><%= t(
+        :"ui.application.get_json_csv_html",
+        json_link: link_to("JSON", local_petition_path(@constituency, :json)),
+        csv_link: link_to('CSV', local_petition_path(@constituency, :csv))
+      ) %></span>
+    </li>
+  </ul>
+</section>
