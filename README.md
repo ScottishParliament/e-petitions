@@ -4,7 +4,7 @@ This is the code base for the Scottish Parliament's petitions service (https://p
 
 ## Setup
 
-We recommend using [Docker Desktop][1] to get setup quickly. If you'd prefer not to use Docker then you'll need Ruby (3.0+), Node (20+), PostgreSQL (12+) and Memcached (1.5+) installed.
+We recommend using [Docker Desktop][1] to get setup quickly. If you'd prefer not to use Docker then you'll need Ruby (3.0+), Node (20+) and PostgreSQL (12+) installed.
 
 ### DNS
 

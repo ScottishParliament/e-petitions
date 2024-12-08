@@ -1,58 +1,56 @@
-<%= cache_for :petition do %>
-  <div class="petition closed-petition">
-    <%= render "localize_content", petition: petition %>
+<div class="petition closed-petition">
+  <%= render "localize_content", petition: petition %>
 
-    <ul class="petition-meta">
-      <li class="meta-created-by">
-        <span class="label"><%= t(:"ui.petitions.created_by") %></span> <%= petition.creator.name %>
-      </li>
-      <li class="meta-deadline">
-        <% if @petition.completed? %>
-          <span class="label"><%= t(:"ui.petitions.date_completed") %></span> <%= short_date_format petition.completed_at %>
-        <% elsif @petition.submitted_on_paper? %>
-          <span class="label"><%= t(:"ui.petitions.date_submitted") %></span> <%= short_date_format petition.submitted_on %>
-        <% else %>
-          <span class="label"><%= t(:"ui.petitions.date_closed") %></span> <%= short_date_format petition.closed_at %>
-        <% end %>
-      </li>
-    </ul>
-
-    <section class="referral-notice" aria-labelledby="referral-notice-heading">
-      <h2 id="referral-notice-heading">
-        <% if @petition.completed? %>
-          <%= t(:"ui.petitions.referral_threshold.completed.heading") %>
-        <% else %>
-          <%= t(:"ui.petitions.referral_threshold.closed.heading") %>
-        <% end %>
-      </h2>
-
-      <% if @petition.scot_parl_link? %>
-        <% if @petition.completed? %>
-          <p class="secondary"><%= t(:"ui.petitions.referral_threshold.completed.link_html", link: @petition.scot_parl_link) %></p>
-        <% else %>
-          <p class="secondary"><%= t(:"ui.petitions.referral_threshold.closed.link_html", link: @petition.scot_parl_link) %></p>
-        <% end %>
-      <% end %>
-    </section>
-
-    <div class="signature-count">
-      <% if petition.collect_signatures? %>
-        <p class="signature-count-number"><%= signature_count(:default, petition.signature_count) %></p>
+  <ul class="petition-meta">
+    <li class="meta-created-by">
+      <span class="label"><%= t(:"ui.petitions.created_by") %></span> <%= petition.creator.name %>
+    </li>
+    <li class="meta-deadline">
+      <% if @petition.completed? %>
+        <span class="label"><%= t(:"ui.petitions.date_completed") %></span> <%= short_date_format petition.completed_at %>
+      <% elsif @petition.submitted_on_paper? %>
+        <span class="label"><%= t(:"ui.petitions.date_submitted") %></span> <%= short_date_format petition.submitted_on %>
       <% else %>
-        <p class="no-signature-count"><%= t(:"ui.signature_counts.not_applicable") %></p>
+        <span class="label"><%= t(:"ui.petitions.date_closed") %></span> <%= short_date_format petition.closed_at %>
       <% end %>
+    </li>
+  </ul>
 
-      <% unless Site.disable_thresholds_and_debates? %>
-        <div class="signature-count-graph" aria-hidden="true">
-          <span class="signature-count-current" style="width: <%= signatures_threshold_percentage(petition) %>"></span>
-        </div>
-        <p class="signature-count-goal">
-          <%= number_with_delimiter(current_threshold(petition)) %>
-        </p>
+  <section class="referral-notice" aria-labelledby="referral-notice-heading">
+    <h2 id="referral-notice-heading">
+      <% if @petition.completed? %>
+        <%= t(:"ui.petitions.referral_threshold.completed.heading") %>
+      <% else %>
+        <%= t(:"ui.petitions.referral_threshold.closed.heading") %>
       <% end %>
-    </div>
+    </h2>
 
-    <%= render 'threshold_details', petition: petition %>
-    <%= render 'other_parliamentary_business_details', petition: petition %>
+    <% if @petition.scot_parl_link? %>
+      <% if @petition.completed? %>
+        <p class="secondary"><%= t(:"ui.petitions.referral_threshold.completed.link_html", link: @petition.scot_parl_link) %></p>
+      <% else %>
+        <p class="secondary"><%= t(:"ui.petitions.referral_threshold.closed.link_html", link: @petition.scot_parl_link) %></p>
+      <% end %>
+    <% end %>
+  </section>
+
+  <div class="signature-count">
+    <% if petition.collect_signatures? %>
+      <p class="signature-count-number"><%= signature_count(:default, petition.signature_count) %></p>
+    <% else %>
+      <p class="no-signature-count"><%= t(:"ui.signature_counts.not_applicable") %></p>
+    <% end %>
+
+    <% unless Site.disable_thresholds_and_debates? %>
+      <div class="signature-count-graph" aria-hidden="true">
+        <span class="signature-count-current" style="width: <%= signatures_threshold_percentage(petition) %>"></span>
+      </div>
+      <p class="signature-count-goal">
+        <%= number_with_delimiter(current_threshold(petition)) %>
+      </p>
+    <% end %>
   </div>
-<% end %>
+
+  <%= render 'threshold_details', petition: petition %>
+  <%= render 'other_parliamentary_business_details', petition: petition %>
+</div>

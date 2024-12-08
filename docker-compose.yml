@@ -11,12 +11,10 @@ x-application: &application
     - /tmp/pids/
   depends_on:
     - postgres
-    - memcached
 
 x-environment: &environment
   DATABASE_URL: "postgres://postgres:fUG1DnZpy1rNkxiO@postgres:5432"
   DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL: "true"
-  MEMCACHE_SERVERS: "memcached:11211"
   SPROCKETS_CACHE: "/cache"
   PIDFILE: "/tmp/pids/server.pid"
 
@@ -32,11 +30,6 @@ services:
       - "127.0.0.1:5432:5432"
     volumes:
       - db:/var/lib/postgresql/data
-
-  memcached:
-    image: memcached:1.5
-    expose:
-      - "11121"
 
   web:
     <<: *application

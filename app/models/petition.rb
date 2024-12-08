@@ -36,8 +36,6 @@ class Petition < ActiveRecord::Base
 
   PREVIOUS_ACTION_CUTOFF = Time.utc(2024, 1, 1, 0, 0, 0)
 
-  self.cache_timestamp_format = :stepped_cache_key
-
   has_perishable_token called: 'sponsor_token'
 
   translate :action, :additional_details, :background, :previous_action, :scot_parl_link

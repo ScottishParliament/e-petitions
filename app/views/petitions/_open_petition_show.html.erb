@@ -2,42 +2,40 @@
   <%= tag :meta, name: "count_url", content: count_petition_url(@petition) %>
 <% end %>
 
-<%= cache_for :petition do %>
-  <div class="petition open-petition">
-    <%= render "localize_content", petition: petition %>
+<div class="petition open-petition">
+  <%= render "localize_content", petition: petition %>
 
-    <ul class="petition-meta">
-      <li class="meta-created-by">
-        <span class="label"><%= t(:"ui.petitions.created_by") %></span> <%= petition.creator.name %>
-      </li>
-      <li class="meta-referred-at">
-        <span class="label"><%= t(:"ui.petitions.date_referred") %></span> <%= short_date_format petition.referred_at %>
-      </li>
-      <li class="meta-deadline">
-        <%= t(:"ui.petitions.petitions_run_length") %>
-      </li>
-    </ul>
+  <ul class="petition-meta">
+    <li class="meta-created-by">
+      <span class="label"><%= t(:"ui.petitions.created_by") %></span> <%= petition.creator.name %>
+    </li>
+    <li class="meta-referred-at">
+      <span class="label"><%= t(:"ui.petitions.date_referred") %></span> <%= short_date_format petition.referred_at %>
+    </li>
+    <li class="meta-deadline">
+      <%= t(:"ui.petitions.petitions_run_length") %>
+    </li>
+  </ul>
 
-    <% unless Site.signature_collection_disabled? %>
-      <p class="sign-petition"><%= link_to t(:"ui.petitions.sign_this_petition"), new_petition_signature_path(petition), class: "button forward" %></p>
-    <% end %>
+  <% unless Site.signature_collection_disabled? %>
+    <p class="sign-petition"><%= link_to t(:"ui.petitions.sign_this_petition"), new_petition_signature_path(petition), class: "button forward" %></p>
+  <% end %>
 
-    <div class="signature-count">
-      <p class="signature-count-number">
-        <%= signature_count(:default, petition.signature_count) %>
+  <div class="signature-count">
+    <p class="signature-count-number">
+      <%= signature_count(:default, petition.signature_count) %>
+    </p>
+    <% unless Site.disable_thresholds_and_debates? %>
+      <div class="signature-count-graph" aria-hidden="true">
+        <span class="signature-count-current" style="width: <%= signatures_threshold_percentage(petition) %>"></span>
+      </div>
+      <p class="signature-count-goal">
+        <%= number_with_delimiter(current_threshold(petition)) %>
       </p>
-      <% unless Site.disable_thresholds_and_debates? %>
-        <div class="signature-count-graph" aria-hidden="true">
-          <span class="signature-count-current" style="width: <%= signatures_threshold_percentage(petition) %>"></span>
-        </div>
-        <p class="signature-count-goal">
-          <%= number_with_delimiter(current_threshold(petition)) %>
-        </p>
-      <% end %>
-    </div>
-
-    <%= render 'threshold_details', petition: petition %>
-    <%= render 'other_parliamentary_business_details', petition: petition %>
-    <%= render 'share_petition', petition: petition %>
+    <% end %>
   </div>
-<% end %>
+
+  <%= render 'threshold_details', petition: petition %>
+  <%= render 'other_parliamentary_business_details', petition: petition %>
+  <%= render 'share_petition', petition: petition %>
+</div>
