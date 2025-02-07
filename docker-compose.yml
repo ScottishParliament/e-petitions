@@ -20,7 +20,7 @@ x-environment: &environment
 
 services:
   postgres:
-    image: postgres:12
+    image: postgres:16
     command: >
       -c ssl=on
       -c ssl_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
