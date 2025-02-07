@@ -99,7 +99,7 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     base64 (0.2.0)
     bcrypt (3.1.20)
-    bigdecimal (3.1.8)
+    bigdecimal (3.1.9)
     brakeman (6.2.2)
       racc
     builder (3.3.0)
@@ -216,7 +216,7 @@ GEM
       rake
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hashdiff (1.1.1)
+    hashdiff (1.1.2)
     htmlentities (4.3.4)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
@@ -406,7 +406,7 @@ GEM
     timeout (0.4.2)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    webmock (3.24.0)
+    webmock (3.25.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
