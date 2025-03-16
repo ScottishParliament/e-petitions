@@ -128,8 +128,8 @@ Scenario: Charlie tries to submit an invalid petition
   When I press "Preview petition"
   Then I should see "Title must be completed"
   And I should see "Summary must be completed"
-  Then I should see "Previous action must be completed"
-  Then I should see "Background information must be completed"
+  And I should see "Previous action must be completed"
+  And I should see "Background information must be completed"
 
   When I am allowed to make the petition action too long
   And I fill in "What do you want us to do?" with text longer than 100 characters
