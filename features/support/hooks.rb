@@ -42,7 +42,7 @@ Before('not @gaelic') do
   I18n.locale = :"en-GB"
 end
 
-After do
+After('not @javascript') do
   page.driver.options[:headers] = nil
 end
 
