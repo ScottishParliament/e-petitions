@@ -9,7 +9,8 @@ Feature: Moderator respond to petition
     Given a sponsored petition "More money for charities"
     And I am logged in as a sysadmin
     When I go to the admin petition page for "More money for charities"
-    Then I should be connected to the server via an ssl connection
+    Then I should be on the admin petition page for "More money for charities"
+    And I should be connected to the server via an ssl connection
     And the markup should be valid
     And I should see the petition details
     And I should not see "Rejection reason"
