@@ -609,7 +609,7 @@ class Site < ActiveRecord::Base
   end
 
   def password_digest
-    BCrypt::Password.new(super)
+    super.present? ? BCrypt::Password.new(super) : nil
   end
 
   def password=(new_password)

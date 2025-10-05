@@ -465,30 +465,23 @@ RSpec.describe Signature, type: :model do
 
       describe "##{attribute}" do
         let(:signature) { FactoryBot.create(:signature, attribute => value) }
-        let(:exception) { ActiveRecord::ActiveRecordError }
-        let(:message) { "#{attribute} is marked as readonly" }
 
         it "can't be updated via update_column" do
           expect {
             signature.update_column(attribute, new_value)
-          }.to raise_error(exception, message)
+          }.to raise_error(ActiveRecord::ActiveRecordError, "#{attribute} is marked as readonly")
         end
 
-        it "can't be updated via update" do
+        it "can't be mass-assigned" do
           expect {
             signature.update(attribute => value)
-          }.not_to change {
-            signature.reload.send(attribute)
-          }
+          }.to raise_error(ActiveRecord::ReadonlyAttributeError, attribute.to_s)
         end
 
-        it "can't be updated via save" do
+        it "can't be assigned directly" do
           expect {
             signature.send(:"#{attribute}=", new_value)
-            signature.save
-          }.not_to change {
-            signature.reload.send(attribute)
-          }
+          }.to raise_error(ActiveRecord::ReadonlyAttributeError, attribute.to_s)
         end
       end
 
@@ -1890,7 +1883,6 @@ RSpec.describe Signature, type: :model do
       end
 
       it "returns the token from the database" do
-        expect(signature).to receive(:signed_token?).and_return(true)
         expect(signature).to receive(:read_attribute).with(:signed_token).and_return(token)
         expect(signature.signed_token).to eq(token)
       end

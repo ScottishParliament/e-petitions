@@ -3,10 +3,10 @@ source 'https://rubygems.org'
 # Load environment variables
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
-gem 'rails', '6.1.7.10'
+gem 'rails', '7.1.5.2'
 
 gem 'rake'
-gem 'pg', '< 1.5'
+gem 'pg'
 gem 'authlogic'
 gem 'will_paginate'
 gem 'json'

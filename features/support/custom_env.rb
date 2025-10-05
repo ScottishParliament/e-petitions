@@ -5,6 +5,12 @@ require 'multi_test'
 require 'faker'
 require 'notify_mock'
 
+# Use webmock to disable net connections except for localhost and exceptions
+WebMock.disable_net_connect!(
+  allow_localhost: true,
+  allow: 'chromedriver.storage.googleapis.com'
+)
+
 MultiTest.disable_autorun
 
 Capybara.javascript_driver = ENV.fetch("JS_DRIVER", "chrome_headless").to_sym

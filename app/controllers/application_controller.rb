@@ -8,38 +8,14 @@ class ApplicationController < ActionController::Base
 
   helper_method :public_petition_facets
 
-  after_action do
-    default_src = %w[default-src 'self']
-    font_src = %w[font-src 'self']
-
-    img_src = %w[img-src 'self' data:]
-    img_src << "https://www.google-analytics.com"
-
-    connect_src = %w[connect-src 'self']
-    connect_src << "https://apikeys.civiccomputing.com"
-    connect_src << "https://*.google-analytics.com"
-
-    script_src = %w[script-src 'self' 'unsafe-inline']
-    script_src << "https://cc.cdn.civiccomputing.com"
-    script_src << "https://www.googletagmanager.com"
-    script_src << "https://www.google-analytics.com"
-
+  content_security_policy do |policy|
     if Site.translation_enabled?
-      script_src << Site.moderate_url
+      policy.script_src :self, :unsafe_inline,
+        "https://cc.cdn.civiccomputing.com",
+        "https://www.googletagmanager.com",
+        "https://www.google-analytics.com",
+        Site.moderate_url
     end
-
-    style_src = %w[style-src 'self' 'unsafe-inline']
-
-    directives = [
-      default_src.join(" "),
-      font_src.join(" "),
-      img_src.join(" "),
-      connect_src.join(" "),
-      script_src.join(" "),
-      style_src.join(" "),
-    ]
-
-    response.headers["Content-Security-Policy"] = directives.join("; ")
   end
 
   def admin_request?
