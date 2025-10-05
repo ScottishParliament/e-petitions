@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Load environment variables
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
-gem 'rails', '7.2.2.2'
+gem 'rails', '8.0.3'
 
 gem 'rake'
 gem 'pg'
@@ -35,9 +35,6 @@ gem 'scrypt'
 gem 'webrick'
 gem 'puma'
 gem 'ffi', force_ruby_platform: true
-
-gem 'net-imap', '< 0.5'
-gem 'zeitwerk', '< 2.7'
 
 gem 'aws-sdk-codedeploy', require: false
 gem 'aws-sdk-cloudwatchlogs', require: false
