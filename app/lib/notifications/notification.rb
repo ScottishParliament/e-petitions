@@ -10,7 +10,7 @@ module Notifications
 
     facet :all, -> { by_latest }
 
-    enum status: {
+    enum :status, {
       created:    0,
       sending:    1,
       delivered:  2,

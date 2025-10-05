@@ -149,7 +149,7 @@ RSpec.describe PetitionsController, type: :controller do
         end
       end
 
-      context "when creator is on the Gaelic domain" do
+      context "when creator is on the Gaelic domain", gaelic: true do
         it "records the Gaelic locale on the creator's signature" do
           perform_enqueued_jobs do
             post :create, params: { stage: "replay_email", locale: "gd-GB", petition_creator: params.merge(state: Signature::VALIDATED_STATE) }

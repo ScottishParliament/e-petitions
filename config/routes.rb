@@ -136,13 +136,19 @@ Rails.application.routes.draw do
       get '/translations', to: 'translations#index', as: :translations
 
       resources :invalidations, except: %i[show] do
-        post :cancel, :count, :start, on: :member
+        member do
+          post :cancel
+          post :count
+          post :start
+        end
       end
 
       resources :paper_petitions, only: %i[new create]
 
       resources :petitions, only: %i[show index], constraints: { id: /(PE|PP)?\d{1,11}/ } do
-        post :resend, on: :member
+        member do
+          post :resend
+        end
 
         resource  :content, controller: 'content', only: %i[create destroy]
         resources :emails, controller: 'petition_emails', except: %i[show]
@@ -168,8 +174,12 @@ Rails.application.routes.draw do
         resource :archive, controller: 'archive', only: %i[update]
 
         resources :signatures, except: %i[show edit update] do
-          post :validate, :invalidate, on: :member
-          post :subscribe, :unsubscribe, on: :member
+          member do
+            post :validate
+            post :invalidate
+            post :subscribe
+            post :unsubscribe
+          end
 
           collection do
             delete :destroy, action: :bulk_destroy
@@ -189,8 +199,12 @@ Rails.application.routes.draw do
       resource :holidays, only: %i[edit update]
 
       resources :signatures, only: %i[index destroy] do
-        post :validate, :invalidate, on: :member
-        post :subscribe, :unsubscribe, on: :member
+        member do
+          post :validate
+          post :invalidate
+          post :subscribe
+          post :unsubscribe
+        end
 
         collection do
           delete :destroy, action: :bulk_destroy

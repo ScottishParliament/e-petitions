@@ -10,8 +10,7 @@ class LocalizedController < ApplicationController
   before_action :set_locale
   before_action :set_bypass_cookie, if: :bypass_param?
   before_action :redirect_to_english_page, if: :gaelic_disabled?
-  before_action :redirect_to_holding_page, except: :holding
-  before_action :redirect_to_home_page, only: :holding
+  before_action :redirect_to_holding_page
 
   helper_method :holding_page?
 
@@ -43,7 +42,7 @@ class LocalizedController < ApplicationController
   end
 
   def holding_page?
-    action_name == "holding"
+    controller_name == "pages" && action_name == "holding"
   end
 
   def bypass_param?
@@ -74,13 +73,7 @@ class LocalizedController < ApplicationController
   end
 
   def redirect_to_english_page
-    redirect_to english_url unless english_url?
-  end
-
-  def redirect_to_home_page
-    unless bypass_authenticated?
-      redirect_to home_url unless Site.show_holding_page?
-    end
+    redirect_to english_url, allow_other_host: true unless english_url?
   end
 
   def redirect_to_holding_page

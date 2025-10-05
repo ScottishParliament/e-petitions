@@ -488,8 +488,8 @@ gd-GB:
         petition_stage:
           intro_html: |-
             <h1 id="page-heading">Start a petition</h1>
-            <p>Remember, your petition must meet the <a href="/rules">rules for petitions</a>. 
-              Your petition can collect signatures until your petition is closed by the Citizen 
+            <p>Remember, your petition must meet the <a href="/rules">rules for petitions</a>.
+              Your petition can collect signatures until your petition is closed by the Citizen
               Participation and Public Petitions Committee.
             </p>
           submit_html: |-
@@ -603,6 +603,7 @@ gd-GB:
       heading_open: "Under consideration"
       more_details: "More details"
       date_submitted: "Date submitted"
+      date_closed: "Date closed"
       date_completed: "Date closed"
       heading_closed: "Under consideration"
       heading_completed: "Closed petition"
