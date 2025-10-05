@@ -10,19 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_30_124656) do
-
+ActiveRecord::Schema[8.0].define(version: 2023_01_30_124656) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "intarray"
+  enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
-  enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -35,7 +34,7 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "service_name", null: false
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
@@ -52,18 +51,18 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "password_salt", limit: 255
     t.integer "login_count", default: 0
     t.integer "failed_login_count", default: 0
-    t.datetime "current_login_at"
-    t.datetime "last_login_at"
+    t.datetime "current_login_at", precision: nil
+    t.datetime "last_login_at", precision: nil
     t.string "current_login_ip", limit: 255
     t.string "last_login_ip", limit: 255
     t.string "first_name", limit: 255
     t.string "last_name", limit: 255
     t.string "role", limit: 10, null: false
     t.boolean "force_password_reset", default: true
-    t.datetime "password_changed_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "last_request_at"
+    t.datetime "password_changed_at", precision: nil
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
+    t.datetime "last_request_at", precision: nil
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["last_name", "first_name"], name: "index_admin_users_on_last_name_and_first_name"
   end
@@ -73,8 +72,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "name_en", limit: 100, null: false
     t.string "name_gd", limit: 100, null: false
     t.string "example_postcode", limit: 7, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["name_en"], name: "index_constituencies_on_name_en", unique: true
     t.index ["name_gd"], name: "index_constituencies_on_name_gd", unique: true
     t.index ["region_id"], name: "index_constituencies_on_region_id"
@@ -84,9 +83,9 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "constituency_id", null: false
     t.bigint "petition_id", null: false
     t.integer "signature_count", default: 0, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.datetime "last_signed_at"
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "last_signed_at", precision: nil
     t.index ["petition_id", "constituency_id"], name: "idx_constituency_petition_journal_uniqueness", unique: true
   end
 
@@ -94,31 +93,31 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.bigint "signature_id", null: false
     t.string "address"
     t.string "phone_number", limit: 255
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["signature_id"], name: "index_contacts_on_signature_id"
   end
 
   create_table "country_petition_journals", force: :cascade do |t|
     t.bigint "petition_id", null: false
     t.integer "signature_count", default: 0, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "location_code", limit: 30
-    t.datetime "last_signed_at"
+    t.datetime "last_signed_at", precision: nil
     t.index ["petition_id", "location_code"], name: "index_country_petition_journals_on_petition_and_location", unique: true
   end
 
   create_table "debate_outcomes", force: :cascade do |t|
     t.bigint "petition_id", null: false
     t.date "debated_on"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.boolean "debated", default: true, null: false
     t.string "commons_image_file_name"
     t.string "commons_image_content_type"
     t.integer "commons_image_file_size"
-    t.datetime "commons_image_updated_at"
+    t.datetime "commons_image_updated_at", precision: nil
     t.string "transcript_url_en", limit: 500
     t.string "transcript_url_gd", limit: 500
     t.string "video_url_en", limit: 500
@@ -137,12 +136,12 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.integer "attempts", default: 0
     t.text "handler"
     t.text "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
+    t.datetime "run_at", precision: nil
+    t.datetime "locked_at", precision: nil
+    t.datetime "failed_at", precision: nil
     t.string "locked_by", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.string "queue", limit: 255
     t.index ["priority", "run_at"], name: "index_delayed_jobs_on_priority_and_run_at"
   end
@@ -152,19 +151,19 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "name", limit: 100, null: false
     t.string "strip_characters", limit: 10
     t.string "strip_extension", limit: 10, default: "+"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["canonical_domain_id"], name: "index_domains_on_canonical_domain_id"
     t.index ["name"], name: "index_domains_on_name", unique: true
   end
 
   create_table "email_requested_receipts", force: :cascade do |t|
     t.bigint "petition_id"
-    t.datetime "debate_outcome"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.datetime "debate_scheduled"
-    t.datetime "petition_email"
+    t.datetime "debate_outcome", precision: nil
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "debate_scheduled", precision: nil
+    t.datetime "petition_email", precision: nil
     t.index ["petition_id"], name: "index_email_requested_receipts_on_petition_id"
   end
 
@@ -174,7 +173,7 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "email"
     t.string "user_agent"
     t.string "ip_address", limit: 40
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.index ["ip_address"], name: "index_feedback_on_ip_address"
   end
 
@@ -183,8 +182,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.date "christmas_end"
     t.date "easter_start"
     t.date "easter_end"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "invalidations", force: :cascade do |t|
@@ -195,19 +194,19 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "postcode", limit: 255
     t.string "ip_address", limit: 40
     t.string "email", limit: 255
-    t.datetime "created_after"
-    t.datetime "created_before"
+    t.datetime "created_after", precision: nil
+    t.datetime "created_before", precision: nil
     t.string "constituency_id", limit: 30
     t.string "location_code", limit: 30
     t.integer "matching_count", default: 0, null: false
     t.integer "invalidated_count", default: 0, null: false
-    t.datetime "enqueued_at"
-    t.datetime "started_at"
-    t.datetime "cancelled_at"
-    t.datetime "completed_at"
-    t.datetime "counted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "enqueued_at", precision: nil
+    t.datetime "started_at", precision: nil
+    t.datetime "cancelled_at", precision: nil
+    t.datetime "completed_at", precision: nil
+    t.datetime "counted_at", precision: nil
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "domain", limit: 255
     t.index "to_tsvector('english'::regconfig, (details)::text)", name: "ft_index_invalidations_on_details", using: :gin
     t.index "to_tsvector('english'::regconfig, (id)::text)", name: "ft_index_invalidations_on_id", using: :gin
@@ -223,8 +222,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "locale", limit: 10, null: false
     t.string "name", limit: 30, null: false
     t.jsonb "translations", default: {}, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["locale"], name: "index_languages_on_locale", unique: true
     t.index ["name"], name: "index_languages_on_name", unique: true
   end
@@ -236,8 +235,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "name_gd", limit: 100, null: false
     t.string "party_en", limit: 100
     t.string "party_gd", limit: 100
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["constituency_id"], name: "index_members_on_constituency_id", unique: true
     t.index ["region_id"], name: "index_members_on_region_id"
   end
@@ -245,12 +244,12 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
   create_table "notes", force: :cascade do |t|
     t.bigint "petition_id"
     t.text "details"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["petition_id"], name: "index_notes_on_petition_id", unique: true
   end
 
-  create_table "notifications", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "notifications", id: :uuid, default: -> { "public.gen_random_uuid()" }, force: :cascade do |t|
     t.string "to", null: false
     t.uuid "template_id", null: false
     t.string "reference", limit: 100, null: false
@@ -258,8 +257,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.jsonb "personalisation", null: false
     t.integer "status", default: 0, null: false
     t.jsonb "events", default: {}, null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index "to_tsvector('simple'::regconfig, (\"to\")::text)", name: "ft_index_notifications_on_to", using: :gin
     t.index "to_tsvector('simple'::regconfig, (reference)::text)", name: "ftindex_notifications_on_reference", using: :gin
     t.index ["created_at"], name: "index_notifications_on_created_at"
@@ -275,8 +274,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
   create_table "petition_emails", force: :cascade do |t|
     t.bigint "petition_id"
     t.string "sent_by"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "subject_en", null: false
     t.string "subject_gd"
     t.text "body_en"
@@ -286,38 +285,38 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
 
   create_table "petition_statistics", force: :cascade do |t|
     t.bigint "petition_id"
-    t.datetime "refreshed_at"
+    t.datetime "refreshed_at", precision: nil
     t.integer "duplicate_emails"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.decimal "pending_rate"
     t.index ["petition_id"], name: "index_petition_statistics_on_petition_id", unique: true
   end
 
   create_table "petitions", force: :cascade do |t|
     t.string "state", limit: 10, default: "pending", null: false
-    t.datetime "open_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "closed_at"
+    t.datetime "open_at", precision: nil
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
+    t.datetime "closed_at", precision: nil
     t.integer "signature_count", default: 0
     t.boolean "notified_by_email", default: false
     t.string "sponsor_token", limit: 255
     t.date "scheduled_debate_date"
-    t.datetime "last_signed_at"
-    t.datetime "referral_threshold_reached_at"
-    t.datetime "debate_threshold_reached_at"
-    t.datetime "rejected_at"
-    t.datetime "debate_outcome_at"
-    t.datetime "moderation_threshold_reached_at"
+    t.datetime "last_signed_at", precision: nil
+    t.datetime "referral_threshold_reached_at", precision: nil
+    t.datetime "debate_threshold_reached_at", precision: nil
+    t.datetime "rejected_at", precision: nil
+    t.datetime "debate_outcome_at", precision: nil
+    t.datetime "moderation_threshold_reached_at", precision: nil
     t.string "debate_state", limit: 30, default: "pending"
     t.boolean "special_consideration"
     t.integer "tags", default: [], null: false, array: true
-    t.datetime "locked_at"
+    t.datetime "locked_at", precision: nil
     t.bigint "locked_by_id"
     t.integer "moderation_lag"
-    t.datetime "signature_count_reset_at"
-    t.datetime "signature_count_validated_at"
+    t.datetime "signature_count_reset_at", precision: nil
+    t.datetime "signature_count_validated_at", precision: nil
     t.text "committee_note"
     t.string "locale", limit: 7, default: "en-GB", null: false
     t.string "action_en", limit: 255
@@ -326,15 +325,15 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.text "additional_details_gd"
     t.string "background_en", limit: 3000
     t.string "background_gd", limit: 3000
-    t.datetime "completed_at"
-    t.datetime "referred_at"
+    t.datetime "completed_at", precision: nil
+    t.datetime "referred_at", precision: nil
     t.string "scot_parl_link_en"
     t.string "scot_parl_link_gd"
     t.boolean "submitted_on_paper", default: false, null: false
     t.date "submitted_on"
-    t.datetime "archived_at"
+    t.datetime "archived_at", precision: nil
     t.boolean "use_markdown", default: false, null: false
-    t.datetime "anonymized_at"
+    t.datetime "anonymized_at", precision: nil
     t.integer "topics", default: [], null: false, array: true
     t.boolean "collect_signatures", default: true, null: false
     t.bigint "pe_number_id"
@@ -382,8 +381,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.integer "sustained_period", default: 300, null: false
     t.string "allowed_domains", limit: 10000, default: "", null: false
     t.string "allowed_ips", limit: 10000, default: "", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "blocked_domains", limit: 50000, default: "", null: false
     t.string "blocked_ips", limit: 50000, default: "", null: false
     t.boolean "geoblocking_enabled", default: false, null: false
@@ -404,8 +403,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
   create_table "regions", id: { type: :string, limit: 9 }, force: :cascade do |t|
     t.string "name_en", limit: 100, null: false
     t.string "name_gd", limit: 100, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["name_en"], name: "index_regions_on_name_en", unique: true
     t.index ["name_gd"], name: "index_regions_on_name_gd", unique: true
   end
@@ -416,8 +415,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "description_en", limit: 2000, null: false
     t.string "description_gd", limit: 2000
     t.boolean "hidden", default: true, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["code"], name: "index_rejection_reasons_on_code", unique: true
     t.index ["title"], name: "index_rejection_reasons_on_title", unique: true
   end
@@ -426,8 +425,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.bigint "petition_id"
     t.string "code", limit: 50, null: false
     t.text "details"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.text "details_en"
     t.text "details_gd"
     t.index ["petition_id"], name: "index_rejections_on_petition_id", unique: true
@@ -440,21 +439,21 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "postcode", limit: 255
     t.string "ip_address", limit: 40
     t.bigint "petition_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.boolean "notify_by_email", default: false
     t.string "email", limit: 255
     t.string "unsubscribe_token"
     t.string "constituency_id"
-    t.datetime "validated_at"
+    t.datetime "validated_at", precision: nil
     t.integer "number"
     t.boolean "seen_signed_confirmation_page", default: false, null: false
     t.string "location_code", limit: 30
-    t.datetime "invalidated_at"
+    t.datetime "invalidated_at", precision: nil
     t.bigint "invalidation_id"
-    t.datetime "debate_scheduled_email_at"
-    t.datetime "debate_outcome_email_at"
-    t.datetime "petition_email_at"
+    t.datetime "debate_scheduled_email_at", precision: nil
+    t.datetime "debate_outcome_email_at", precision: nil
+    t.datetime "petition_email_at", precision: nil
     t.uuid "uuid"
     t.integer "email_count", default: 0, null: false
     t.boolean "sponsor", default: false, null: false
@@ -463,7 +462,7 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "validated_ip"
     t.string "canonical_email"
     t.string "locale", limit: 10, default: "en-GB", null: false
-    t.datetime "anonymized_at"
+    t.datetime "anonymized_at", precision: nil
     t.index "((ip_address)::inet)", name: "index_signatures_on_inet"
     t.index "((regexp_replace(\"left\"(lower((email)::text), (\"position\"((email)::text, '@'::text) - 1)), '\\.|\\+.+'::text, ''::text, 'g'::text) || \"substring\"(lower((email)::text), \"position\"((email)::text, '@'::text))))", name: "index_signatures_on_lower_normalized_email"
     t.index "\"left\"((postcode)::text, '-3'::integer), petition_id", name: "index_signatures_on_sector_and_petition_id"
@@ -504,29 +503,29 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.integer "threshold_for_moderation", default: 2, null: false
     t.integer "threshold_for_referral", default: 50, null: false
     t.integer "threshold_for_debate", default: 5000, null: false
-    t.datetime "last_checked_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "last_checked_at", precision: nil
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "feedback_email", limit: 100, default: "\"Petitions: Scottish Parliament\" <petitionscommittee@parliament.scot>", null: false
     t.string "moderate_url", limit: 50, default: "https://moderate.petitions.parliament.scot", null: false
-    t.datetime "last_petition_created_at"
+    t.datetime "last_petition_created_at", precision: nil
     t.integer "login_timeout", default: 1800, null: false
     t.jsonb "feature_flags", default: {}, null: false
-    t.datetime "signature_count_updated_at"
+    t.datetime "signature_count_updated_at", precision: nil
     t.integer "signature_count_interval", default: 60, null: false
     t.boolean "update_signature_counts", default: false, null: false
     t.integer "threshold_for_moderation_delay", default: 500, null: false
     t.string "title_gd", limit: 50, default: "Athchuinge do Phàrlamaid na h-Alba", null: false
     t.string "url_gd", limit: 50, default: "https://athchuingean.parlamaid-alba.scot", null: false
     t.string "email_from_gd", limit: 100, default: "\"Athchuingean: Pàrlamaid na h-Alba\" <gun-fhreagairt@athchuingean.parlamaid-alba.scot>", null: false
-    t.datetime "translations_updated_at"
+    t.datetime "translations_updated_at", precision: nil
   end
 
   create_table "tags", force: :cascade do |t|
     t.string "name", limit: 50, null: false
     t.string "description", limit: 200
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index "to_tsvector('english'::regconfig, (description)::text)", name: "index_ft_tags_on_description", using: :gin
     t.index "to_tsvector('english'::regconfig, (name)::text)", name: "index_ft_tags_on_name", using: :gin
     t.index ["name"], name: "index_tags_on_name", unique: true
@@ -534,17 +533,17 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "name", limit: 60, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["name"], name: "index_tasks_on_name", unique: true
   end
 
-  create_table "templates", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "templates", id: :uuid, default: -> { "public.gen_random_uuid()" }, force: :cascade do |t|
     t.string "name", null: false
     t.string "subject", null: false
     t.text "body", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["name"], name: "index_templates_on_name", unique: true
   end
 
@@ -553,8 +552,8 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.string "code_gd", limit: 100
     t.string "name_en", limit: 100, null: false
     t.string "name_gd", limit: 100
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["code_en"], name: "index_topics_on_code_en", unique: true
     t.index ["code_gd"], name: "index_topics_on_code_gd", unique: true
     t.index ["name_en"], name: "index_topics_on_name_en", unique: true
@@ -565,9 +564,9 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.bigint "petition_id"
     t.string "domain", limit: 100, null: false
     t.integer "count", null: false
-    t.datetime "starts_at", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "starts_at", precision: nil, null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["created_at", "count"], name: "index_trending_domains_on_created_at_and_count", order: { count: :desc }
     t.index ["domain", "petition_id"], name: "index_trending_domains_on_domain_and_petition_id"
     t.index ["petition_id"], name: "index_trending_domains_on_petition_id"
@@ -578,9 +577,9 @@ ActiveRecord::Schema.define(version: 2023_01_30_124656) do
     t.inet "ip_address", null: false
     t.string "country_code", limit: 30, null: false
     t.integer "count", null: false
-    t.datetime "starts_at", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "starts_at", precision: nil, null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["created_at", "count"], name: "index_trending_ips_on_created_at_and_count", order: { count: :desc }
     t.index ["ip_address", "petition_id"], name: "index_trending_ips_on_ip_address_and_petition_id"
     t.index ["petition_id"], name: "index_trending_ips_on_petition_id"
