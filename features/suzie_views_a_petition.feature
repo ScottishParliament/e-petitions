@@ -122,7 +122,7 @@ Feature: Suzie views a petition
   Scenario: Suzie views a petition which will not be debated
     Given a petition "Spend more money on Defence" with a negative debate outcome
     When I view the petition
-    Then I should see "The Citizen Participation and Public Petitions Committee decided not to refer this petition for a debate"
+    Then I should see "The Public Petitions Committee decided not to refer this petition for a debate"
 
   Scenario: Suzie views a petition which was debated yesterday
     Given the date is the "27/10/2015"
@@ -173,7 +173,7 @@ Feature: Suzie views a petition
 
     Scenarios:
       | state     | copy                                                                                                  |
-      | closed    | Find out about the Citizen Participation and Public Petitions Committee’s discussion of this petition |
+      | closed    | Find out about the Public Petitions Committee’s discussion of this petition |
       | completed | Find out about the decisions taken on this petition                                                   |
 
   Scenario: Suzie sees a message when viewing a petition and signature collection has been paused

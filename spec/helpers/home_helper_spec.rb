@@ -47,19 +47,19 @@ RSpec.describe HomeHelper, type: :helper do
 
       context "when the petition count is 1" do
         it "returns a correctly formatted petition count" do
-          expect(helper.petition_count(:referred, 1)).to eq("<span class=\"count\">1</span> petition was referred to the Citizen Participation and Public Petitions Committee")
+          expect(helper.petition_count(:referred, 1)).to eq("<span class=\"count\">1</span> petition was referred to the Public Petitions Committee")
         end
       end
 
       context "when the petition count is 100" do
         it "returns a correctly formatted petition count" do
-          expect(helper.petition_count(:referred, 100)).to eq("<span class=\"count\">100</span> petitions were referred to the Citizen Participation and Public Petitions Committee")
+          expect(helper.petition_count(:referred, 100)).to eq("<span class=\"count\">100</span> petitions were referred to the Public Petitions Committee")
         end
       end
 
       context "when the petition count is 1000" do
         it "returns a correctly formatted petition count" do
-          expect(helper.petition_count(:referred, 1000)).to eq("<span class=\"count\">1,000</span> petitions were referred to the Citizen Participation and Public Petitions Committee")
+          expect(helper.petition_count(:referred, 1000)).to eq("<span class=\"count\">1,000</span> petitions were referred to the Public Petitions Committee")
         end
       end
     end

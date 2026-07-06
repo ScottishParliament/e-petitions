@@ -4,15 +4,15 @@ subject: "We published your petition “((action_gd))”"
 body: |-
   Dear ((creator)),
 
-  Your petition “((action_gd))” is now published and will be scheduled for consideration by the Citizen Participation and Public Petitions Committee. We aim to inform petitioners 2 weeks in advance as to when their petition will be on the agenda.
+  Your petition “((action_gd))” is now published and will be scheduled for consideration by the Public Petitions Committee. We aim to inform petitioners 2 weeks in advance as to when their petition will be on the agenda.
 
   Click this link to see your petition and start sharing it:
   ((url_gd))
 
-  Information gathered and reported by the Citizen Participation and Public Petitions Committee regarding your petition will be updated on the Scottish Parliament Website here: ((petition_website_url_gd))
+  Information gathered and reported by the Public Petitions Committee regarding your petition will be updated on the Scottish Parliament Website here: ((petition_website_url_gd))
 
   Finally, should you require any further information in the meantime, please do not hesitate to contact us.
 
   Thanks,
-  The Citizen Participation and Public Petitions team
+  The Public Petitions team
   The Scottish Parliament
