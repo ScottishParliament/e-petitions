@@ -32,6 +32,7 @@ class Site < ActiveRecord::Base
     disable_other_business
     disable_thresholds_and_debates
     disable_petition_creation
+    disable_petition_moderation_locking
     disable_collecting_signatures
   ]
 
@@ -241,6 +242,14 @@ class Site < ActiveRecord::Base
 
     def moderation_near_overdue_in_days
       5.days
+    end
+
+    def disable_petition_moderation_locking!
+      instance.update!(disable_petition_moderation_locking: true)
+    end
+
+    def enable_petition_moderation_locking!
+      instance.update!(disable_petition_moderation_locking: false)
     end
 
     def defaults
