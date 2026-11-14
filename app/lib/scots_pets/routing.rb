@@ -213,7 +213,7 @@ module ScotsPets
       constraints(Site.constraints_for_public_en) do
         defaults locale: "en-GB" do
           routes.each do |route|
-            match route.path("en-GB"), route.options("en")
+            match route.path("en-GB"), **route.options("en")
 
             if route.localized?
               match route.path("gd-GB"), to: redirect(route.redirect("en"), status: 308), via: route.via, as: nil
@@ -225,7 +225,7 @@ module ScotsPets
       constraints(Site.constraints_for_public_gd) do
         defaults locale: "gd-GB" do
           routes.each do |route|
-            match route.path("gd-GB"), route.options("gd")
+            match route.path("gd-GB"), **route.options("gd")
 
             if route.localized?
               match route.path("en-GB"), to: redirect(route.redirect("gd"), status: 308), via: route.via, as: nil
