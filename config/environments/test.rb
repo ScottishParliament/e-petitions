@@ -70,4 +70,12 @@ Rails.application.configure do
 
   # Disable asset digests so that test values don't change.
   config.assets.digest = false
+
+  # Compile assets on the calling thread - Sprockets 4 defaults to compiling
+  # them concurrently on a thread pool which means assets that query the
+  # database (e.g. auto-updater.js.erb) use a separate connection outside
+  # of the test transaction and deadlock waiting for uncommitted rows.
+  config.assets.configure do |env|
+    env.export_concurrent = false
+  end
 end
