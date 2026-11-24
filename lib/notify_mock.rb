@@ -34,7 +34,7 @@ module NotifyMock
 
         ActionMailer::Base.deliveries << message
 
-        [ 200, { "Content-Type" => "application/json" }, ["{}"] ]
+        [ 200, { "content-type" => "application/json" }, ["{}"] ]
       end
 
       def sanitize(html, options = {})
