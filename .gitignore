@@ -24,7 +24,7 @@
 # Ignore generated error files
 /public/4*.html
 /public/5*.html
-/public/error.css
+/public/FuturaBT-Book.ttf
 
 # Ignore uploaded files
 /storage

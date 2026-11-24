@@ -33,8 +33,8 @@ namespace :errors do
       File.unlink(html_file) if File.exist?(html_file)
     end
 
-    css_file = Rails.public_path.join("error.css")
-    File.unlink(css_file) if File.exist?(css_file)
+    font_file = Rails.public_path.join("FuturaBT-Book.ttf")
+    File.unlink(font_file) if File.exist?(font_file)
   end
 end
 
